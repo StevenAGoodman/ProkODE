@@ -1,9 +1,14 @@
 import numpy as np
-import pandas as pd
+import scipy 
 import random
 import json
 
+import scipy.optimize
+
 max_runtime = 100
+n = 1000 # number of genes 
+m = 1 # time is 1 at init
+r = 100 # number of tfs
 # f = [] # r x 1
 # A = [] # m x r
 # P = [] # r x n
@@ -16,10 +21,7 @@ with open("f.json", "r") as file:
 with open("A_init.json", "r") as file:
     A = np.matrix(np.array(json.loads(file.read())))
 
-
-
-######## is there a python (AI?) package that can do this loss function?
-######## Loss function: min|P - E * A^+|^2
+## Loss function: min|P - A^-1 * E|^2
 
 #create A valid for least squares
 A_inv = np.linalg.pinv(A)
@@ -27,11 +29,36 @@ A_inv = np.linalg.pinv(A)
 # print(block_a)
 
 ## Initail iteration
-b = column_matrix = P.ravel(order='F').reshape(-1, 1)
+P = column_matrix = P.ravel(order='F').reshape(-1, 1)
 
-E,_,_,_ = np.linalg.lstsq(A_inv,b) # solves min |b - ax|
+huggabaloo = m*n+r*m
 
-check = E - (A @ b)
-print(check)
-# for t in range(max_runtime):
+### Loss function optimization
+def errorFunc(e,a):
+    return np.linalg.norm(P - (a @ e))**2
+
+def toVector(e, a):
+    assert e.shape == (m, n)
+    assert a.shape == (r, m)
+    return np.hstack([e.flatten(), a.flatten()])
+
+def toWZ(vec):
+    assert vec.shape == (huggabaloo,)
+    return vec[:m*n].reshape(m,n), vec[m*n:].reshape(r,m)
+
+def doOptimization(e0,a0):
+    def f(x): 
+        e, a = toWZ(x)
+        return errorFunc(e, a)
+
+    result = scipy.optimize.minimize(f, toVector(e0, a0))
+    # Different optimize functions return their
+    # vector result differently. In this case it's result.x:
+    result.x = toWZ(result.x) 
+    return result
+
+print(doOptimization(np.ones((m,n)), np.ones((r,m))))
+
+
+
 
