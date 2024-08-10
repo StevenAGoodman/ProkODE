@@ -21,13 +21,17 @@ with open("A_init.json", "r") as file:
 ######## is there a python (AI?) package that can do this loss function?
 ######## Loss function: min|P - E * A^+|^2
 
+#create A valid for least squares
 A_inv = np.linalg.pinv(A)
+# block_a = np.block([[A_inv,A_inv],[A_inv,A_inv]])
+# print(block_a)
 
 ## Initail iteration
-a = np.block()
 b = column_matrix = P.ravel(order='F').reshape(-1, 1)
 
-np.linalg.lstsq(a,b) # solves min |b - ax|
+E,_,_,_ = np.linalg.lstsq(A_inv,b) # solves min |b - ax|
 
+check = E - (A @ b)
+print(check)
 # for t in range(max_runtime):
 
