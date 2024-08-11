@@ -19,7 +19,11 @@ for tf in range(n_tfs):
 for gene in range(n_genes):
     AInnerArr = []
     for tf in range(n_tfs):
-        AInnerArr.append(round((random.random() * 10))) # !!improve function of probabilities
+        rnd = random.randrange(0,10)
+        if rnd >= 5:
+            AInnerArr.append(0) 
+        else:
+            AInnerArr.append(round((random.random() * 10))) 
     A.append(AInnerArr)
 
 ## Define P_1

@@ -2,7 +2,6 @@ import numpy as np
 import scipy 
 import random
 import json
-
 import scipy.optimize
 
 max_runtime = 100
@@ -25,6 +24,14 @@ with open("A_init.json", "r") as file:
 
 #create A valid for least squares
 A_inv = np.linalg.pinv(A)
+zeros = np.where(A_inv.flatten() == 0)
+cons = []
+for i in range(len(zeros)):
+    def consFunc(x):
+        return x[i]
+    constraint = {'type':'eq', 'fun': consFunc}
+    cons.append(constraint)
+
 # block_a = np.block([[A_inv,A_inv],[A_inv,A_inv]])
 # print(block_a)
 
@@ -51,13 +58,13 @@ def doOptimization(e0,a0):
         e, a = toWZ(x)
         return errorFunc(e, a)
 
-    result = scipy.optimize.minimize(f, toVector(e0, a0))
+    result = scipy.optimize.minimize(f, toVector(e0, a0), constraints=cons)
     # Different optimize functions return their
     # vector result differently. In this case it's result.x:
     result.x = toWZ(result.x) 
     return result
 
-print(doOptimization(np.ones((m,n)), np.ones((r,m))))
+print(doOptimization(np.zeros((m,n)), np.zeros((r,m))))
 
 
 
