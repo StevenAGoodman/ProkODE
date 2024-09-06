@@ -38,7 +38,9 @@ Outputs:
 >>> 1. using network.json, create differential equations for each gene based on effected genes (i will place the math in this readme soon)
 >>> 2. plot graphs (haven't implemented the select proteins option yet)
 
-```{
+```
+# network.json
+{
     "tg1":[
         "tgdecay":float,
         "regulators":[
@@ -53,7 +55,9 @@ Outputs:
         ]
     ],
     "tg2":[
-
+        "tgdecay":float,
+        ...
     ],
     ...
-} 
+}
+```
