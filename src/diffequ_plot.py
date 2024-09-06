@@ -1,4 +1,5 @@
 import json
+import random
 import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
@@ -25,7 +26,7 @@ import pandas as pd
 #     ...
 # } 
 
-def config_network_json(decay_file, tfbs_file):
+def config_network_json(gene_arr, decay_file, tfbs_file):
     # needed inputs: lists of tgs, gene - decay rates ref file,
 
     # implicit file dependencies: 
@@ -33,62 +34,78 @@ def config_network_json(decay_file, tfbs_file):
     topology_df = pd.read_csv(tfbs_file) # names=['tf','tg','kd', 'beta]
     topology_df = topology_df.reset_index()
 
-    tg_arr = list(set(topology_df['tg'].to_list()))
     output = {}
 
-    for tg in tg_arr:
-        print(tg)
-        tgdecay = decay_df.at[decay_df['gene']==tg, 'decay']# query decay rates file
-        
-        arr = {"tg_decay":tgdecay,}
+    for tg in gene_arr:
+        tgdecay = decay_df.loc[decay_df['gene']==tg, 'decay']# query decay rates file
+
+        arr = {"tg_decay":tgdecay.to_list()[0]}
         reg_arr = {}
         for _, tf_row in topology_df[topology_df['tg']==tg].iterrows():
             beta = tf_row['beta']
             kdtf = tf_row['kd']
             reg_arr[tf_row['tf']] = {"beta":beta,"kd_tf":kdtf}
         arr["regulators"] = reg_arr
-        print(arr)
+        
         output[tg] = arr
 
-    json.dump(output, open('network.json', 'w'))
-
-    return tg_arr
+    json.dump(output, open('network.json', 'w'), indent=4)
 
 # def get_basal(Nns):
     # Np = 
     # Kdp =
     return 0. # Np / (Nns * Kdp)
 
-def plot_system(params):
+def plot_system(params, s0, tg_arr):
     # check if params len mathces nodes
 
     def f(s,t):
+        print(s)
         diffeqs = []
-        prev_ids = [] # corresponds to prev_amnts; use as reference for index of id
 
-        for tg in (params):
-            param = params[i+1]
-            R_trans = (prev_amnts[i] / (prev_amnts[i] + param[0])) * (param[1] * E_basal) + (1 - (prev_amnts[i] / (prev_amnts[i] + param[0]))) * E_basal
-            d = R_trans - param[2] * s[i+1]
-            prev_amnts.append(d)
-                
+        for tg in params:
+            param = params[tg]
+            tg_decay = param['tg_decay']
+            regulators = param['regulators']
+            
+            probspace_taken = 0 ## NOT ACCURATE
+            R_trans = 0
+            for tf in regulators:
+                N_tf = s[tg_arr.index(tf)]
+                print(tg_arr.index(tf))
+                beta = regulators[tf]["beta"]
+                kd_tf = regulators[tf]["kd_tf"]
+                bindProb = N_tf / (N_tf + kd_tf)
+                assert N_tf >= 0, (N_tf, f'{s}')
+
+                R_trans += bindProb * (beta * E_basal)
+                probspace_taken = bindProb + probspace_taken - (probspace_taken * bindProb)
+            print(probspace_taken)
+            assert probspace_taken < 1
+            probspace_remaining = 1 - probspace_taken
+            R_trans += (probspace_remaining) * E_basal
+            d = R_trans - tg_decay * s[tg_arr.index(tg)]
+            diffeqs.append(d)
         return diffeqs
 
-    t = np.linspace(0,10000)
-    s0=[0,0]
+    t = np.arange(0,1000,0.1)
 
     s = odeint(f,s0,t)
+    print(t)
 
-    plt.plot(t,s[:,0],'r-', linewidth=2.0)
-    plt.plot(t,s[:,1],'b-', linewidth=2.0)
+    for i in range(10):
+        plt.plot(t,s[:,i],random.choice(['r-','g-','b-']), linewidth=2.0)
     # plt.plot(t,s[:,2], 'g-',linewidth=2.0)
     plt.xlabel("t")
     plt.ylabel("S[N,C]")
     plt.legend(["N","C",'d'])
     plt.show()
 
-tg_arr = config_network_json('decay_rates.csv', 'tfbs.csv')
+genome_df = pd.read_csv('./inputs/annotation.csv')
+gene_arr = list(set(genome_df['geneid'].to_list()))
+# config_network_json(gene_arr,'decay_rates.csv', 'tfbs.csv')
 params = json.load(open('network.json', 'r'))
-s0 = [np.random.randint(0,100) for i in range(len(tg_arr))]
+s0 = [random.randint(0,100) for i in range(len(gene_arr))] 
 E_basal = 0.00434782608696
-# plot_system(params, s0)
+print(len(params))
+plot_system(params, s0, gene_arr)
