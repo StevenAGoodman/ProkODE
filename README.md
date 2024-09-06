@@ -1,6 +1,18 @@
 # ProkODE: A Computational Model to Unpakage Time-Series Protein Concentrations during Prokaryotic Development
 
-__NOTE__: I am currently using external software, so I just created a docker image for easier use...
+## Accessing Workspace
+
+I am currently using external software. To allow others to edit this repo without the hassle of manually installing everything, I assume people have Visual Studio Code with the dev container functionality.
+
+To work within this repo:
+1. navigate to 'vscode_dev' branch in this repository
+2. download & unzip its zip folder
+3. open vscode
+4. ensure 'Visual Studio Code Dev Containers' extension is installed
+5. ctrl + shift + p, run 'Dev Containers: Open Folder in Container'
+6. select the unzipped folder you accessed through 'vscode_dev'
+
+With this you should be able to edit the code with all the necessary packages. Please contact with any difficulties!
 
 ## Overview
 
