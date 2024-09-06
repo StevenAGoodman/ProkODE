@@ -1,4 +1,4 @@
-# ProkODE: A Computational Model to Unpakage Time-Series Protein Concentrations during Prokaryotic Development
+# ProkODE: A Computational Model to Unpackage Time-Series Protein Concentrations during Prokaryotic Development
 
 ## Accessing Workspace
 
