@@ -11,3 +11,6 @@ for file in file_paths:
 
 out = motifs.write(mots,'JASPAR')
 open('pfmdb.jaspar', 'w').write(out)
+
+## Prediction and Analysis of Transcription Factor Binding Sites: Practical Examples and Case Studies Using R Programming
+# uniprobe
