@@ -3,9 +3,7 @@ import pandas as pd
 import os
 
 from maths.py import *
-
-def network_hub():
-    return
+from run import *
 
 def get_betas():
     # read sample to df
