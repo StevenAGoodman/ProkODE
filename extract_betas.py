@@ -4,17 +4,22 @@ import os
 
 from maths.py import *
 
-def fit_beta():
+def network_hub():
     return
 
 def get_betas():
     # read sample to df
     sample_df = pd.read_csv(sample_file, names=['gene', 'transcription rate'])
 
+    network_hub()
+    
     for _,row in sample.iter_rows:
         gene = row[0]
+        transcription_rate = row[1]
         
-        rev_eq1(transcription_rate, N_p, Kd_p, [all tf jazz]) # from maths.py get beta value from context & trans rate
+        get_gene_info()
+
+        rev_eq1(transcription_rate, N_tf, Kd_tf, N_p, Kd_p, [all tf jazz]) # from maths.py get beta value from context & trans rate
 
     return tf_betas
 
