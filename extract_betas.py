@@ -2,12 +2,19 @@ import numpy as np
 import pandas as pd
 import os
 
+from maths.py import *
+
+def fit_beta():
+    return
 
 def get_betas():
     # read sample to df
     sample_df = pd.read_csv(sample_file, names=['gene', 'transcription rate'])
 
-    fit_beta
+    for _,row in sample.iter_rows:
+        gene = row[0]
+        
+        rev_eq1(transcription_rate, N_p, Kd_p, [all tf jazz]) # from maths.py get beta value from context & trans rate
 
     return tf_betas
 
