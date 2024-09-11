@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import os
 
-from maths.py import *
+from  import *
 from run import *
 
 def get_betas():
