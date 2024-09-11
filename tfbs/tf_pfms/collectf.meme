@@ -7,7 +7,7 @@ strands: + -
 Background letter frequencies (from uniform background):
 A 0.25000 C 0.25000 G 0.25000 T 0.25000 
 
-MOTIF LexA_C.glutamicum
+MOTIF LexA
 
 letter-probability matrix: alength= 4 w= 17 nsites= 40 E= 0
   0.250000	  0.200000	  0.050000	  0.500000	
@@ -30,7 +30,7 @@ letter-probability matrix: alength= 4 w= 17 nsites= 40 E= 0
 
 URL http://www.collectf.org/EXPREG_00000020
 
-MOTIF PhoP_Y.pestis
+MOTIF PhoP
 
 letter-probability matrix: alength= 4 w= 21 nsites= 45 E= 0
   0.222222	  0.244444	  0.088889	  0.444444	
@@ -57,7 +57,7 @@ letter-probability matrix: alength= 4 w= 21 nsites= 45 E= 0
 
 URL http://www.collectf.org/EXPREG_00000050
 
-MOTIF CcpA_S.pneumoniae
+MOTIF CcpA
 
 letter-probability matrix: alength= 4 w= 20 nsites= 54 E= 0
   0.370370	  0.111111	  0.092593	  0.425926	
@@ -83,7 +83,7 @@ letter-probability matrix: alength= 4 w= 20 nsites= 54 E= 0
 
 URL http://www.collectf.org/EXPREG_000000e0
 
-MOTIF Fur_C.crescentus
+MOTIF Fur
 
 letter-probability matrix: alength= 4 w= 23 nsites= 16 E= 0
   0.750000	  0.000000	  0.187500	  0.062500	
@@ -112,7 +112,7 @@ letter-probability matrix: alength= 4 w= 23 nsites= 16 E= 0
 
 URL http://www.collectf.org/EXPREG_00000100
 
-MOTIF LexA_P.difficile
+MOTIF LexA
 
 letter-probability matrix: alength= 4 w= 16 nsites= 16 E= 0
   0.625000	  0.062500	  0.125000	  0.187500	
@@ -134,7 +134,7 @@ letter-probability matrix: alength= 4 w= 16 nsites= 16 E= 0
 
 URL http://www.collectf.org/EXPREG_00000120
 
-MOTIF HapR_V.cholerae
+MOTIF HapR
 
 letter-probability matrix: alength= 4 w= 22 nsites= 18 E= 0
   0.000000	  0.277778	  0.055556	  0.666667	
@@ -162,7 +162,7 @@ letter-probability matrix: alength= 4 w= 22 nsites= 18 E= 0
 
 URL http://www.collectf.org/EXPREG_00000130
 
-MOTIF CodY_L.lactis
+MOTIF CodY
 
 letter-probability matrix: alength= 4 w= 15 nsites= 12 E= 0
   0.750000	  0.000000	  0.000000	  0.250000	
@@ -183,7 +183,7 @@ letter-probability matrix: alength= 4 w= 15 nsites= 12 E= 0
 
 URL http://www.collectf.org/EXPREG_000001b0
 
-MOTIF GlnR_S.erythraea
+MOTIF GlnR
 
 letter-probability matrix: alength= 4 w= 16 nsites= 34 E= 0
   0.058824	  0.117647	  0.294118	  0.529412	
@@ -205,7 +205,7 @@ letter-probability matrix: alength= 4 w= 16 nsites= 34 E= 0
 
 URL http://www.collectf.org/EXPREG_00000200
 
-MOTIF ToxT_V.cholerae
+MOTIF ToxT
 
 letter-probability matrix: alength= 4 w= 14 nsites= 11 E= 0
   0.181818	  0.181818	  0.000000	  0.636364	
@@ -225,7 +225,7 @@ letter-probability matrix: alength= 4 w= 14 nsites= 11 E= 0
 
 URL http://www.collectf.org/EXPREG_00000240
 
-MOTIF LuxR_V.campbellii
+MOTIF LuxR
 
 letter-probability matrix: alength= 4 w= 21 nsites= 489 E= 0
   0.192229	  0.188139	  0.120654	  0.498978	
@@ -252,7 +252,7 @@ letter-probability matrix: alength= 4 w= 21 nsites= 489 E= 0
 
 URL http://www.collectf.org/EXPREG_00000290
 
-MOTIF CodY_S.pyogenes
+MOTIF CodY
 
 letter-probability matrix: alength= 4 w= 15 nsites= 15 E= 0
   0.666667	  0.133333	  0.000000	  0.200000	
@@ -273,7 +273,7 @@ letter-probability matrix: alength= 4 w= 15 nsites= 15 E= 0
 
 URL http://www.collectf.org/EXPREG_00000330
 
-MOTIF Fur_H.pylori
+MOTIF Fur
 
 letter-probability matrix: alength= 4 w= 48 nsites= 23 E= 0
   0.434783	  0.043478	  0.043478	  0.478261	
@@ -327,7 +327,7 @@ letter-probability matrix: alength= 4 w= 48 nsites= 23 E= 0
 
 URL http://www.collectf.org/EXPREG_00000340
 
-MOTIF Fur_A.salmonicida
+MOTIF Fur
 
 letter-probability matrix: alength= 4 w= 25 nsites= 23 E= 0
   0.391304	  0.043478	  0.391304	  0.173913	
@@ -358,7 +358,7 @@ letter-probability matrix: alength= 4 w= 25 nsites= 23 E= 0
 
 URL http://www.collectf.org/EXPREG_00000360
 
-MOTIF Fur_A.ferrooxidans
+MOTIF Fur
 
 letter-probability matrix: alength= 4 w= 21 nsites= 11 E= 0
   0.090909	  0.272727	  0.181818	  0.454545	
@@ -385,7 +385,7 @@ letter-probability matrix: alength= 4 w= 21 nsites= 11 E= 0
 
 URL http://www.collectf.org/EXPREG_00000370
 
-MOTIF ArgR_P.aeruginosa
+MOTIF ArgR
 
 letter-probability matrix: alength= 4 w= 43 nsites= 18 E= 0
   0.444444	  0.222222	  0.166667	  0.166667	
@@ -434,7 +434,7 @@ letter-probability matrix: alength= 4 w= 43 nsites= 18 E= 0
 
 URL http://www.collectf.org/EXPREG_00000470
 
-MOTIF PvdS_P.aeruginosa
+MOTIF PvdS
 
 letter-probability matrix: alength= 4 w= 24 nsites= 21 E= 0
   0.952381	  0.047619	  0.000000	  0.000000	
@@ -464,7 +464,7 @@ letter-probability matrix: alength= 4 w= 24 nsites= 21 E= 0
 
 URL http://www.collectf.org/EXPREG_000004b0
 
-MOTIF AmrZ_P.aeruginosa
+MOTIF AmrZ
 
 letter-probability matrix: alength= 4 w= 24 nsites= 363 E= 0
   0.170799	  0.303030	  0.391185	  0.134986	
@@ -494,7 +494,7 @@ letter-probability matrix: alength= 4 w= 24 nsites= 363 E= 0
 
 URL http://www.collectf.org/EXPREG_000004d0
 
-MOTIF DosR_M.tuberculosis
+MOTIF DosR
 
 letter-probability matrix: alength= 4 w= 20 nsites= 14 E= 0
   0.214286	  0.000000	  0.357143	  0.428571	
@@ -520,7 +520,7 @@ letter-probability matrix: alength= 4 w= 20 nsites= 14 E= 0
 
 URL http://www.collectf.org/EXPREG_000005c0
 
-MOTIF LexA_M.tuberculosis
+MOTIF LexA
 
 letter-probability matrix: alength= 4 w= 20 nsites= 41 E= 0
   0.341463	  0.170732	  0.097561	  0.390244	
@@ -546,7 +546,7 @@ letter-probability matrix: alength= 4 w= 20 nsites= 41 E= 0
 
 URL http://www.collectf.org/EXPREG_000005d0
 
-MOTIF NikR_H.pylori
+MOTIF NikR
 
 letter-probability matrix: alength= 4 w= 35 nsites= 19 E= 0
   0.473684	  0.000000	  0.105263	  0.421053	
@@ -587,7 +587,7 @@ letter-probability matrix: alength= 4 w= 35 nsites= 19 E= 0
 
 URL http://www.collectf.org/EXPREG_00000670
 
-MOTIF IHF_P.putida
+MOTIF IHF
 
 letter-probability matrix: alength= 4 w= 28 nsites= 43 E= 0
   0.348837	  0.186047	  0.186047	  0.279070	
@@ -621,7 +621,7 @@ letter-probability matrix: alength= 4 w= 28 nsites= 43 E= 0
 
 URL http://www.collectf.org/EXPREG_000006f0
 
-MOTIF IHF_P.putida
+MOTIF IHF
 
 letter-probability matrix: alength= 4 w= 14 nsites= 40 E= 0
   0.150000	  0.250000	  0.300000	  0.300000	
@@ -641,7 +641,7 @@ letter-probability matrix: alength= 4 w= 14 nsites= 40 E= 0
 
 URL http://www.collectf.org/EXPREG_00000700
 
-MOTIF LexA_P.putida
+MOTIF LexA
 
 letter-probability matrix: alength= 4 w= 22 nsites= 12 E= 0
   0.333333	  0.083333	  0.250000	  0.333333	
@@ -669,7 +669,7 @@ letter-probability matrix: alength= 4 w= 22 nsites= 12 E= 0
 
 URL http://www.collectf.org/EXPREG_00000710
 
-MOTIF NtcA_N.sp.
+MOTIF NtcA
 
 letter-probability matrix: alength= 4 w= 14 nsites= 509 E= 0
   0.003929	  0.000000	  0.996071	  0.000000	
@@ -689,7 +689,7 @@ letter-probability matrix: alength= 4 w= 14 nsites= 509 E= 0
 
 URL http://www.collectf.org/EXPREG_00000760
 
-MOTIF LexA_E.coli
+MOTIF LexA
 
 letter-probability matrix: alength= 4 w= 20 nsites= 50 E= 0
   0.360000	  0.040000	  0.100000	  0.500000	
@@ -715,7 +715,7 @@ letter-probability matrix: alength= 4 w= 20 nsites= 50 E= 0
 
 URL http://www.collectf.org/EXPREG_000007a0
 
-MOTIF MatP_E.coli
+MOTIF MatP
 
 letter-probability matrix: alength= 4 w= 53 nsites= 32 E= 0
   0.187500	  0.375000	  0.156250	  0.281250	
@@ -774,7 +774,7 @@ letter-probability matrix: alength= 4 w= 53 nsites= 32 E= 0
 
 URL http://www.collectf.org/EXPREG_000007b0
 
-MOTIF Fur_E.coli
+MOTIF Fur
 
 letter-probability matrix: alength= 4 w= 31 nsites= 26 E= 0
   0.384615	  0.307692	  0.000000	  0.307692	
@@ -811,7 +811,7 @@ letter-probability matrix: alength= 4 w= 31 nsites= 26 E= 0
 
 URL http://www.collectf.org/EXPREG_000007c0
 
-MOTIF ArcA_E.coli
+MOTIF ArcA
 
 letter-probability matrix: alength= 4 w= 21 nsites= 66 E= 0
   0.469697	  0.045455	  0.000000	  0.484848	
@@ -838,7 +838,7 @@ letter-probability matrix: alength= 4 w= 21 nsites= 66 E= 0
 
 URL http://www.collectf.org/EXPREG_00000800
 
-MOTIF OmpR_S.enterica
+MOTIF OmpR
 
 letter-probability matrix: alength= 4 w= 9 nsites= 51 E= 0
   0.196078	  0.235294	  0.000000	  0.568627	
@@ -853,7 +853,7 @@ letter-probability matrix: alength= 4 w= 9 nsites= 51 E= 0
 
 URL http://www.collectf.org/EXPREG_00000810
 
-MOTIF Lrp_E.coli
+MOTIF Lrp
 
 letter-probability matrix: alength= 4 w= 15 nsites= 147 E= 0
   0.020408	  0.598639	  0.068027	  0.312925	
@@ -874,7 +874,7 @@ letter-probability matrix: alength= 4 w= 15 nsites= 147 E= 0
 
 URL http://www.collectf.org/EXPREG_00000840
 
-MOTIF CRP_E.coli
+MOTIF CRP
 
 letter-probability matrix: alength= 4 w= 22 nsites= 62 E= 0
   0.274194	  0.112903	  0.225806	  0.387097	
@@ -902,7 +902,7 @@ letter-probability matrix: alength= 4 w= 22 nsites= 62 E= 0
 
 URL http://www.collectf.org/EXPREG_00000850
 
-MOTIF RutR_E.coli
+MOTIF RutR
 
 letter-probability matrix: alength= 4 w= 16 nsites= 19 E= 0
   0.263158	  0.157895	  0.000000	  0.578947	
@@ -924,7 +924,7 @@ letter-probability matrix: alength= 4 w= 16 nsites= 19 E= 0
 
 URL http://www.collectf.org/EXPREG_00000870
 
-MOTIF Fur_V.cholerae
+MOTIF Fur
 
 letter-probability matrix: alength= 4 w= 23 nsites= 106 E= 0
   0.641509	  0.084906	  0.141509	  0.132075	
@@ -953,7 +953,7 @@ letter-probability matrix: alength= 4 w= 23 nsites= 106 E= 0
 
 URL http://www.collectf.org/EXPREG_000008b0
 
-MOTIF CtrA_C.crescentus
+MOTIF CtrA
 
 letter-probability matrix: alength= 4 w= 22 nsites= 13 E= 0
   0.000000	  0.538462	  0.384615	  0.076923	
@@ -981,7 +981,7 @@ letter-probability matrix: alength= 4 w= 22 nsites= 13 E= 0
 
 URL http://www.collectf.org/EXPREG_000008c0
 
-MOTIF MogR_L.monocytogenes
+MOTIF MogR
 
 letter-probability matrix: alength= 4 w= 15 nsites= 21 E= 0
   0.238095	  0.095238	  0.047619	  0.619048	
@@ -1002,7 +1002,7 @@ letter-probability matrix: alength= 4 w= 15 nsites= 21 E= 0
 
 URL http://www.collectf.org/EXPREG_000008d0
 
-MOTIF PhoP_S.enterica
+MOTIF PhoP
 
 letter-probability matrix: alength= 4 w= 27 nsites= 42 E= 0
   0.190476	  0.357143	  0.071429	  0.380952	
@@ -1035,7 +1035,7 @@ letter-probability matrix: alength= 4 w= 27 nsites= 42 E= 0
 
 URL http://www.collectf.org/EXPREG_000008e0
 
-MOTIF PhoP_E.coli
+MOTIF PhoP
 
 letter-probability matrix: alength= 4 w= 23 nsites= 43 E= 0
   0.302326	  0.255814	  0.069767	  0.372093	
@@ -1064,7 +1064,7 @@ letter-probability matrix: alength= 4 w= 23 nsites= 43 E= 0
 
 URL http://www.collectf.org/EXPREG_00000950
 
-MOTIF AmpR_P.aeruginosa
+MOTIF AmpR
 
 letter-probability matrix: alength= 4 w= 16 nsites= 26 E= 0
   0.384615	  0.230769	  0.153846	  0.230769	
@@ -1086,7 +1086,7 @@ letter-probability matrix: alength= 4 w= 16 nsites= 26 E= 0
 
 URL http://www.collectf.org/EXPREG_000009a0
 
-MOTIF LasR_P.aeruginosa
+MOTIF LasR
 
 letter-probability matrix: alength= 4 w= 23 nsites= 61 E= 0
   0.278689	  0.278689	  0.245902	  0.196721	
@@ -1115,7 +1115,7 @@ letter-probability matrix: alength= 4 w= 23 nsites= 61 E= 0
 
 URL http://www.collectf.org/EXPREG_000009b0
 
-MOTIF CcpA_B.subtilis
+MOTIF CcpA
 
 letter-probability matrix: alength= 4 w= 27 nsites= 74 E= 0
   0.351351	  0.202703	  0.094595	  0.351351	
@@ -1148,7 +1148,7 @@ letter-probability matrix: alength= 4 w= 27 nsites= 74 E= 0
 
 URL http://www.collectf.org/EXPREG_000009c0
 
-MOTIF AlgR_P.aeruginosa
+MOTIF AlgR
 
 letter-probability matrix: alength= 4 w= 24 nsites= 19 E= 0
   0.052632	  0.210526	  0.263158	  0.473684	
@@ -1178,7 +1178,7 @@ letter-probability matrix: alength= 4 w= 24 nsites= 19 E= 0
 
 URL http://www.collectf.org/EXPREG_000009d0
 
-MOTIF RpoN_S.enterica
+MOTIF RpoN
 
 letter-probability matrix: alength= 4 w= 18 nsites= 70 E= 0
   0.042857	  0.085714	  0.000000	  0.871429	
@@ -1202,7 +1202,7 @@ letter-probability matrix: alength= 4 w= 18 nsites= 70 E= 0
 
 URL http://www.collectf.org/EXPREG_000009e0
 
-MOTIF LexA_B.subtilis
+MOTIF LexA
 
 letter-probability matrix: alength= 4 w= 14 nsites= 40 E= 0
   0.500000	  0.500000	  0.000000	  0.000000	
@@ -1222,7 +1222,7 @@ letter-probability matrix: alength= 4 w= 14 nsites= 40 E= 0
 
 URL http://www.collectf.org/EXPREG_00000a00
 
-MOTIF Fur_Y.pestis
+MOTIF Fur
 
 letter-probability matrix: alength= 4 w= 19 nsites= 32 E= 0
   0.906250	  0.031250	  0.062500	  0.000000	
@@ -1247,7 +1247,7 @@ letter-probability matrix: alength= 4 w= 19 nsites= 32 E= 0
 
 URL http://www.collectf.org/EXPREG_00000a20
 
-MOTIF LexA_P.aeruginosa
+MOTIF LexA
 
 letter-probability matrix: alength= 4 w= 20 nsites= 13 E= 0
   0.230769	  0.230769	  0.153846	  0.384615	
@@ -1273,7 +1273,7 @@ letter-probability matrix: alength= 4 w= 20 nsites= 13 E= 0
 
 URL http://www.collectf.org/EXPREG_00000a60
 
-MOTIF CsgD_E.coli
+MOTIF CsgD
 
 letter-probability matrix: alength= 4 w= 17 nsites= 18 E= 0
   0.444444	  0.166667	  0.055556	  0.333333	
@@ -1296,7 +1296,7 @@ letter-probability matrix: alength= 4 w= 17 nsites= 18 E= 0
 
 URL http://www.collectf.org/EXPREG_00000b00
 
-MOTIF Fur_B.subtilis
+MOTIF Fur
 
 letter-probability matrix: alength= 4 w= 22 nsites= 24 E= 0
   0.250000	  0.041667	  0.458333	  0.250000	
@@ -1324,7 +1324,7 @@ letter-probability matrix: alength= 4 w= 22 nsites= 24 E= 0
 
 URL http://www.collectf.org/EXPREG_00000b40
 
-MOTIF Vfr_P.aeruginosa
+MOTIF Vfr
 
 letter-probability matrix: alength= 4 w= 32 nsites= 17 E= 0
   0.235294	  0.235294	  0.235294	  0.294118	
@@ -1362,7 +1362,7 @@ letter-probability matrix: alength= 4 w= 32 nsites= 17 E= 0
 
 URL http://www.collectf.org/EXPREG_00000b50
 
-MOTIF PerR_B.subtilis
+MOTIF PerR
 
 letter-probability matrix: alength= 4 w= 15 nsites= 14 E= 0
   0.071429	  0.071429	  0.000000	  0.857143	
@@ -1383,7 +1383,7 @@ letter-probability matrix: alength= 4 w= 15 nsites= 14 E= 0
 
 URL http://www.collectf.org/EXPREG_00000bc0
 
-MOTIF EspR_M.tuberculosis
+MOTIF EspR
 
 letter-probability matrix: alength= 4 w= 9 nsites= 407 E= 0
   0.162162	  0.378378	  0.260442	  0.199017	
@@ -1398,7 +1398,7 @@ letter-probability matrix: alength= 4 w= 9 nsites= 407 E= 0
 
 URL http://www.collectf.org/EXPREG_00000c30
 
-MOTIF Fur_P.aeruginosa
+MOTIF Fur
 
 letter-probability matrix: alength= 4 w= 19 nsites= 61 E= 0
   0.147541	  0.147541	  0.573770	  0.131148	
@@ -1423,7 +1423,7 @@ letter-probability matrix: alength= 4 w= 19 nsites= 61 E= 0
 
 URL http://www.collectf.org/EXPREG_00000c80
 
-MOTIF CcpA_C.difficile
+MOTIF CcpA
 
 letter-probability matrix: alength= 4 w= 16 nsites= 52 E= 0
   0.461538	  0.019231	  0.269231	  0.250000	
@@ -1445,7 +1445,7 @@ letter-probability matrix: alength= 4 w= 16 nsites= 52 E= 0
 
 URL http://www.collectf.org/EXPREG_00000d10
 
-MOTIF Zur_P.protegens
+MOTIF Zur
 
 letter-probability matrix: alength= 4 w= 17 nsites= 12 E= 0
   0.083333	  0.000000	  0.166667	  0.750000	
@@ -1468,7 +1468,7 @@ letter-probability matrix: alength= 4 w= 17 nsites= 12 E= 0
 
 URL http://www.collectf.org/EXPREG_00000e20
 
-MOTIF Fur_N.gonorrhoeae
+MOTIF Fur
 
 letter-probability matrix: alength= 4 w= 24 nsites= 30 E= 0
   0.266667	  0.166667	  0.166667	  0.400000	
@@ -1498,7 +1498,7 @@ letter-probability matrix: alength= 4 w= 24 nsites= 30 E= 0
 
 URL http://www.collectf.org/EXPREG_00000ec0
 
-MOTIF HgtR_G.sulfurreducens
+MOTIF HgtR
 
 letter-probability matrix: alength= 4 w= 23 nsites= 14 E= 0
   0.714286	  0.071429	  0.071429	  0.142857	
@@ -1527,7 +1527,7 @@ letter-probability matrix: alength= 4 w= 23 nsites= 14 E= 0
 
 URL http://www.collectf.org/EXPREG_00000f50
 
-MOTIF GlxR_C.glutamicum
+MOTIF GlxR
 
 letter-probability matrix: alength= 4 w= 26 nsites= 207 E= 0
   0.309179	  0.202899	  0.231884	  0.256039	
@@ -1559,7 +1559,7 @@ letter-probability matrix: alength= 4 w= 26 nsites= 207 E= 0
 
 URL http://www.collectf.org/EXPREG_00000f90
 
-MOTIF BldD_S.coelicolor
+MOTIF BldD
 
 letter-probability matrix: alength= 4 w= 15 nsites= 24 E= 0
   0.333333	  0.083333	  0.500000	  0.083333	
@@ -1580,7 +1580,7 @@ letter-probability matrix: alength= 4 w= 15 nsites= 24 E= 0
 
 URL http://www.collectf.org/EXPREG_00000fc0
 
-MOTIF CRP_Y.pestis
+MOTIF CRP
 
 letter-probability matrix: alength= 4 w= 32 nsites= 31 E= 0
   0.225806	  0.225806	  0.161290	  0.387097	
@@ -1618,7 +1618,7 @@ letter-probability matrix: alength= 4 w= 32 nsites= 31 E= 0
 
 URL http://www.collectf.org/EXPREG_00000ff0
 
-MOTIF OmpR_Y.pestis
+MOTIF OmpR
 
 letter-probability matrix: alength= 4 w= 20 nsites= 14 E= 0
   0.357143	  0.071429	  0.214286	  0.357143	
@@ -1644,7 +1644,7 @@ letter-probability matrix: alength= 4 w= 20 nsites= 14 E= 0
 
 URL http://www.collectf.org/EXPREG_00001000
 
-MOTIF Fur_S.enterica
+MOTIF Fur
 
 letter-probability matrix: alength= 4 w= 19 nsites= 30 E= 0
   0.100000	  0.200000	  0.566667	  0.133333	
@@ -1669,7 +1669,7 @@ letter-probability matrix: alength= 4 w= 19 nsites= 30 E= 0
 
 URL http://www.collectf.org/EXPREG_00001020
 
-MOTIF CRP_V.vulnificus
+MOTIF CRP
 
 letter-probability matrix: alength= 4 w= 25 nsites= 11 E= 0
   0.272727	  0.090909	  0.272727	  0.363636	
@@ -1700,7 +1700,7 @@ letter-probability matrix: alength= 4 w= 25 nsites= 11 E= 0
 
 URL http://www.collectf.org/EXPREG_00001030
 
-MOTIF CodY_B.anthracis
+MOTIF CodY
 
 letter-probability matrix: alength= 4 w= 11 nsites= 339 E= 0
   0.412979	  0.000000	  0.008850	  0.578171	
@@ -1717,7 +1717,7 @@ letter-probability matrix: alength= 4 w= 11 nsites= 339 E= 0
 
 URL http://www.collectf.org/EXPREG_000010c0
 
-MOTIF LexA_V.parahaemolyticus
+MOTIF LexA
 
 letter-probability matrix: alength= 4 w= 22 nsites= 10 E= 0
   0.400000	  0.100000	  0.200000	  0.300000	
@@ -1745,7 +1745,7 @@ letter-probability matrix: alength= 4 w= 22 nsites= 10 E= 0
 
 URL http://www.collectf.org/EXPREG_000010e0
 
-MOTIF Fur_P.syringae
+MOTIF Fur
 
 letter-probability matrix: alength= 4 w= 17 nsites= 337 E= 0
   0.486647	  0.068249	  0.124629	  0.320475	
@@ -1768,7 +1768,7 @@ letter-probability matrix: alength= 4 w= 17 nsites= 337 E= 0
 
 URL http://www.collectf.org/EXPREG_00001110
 
-MOTIF PvdS_P.syringae
+MOTIF PvdS
 
 letter-probability matrix: alength= 4 w= 29 nsites= 15 E= 0
   0.066667	  0.533333	  0.000000	  0.400000	
@@ -1803,7 +1803,7 @@ letter-probability matrix: alength= 4 w= 29 nsites= 15 E= 0
 
 URL http://www.collectf.org/EXPREG_00001150
 
-MOTIF PhhR_P.putida
+MOTIF PhhR
 
 letter-probability matrix: alength= 4 w= 29 nsites= 10 E= 0
   0.200000	  0.300000	  0.200000	  0.300000	
@@ -1838,7 +1838,7 @@ letter-probability matrix: alength= 4 w= 29 nsites= 10 E= 0
 
 URL http://www.collectf.org/EXPREG_00001190
 
-MOTIF ArcA_S.oneidensis
+MOTIF ArcA
 
 letter-probability matrix: alength= 4 w= 15 nsites= 20 E= 0
   0.000000	  0.000000	  0.950000	  0.050000	
@@ -1859,7 +1859,7 @@ letter-probability matrix: alength= 4 w= 15 nsites= 20 E= 0
 
 URL http://www.collectf.org/EXPREG_00001280
 
-MOTIF HexR_S.oneidensis
+MOTIF HexR
 
 letter-probability matrix: alength= 4 w= 17 nsites= 13 E= 0
   0.000000	  0.153846	  0.000000	  0.846154	
@@ -1882,7 +1882,7 @@ letter-probability matrix: alength= 4 w= 17 nsites= 13 E= 0
 
 URL http://www.collectf.org/EXPREG_000012b0
 
-MOTIF Fur_L.monocytogenes
+MOTIF Fur
 
 letter-probability matrix: alength= 4 w= 19 nsites= 16 E= 0
   0.000000	  0.000000	  1.000000	  0.000000	
@@ -1907,7 +1907,7 @@ letter-probability matrix: alength= 4 w= 19 nsites= 16 E= 0
 
 URL http://www.collectf.org/EXPREG_000013d0
 
-MOTIF LexA_L.monocytogenes
+MOTIF LexA
 
 letter-probability matrix: alength= 4 w= 22 nsites= 17 E= 0
   0.705882	  0.000000	  0.058824	  0.235294	
@@ -1935,7 +1935,7 @@ letter-probability matrix: alength= 4 w= 22 nsites= 17 E= 0
 
 URL http://www.collectf.org/EXPREG_000013e0
 
-MOTIF ExpR_S.meliloti
+MOTIF ExpR
 
 letter-probability matrix: alength= 4 w= 27 nsites= 21 E= 0
   0.428571	  0.047619	  0.285714	  0.238095	
@@ -1968,7 +1968,7 @@ letter-probability matrix: alength= 4 w= 27 nsites= 21 E= 0
 
 URL http://www.collectf.org/EXPREG_00001440
 
-MOTIF LexA_S.meliloti
+MOTIF LexA
 
 letter-probability matrix: alength= 4 w= 19 nsites= 10 E= 0
   0.500000	  0.200000	  0.100000	  0.200000	
@@ -1993,7 +1993,7 @@ letter-probability matrix: alength= 4 w= 19 nsites= 10 E= 0
 
 URL http://www.collectf.org/EXPREG_00001480
 
-MOTIF LexA_C.crescentus
+MOTIF LexA
 
 letter-probability matrix: alength= 4 w= 19 nsites= 45 E= 0
   0.311111	  0.311111	  0.088889	  0.288889	
@@ -2018,7 +2018,7 @@ letter-probability matrix: alength= 4 w= 19 nsites= 45 E= 0
 
 URL http://www.collectf.org/EXPREG_000014f0
 
-MOTIF CcpA_L.lactis
+MOTIF CcpA
 
 letter-probability matrix: alength= 4 w= 14 nsites= 75 E= 0
   0.280000	  0.000000	  0.000000	  0.720000	
@@ -2038,7 +2038,7 @@ letter-probability matrix: alength= 4 w= 14 nsites= 75 E= 0
 
 URL http://www.collectf.org/EXPREG_00001520
 
-MOTIF OxyR_P.aeruginosa
+MOTIF OxyR
 
 letter-probability matrix: alength= 4 w= 40 nsites= 92 E= 0
   0.358696	  0.173913	  0.239130	  0.228261	
@@ -2084,7 +2084,7 @@ letter-probability matrix: alength= 4 w= 40 nsites= 92 E= 0
 
 URL http://www.collectf.org/EXPREG_00001560
 
-MOTIF PsrA_P.aeruginosa
+MOTIF PsrA
 
 letter-probability matrix: alength= 4 w= 14 nsites= 11 E= 0
   0.000000	  0.727273	  0.272727	  0.000000	
@@ -2104,7 +2104,7 @@ letter-probability matrix: alength= 4 w= 14 nsites= 11 E= 0
 
 URL http://www.collectf.org/EXPREG_00001610
 
-MOTIF VqsM_P.aeruginosa
+MOTIF VqsM
 
 letter-probability matrix: alength= 4 w= 17 nsites= 40 E= 0
   0.025000	  0.150000	  0.625000	  0.200000	
@@ -2127,7 +2127,7 @@ letter-probability matrix: alength= 4 w= 17 nsites= 40 E= 0
 
 URL http://www.collectf.org/EXPREG_00001670
 
-MOTIF Zur_N.meningitidis
+MOTIF Zur
 
 letter-probability matrix: alength= 4 w= 15 nsites= 13 E= 0
   0.000000	  0.076923	  0.000000	  0.923077	
@@ -2148,7 +2148,7 @@ letter-probability matrix: alength= 4 w= 15 nsites= 13 E= 0
 
 URL http://www.collectf.org/EXPREG_000016a0
 
-MOTIF RpoN_V.cholerae
+MOTIF RpoN
 
 letter-probability matrix: alength= 4 w= 15 nsites= 68 E= 0
   0.044118	  0.176471	  0.014706	  0.764706	
@@ -2169,7 +2169,7 @@ letter-probability matrix: alength= 4 w= 15 nsites= 68 E= 0
 
 URL http://www.collectf.org/EXPREG_000016e0
 
-MOTIF H-NS_V.cholerae
+MOTIF H-NS
 
 letter-probability matrix: alength= 4 w= 10 nsites= 10 E= 0
   0.100000	  0.100000	  0.200000	  0.600000	
@@ -2185,7 +2185,7 @@ letter-probability matrix: alength= 4 w= 10 nsites= 10 E= 0
 
 URL http://www.collectf.org/EXPREG_00001730
 
-MOTIF AdpA_S.coelicolor
+MOTIF AdpA
 
 letter-probability matrix: alength= 4 w= 10 nsites= 21 E= 0
   0.000000	  0.142857	  0.285714	  0.571429	
@@ -2201,7 +2201,7 @@ letter-probability matrix: alength= 4 w= 10 nsites= 21 E= 0
 
 URL http://www.collectf.org/EXPREG_00001770
 
-MOTIF LexA_S.aureus
+MOTIF LexA
 
 letter-probability matrix: alength= 4 w= 14 nsites= 10 E= 0
   0.000000	  1.000000	  0.000000	  0.000000	
@@ -2221,7 +2221,7 @@ letter-probability matrix: alength= 4 w= 14 nsites= 10 E= 0
 
 URL http://www.collectf.org/EXPREG_00001790
 
-MOTIF HrpX_X.oryzae
+MOTIF HrpX
 
 letter-probability matrix: alength= 4 w= 25 nsites= 10 E= 0
   0.000000	  0.000000	  0.000000	  1.000000	
@@ -2252,7 +2252,7 @@ letter-probability matrix: alength= 4 w= 25 nsites= 10 E= 0
 
 URL http://www.collectf.org/EXPREG_000017f0
 
-MOTIF CcpA_S.suis
+MOTIF CcpA
 
 letter-probability matrix: alength= 4 w= 23 nsites= 76 E= 0
   0.302632	  0.105263	  0.171053	  0.421053	

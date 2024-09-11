@@ -1,15 +1,18 @@
 import numpy as np
 import pandas as pd
+from src.preprocessing.preprocessing import *
+from src.config_network_structure import *
+from src.config_interface import *
 
-import sys
-sys.path.insert(1, '/workspaces/PROKODE-DOCKER/src')
-sys.path.insert(2, '/workspaces/PROKODE-DOCKER/src/preprocessing')
-from diffeq_plot import *
-from config_promo import *
-from preprocessing import *
+def create_network_json_main(prokode_dir, genome_loc, annotation_loc):
+    # create tfbs.csv and decay_rates.csv
+    tfbs_loc, decay_rates_loc = preprocessing_main(prokode_dir, genome_loc, annotation_loc)
 
-create_network(genome_loc, annotation_loc):
-  config_promo()
-  
+    # create network.json
+    network_loc = network_main(prokode_dir, tfbs_loc, decay_rates_loc)
 
-user_interface():
+    return network_loc
+
+def user_interface_main():
+    #
+    a = ''

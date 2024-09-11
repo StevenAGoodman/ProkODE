@@ -1,13 +1,11 @@
 import numpy as np
 import pandas as pd
 import os
-
-from  import *
 from run import *
 
-def get_betas():
+def get_betas(sample_loc):
     # read sample to df
-    sample_df = pd.read_csv(sample_file, names=['gene', 'transcription rate'])
+    sample_df = pd.read_csv(sample_loc, names=['gene', 'transcription rate'])
 
     network_hub()
     
@@ -17,11 +15,11 @@ def get_betas():
         
         get_gene_info()
 
-        rev_eq1(transcription_rate, N_tf, Kd_tf, N_p, Kd_p, [all tf jazz]) # from maths.py get beta value from context & trans rate
+        beta_from_eqs(transcription_rate, N_tf, Kd_tf, N_p, Kd_p, [all tf jazz]) # from maths.py get beta value from context & trans rate
 
     return tf_betas
 
-def main(data_folder_loc, results_loc):
+def preprocessing_main(data_folder_loc, results_loc):
     # import all expiremental data files into folder
     data_folder = os.fsencode(data_folder_loc)
     
@@ -32,11 +30,11 @@ def main(data_folder_loc, results_loc):
         sample_loc = os.fsdecode(sample_file)
 
         # get str in csv formatting of tf - beta relations for sample
-        sample_tf_betas = get_betas()
+        sample_tf_betas = get_betas(sample_loc)
 
         results_csvoutput += sample_tf_betas
 
     # write results to training csv (tf, beta)
     open(results_loc, 'w').write(results_csvoutput)
 
-main('/data/samples')
+preprocessing_main('/data/samples')
