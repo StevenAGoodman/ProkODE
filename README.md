@@ -5,8 +5,8 @@
 I am currently using external software. To allow others to edit this repo without the hassle of manually installing everything, I assume people have Visual Studio Code with the dev container functionality.
 
 To work within this repo:
-1. navigate to 'vscode_dev' branch in this repository
-2. download & unzip its zip folder
+1. navigate to 'main' branch in this repository
+2. download code to folder
 3. open vscode
 4. ensure 'Visual Studio Code Dev Containers' extension is installed
 5. `ctrl + shift + p`: run 'Dev Containers: Open Folder in Container...'
