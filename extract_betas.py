@@ -3,11 +3,13 @@ import pandas as pd
 import os
 from run import *
 
+def network_hub():
+
 def get_betas(sample_loc):
     # read sample to df
     sample_df = pd.read_csv(sample_loc, names=['gene', 'transcription rate'])
 
-    network_hub()
+    tf_ref_arr, = network_hub()
     
     for _,row in sample.iter_rows:
         gene = row[0]
