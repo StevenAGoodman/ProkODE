@@ -1,7 +1,27 @@
 import numpy as np
 import pandas as pd
+import scipy as sp
 import os
 from run import *
+
+def function(x, params):
+    tgdecay = tg_decay_rate
+    y = (params[0] * x) / (1 + tgdecay * x)
+    return y
+
+def fit_model_for_transcription_rate(time_series_data_loc, gene_arr):
+    ts_df = pd.read_csv(timeseries data loc)
+
+    for gene in gene_arr:
+        x_data = ts_df.loc[ts_df['gene'] == gene]['time']
+        y_data = ts_df.loc[ts_df['gene'] == gene]['expression']
+        
+        tg_decay_rate = 
+        sp.optimize.curve_fit(function, )
+
+def estimate_tfparams(coefficient_matrix, beta_all_matrix):
+    tf_params = sp.sparse.linalg.lsqr(coefficient_matrix, beta_all_matrix)
+    return tf_params
 
 def network_hub():
 
