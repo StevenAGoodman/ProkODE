@@ -33,17 +33,17 @@ def create_tfbs_file(gene_arr, promo_file, pcsm_database_file):
         index = math.floor(int(loc) / promo_len)
         return key[index]
 
-    def run_trap(sequence_file, pwm_file, tf_len):
+    def run_ciiider(sequence_file, pwm_file, tf_len):
+        
+        config_o = f'[General]\nSTARTPOINT=1\nENDPOINT=1\n\n[Scan]\nGENELISTFILENAME={open('')}\nREFERENCEFASTA=/workspaces/PROKODE-DOCKER/src/inputs/genome.txt\nGENELOOKUPMANAGER={promo_file}\nMATRIXFILE={pwm_file}\nGENESCANRESULTS=tfsb_out.txt'
+        open('config.ini', 'w').write(config_o)
+        # java -jar /CiiiDER/CiiiDER_TFMs/CiiiDER.jar –n config.ini
+        subprocess.run(['java','-jar','/CiiiDER/CiiiDER_TFMs/CiiiDER.jar', '-n', 'config.ini'])
+        
         output_file = 'trap_results.gff'
         # annotate -s promoters.fa -psem psem.psem -t 0.1 -g 0.5 -R 21 -S 1 -o trap_results.txt 
         subprocess.run(['annotate', '-s', sequence_file, '--psem', pwm_file, '-t', bind_threshold, '-g', gc, '-R', tf_len, '-S', shift_len, '-o', output_file])
-        # subprocess.run('echo', 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
         return output_file
-
-    def to_psem(matrix_file):
-        out_file = 'psem.psem'
-        subprocess.run(['convert-pscm', '--pscm', matrix_file, '--to', 'psem', '-g', gc, '-o', out_file])
-        return out_file
         
     def query_pcsm_data(gene):
         gene_found = False
@@ -72,8 +72,7 @@ def create_tfbs_file(gene_arr, promo_file, pcsm_database_file):
             tf_len = int(tf_len/copies_found)
         return fname, f'{tf_len}'
 
-    with open('promo_key.json', 'r') as file:
-        key = json.load(file)
+    key = json.load(open('promo_key.json', 'r'))
 
     results = 'tf,tg,kd\n'
     for gene in gene_arr:
@@ -82,10 +81,8 @@ def create_tfbs_file(gene_arr, promo_file, pcsm_database_file):
         if pscm == -1:
             continue
         tf = gene
-        psem = to_psem(pscm)#file path
-        print(tf_len)
 
-        trap_file = run_trap(promo_file, psem, tf_len)
+        trap_file = run_ciiider(promo_file, pscm, tf_len)
         trap_df = open(trap_file, 'r').readlines()
         trap_df = [line.replace('\n','').split('\t') for line in trap_df]
         for row in trap_df[2:]:

@@ -9,7 +9,7 @@ To work within this repo:
 2. download & unzip its zip folder
 3. open vscode
 4. ensure 'Visual Studio Code Dev Containers' extension is installed
-5. ctrl + shift + p, run 'Dev Containers: Open Folder in Container'
+5. `ctrl + shift + p`: run 'Dev Containers: Open Folder in Container...'
 6. select the unzipped folder you accessed through 'vscode_dev'
 
 With this you should be able to edit the code with all the necessary packages. Please contact with any difficulties!
