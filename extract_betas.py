@@ -6,8 +6,9 @@ from run import *
 
 def network_hub():
 
-def get_beta_all():
-    
+def get_beta_all_static():
+
+def get_beta_all_timeseries():    
 
 def get_betas(network_json, sample_gene_dict tf_key):
     coefficient_matrix = []
