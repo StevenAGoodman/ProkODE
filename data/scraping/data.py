@@ -1,14 +1,22 @@
-import GEOparse
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import random
 
-gse = GEOparse.get_GEO(geo="GSE1563", destdir="./")
+df = pd.read_csv("GSE90743_E14R025_raw_counts.txt",delimiter='\t', usecols=range(12))
+# 5m,n10, 25, 45, 75, 120, 210, 330, 25h, 26, 28
 
-print()
-print("GSM example:")
-for gsm_name, gsm in gse.gsms.items():
-    print("Name: ", gsm_name)
-    print("Metadata:",)
-    for key, value in gsm.metadata.items():
-        print(" - %s : %s" % (key, ", ".join(value)))
-    print ("Table data:",)
-    print (gsm.table.head())
-    break
+# ploooooot stuff
+x = [5,10,25,45,75,120,210,330,1500,1560,1680]
+
+fig, ax = plt.subplots()
+
+for i in range(5):
+    y_i = df.iloc[i].values.flatten().tolist()[1:]
+    
+    ax.plot(x, y_i, random.choice(['-r', '-g', '-b', '-y']))
+
+# ax.scatter(x, y2, label='Dataset 2',marker='^')
+# ax.scatter(x, y3, label='Dataset 3',marker='s')
+# ax.scatter(x, y4, label='Dataset 4')
+plt.show()

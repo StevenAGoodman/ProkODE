@@ -4,11 +4,14 @@ import scipy as sp
 import os
 from run import *
 
-def network_hub():
+prokode_dir = '/workspaces/PROKODE-DOCKER'
 
 def get_beta_all_static():
 
-def get_beta_all_timeseries():    
+def get_beta_all_timeseries():
+    
+    beta_all = 
+    return beta_all
 
 def get_betas(network_json, sample_gene_dict tf_key):
     coefficient_matrix = []
@@ -36,20 +39,19 @@ def get_betas(network_json, sample_gene_dict tf_key):
     coefficient_matrix = np.array(coefficient_matrix)
     beta_all_matrix = np.array(beta_all_matrix, columnshape)
     
-    _, beta_arr = scipy.sparse.linalg.lsqr(coefficient_matrix, beta_all_matrix)
+    _, beta_arr = sp.linalg.sparse.lsqr(coefficient_matrix, beta_all_matrix)
     return beta_arr
 
-def get_betas(sample_loc):
+def get_betas(sample_loc, genome_loc, annotation_loc):
     # read sample to df
     sample_df = pd.read_csv(sample_loc, names=['gene', 'transcription rate'])
 
-    tf_ref_arr, = network_hub()
-    
-    for _,row in sample.iter_rows:
+    net_json_loc = create_network_json_main(prokode_dir,)
+    network_dict = json.load(open(net_json_loc, 'r'))
+
+    for _,row in sample_df.iter_rows:
         gene = row[0]
         transcription_rate = row[1]
-        
-        get_gene_info()
 
         get_betas(transcription_rate, N_tf, Kd_tf, N_p, Kd_p, [all tf jazz]) # from maths.py get beta value from context & trans rate
 
