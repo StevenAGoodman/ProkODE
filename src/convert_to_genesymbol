@@ -1,9 +1,1 @@
-
-from rpy2.robjects.packages import importr, data
-utils = importr('utils')
-base = importr('base')
-
-utils.install_packages()
-
-def convert_main():
-    # 
+# just use ncbi file and search for row with name, get first item in row
