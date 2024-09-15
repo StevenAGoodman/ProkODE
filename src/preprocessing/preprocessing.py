@@ -4,6 +4,23 @@ import subprocess
 import os
 import sys
 
+def clean(csv_str):
+    return_str = ""
+    prev = ''
+    for row in csv_str.split('\n'):
+        a = row.find(',')
+        b = prev.find(',')
+        c = row[:(a+1 + row[a+1:].find(','))]
+        d = prev[:(b+1 + prev[b+1:].find(','))]
+
+        if c == d:
+            aff = sum([float(row[(a+2 + row[a+1:].find(',')):]), float(prev[(b+2 + prev[b+1:].find(',')):])])/2.0
+            prev = f'{c},{aff}'
+        else:
+            return_str += prev + '\n'
+            prev = row
+    return return_str
+
 def run_CiiiDER(prokode_dir, promoters_loc, matrices_loc, deficit_val):
     # CiiiDER (https://ciiider.erc.monash.edu/) is a software that searches the promoter DNA regions of each gene with the binding motifs of each transcription factor to determine their binding sites. 
 
@@ -68,10 +85,14 @@ def create_tfbs(prokode_dir, ci_results_loc):
         kd_vals.append(kd)
 
     tfbs_df.insert(2,'Kd', kd_vals)
+    tfbs_df.drop(axis=1, index=0)
 
     # write to tfbs.csv
     tfbs_loc = prokode_dir + '/src/tfbs.csv'
-    tfbs_df.to_csv(open(tfbs_loc, 'w'))
+    out = tfbs_df.to_csv()
+    out = clean(out)
+
+    open(tfbs_loc, 'w').write(out)
     
     return tfbs_loc
 

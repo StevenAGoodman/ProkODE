@@ -42,6 +42,7 @@ def create_network_json(prokode_dir, gene_arr, decay_loc, tfbs_loc):
         reg_arr = {}
         # within each gene's "regulators": array
         for _, tf_row in tfbs_df[tfbs_df['tg']==tg].iterrows():
+            tf_row['tf'] = "polymerase" if tf_row['tf'] == "ropD" else tf_row['tf']
             # beta = tf_row['beta']
             kdtf = tf_row['Kd']
             reg_arr[tf_row['tf']] = {"beta":"nan","kd_tf":kdtf}

@@ -1,0 +1,26 @@
+#command_line= annotate -s promoters.fa --psem psem.psem -t 0.3 -g 0.5 -R 22 -S 1 -o trap_results.gff 
+#seqname	source	feature	start	end	score	strand	frame	attributes
+divide	ANNOTATE	region	70095	70116	0.641913	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	70096	70117	0.641913	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	70097	70118	0.641913	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	70098	70119	0.641913	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	70099	70120	0.641913	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	70100	70121	0.641913	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	70101	70122	0.641203	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	70102	70123	0.641203	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	86350	86371	0.325795	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	86351	86372	0.325663	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	156853	156874	0.458647	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	156854	156875	0.458619	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	156855	156876	0.458619	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	156856	156877	0.458619	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	156857	156878	0.458619	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	156858	156879	0.458619	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	156859	156880	0.45837	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	156860	156881	0.45837	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	215336	215357	0.808779	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	215337	215358	0.808779	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	302935	302956	0.316013	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	302936	302957	0.316015	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	424526	424547	0.541091	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
+divide	ANNOTATE	region	424527	424548	0.541091	+	.	matrix_id=ArcA;matrix_name=N/A;seq_id=divide;def_L=22
