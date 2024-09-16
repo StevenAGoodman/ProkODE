@@ -73,7 +73,7 @@ DEFICIT = {deficit_val}"""
         out = []
         for line in cfile:
             if len(line)<5:
-                line = line[:-1]
+                line = line[:-2]
                 prev = line
             else:
                 prev += line
