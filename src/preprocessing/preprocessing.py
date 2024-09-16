@@ -41,7 +41,7 @@ def clean(csv_str):
             prev = row
     return return_str
 
-def run_CiiiDER(prokode_dir, promoters_loc, matrices_loc, deficit_val):
+def run_CiiiDER(prokode_dir, jar_loc, promoters_loc, matrices_loc, deficit_val):
     # CiiiDER (https://ciiider.erc.monash.edu/) is a software that searches the promoter DNA regions of each gene with the binding motifs of each transcription factor to determine their binding sites. 
 
     c_output_fpath = prokode_dir + '/src/preprocessing/CiiiDER_results.txt'
@@ -79,7 +79,7 @@ DEFICIT = {deficit_val}"""
                 prev += line
                 out.append(prev)
                 
-    open(c_output_fpath,'w').write(out)
+    open(c_output_fpath,'w').writelines(out)
 
     return c_output_fpath
 
@@ -152,7 +152,7 @@ def decay_rates_main(prokode_dir, annotation_loc):
 
     return decay_rates_loc
 
-def preprocessing_main(prokode_dir, genome_loc, annotation_loc, pfm_database_loc, add_betas=False):
+def preprocessing_main(prokode_dir, genome_loc, annotation_loc, pfm_database_loc, CiiiDER_jar_loc, add_betas=False):
     # create promoters.fa
     promoters_loc = create_promoterf(prokode_dir, genome_loc, annotation_loc)
 
@@ -160,7 +160,7 @@ def preprocessing_main(prokode_dir, genome_loc, annotation_loc, pfm_database_loc
     motif_matrix_loc = config_tfmotifs(prokode_dir, pfm_database_loc, annotation_loc)
 
     # run CiiiDER with files
-    CiiiDER_results_loc = run_CiiiDER(prokode_dir, promoters_loc,motif_matrix_loc, 0.25)
+    CiiiDER_results_loc = run_CiiiDER(prokode_dir, CiiiDER_jar_loc, promoters_loc,motif_matrix_loc, 0.25)
 
     # configer into tf binding site csv
     tfbs_loc = create_tfbs(prokode_dir, CiiiDER_results_loc)
