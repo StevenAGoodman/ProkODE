@@ -8,7 +8,7 @@ import sys
 def config_tfmotifs(prokode_dir, pfm_database_loc, annotation_loc):
     motif_arr = []
 
-    annotation_df = pd.read_csv(annotation_loc)
+    annotation_df = pd.read_csv(annotation_loc, delimiter='\t')
     gene_vector =  annotation_df['geneid'].tolist()
     record = motifs.parse(open(pfm_database_loc, 'r'), 'JASPAR')
     
@@ -58,23 +58,42 @@ DEFICIT = {deficit_val}"""
     
     open(prokode_dir + '/src/preprocessing/config.ini', 'w').write(config_o)
 
-    # run ciiider
-    subprocess.run(['java','-jar','/CiiiDER/CiiiDER_TFMs/CiiiDER.jar', '-n', prokode_dir + '/src/preprocessing/config.ini'])
+    # run ciiider ######## TEMPORARY: !!!!!!!!!!!!!!!!!!!PLEASE CHANGE CIIIDER LOC!!!!!!!!!!!!!!!!!!!!!!##############
+    # !
+    # !
+    # !
+    # !
+    # !
+    subprocess.run(['java','-jar',"C:/Users/cryst/LOFScreening/archive/CiiiDER_TFMs/CiiiDER.jar", '-n', prokode_dir + '/src/preprocessing/config.ini'])
 
     c_output_fpath = c_output_fpath[:-3] + 'csv'
+
+    # cleanup results
+    with open(c_output_fpath, 'r') as cfile:
+        out = []
+        for line in cfile:
+            if len(line)<5:
+                line = line[:-1]
+                prev = line
+            else:
+                prev += line
+                out.append(prev)
+                
+    open(c_output_fpath,'w').write(out)
 
     return c_output_fpath
 
 def create_promoterf(prokode_dir, genome_loc, annotation_loc):
     # config files
     genome = open(genome_loc, 'r').read()
-    annotation_df = pd.read_csv(annotation_loc)
+    annotation_df = pd.read_csv(annotation_loc, delimiter='\t')
 
     # write promoter region surrounding each gene's start loc to promoters.fa
     promoter_contents = ''
     for i in annotation_df.index:
         gene = annotation_df.loc[i, 'geneid']
-        start = annotation_df.loc[i, 'start']
+        start = int(annotation_df.loc[i, 'start'])
+        print(gene, start)
         promo_seq = genome[start-150:start+50]
         promoter_contents += f'>{gene}\n{promo_seq}\n'
 
@@ -121,7 +140,7 @@ def get_decay_rates(gene):
 
 def decay_rates_main(prokode_dir, annotation_loc):
     # read number of genes
-    annotation_df = pd.read_csv(open(annotation_loc, 'r'))
+    annotation_df = pd.read_csv(annotation_loc, delimiter='\t')
 
     out = 'gene,decay_rate\n'
     for gene in annotation_df['geneid'].to_list():
@@ -135,13 +154,13 @@ def decay_rates_main(prokode_dir, annotation_loc):
 
 def preprocessing_main(prokode_dir, genome_loc, annotation_loc, pfm_database_loc, add_betas=False):
     # create promoters.fa
-    promoters_loc = create_promoterf(prokode_dir, genome_loc,annotation_loc)
+    promoters_loc = create_promoterf(prokode_dir, genome_loc, annotation_loc)
 
     # config motif matrix file for only tfs within genome
     motif_matrix_loc = config_tfmotifs(prokode_dir, pfm_database_loc, annotation_loc)
 
     # run CiiiDER with files
-    CiiiDER_results_loc = run_CiiiDER(prokode_dir, promoters_loc,motif_matrix_loc, 0.1)
+    CiiiDER_results_loc = run_CiiiDER(prokode_dir, promoters_loc,motif_matrix_loc, 0.35)
 
     # configer into tf binding site csv
     tfbs_loc = create_tfbs(prokode_dir, CiiiDER_results_loc)

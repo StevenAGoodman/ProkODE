@@ -5,11 +5,11 @@ import json
 import statistics
 from run import create_network_json_main
 
-prokode_dir = '/workspaces/PROKODE-DOCKER'
+prokode_dir = 'C:/Users/cryst/LOFScreening/archive/PROKODE'
 data_file = 'GSE90743_E14R025_raw_counts.txt'
-genome_loc = '/workspaces/PROKODE-DOCKER/src/inputs/genome.fasta'
-annotation_loc = '/workspaces/PROKODE-DOCKER/src/inputs/annotation.csv'
-pfm_database_loc = '/workspaces/PROKODE-DOCKER/src/preprocessing/pfmdb.txt'
+genome_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/inputs/genome.fasta'
+annotation_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/inputs/annotation.csv'
+pfm_database_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/preprocessing/pfmdb.txt'
 
 sensor_normal_dist = 10
 basal_rate = 3
@@ -18,6 +18,14 @@ Np = 6000
 Kd_p = 0.1
 Nns = 4600000
 
+def find_key_nonrecursive(adict:dict, key):
+    for k, v in adict.items():
+        if key in k:
+            return v
+        d = v["synonyms"]
+        if key in d:
+            return v
+    
 def compare(beta_collection, tf_key):
     results = 'tf,mean,median,range,standard deviation\n'
 
@@ -51,7 +59,6 @@ def predict(x_prevk, P_prevk, A, Q):
 
 def kalman_filtering(data):
     gene_key = data.iloc[:, 0].values.flatten().tolist()
-    print(gene_key)
 
     # define t
     t = [5,10,25,45,75,120,210,330,1500,1560,1680]
@@ -72,9 +79,7 @@ def kalman_filtering(data):
     velocities = []
 
     for gene in gene_key:
-        print(gene)
         z_all = data.loc[data['Gene'] == gene].values[0][1:]
-        print(z_all)
         position_arr = []
         velocity_arr = []
 
@@ -98,6 +103,7 @@ def kalman_filtering(data):
     velocities_matrix = np.array(velocities) # m genes, n time points
     positions_matrix = np.array(positions) # ^
 
+    print('kalman complete...')
     return positions_matrix, velocities_matrix, gene_key, t
 
 def get_betas_for_timepoint(genes_position_vector, genes_velocity_vector, network_dict, gene_key, tf_key):
@@ -118,15 +124,20 @@ def get_betas_for_timepoint(genes_position_vector, genes_velocity_vector, networ
         beta_all_matrix.append(beta_all)
 
         # get coeffiecients
-        tfs_info = [ tf for tf, _ in network_dict[gene]["regulators"].items() ]
-
+        k = find_key_nonrecursive(network_dict, gene)
+        try:
+            tfs_info = [ tf for tf in k["regulators"].keys() ]
+        except:
+            print(gene, 'FAILURE!!!!!')
+            tfs_info = []
         coefficient_arr = [0 for i in range(len(tf_key))]
 
         for tf in tfs_info:
             N_tf = genes_position_vector[gene_key.index(tf)]
-            P = N_tf / (N_tf + tf["kd"])
-            coefficient_arr[tf_key.index(tf)] = P
-
+            P = N_tf / (N_tf + k["regulators"][tf]["kd_tf"])
+            coefficient_arr[tf_key.index(tf)] = float(P)
+        
+        print(coefficient_arr)
         coefficient_matrix.append(coefficient_arr)
 
     # format matrices
@@ -140,13 +151,16 @@ def get_betas_for_timepoint(genes_position_vector, genes_velocity_vector, networ
 
     return beta_arr
 
-def main(prokode_dir, data_file, genome_loc, annotation_loc, pfm_database_loc):
+def main(prokode_dir, data_file, genome_loc, annotation_loc, pfm_database_loc, prebuilt=False):
     # kalman filtering
     data = pd.read_csv(data_file, delimiter='\t')
     positions_matrix, velocities_matrix, gene_key, t = kalman_filtering(data)
 
     # create network.json
-    network_loc = create_network_json_main(prokode_dir, genome_loc, annotation_loc, pfm_database_loc, False) # '/workspaces/PROKODE-DOCKER/src/network.json' 
+    if prebuilt:
+        network_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/network.json'
+    else:
+        network_loc = create_network_json_main(prokode_dir, genome_loc, annotation_loc, pfm_database_loc, False)# 
     network_dict = json.load(open(network_loc, 'r'))
 
     # define arbitrary order of tfs
@@ -157,7 +171,6 @@ def main(prokode_dir, data_file, genome_loc, annotation_loc, pfm_database_loc):
         tf_key = tf_key.remove('polymerase') # filter out polymerase
     except:
         print('no rnap')
-    print(tf_key)
 
     # get beta vals for each time point
     beta_collection = [] # m time points by n tfs
@@ -168,4 +181,4 @@ def main(prokode_dir, data_file, genome_loc, annotation_loc, pfm_database_loc):
 
     compare(beta_collection)
 
-main(prokode_dir, data_file, genome_loc, annotation_loc, pfm_database_loc)
+main(prokode_dir, data_file, genome_loc, annotation_loc, pfm_database_loc, False)
