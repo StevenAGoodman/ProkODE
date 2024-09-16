@@ -160,7 +160,7 @@ def preprocessing_main(prokode_dir, genome_loc, annotation_loc, pfm_database_loc
     motif_matrix_loc = config_tfmotifs(prokode_dir, pfm_database_loc, annotation_loc)
 
     # run CiiiDER with files
-    CiiiDER_results_loc = run_CiiiDER(prokode_dir, promoters_loc,motif_matrix_loc, 0.35)
+    CiiiDER_results_loc = run_CiiiDER(prokode_dir, promoters_loc,motif_matrix_loc, 0.25)
 
     # configer into tf binding site csv
     tfbs_loc = create_tfbs(prokode_dir, CiiiDER_results_loc)
