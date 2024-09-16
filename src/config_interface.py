@@ -26,36 +26,6 @@ import pandas as pd
 #     ...
 # } 
 
-def config_network_json(gene_arr, decay_file, tfbs_file):
-    # needed inputs: lists of tgs, gene - decay rates ref file,
-
-    # implicit file dependencies: 
-    decay_df = pd.read_csv(decay_file) # names=['gene', 'prot decay rate']
-    topology_df = pd.read_csv(tfbs_file) # names=['tf','tg','kd', 'beta]
-    topology_df = topology_df.reset_index()
-
-    output = {}
-
-    for tg in gene_arr:
-        tgdecay = decay_df.loc[decay_df['gene']==tg, 'decay']# query decay rates file
-
-        arr = {"tg_decay":tgdecay.to_list()[0]}
-        reg_arr = {}
-        for _, tf_row in topology_df[topology_df['tg']==tg].iterrows():
-            beta = tf_row['beta']
-            kdtf = tf_row['kd']
-            reg_arr[tf_row['tf']] = {"beta":beta,"kd_tf":kdtf}
-        arr["regulators"] = reg_arr
-        
-        output[tg] = arr
-
-    json.dump(output, open('network.json', 'w'), indent=4)
-
-# def get_basal(Nns):
-    # Np = 
-    # Kdp =
-    return 0. # Np / (Nns * Kdp)
-
 def plot_system(params, s0, tg_arr):
     # check if params len mathces nodes
 
@@ -101,11 +71,14 @@ def plot_system(params, s0, tg_arr):
     plt.legend(["N","C",'d'])
     plt.show()
 
-genome_df = pd.read_csv('./inputs/annotation.csv')
-gene_arr = list(set(genome_df['geneid'].to_list()))
-# config_network_json(gene_arr,'decay_rates.csv', 'tfbs.csv')
-params = json.load(open('network.json', 'r'))
-s0 = [random.randint(0,100) for i in range(len(gene_arr))] 
-E_basal = 0.00434782608696
-print(len(params))
-plot_system(params, s0, gene_arr)
+def user_interface_main():
+    genome_df = pd.read_csv('./inputs/annotation.csv')
+    gene_arr = list(set(genome_df['geneid'].to_list()))
+    # config_network_json(gene_arr,'decay_rates.csv', 'tfbs.csv')
+    params = json.load(open('network.json', 'r'))
+    s0 = [random.randint(0,100) for i in range(len(gene_arr))] 
+    E_basal = 0.00434782608696
+    print(len(params))
+    plot_system(params, s0, gene_arr)
+
+

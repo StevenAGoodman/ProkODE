@@ -1,8 +1,28 @@
 import numpy as np
 import pandas as pd
+from Bio import motifs
 import subprocess
 import os
 import sys
+
+def config_tfmotifs(prokode_dir, pfm_database_loc, annotation_loc):
+    motif_arr = []
+
+    annotation_df = pd.read_csv(annotation_loc)
+    gene_vector =  annotation_df['geneid'].tolist()
+    record = motifs.parse(open(pfm_database_loc, 'r'), 'JASPAR')
+    
+    for m in record:
+        if m.name in gene_vector:
+            motif_arr.append(m)
+        else:
+            continue
+    
+    out_loc = prokode_dir + '/src/preprocessing/motif_matrices.txt'
+    out = motifs.write(motif_arr, "JASPAR")
+    open(out_loc, 'w').write(out)
+
+    return out_loc
 
 def clean(csv_str):
     return_str = ""
@@ -117,8 +137,11 @@ def preprocessing_main(prokode_dir, genome_loc, annotation_loc, pfm_database_loc
     # create promoters.fa
     promoters_loc = create_promoterf(prokode_dir, genome_loc,annotation_loc)
 
+    # config motif matrix file for only tfs within genome
+    motif_matrix_loc = config_tfmotifs(prokode_dir, pfm_database_loc, annotation_loc)
+
     # run CiiiDER with files
-    CiiiDER_results_loc = run_CiiiDER(prokode_dir, promoters_loc,pfm_database_loc, 0.1)
+    CiiiDER_results_loc = run_CiiiDER(prokode_dir, promoters_loc,motif_matrix_loc, 0.1)
 
     # configer into tf binding site csv
     tfbs_loc = create_tfbs(prokode_dir, CiiiDER_results_loc)
@@ -132,5 +155,5 @@ def preprocessing_main(prokode_dir, genome_loc, annotation_loc, pfm_database_loc
     
     return tfbs_loc, decay_rates_loc
 
-# temp start code
-preprocessing_main('/workspaces/PROKODE-DOCKER','/workspaces/PROKODE-DOCKER/src/inputs/genome.fasta','/workspaces/PROKODE-DOCKER/src/inputs/annotation.csv','/workspaces/PROKODE-DOCKER/src/preprocessing/pfmdb.txt')
+# # temp start code
+# preprocessing_main('/workspaces/PROKODE-DOCKER','/workspaces/PROKODE-DOCKER/src/inputs/genome.fasta','/workspaces/PROKODE-DOCKER/src/inputs/annotation.csv','/workspaces/PROKODE-DOCKER/src/preprocessing/pfmdb.txt')

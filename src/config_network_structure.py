@@ -42,7 +42,7 @@ def create_network_json(prokode_dir, gene_arr, decay_loc, tfbs_loc):
         reg_arr = {}
         # within each gene's "regulators": array
         for _, tf_row in tfbs_df[tfbs_df['tg']==tg].iterrows():
-            tf_row['tf'] = "polymerase" if tf_row['tf'] == "ropD" else tf_row['tf']
+            tf_row['tf'] = "polymerase" if tf_row['tf'] == "rpoD" else tf_row['tf']
             # beta = tf_row['beta']
             kdtf = tf_row['Kd']
             reg_arr[tf_row['tf']] = {"beta":"nan","kd_tf":kdtf}
@@ -74,4 +74,4 @@ def network_main(prokode_dir, annotation_loc, tfbs_loc, decay_rates_loc):
 
     return network_loc
 
-net = network_main('/workspaces/PROKODE-DOCKER', '/workspaces/PROKODE-DOCKER/src/inputs/annotation.csv', '/workspaces/PROKODE-DOCKER/src/tfbs.csv', '/workspaces/PROKODE-DOCKER/src/decay_rates.csv')
+# net = network_main('/workspaces/PROKODE-DOCKER', '/workspaces/PROKODE-DOCKER/src/inputs/annotation.csv', '/workspaces/PROKODE-DOCKER/src/tfbs.csv', '/workspaces/PROKODE-DOCKER/src/decay_rates.csv')
