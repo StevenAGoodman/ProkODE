@@ -1,8 +1,45 @@
 import numpy as np
 import pandas as pd
+from Bio import motifs
 import subprocess
 import os
 import sys
+
+def config_tfmotifs(prokode_dir, pfm_database_loc, annotation_loc):
+    motif_arr = []
+
+    annotation_df = pd.read_csv(annotation_loc)
+    gene_vector =  annotation_df['geneid'].tolist()
+    record = motifs.parse(open(pfm_database_loc, 'r'), 'JASPAR')
+    
+    for m in record:
+        if m.name in gene_vector:
+            motif_arr.append(m)
+        else:
+            continue
+    
+    out_loc = prokode_dir + '/src/preprocessing/motif_matrices.txt'
+    out = motifs.write(motif_arr, "JASPAR")
+    open(out_loc, 'w').write(out)
+
+    return out_loc
+
+def clean(csv_str):
+    return_str = ""
+    prev = ''
+    for row in csv_str.split('\n'):
+        a = row.find(',')
+        b = prev.find(',')
+        c = row[:(a+1 + row[a+1:].find(','))]
+        d = prev[:(b+1 + prev[b+1:].find(','))]
+
+        if c == d:
+            aff = sum([float(row[(a+2 + row[a+1:].find(',')):]), float(prev[(b+2 + prev[b+1:].find(',')):])])/2.0
+            prev = f'{c},{aff}'
+        else:
+            return_str += prev + '\n'
+            prev = row
+    return return_str
 
 def run_CiiiDER(prokode_dir, promoters_loc, matrices_loc, deficit_val):
     # CiiiDER (https://ciiider.erc.monash.edu/) is a software that searches the promoter DNA regions of each gene with the binding motifs of each transcription factor to determine their binding sites. 
@@ -68,10 +105,14 @@ def create_tfbs(prokode_dir, ci_results_loc):
         kd_vals.append(kd)
 
     tfbs_df.insert(2,'Kd', kd_vals)
+    tfbs_df.drop(axis=1, index=0)
 
     # write to tfbs.csv
     tfbs_loc = prokode_dir + '/src/tfbs.csv'
-    tfbs_df.to_csv(open(tfbs_loc, 'w'))
+    out = tfbs_df.to_csv()
+    out = clean(out)
+
+    open(tfbs_loc, 'w').write(out)
     
     return tfbs_loc
 
@@ -96,8 +137,11 @@ def preprocessing_main(prokode_dir, genome_loc, annotation_loc, pfm_database_loc
     # create promoters.fa
     promoters_loc = create_promoterf(prokode_dir, genome_loc,annotation_loc)
 
+    # config motif matrix file for only tfs within genome
+    motif_matrix_loc = config_tfmotifs(prokode_dir, pfm_database_loc, annotation_loc)
+
     # run CiiiDER with files
-    CiiiDER_results_loc = run_CiiiDER(prokode_dir, promoters_loc,pfm_database_loc, 0.1)
+    CiiiDER_results_loc = run_CiiiDER(prokode_dir, promoters_loc,motif_matrix_loc, 0.1)
 
     # configer into tf binding site csv
     tfbs_loc = create_tfbs(prokode_dir, CiiiDER_results_loc)
@@ -111,5 +155,5 @@ def preprocessing_main(prokode_dir, genome_loc, annotation_loc, pfm_database_loc
     
     return tfbs_loc, decay_rates_loc
 
-# temp start code
-preprocessing_main('/workspaces/PROKODE-DOCKER','/workspaces/PROKODE-DOCKER/src/inputs/genome.fasta','/workspaces/PROKODE-DOCKER/src/inputs/annotation.csv','/workspaces/PROKODE-DOCKER/src/preprocessing/pfmdb.txt')
+# # temp start code
+# preprocessing_main('/workspaces/PROKODE-DOCKER','/workspaces/PROKODE-DOCKER/src/inputs/genome.fasta','/workspaces/PROKODE-DOCKER/src/inputs/annotation.csv','/workspaces/PROKODE-DOCKER/src/preprocessing/pfmdb.txt')

@@ -1,13 +1,20 @@
 from Bio import motifs
 import random
+import re
+import os
 
-file_paths = ['regtransbase.meme','collectf.meme','dpinteract.meme','fan2020.meme','SwissRegulon_e_coli.meme']
-
+directory = os.fsencode('tf_pfms_prok')
 mots = []
-for file in file_paths:
-    record = motifs.parse(open(f'tf_pfms/{file}', 'r'), 'minimal')
+
+for file in os.listdir(directory):
+    filename = os.fsdecode(file)
+
+    record = motifs.parse(open(f'tf_pfms_prok/{filename}', 'r'), 'minimal')
     for m in record:
-        m.name = m.name[:m.name.find('_')]
+        foo = re.search("(^| |_)([a-zA-Z][a-zA-Z][a-zA-Z][a-zA-Z]?)( |_|$)", m.name)
+        m.name = foo.group().replace('_', '') if foo != None else 'abort'
+        if m.name == 'abort':
+            continue
         mots.append(m)
 
 out = motifs.write(mots,'JASPAR')

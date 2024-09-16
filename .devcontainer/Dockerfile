@@ -4,7 +4,7 @@ RUN apt-get install -y zip \
     unzip
 
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir numpy pandas biopython matplotlib scipy GEOparse
+    pip install --no-cache-dir numpy pandas biopython matplotlib scipy filterpy
 
 RUN apt-get update && \
     apt-get install -y openjdk-11-jdk && \
