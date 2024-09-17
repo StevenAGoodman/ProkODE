@@ -4,6 +4,7 @@ from Bio import motifs
 import subprocess
 import os
 import sys
+import csv
 
 def config_tfmotifs(prokode_dir, pfm_database_loc, annotation_loc):
     motif_arr = []
@@ -43,8 +44,8 @@ def clean(csv_str):
 
 def run_CiiiDER(prokode_dir, jar_loc, promoters_loc, matrices_loc, deficit_val):
     # CiiiDER (https://ciiider.erc.monash.edu/) is a software that searches the promoter DNA regions of each gene with the binding motifs of each transcription factor to determine their binding sites. 
-
-    c_output_fpath = prokode_dir + '/src/preprocessing/CiiiDER_results.txt'
+    print("HOROATKYYSF")
+    c_output_loc = prokode_dir + '/src/preprocessing/CiiiDER_results.txt'
     
     # config config.ini
     config_o = f"""[General]
@@ -53,35 +54,31 @@ ENDPOINT = 1\n
 [Scan]
 GENELISTFILENAME = {promoters_loc}
 MATRIXFILE = {matrices_loc}
-GENESCANRESULTS = {c_output_fpath}
+GENESCANRESULTS = {c_output_loc}
 DEFICIT = {deficit_val}"""
     
     open(prokode_dir + '/src/preprocessing/config.ini', 'w').write(config_o)
 
-    # run ciiider ######## TEMPORARY: !!!!!!!!!!!!!!!!!!!PLEASE CHANGE CIIIDER LOC!!!!!!!!!!!!!!!!!!!!!!##############
-    # !
-    # !
-    # !
-    # !
-    # !
-    subprocess.run(['java','-jar',"C:/Users/cryst/LOFScreening/archive/CiiiDER_TFMs/CiiiDER.jar", '-n', prokode_dir + '/src/preprocessing/config.ini'])
+    subprocess.run(['java','-jar', jar_loc, '-n', prokode_dir + '/src/preprocessing/config.ini'])
 
-    c_output_fpath = c_output_fpath[:-3] + 'csv'
+    c_output_loc = c_output_loc[:-3] + 'csv'
 
     # cleanup results
-    with open(c_output_fpath, 'r') as cfile:
+    with open(c_output_loc, "r") as csvfile:
         out = []
-        for line in cfile:
-            if len(line)<5:
-                line = line[:-2]
-                prev = line
+        datareader = csv.reader(csvfile)
+        for row in datareader:
+            if len(row)<4:
+                row = row[0][:-2]
+                prev = [row]
             else:
-                prev += line
+                prev.append(item for item in row[1:])
                 out.append(prev)
-                
-    open(c_output_fpath,'w').writelines(out)
+    
+    out = np.array(out)
+    np.savetxt(c_output_loc, out, delimiter=",")
 
-    return c_output_fpath
+    return c_output_loc
 
 def create_promoterf(prokode_dir, genome_loc, annotation_loc):
     # config files
@@ -155,13 +152,13 @@ def decay_rates_main(prokode_dir, annotation_loc):
 def preprocessing_main(prokode_dir, genome_loc, annotation_loc, pfm_database_loc, CiiiDER_jar_loc, add_betas=False):
     # create promoters.fa
     promoters_loc = create_promoterf(prokode_dir, genome_loc, annotation_loc)
-
+    print(promoters_loc)
     # config motif matrix file for only tfs within genome
     motif_matrix_loc = config_tfmotifs(prokode_dir, pfm_database_loc, annotation_loc)
-
+    print(motif_matrix_loc)
     # run CiiiDER with files
     CiiiDER_results_loc = run_CiiiDER(prokode_dir, CiiiDER_jar_loc, promoters_loc,motif_matrix_loc, 0.25)
-
+    print(CiiiDER_jar_loc, CiiiDER_results_loc)
     # configer into tf binding site csv
     tfbs_loc = create_tfbs(prokode_dir, CiiiDER_results_loc)
 

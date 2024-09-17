@@ -5,11 +5,12 @@ import json
 import statistics
 from run import create_network_json_main
 
-prokode_dir = 'C:/Users/cryst/LOFScreening/archive/PROKODE'
+prokode_dir = '/workspaces/git'
 data_file = 'GSE90743_E14R025_raw_counts.txt'
-genome_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/inputs/genome.fasta'
-annotation_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/inputs/annotation.csv'
-pfm_database_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/preprocessing/pfmdb.txt'
+genome_loc = '/workspaces/git/src/inputs/genome.fasta'
+annotation_loc = '/workspaces/git/src/inputs/annotation.csv'
+pfm_database_loc = '/workspaces/git/src/preprocessing/pfmdb.txt'
+CiiiDER_jar_loc = '/CiiiDER/CiiiDER_TFMs/CiiiDER.jar'
 
 sensor_normal_dist = 10
 basal_rate = 3
@@ -151,16 +152,16 @@ def get_betas_for_timepoint(genes_position_vector, genes_velocity_vector, networ
 
     return beta_arr
 
-def main(prokode_dir, data_file, genome_loc, annotation_loc, pfm_database_loc, prebuilt=False):
+def main(prokode_dir, data_file, genome_loc, annotation_loc, pfm_database_loc, CiiiDER_jar_loc, prebuilt=False):
     # kalman filtering
     data = pd.read_csv(data_file, delimiter='\t')
     positions_matrix, velocities_matrix, gene_key, t = kalman_filtering(data)
 
     # create network.json
     if prebuilt:
-        network_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/network.json'
+        network_loc = '/workspaces/git/src/network.json'
     else:
-        network_loc = create_network_json_main(prokode_dir, genome_loc, annotation_loc, pfm_database_loc, False)# 
+        network_loc = create_network_json_main(prokode_dir, genome_loc, annotation_loc, pfm_database_loc, CiiiDER_jar_loc, False)# 
     network_dict = json.load(open(network_loc, 'r'))
 
     # define arbitrary order of tfs
@@ -181,4 +182,4 @@ def main(prokode_dir, data_file, genome_loc, annotation_loc, pfm_database_loc, p
 
     compare(beta_collection)
 
-main(prokode_dir, data_file, genome_loc, annotation_loc, pfm_database_loc, False)
+main(prokode_dir, data_file, genome_loc, annotation_loc, pfm_database_loc, CiiiDER_jar_loc, False)
