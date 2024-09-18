@@ -12,7 +12,7 @@ genome_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/inputs/genome.fast
 annotation_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/inputs/annotation.csv'
 pfm_database_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/preprocessing/pfmdb.txt'
 CiiiDER_jar_loc = './CiiiDER_TFMs/CiiiDER.jar'
-CiiiDER_thresh = 0.33
+CiiiDER_thresh = 0.5
 
 sensor_normal_dist = 10
 basal_rate = 3

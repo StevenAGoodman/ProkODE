@@ -50,26 +50,13 @@ Outputs:
 >>> 1. using network.json, create differential equations for each gene based on effected genes (i will place the math in this readme soon)
 >>> 2. plot graphs (haven't implemented the select proteins option yet)
 
-```
-# network.json
-{
-    "tg1":[
-        "tgdecay":float,
-        "regulators":[
-            "tf1": [
-                "beta":float,
-                "kd_tf":float,
-            ]
-            "tf2":[
+## Testing Log
 
-            ]
-            ...
-        ]
-    ],
-    "tg2":[
-        "tgdecay":float,
-        ...
-    ],
-    ...
-}
-```
+### Testing model accuracy through how well beta values match
+1. `1.1`
+   - model used:
+   - tf match threshold:
+   - preprocessing features:
+   - average standard deviation:
+
+2. `1.2`
