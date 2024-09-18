@@ -38,9 +38,7 @@ def create_network_json(prokode_dir, gene_arr, decay_loc, tfbs_loc, annotation_d
         tgdecay = decay_df.loc[decay_df['gene']==tg, 'decay_rate']
 
         # within each gene's brackets:
-        print(tgdecay.to_list())
         syn = annotation_df.loc[annotation_df['geneid']==tg,'synonyms'].values[0]
-        print(syn)
         arr = {"tg_decay":tgdecay.to_list()[0], "synonyms":ast.literal_eval(syn)}
         reg_arr = {}
         # within each gene's "regulators": array
@@ -54,6 +52,7 @@ def create_network_json(prokode_dir, gene_arr, decay_loc, tfbs_loc, annotation_d
         output[tg] = arr
 
     # write to network.json
+    print('\t\twriting to network.json')
     network_loc = prokode_dir + '/src/network.json'
     json.dump(output, open(network_loc, 'w'), indent=5)
 
