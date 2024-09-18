@@ -45,7 +45,7 @@ def create_network_json(prokode_dir, gene_arr, decay_loc, tfbs_loc, annotation_d
         for _, tf_row in tfbs_df[tfbs_df['tg']==tg].iterrows():
             tf_row['tf'] = "polymerase" if tf_row['tf'] == "rpoD" else tf_row['tf']
             # beta = tf_row['beta']
-            kdtf = tf_row['Kd']
+            kdtf = tf_row['kd']
             reg_arr[tf_row['tf']] = {"beta":"nan","kd_tf":kdtf}
         arr["regulators"] = reg_arr
         
@@ -57,6 +57,42 @@ def create_network_json(prokode_dir, gene_arr, decay_loc, tfbs_loc, annotation_d
     json.dump(output, open(network_loc, 'w'), indent=5)
 
     return network_loc
+
+# def create_network_json(prokode_dir, gene_arr, decay_loc, tfbs_loc, annotation_df):
+#     # read file dependencies: 
+#     decay_df = pd.read_csv(decay_loc) # names=['gene', 'decay_rate']
+    
+#     # read tfbs.csv and append to network.json
+#     print('\t\twriting to network.json')
+#     network_loc = prokode_dir + '/src/network.json'
+#     with open(tfbs_loc, 'r') as tfbs_file: # names=[,'tf','tg','kd', 'beta]
+#         with open(network_loc, 'a') as network_file:
+#             # json start bracket
+#             network_file.write('{\n')
+
+#             # loop over every gene
+#             for tg in gene_arr:
+#                 # query decay rates file
+#                 tgdecay = decay_df.loc[decay_df['gene']==tg, 'decay_rate']
+
+#                 # within each gene's brackets:
+#                 syn = annotation_df.loc[annotation_df['geneid']==tg,'synonyms'].values[0]
+#                 arr = {"tg":tg, "synonyms":ast.literal_eval(syn), "tg_decay":tgdecay.to_list()[0]}
+#                 reg_arr = {}
+#                 # within each gene's "regulators": array
+#                 for _, tf_row in tfbs_df[tfbs_df['tg']==tg].iterrows():
+#                     tf_row['tf'] = "polymerase" if tf_row['tf'] == "rpoD" else tf_row['tf']
+#                     # beta = tf_row['beta']
+#                     kdtf = tf_row['Kd']
+#                     reg_arr[tf_row['tf']] = {"beta":"nan","kd_tf":kdtf}
+#                 arr["regulators"] = reg_arr
+                
+#                 network_file.write(f'{json.loads(arr)},\n')
+            
+#             # json end brackets
+#             network_file.write('}')
+
+#     return network_loc
 
 # def config_basal(Nns):
 #     Np = 6000

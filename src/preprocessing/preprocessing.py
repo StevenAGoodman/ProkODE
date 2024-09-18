@@ -44,19 +44,19 @@ def create_tfbs_through_CiiiDER(prokode_dir, jar_loc, promoters_loc, matrices_lo
     # CiiiDER (https://ciiider.erc.monash.edu/) is a software that searches the promoter DNA regions of each gene with the binding motifs of each transcription factor to determine their binding sites. 
     c_output_loc = prokode_dir + '/src/preprocessing/CiiiDER_results.txt'
     
-#     # config config.ini
-#     config_o = f"""[General]
-# STARTPOINT = 1
-# ENDPOINT = 1\n
-# [Scan]
-# GENELISTFILENAME = {promoters_loc}
-# MATRIXFILE = {matrices_loc}
-# GENESCANRESULTS = {c_output_loc}
-# DEFICIT = {deficit_val}"""
+    # config config.ini
+    config_o = f"""[General]
+STARTPOINT = 1
+ENDPOINT = 1\n
+[Scan]
+GENELISTFILENAME = {promoters_loc}
+MATRIXFILE = {matrices_loc}
+GENESCANRESULTS = {c_output_loc}
+DEFICIT = {deficit_val}"""
     
-#     open(prokode_dir + '/src/preprocessing/config.ini', 'w').write(config_o)
+    open(prokode_dir + '/src/preprocessing/config.ini', 'w').write(config_o)
 
-#     subprocess.run(['java','-jar', jar_loc, '-n', prokode_dir + '/src/preprocessing/config.ini'])
+    subprocess.run(['java','-jar', jar_loc, '-n', prokode_dir + '/src/preprocessing/config.ini'])
 
     c_output_loc = c_output_loc[:-3] + 'csv'
 

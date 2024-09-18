@@ -12,7 +12,7 @@ genome_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/inputs/genome.fast
 annotation_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/inputs/annotation.csv'
 pfm_database_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/preprocessing/pfmdb.txt'
 CiiiDER_jar_loc = './CiiiDER_TFMs/CiiiDER.jar'
-CiiiDER_thresh = 0.15
+CiiiDER_thresh = 0.33
 
 sensor_normal_dist = 10
 basal_rate = 3
@@ -20,6 +20,12 @@ decay_rate = np.log(2)/300
 Np = 6000
 Kd_p = 0.1
 Nns = 4600000
+
+def update_mean(count, existing_mean, new_value):
+    count += 1
+    delta = new_value - existing_mean
+    mean = existing_mean + (delta / count)
+    return (count, mean)
 
 def find_key_nonrecursive(adict:dict, key):
     for k, v in adict.items():
@@ -31,6 +37,8 @@ def find_key_nonrecursive(adict:dict, key):
     
 def compare(beta_collection, tf_key):
     compare_json = []
+    count = 0
+    running_mean_std_dev = 0
     for tf_beta_index in range(len(tf_key)):
         tf = tf_key[tf_beta_index]
         tf_beta_vector = beta_collection[:, tf_beta_index]
@@ -40,7 +48,11 @@ def compare(beta_collection, tf_key):
         range_r = [float(min(tf_beta_vector)), float(max(tf_beta_vector))]
         std_dev = statistics.stdev(tf_beta_vector)
 
+        count, running_mean_std_dev = update_mean(count, running_mean_std_dev, std_dev)
+
         compare_json.append({"tf":tf,"mean":mean,"median":median_r,"range":range_r,"standard deviation":std_dev})
+    
+    compare_json.append({"tf":"all","mean standard deviation":running_mean_std_dev})
     
     json.dump(compare_json, open('results.json', 'w'), indent=3)
 
