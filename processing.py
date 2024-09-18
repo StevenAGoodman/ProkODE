@@ -4,15 +4,15 @@ from scipy.sparse.linalg import lsqr
 import json
 import statistics
 from run import create_network_json_main
-from qpsolvers import solve_ls
+import cvxpy 
 
-prokode_dir = '/workspaces/git'
+prokode_dir = 'C:/Users/cryst/LOFScreening/archive/PROKODE'
 data_file = 'GSE90743_E14R025_raw_counts.txt'
-genome_loc = '/workspaces/git/src/inputs/genome.fasta'
-annotation_loc = '/workspaces/git/src/inputs/annotation.csv'
-pfm_database_loc = '/workspaces/git/src/preprocessing/pfmdb.txt'
-CiiiDER_jar_loc = '/CiiiDER/CiiiDER_TFMs/CiiiDER.jar'
-CiiiDER_thresh = 0.05
+genome_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/inputs/genome.fasta'
+annotation_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/inputs/annotation.csv'
+pfm_database_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/preprocessing/pfmdb.txt'
+CiiiDER_jar_loc = './CiiiDER_TFMs/CiiiDER.jar'
+CiiiDER_thresh = 0.15
 
 sensor_normal_dist = 10
 basal_rate = 3
@@ -30,7 +30,7 @@ def find_key_nonrecursive(adict:dict, key):
             return v
     
 def compare(beta_collection, tf_key):
-    results = 'tf,mean,median,range,standard deviation\n'
+    compare_json = []
     for tf_beta_index in range(len(tf_key)):
         tf = tf_key[tf_beta_index]
         tf_beta_vector = beta_collection[:, tf_beta_index]
@@ -40,9 +40,9 @@ def compare(beta_collection, tf_key):
         range_r = [float(min(tf_beta_vector)), float(max(tf_beta_vector))]
         std_dev = statistics.stdev(tf_beta_vector)
 
-        results += f'{tf},{mean},{median_r},{range_r},{std_dev}\n'
-
-    open('results.csv', 'w').write(results)
+        compare_json.append({"tf":tf,"mean":mean,"median":median_r,"range":range_r,"standard deviation":std_dev})
+    
+    json.dump(compare_json, open('results.json', 'w'), indent=3)
 
 def update(P_predict, H, R, z_k, x_predict):
     # kalman gain
@@ -147,10 +147,19 @@ def get_betas_for_timepoint(genes_position_vector, genes_velocity_vector, networ
     beta_all_matrix = np.reshape(beta_all_matrix, (-1, 1))
 
     # least squares fitting
-    lower_bound = np.array([ 0 for i in range(len(tf_key)) ])
-    beta_vector = solve_ls(coefficient_matrix, beta_all_matrix, lb=lower_bound, solver='osqp', sparse_conversion=True, time_limit=60)
-    print(beta_vector)
-    beta_arr = beta_vector.tolist()
+    print('\t...solving least squares problem')
+    X = cvxpy.Variable((coefficient_matrix.shape[1],1))
+    constraints = [X >= 0]
+
+    product = coefficient_matrix @ X
+    cost = cvxpy.sum(product, axis=1, keepdims=True) - beta_all_matrix
+    problem = cvxpy.Problem(cvxpy.Minimize(cvxpy.norm(cost)), constraints)
+    problem.solve()
+
+    # beta_vector = solve_ls(coefficient_matrix, beta_all_matrix, lb=lower_bound, solver='osqp', sparse_conversion=True, time_limit=60)
+    # print(beta_vector)
+    beta_arr = X.value.transpose().tolist()[0]
+    print(beta_arr)
 
     return beta_arr
 
@@ -163,17 +172,12 @@ def main(prokode_dir, data_file, genome_loc, annotation_loc, pfm_database_loc, C
         network_loc = prokode_dir + '/src/network.json'
     else:
         network_loc = create_network_json_main(prokode_dir, genome_loc, annotation_loc, pfm_database_loc, CiiiDER_jar_loc, CiiiDER_thresh, False)# 
-    network_dict = json.load(open(network_loc, 'r'))
+    network_dict: dict = json.load(open(network_loc, 'r'))
     
 
     # define arbitrary order of tfs
-    tf_key = [ [ tf for tf, _ in val["regulators"].items() ] for key,val in network_dict.items()]
-    tf_key = [element for innerList in tf_key for element in innerList]
+    tf_key = [ tf for val in network_dict.values() for tf in val["regulators"].keys() ]
     tf_key = list(set(tf_key)) # filter repeats
-    try:
-        tf_key = tf_key.remove('polymerase') # filter out polymerase
-    except:
-        print('')
 
     # kalman filtering
     print('kalman filtering...')
@@ -185,7 +189,7 @@ def main(prokode_dir, data_file, genome_loc, annotation_loc, pfm_database_loc, C
     print('getting beta collection...')
     beta_collection = [] # m time points by n tfs
     for time_index in range(len(t)):
-        print('\tgetting betas for timepoint')
+        print('\t...getting betas for timepoint')
         beta_arr = get_betas_for_timepoint(positions_matrix[:, time_index], velocities_matrix[:, time_index], network_dict, gene_key, tf_key)
         beta_collection.append(beta_arr)
     print('\t...merging timepoints')

@@ -23,27 +23,13 @@ def config_tfmotifs(prokode_dir, pfm_database_loc, annotation_loc):
 
     return out_loc
 
-def clean(csv_str):
-    return_str = ""
-    prev = ''
-    for row in csv_str.split('\n'):
-        a = row.find(',')
-        b = prev.find(',')
-        c = row[:(a+1 + row[a+1:].find(','))]
-        d = prev[:(b+1 + prev[b+1:].find(','))]
-
-        if c == d:
-            aff = sum([float(row[(a+2 + row[a+1:].find(',')):]), float(prev[(b+2 + prev[b+1:].find(',')):])])/2.0
-            prev = f'{c},{aff}'
-        else:
-            return_str += prev + '\n'
-            prev = row
-    return return_str
+def score_to_kd(score):
+    return np.exp(-1 * score)
 
 def write_to_tfbs(line, add_betas):
     # line headers: ['tg','_','tf','tf_matrixid','start','end','strand','prescore','score','seq']
     tfbs_row = [line[2], line[0]]
-    kd = score_to_kd(line[8])
+    kd = score_to_kd(float(line[8]))
     tfbs_row.append(kd)
 
     # add betas if desired
@@ -58,19 +44,19 @@ def create_tfbs_through_CiiiDER(prokode_dir, jar_loc, promoters_loc, matrices_lo
     # CiiiDER (https://ciiider.erc.monash.edu/) is a software that searches the promoter DNA regions of each gene with the binding motifs of each transcription factor to determine their binding sites. 
     c_output_loc = prokode_dir + '/src/preprocessing/CiiiDER_results.txt'
     
-    # config config.ini
-    config_o = f"""[General]
-STARTPOINT = 1
-ENDPOINT = 1\n
-[Scan]
-GENELISTFILENAME = {promoters_loc}
-MATRIXFILE = {matrices_loc}
-GENESCANRESULTS = {c_output_loc}
-DEFICIT = {deficit_val}"""
+#     # config config.ini
+#     config_o = f"""[General]
+# STARTPOINT = 1
+# ENDPOINT = 1\n
+# [Scan]
+# GENELISTFILENAME = {promoters_loc}
+# MATRIXFILE = {matrices_loc}
+# GENESCANRESULTS = {c_output_loc}
+# DEFICIT = {deficit_val}"""
     
-    open(prokode_dir + '/src/preprocessing/config.ini', 'w').write(config_o)
+#     open(prokode_dir + '/src/preprocessing/config.ini', 'w').write(config_o)
 
-    subprocess.run(['java','-jar', jar_loc, '-n', prokode_dir + '/src/preprocessing/config.ini'])
+#     subprocess.run(['java','-jar', jar_loc, '-n', prokode_dir + '/src/preprocessing/config.ini'])
 
     c_output_loc = c_output_loc[:-3] + 'csv'
 
@@ -89,7 +75,7 @@ DEFICIT = {deficit_val}"""
             prev_fullline = ''
             prev_act = False
             for row in csvfile:
-                if len(row)<10:
+                if len(row)<12:
                     row = row.replace("\n", '')
                     prev = row
                     prev_act = True
@@ -101,7 +87,7 @@ DEFICIT = {deficit_val}"""
                     
                     line = line.split(',')
                     a = line[1]
-                    b = prev_fullline[1]
+                    b = prev_fullline[1] if type(prev_fullline)==list else ''
 
                     if a == b:
                         continue
@@ -119,42 +105,15 @@ def create_promoterf(prokode_dir, genome_loc, annotation_loc):
     annotation_df = pd.read_csv(annotation_loc, delimiter='\t')
 
     # write promoter region surrounding each gene's start loc to promoters.fa
-    promoter_contents = ''
-    for i in annotation_df.index:
-        gene = annotation_df.loc[i, 'geneid']
-        start = int(annotation_df.loc[i, 'start'])
-        promo_seq = genome[start-150:start+50]
-        promoter_contents += f'>{gene}\n{promo_seq}\n'
+    promoters_loc = prokode_dir + '/src/preprocessing/promoters.fa'    
+    with open(promoters_loc, 'a') as promoters_file:
+        for i in annotation_df.index:
+            gene = annotation_df.loc[i, 'geneid']
+            start = int(annotation_df.loc[i, 'start'])
+            promo_seq = genome[start-150:start+50]
+            promoters_file.write(f'>{gene}\n{promo_seq}\n')
 
-    # write to promoters.fa
-    promoters_loc = prokode_dir + '/src/preprocessing/promoters.fa'
-    open(promoters_loc, 'w').write(promoter_contents)
     return promoters_loc
-
-def score_to_kd(score):
-    return np.exp(-1 * score)
-
-def create_tfbs(prokode_dir, ci_results_loc):
-    # import ciiider results
-    ciiider_df = pd.read_csv(ci_results_loc, names=['tg','_','tf','tf_matrixid','start','end','strand','prescore','score','seq'])
-
-    tfbs_df = ciiider_df[['tf','tg']].copy()
-
-    kd_vals = []
-    for score in ciiider_df['score'].to_list():
-        kd = score_to_kd(score)
-        kd_vals.append(kd)
-
-    tfbs_df.insert(2,'Kd', kd_vals)
-    tfbs_df.drop(axis=1, index=0)
-
-    # write to tfbs.csv
-    tfbs_loc = prokode_dir + '/src/tfbs.csv'
-    out = tfbs_df.to_csv()
-    out = clean(out)
-    open(tfbs_loc, 'w').write(out)
-    
-    return tfbs_loc
 
 def get_decay_rates(gene):
     return np.log(2)/300
@@ -163,13 +122,13 @@ def decay_rates_main(prokode_dir, annotation_loc):
     # read number of genes
     annotation_df = pd.read_csv(annotation_loc, delimiter='\t')
 
-    out = 'gene,decay_rate\n'
-    for gene in annotation_df['geneid'].to_list():
-        decay_rate = get_decay_rates(gene)
-        out += f'{gene},{decay_rate}\n'
-
+    # write to file
     decay_rates_loc = prokode_dir + '/src/decay_rates.csv'
-    open(decay_rates_loc, 'w').write(out)
+    with open(decay_rates_loc, 'a') as decay_file:
+        decay_file.write('gene,decay_rate\n')
+        for gene in annotation_df['geneid'].to_list():
+            decay_rate = get_decay_rates(gene)
+            decay_file.write(f'{gene},{decay_rate}\n')
 
     return decay_rates_loc
 
@@ -190,6 +149,3 @@ def preprocessing_main(prokode_dir, genome_loc, annotation_loc, pfm_database_loc
     decay_rates_loc = decay_rates_main(prokode_dir, annotation_loc)
     
     return tfbs_loc, decay_rates_loc
-
-# # temp start code
-# preprocessing_main('/workspaces/PROKODE-DOCKER','/workspaces/PROKODE-DOCKER/src/inputs/genome.fasta','/workspaces/PROKODE-DOCKER/src/inputs/annotation.csv','/workspaces/PROKODE-DOCKER/src/preprocessing/pfmdb.txt')
