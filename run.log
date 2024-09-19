@@ -1,0 +1,41 @@
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: Config file name: /workspaces/git/src/preprocessing/config.ini
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: {Parameters are: 
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	CHAMP maximum number of repeats for a give number of clusters = 1
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	CHAMP maximum cluster number = 10
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	CHAMP maximum clustering iterations = 100
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	CHAMP minimum cluster size = 2
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	CHAMP P-value = 0.05
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	CHAMP seed site similarity = 0.85
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	CHAMP to use most significant deficits from enrichment = true
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	CHAMP window size = 0
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	Debug log file = run.log
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	Site identification deficit threshold = 0.5
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	Downstream = 500
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	Workflow end point = 1
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	Enrichment gene coverage P-value = 0.05
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	Enrichment site count P-value = 1.0
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	Enrichment results file = EnrichmentResults.txt
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	EXCLUSIONFILTERFILE = data/exclude.txt
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	Search gene list file = /workspaces/git/src/preprocessing/promoters.fa
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	GENELISTOUT = data/genelist.txt
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	Site identification results file = /workspaces/git/src/preprocessing/CiiiDER_results.txt
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	GRAPHOUTPUT = data/testout.png
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	INCLUSIONFILTERFILE = data/include.txt
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	INPUTFOLDER = resources
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	MATCHFILE = data/minFP_good.prf
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	Transcription factor matrix file = /workspaces/git/src/preprocessing/motif_matrices.txt
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	Number of threads = 2
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	SQLDATA = data/sqldata.sqli
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	Workflow start point = 1
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: 	Upstream = 1500
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: Max memory: 3930062848 bytes
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: Free memory initially: 14815152 bytes
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: Operating system: Linux amd64 5.15.153.1-microsoft-standard-WSL2
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: JVM version: 64 bit Debian OpenJDK 64-Bit Server VM 11.0.24+8-post-Debian-2deb11u1
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: JVM arguments (see lines below): 
+		
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: Program arguments: /CiiiDER/CiiiDER_TFMs/CiiiDER.jar -n /workspaces/git/src/preprocessing/config.ini
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: Recorded parameters to log file
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: Importing Gene List...
+Thu Sep 19 16:18:39 UTC 2024	workflow.Workflow:INFO: Importing Gene List
+Thu Sep 19 16:18:44 UTC 2024	workflow.Workflow:INFO: Scanning Gene Promoters

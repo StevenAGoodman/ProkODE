@@ -1,19 +1,21 @@
 import pandas as pd
 import numpy as np
-from scipy.sparse.linalg import lsqr
 import json
 import statistics
-from run import create_network_json_main
+from src.run import create_network_json_main
 import cvxpy 
 
-prokode_dir = 'C:/Users/cryst/LOFScreening/archive/PROKODE'
+# paramters
+reset = True
+prokode_dir = '/workspaces/git'
 data_file = 'GSE90743_E14R025_raw_counts.txt'
-genome_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/inputs/genome.fasta'
-annotation_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/inputs/annotation.csv'
-pfm_database_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/preprocessing/pfmdb.txt'
-CiiiDER_jar_loc = './CiiiDER_TFMs/CiiiDER.jar'
-CiiiDER_thresh = 0.5
+genome_loc = '/workspaces/git/src/inputs/genome.fasta'
+annotation_loc = '/workspaces/git/src/inputs/annotation.csv'
+pfm_database_loc = '/workspaces/git/src/preprocessing/pfmdb.txt'
+CiiiDER_jar_loc = '/CiiiDER/CiiiDER_TFMs/CiiiDER.jar'
+CiiiDER_thresh = 0.1
 
+# global jazz
 sensor_normal_dist = 10
 basal_rate = 3
 decay_rate = np.log(2)/300
@@ -175,15 +177,16 @@ def get_betas_for_timepoint(genes_position_vector, genes_velocity_vector, networ
 
     return beta_arr
 
-def main(prokode_dir, data_file, genome_loc, annotation_loc, pfm_database_loc, CiiiDER_jar_loc, CiiiDER_thresh, prebuilt=False):
+def main(prokode_dir, data_file, genome_loc, annotation_loc, pfm_database_loc, CiiiDER_jar_loc, CiiiDER_thresh, prebuilt=False, reset=True):
     print("=====================================\nProkODE: GetBetas has begun. Running...\n=====================================\n\n")
 
-    # create network.json
+    # create network.json if not already built
     print('creating network.json...')
     if prebuilt:
         network_loc = prokode_dir + '/src/network.json'
     else:
-        network_loc = create_network_json_main(prokode_dir, genome_loc, annotation_loc, pfm_database_loc, CiiiDER_jar_loc, CiiiDER_thresh, False)# 
+        network_loc = create_network_json_main(prokode_dir, genome_loc, annotation_loc, pfm_database_loc, CiiiDER_jar_loc, CiiiDER_thresh, False, reset)# 
+
     network_dict: dict = json.load(open(network_loc, 'r'))
     
 
@@ -211,4 +214,4 @@ def main(prokode_dir, data_file, genome_loc, annotation_loc, pfm_database_loc, C
 
     compare(beta_collection, tf_key)
 
-main(prokode_dir, data_file, genome_loc, annotation_loc, pfm_database_loc, CiiiDER_jar_loc, CiiiDER_thresh, False)
+main(prokode_dir, data_file, genome_loc, annotation_loc, pfm_database_loc, CiiiDER_jar_loc, CiiiDER_thresh, False, reset)
