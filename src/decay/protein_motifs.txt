@@ -1,0 +1,18 @@
+# all are proteases
+# a lot just have something to do with degrading proteins that dont fold correctly... but cant that just be modeled by the probability of a protein misfolding * some model-validated percentage about the rate of complex formation
+    # SspB binds to the ec-SsrA tag and then caries it to ClpX increasing ClpX’s specificity to the tag. By contrast, ClpS binding to ClpA reduces ClpA interactions with ec-SsrA tags [92], and enhances its role in the degradation of proteins with specific N-degrons [93,94] (figure 1c). Although the ec-SsrA tag is primarily recognized by ClpXP, it has a low affinity to other proteases such as ClpAP, Lon, FtsH and Prc (also named Tsp) 
+        # constant * SspB/etc * prob ?
+    prob_misfold = lambda temp, pH : smth
+    decay_component = lambda prob_misfold, ClpX_amnt, SspB_amnt : prob_misfold * (ClpX_amnt / (ClpX_amnt + Kd_const))
+> ClpXP 
+> ClpAP
+> Lon 
+> FtsH
+> HslUV (analogous to ClpAP)
+> DegP
+https://chatgpt.com/share/66f36d0c-cd28-8001-bd15-9b7019c51f27
+https://sci-hub.st/https://www.sciencedirect.com/science/article/abs/pii/S0022519384800818?via%3Dihub
+A singular value based protein cleavage
+https://royalsocietypublishing.org/doi/10.1098/rsob.220180#d1e2056
+https://sci-hub.st/https://pubs.acs.org/doi/10.1021/acssynbio.7b00122
+HOW CAN YOU MODEL THESE SUPER COMPLEX PATHWAYS WITHOUT CONSIDERING EVERY RULE??

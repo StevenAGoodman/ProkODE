@@ -1,0 +1,10 @@
+        degrading_prot_ref = {
+            "RNase E":{"names":"rne", "score":0.1},
+            "RNase G":{"names":"rng", "score":0.1},
+            "RNase Y":{"names":"rny", "score":0.1},
+            "RNase III":{"names":"rnc", "score":0.1},
+            "RNase J":{"names":"rnj", "score":0.1},
+            "RNase R":{"names":"rnr", "score":0.1},
+            "RNase II":{"names":"rnb", "score":0.1},
+            "PNPase":{"names":"pnp", "score":0.1},
+        }

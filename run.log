@@ -1,0 +1,43 @@
+Wed Sep 25 22:16:58 EDT 2024	workflow.Workflow:INFO: Config file name: C:/Users/cryst/LOFScreening/archive/PROKODE/src/preprocessing/config.ini
+Wed Sep 25 22:16:58 EDT 2024	workflow.Workflow:INFO: {Parameters are: 
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	CHAMP maximum number of repeats for a give number of clusters = 1
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	CHAMP maximum cluster number = 10
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	CHAMP maximum clustering iterations = 100
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	CHAMP minimum cluster size = 2
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	CHAMP P-value = 0.05
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	CHAMP seed site similarity = 0.85
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	CHAMP to use most significant deficits from enrichment = true
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	CHAMP window size = 0
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	Debug log file = run.log
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	Site identification deficit threshold = 0.6
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	Downstream = 500
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	Workflow end point = 1
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	Enrichment gene coverage P-value = 0.05
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	Enrichment site count P-value = 1.0
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	Enrichment results file = EnrichmentResults.txt
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	EXCLUSIONFILTERFILE = data/exclude.txt
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	Search gene list file = C:/Users/cryst/LOFScreening/archive/PROKODE/src/preprocessing/promoters.fa
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	GENELISTOUT = data/genelist.txt
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	Site identification results file = C:/Users/cryst/LOFScreening/archive/PROKODE/src/preprocessing/CiiiDER_results.txt
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	GRAPHOUTPUT = data/testout.png
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	INCLUSIONFILTERFILE = data/include.txt
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	INPUTFOLDER = resources
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	MATCHFILE = data/minFP_good.prf
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	Transcription factor matrix file = C:/Users/cryst/LOFScreening/archive/PROKODE/src/preprocessing/motif_matrices.txt
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	Number of threads = 8
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	SQLDATA = data/sqldata.sqli
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	Workflow start point = 1
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: 	Upstream = 1500
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: Max memory: 4273995776 bytes
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: Free memory initially: 18372936 bytes
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: Operating system: Windows 11 amd64 10.0
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: JVM version: 64 bit Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 22.0.2+9-70
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: JVM arguments (see lines below): 
+		
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: Program arguments: ./CiiiDER_TFMs/CiiiDER.jar -n C:/Users/cryst/LOFScreening/archive/PROKODE/src/preprocessing/config.ini
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: Recorded parameters to log file
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: Importing Gene List...
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: Importing Gene List
+Wed Sep 25 22:16:59 EDT 2024	workflow.Workflow:INFO: Scanning Gene Promoters
+Thu Sep 26 01:09:56 EDT 2024	workflow.Workflow:INFO: Completed Scanning Gene Promoters
+Thu Sep 26 01:09:56 EDT 2024	workflow.Workflow:INFO: Run Completed Successfully
