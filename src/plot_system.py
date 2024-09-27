@@ -10,7 +10,7 @@ from src.maths import *
 from src.decay.processing import decay_main
 
 # constants
-temperature = 1 # kelvin
+temperature = 298 # kelvin
 elongation_rate = 60 # nt/s
 peptide_rate = 20 # aa/s
 Kd_ribo_mrna = 0.1 # WHAT IS THE BINDING AFFINITY OF RIBO TO DALGARNO SEQ????
@@ -25,8 +25,8 @@ def search_json(json_loc, key, gene_key):
     return gene_dict
 
 def score_to_K(score):
-    delta_G = score
-    return np.exp(delta_G / (1.98722 * temperature))
+    delta_G = -1 * score * 1000
+    return 1 / np.exp(delta_G / (1.98722 * temperature))
 
 def get_decay_dicts():
 

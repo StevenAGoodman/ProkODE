@@ -72,7 +72,7 @@ def create_network_json(prokode_dir, tfbs_loc, annotation_df, operons_df):
             
             try:
                 for tg in operon_genes:
-                    output[tg]["regulators"][tf] = {"beta":"NaN","score":kdtf}
+                    output[tg]["regulators"][tf] = {"beta":"NaN","delta G":kdtf}
             except:
                 continue
 

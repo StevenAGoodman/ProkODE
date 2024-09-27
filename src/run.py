@@ -1,29 +1,29 @@
 import numpy as np
 import pandas as pd
-from preprocessing.preprocessing import preprocessing_main
-from config_network_structure import network_main
+from src.preprocessing.preprocessing import preprocessing_main
+from src.config_network_structure import network_main
 # from plot_system import plot_system
-from decay.processing import decay_main
+from src.decay.processing import decay_main
 import os
 
-# paramters
-reset = True
-prokode_dir = '/workspaces/PROKODE'
-data_file = 'GSE90743_E14R025_raw_counts.txt'
-genome_loc = prokode_dir + '/src/inputs/genome.fasta'
-annotation_loc = prokode_dir + '/src/inputs/annotation.tsv'
-operons_loc = prokode_dir + '/src/inputs/operons.tsv'
-pfm_database_loc = prokode_dir + '/src/preprocessing/pfmdb.txt'
-CiiiDER_jar_loc = './CiiiDER_TFMs/CiiiDER.jar'
-CiiiDER_thresh = 0.6
+# # paramters
+# reset = True
+# prokode_dir = 'C:/Users/cryst/LOFScreening/archive/PROKODE'
+# data_file = 'GSE90743_E14R025_raw_counts.txt'
+# genome_loc = prokode_dir + '/src/inputs/genome.fasta'
+# annotation_loc = prokode_dir + '/src/inputs/annotation.tsv'
+# operons_loc = prokode_dir + '/src/inputs/operons.tsv'
+# pfm_database_loc = prokode_dir + '/src/preprocessing/pfmdb.txt'
+# CiiiDER_jar_loc = './CiiiDER_TFMs/CiiiDER.jar'
+# CiiiDER_thresh = 0.6
 
-# global jazz
-sensor_normal_dist = 10
-basal_rate = 3
-decay_rate = np.log(2)/300
-Np = 6000
-Kd_p = 0.1
-Nns = 4600000
+# # global jazz
+# sensor_normal_dist = 10
+# basal_rate = 3
+# decay_rate = np.log(2)/300
+# Np = 6000
+# Kd_p = 0.1
+# Nns = 4600000
 
 def create_network_json_main(prokode_dir, genome_loc, annotation_loc, operons_loc, pfm_database_loc, CiiiDER_jar_loc, CiiiDER_thresh, add_betas = False, reset=True):
     # reset file structure
@@ -61,4 +61,4 @@ def create_interface_files(network_loc):
 
     return None
 
-create_network_json_main(prokode_dir, genome_loc, annotation_loc, operons_loc, pfm_database_loc, CiiiDER_jar_loc, CiiiDER_thresh, False, reset)
+# create_network_json_main(prokode_dir, genome_loc, annotation_loc, operons_loc, pfm_database_loc, CiiiDER_jar_loc, CiiiDER_thresh, False, reset)

@@ -60,7 +60,7 @@ def config_tfmotifs(prokode_dir, pfm_database_loc, annotation_loc):
 
 def get_tfbs_rowarr(line, add_betas):
     # line headers: ['tg','_','tf','tf_matrixid','start','end','strand','prescore','score','seq']
-    tfbs_row = [line[1], line[0]]
+    tfbs_row = [line[0], line[1]]
     score = float(line[2])
     tfbs_row.append(score)
 
@@ -109,7 +109,7 @@ def create_tfbs_through_CiiiDER(prokode_dir, jar_loc, promoters_loc, promoters_l
             prev_fullline = ''
             prev_activated = False
             for row in csvfile:
-                if len(row)<12:
+                if len(row)<8:
                     row = row.replace("\n", '')
                     prev = row
                     prev_activated = True

@@ -4,21 +4,25 @@ import cvxpy.atoms.elementwise.log
 import pandas as pd
 import numpy as np
 import json
+import os
 import statistics
 from matplotlib import pyplot as plt
 # from src.run import create_network_json_main
 from src.plot_system import *
+from src.run import create_network_json_main
 import cvxpy 
+import scipy.optimize as sp
 
 reset = True
-prokode_dir = '/workspaces/PROKODE'
+prebuilt = True
+prokode_dir = 'C:/Users/cryst/LOFScreening/archive/PROKODE'
 data_file = 'GSE90743_E14R025_raw_counts.txt'
 genome_loc = prokode_dir + '/src/inputs/genome.fasta'
 annotation_loc = prokode_dir + '/src/inputs/annotation.tsv'
 operons_loc = prokode_dir + '/src/inputs/operons.tsv'
 pfm_database_loc = prokode_dir + '/src/preprocessing/pfmdb.txt'
 CiiiDER_jar_loc = './CiiiDER_TFMs/CiiiDER.jar'
-CiiiDER_thresh = 0.3
+CiiiDER_thresh = 0.0
 
 # global jazz
 sensor_normal_dist = 10
@@ -145,6 +149,25 @@ def kalman_filtering(data):
     print('kalman complete...')
     return positions_matrix, velocities_matrix, gene_key, t
 
+def parse_data(data_df):
+    gene_key = data_df["geneid"].tolist()
+    
+    # if not done in R, you may need some id conversion function for gene_key
+
+    df_header = list(data_df)
+    dt = float(df_header[2]) - float(df_header[1]) # expecting headers after geneid to be time points
+
+    t0_arr = data_df[df_header[1]].tolist()
+    t1_arr = data_df[df_header[2]].tolist()
+    positions_matrix = [t0_arr, t1_arr]
+
+    velocity_arr = []
+    for i in range(len(gene_key)):
+        delta_y = float(t1_arr[i]) - float(t0_arr[i])
+        velocity_arr.append(delta_y / dt)
+
+    return positions_matrix, velocity_arr, dt, gene_key
+
 def get_betas_for_timepoint(prev_protein_amnts, genes_position_vector, genes_velocity_vector, N_rnap, N_ribo, network_loc, network_gene_key, mRNA_decay_dict, protein_decay_dict, gene_key:list, tf_key, dt):
     coefficient_matrix = []
     beta_all_matrix = []
@@ -165,12 +188,12 @@ def get_betas_for_timepoint(prev_protein_amnts, genes_position_vector, genes_vel
 
         for tf in tfs_info:
             N_tf = prev_protein_amnts[gene_key.index(tf)]
-            P = N_tf / (N_tf + score_to_K(k["regulators"][tf]["score"]))
+            P = N_tf / (N_tf + score_to_K(k["regulators"][tf]["delta G"]))
 
-            if float(P) == 0: # opportunity to replace with psuedocounts
+            if float(P) == 0.0: # opportunity to replace with psuedocounts
                 P += 0.000001
 
-            # print(k["regulators"][tf]["score"], score_to_K(k["regulators"][tf]["score"]), P)
+            # print(k["regulators"][tf]["delta G"], score_to_K(k["regulators"][tf]["delta G"]), P)
             coefficient_arr[tf_key.index(tf)] = float(P) # ~multiplicative method: np.log10(float(P))
         # get mRNA decay
         mRNA_decay_rate = RNA_decay_rate(gene, genes_position_vector, genes_position_vector[R], mRNA_decay_dict, gene_key)
@@ -209,27 +232,35 @@ def get_betas_for_timepoint(prev_protein_amnts, genes_position_vector, genes_vel
 
     # least squares fitting
     print('\t...solving least squares problem')
-    # X = cvxpy.Variable((coefficient_matrix.shape[1],1))
-    # constraints = [X >= 0]
+                                # X = cvxpy.Variable((coefficient_matrix.shape[1],1))
+                                # constraints = [X >= 0]
 
-    # cost = cvxpy.log(product) - beta_all_matrix
-    # problem = cvxpy.Problem(cvxpy.Minimize(cvxpy.norm(cost, p=2)), constraints)
-    # problem.solve(verbose=True)
-    # Define variables
-    coefficient_matrix = np.random.rand(100, 10)
-    beta_all_matrix = np.random.rand(100, 1)
+                                # cost = cvxpy.log(product) - beta_all_matrix
+                                # problem = cvxpy.Problem(cvxpy.Minimize(cvxpy.norm(cost, p=2)), constraints)
+                                # problem.solve(verbose=True)
+                                # Define variables
+    # # coefficient_matrix = np.random.rand(100, 10)
+    # # beta_all_matrix = np.random.rand(100, 1)
 
-    log_beta = cvxpy.Variable((coefficient_matrix.shape[1], 1))  # log of beta values
-    constraints = []
+    # log_beta = cvxpy.Variable((coefficient_matrix.shape[1], 1))  # log of beta values
+    # constraints = []
 
-    # Convert to a linear form: log(P) + log(beta) = log(beta_all)
-    log_product = cvxpy.log(coefficient_matrix) @ log_beta
-    cost = cvxpy.norm(log_product - cvxpy.log(beta_all_matrix), 2) + 1e-6 * cvxpy.norm(log_beta)
+    # # Convert to a linear form: log(P) + log(beta) = log(beta_all)
+    # log_product = cvxpy.log(coefficient_matrix) @ log_beta
+    # cost = cvxpy.norm(log_product - cvxpy.log(beta_all_matrix), 2) + 1e-6 * cvxpy.norm(log_beta)
 
-    # Formulate the problem
-    problem = cvxpy.Problem(cvxpy.Minimize(cost), constraints)
-    problem.solve( verbose=True)
+    # # Formulate the problem
+    # problem = cvxpy.Problem(cvxpy.Minimize(cost), constraints)
+    # problem.solve(solver=cvxpy.SCS, verbose=True)
+    def fun(log_beta):
+        print(log_beta)
+        log_product = np.log(coefficient_matrix) @ log_beta
+        print(log_product)
+        cost = log_product - np.log(beta_all_matrix)
+        return cost
 
+    res = sp.leastsq(fun, np.ones((coefficient_matrix.shape[1], 1)))
+    print(res)
     # Obtain original beta values
     beta_values = np.exp(log_beta.value)
     print(beta_values)
@@ -241,7 +272,7 @@ def get_betas_for_timepoint(prev_protein_amnts, genes_position_vector, genes_vel
 
     return beta_arr, protein_amnts
 
-def main(prokode_dir, data_file, genome_loc, annotation_loc, operons_loc, pfm_database_loc, CiiiDER_jar_loc, CiiiDER_thresh, prebuilt=False, reset=True):
+def main(prokode_dir, data_dir, genome_loc, annotation_loc, operons_loc, pfm_database_loc, CiiiDER_jar_loc, CiiiDER_thresh, run_kalman=False, prebuilt=False, reset=True):
     print("=====================================\nProkODE: GetBetas has begun. Running...\n=====================================\n")
 
     # create network.json if not already built
@@ -249,8 +280,7 @@ def main(prokode_dir, data_file, genome_loc, annotation_loc, operons_loc, pfm_da
     if prebuilt:
         network_loc = prokode_dir + '/src/network.json'
     else:
-        None
-        # network_loc = create_network_json_main(prokode_dir, genome_loc, annotation_loc, operons_loc, pfm_database_loc, CiiiDER_jar_loc, CiiiDER_thresh, False, reset)# 
+        network_loc = create_network_json_main(prokode_dir, genome_loc, annotation_loc, operons_loc, pfm_database_loc, CiiiDER_jar_loc, CiiiDER_thresh, False, reset)# 
         # define arbitrary order of tfs
     tf_key = [ tf for val in json.load(open(network_loc, 'r')).values() for tf in val["regulators"].keys() ]
     tf_key = list(set(tf_key)) # filter repeats
@@ -264,34 +294,53 @@ def main(prokode_dir, data_file, genome_loc, annotation_loc, operons_loc, pfm_da
                 gene = line[line.find('"')+1:line.find('":{')]
                 network_gene_key.append(gene)
 
-    # kalman filtering
-    print('kalman filtering...')
-    data = pd.read_csv(data_file, delimiter='\t')
-    positions_matrix, velocities_matrix, gene_key, t = kalman_filtering(data)
-
+    # data processing / kalman filtering
+    print('data processing and/or kalman filtering...')
+        # so you need data in the format: each file contians a pair of time points each with an array of gene expression [csv headers: geneid, int(time1), int(time2)]
+    data_dir = os.fsencode(data_dir)
+    for data_file in os.listdir(data_dir):
         
-    # get beta vals for each time point
-    print('getting beta collection...')
-    beta_collection = [] # m time points by n tfs
-    protein_amnts = positions_matrix[:, 0]
-    mRNA_decay_dict, protein_decay_dict = get_decay_dicts()
-    N_rnap = 10000
-    N_ribo = 15000
-    time = 0
+        data = pd.read_csv(data_file, delimiter='\t')
 
-    for time_index in range(len(t)):
-        dt = t[time_index] - time
-        time = t[time_index]
+        if run_kalman:
+            positions_matrix, velocities_matrix, gene_key, t = kalman_filtering(data)
 
-        print('\t...getting betas for timepoint')
-        beta_arr, protein_amnts = get_betas_for_timepoint(protein_amnts, positions_matrix[:, time_index], velocities_matrix[:, time_index], N_rnap, N_ribo, network_loc, network_gene_key, mRNA_decay_dict, protein_decay_dict, gene_key, tf_key, dt)
-        beta_collection.append(beta_arr)
+            # get beta vals for each time point
+            print('getting beta collection...')
+            beta_collection = [] # m time points by n tfs
+            protein_amnts = positions_matrix[:, 0]
+            mRNA_decay_dict, protein_decay_dict = get_decay_dicts()
+            N_rnap = 10000
+            N_ribo = 15000
+            time = 0
 
-    print('\t...merging timepoints')
-    beta_collection = np.array(beta_collection)
+            for time_index in range(len(t)):
+                dt = t[time_index] - time
+                time = t[time_index]
 
-    print('analyzing and writing results file...')
+                print('\t...getting betas for timepoint')
+                beta_arr, protein_amnts = get_betas_for_timepoint(protein_amnts, positions_matrix[:, time_index], velocities_matrix[:, time_index], N_rnap, N_ribo, network_loc, network_gene_key, mRNA_decay_dict, protein_decay_dict, gene_key, tf_key, dt)
+                beta_collection.append(beta_arr)
 
-    compare(t, beta_collection, tf_key)
+                print('\t...merging timepoints')
+                beta_collection = np.array(beta_collection)
 
-main(prokode_dir, data_file, genome_loc, annotation_loc, operons_loc, pfm_database_loc, CiiiDER_jar_loc, CiiiDER_thresh, True, reset)
+                print('analyzing and writing results file...')
+                compare(t, beta_collection, tf_key)
+
+        else:
+            positions_matrix, velocity_arr, dt, gene_key = parse_data(data)
+
+            # get beta vals for each time point
+            print('getting beta collection...')
+            beta_collection = [] # m time points by n tfs
+            protein_amnts = positions_matrix[:, 0] # HOW CAN YOU GET PROTEIN AMNTS FROM mRNA DATA: may want to just estimate from entire series first and include in data file
+            mRNA_decay_dict, protein_decay_dict = get_decay_dicts()
+            N_rnap = 10000
+            N_ribo = 15000
+            time = 0
+
+            beta_arr, protein_amnts = get_betas_for_timepoint(protein_amnts, positions_matrix[1], velocity_arr, N_rnap, N_ribo, network_loc, network_gene_key, mRNA_decay_dict, protein_decay_dict, gene_key, tf_key, dt)
+
+
+main(prokode_dir, data_file, genome_loc, annotation_loc, operons_loc, pfm_database_loc, CiiiDER_jar_loc, CiiiDER_thresh, False, prebuilt, reset)
