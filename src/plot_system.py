@@ -25,7 +25,7 @@ def search_json(json_loc, key, gene_key):
     return gene_dict
 
 def score_to_K(score):
-    delta_G = -1 * np.log2(score / 0.25)
+    delta_G = score
     return np.exp(delta_G / (1.98722 * temperature))
 
 def get_decay_dicts():

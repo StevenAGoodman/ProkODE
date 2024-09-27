@@ -8,7 +8,7 @@ import os
 
 # paramters
 reset = True
-prokode_dir = 'C:/Users/cryst/LOFScreening/archive/PROKODE'
+prokode_dir = '/workspaces/PROKODE'
 data_file = 'GSE90743_E14R025_raw_counts.txt'
 genome_loc = prokode_dir + '/src/inputs/genome.fasta'
 annotation_loc = prokode_dir + '/src/inputs/annotation.tsv'

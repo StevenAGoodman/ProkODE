@@ -1,3 +1,6 @@
+import cvxpy.atoms
+import cvxpy.atoms.elementwise
+import cvxpy.atoms.elementwise.log
 import pandas as pd
 import numpy as np
 import json
@@ -97,7 +100,7 @@ def kalman_filtering(data):
 
     # define t
     t = [5,10,25,45,75,120,210,330,1500,1560,1680]
-    t = [60 * time_min for time_min in t] # to seconds
+    t = [60 * min for min in t] # to seconds
 
     # init kalman inputs
     x = x_0 = np.array([[0],
@@ -142,7 +145,7 @@ def kalman_filtering(data):
     print('kalman complete...')
     return positions_matrix, velocities_matrix, gene_key, t
 
-def get_betas_for_timepoint(prev_protein_amnts, genes_position_vector, genes_velocity_vector, N_rnap, N_ribo, network_loc, network_gene_key, mRNA_decay_dict, protein_decay_dict, gene_key, tf_key, dt):
+def get_betas_for_timepoint(prev_protein_amnts, genes_position_vector, genes_velocity_vector, N_rnap, N_ribo, network_loc, network_gene_key, mRNA_decay_dict, protein_decay_dict, gene_key:list, tf_key, dt):
     coefficient_matrix = []
     beta_all_matrix = []
 
@@ -161,10 +164,14 @@ def get_betas_for_timepoint(prev_protein_amnts, genes_position_vector, genes_vel
         coefficient_arr = [0 for i in range(len(tf_key))]
 
         for tf in tfs_info:
-            N_tf = genes_position_vector[gene_key.index(tf)]
+            N_tf = prev_protein_amnts[gene_key.index(tf)]
             P = N_tf / (N_tf + score_to_K(k["regulators"][tf]["score"]))
-            print(k["regulators"][tf]["score"], score_to_K(k["regulators"][tf]["score"]), P)
-            coefficient_arr[tf_key.index(tf)] = np.log10(float(P)) # ~multiplicative method
+
+            if float(P) == 0: # opportunity to replace with psuedocounts
+                P += 0.000001
+
+            # print(k["regulators"][tf]["score"], score_to_K(k["regulators"][tf]["score"]), P)
+            coefficient_arr[tf_key.index(tf)] = float(P) # ~multiplicative method: np.log10(float(P))
         # get mRNA decay
         mRNA_decay_rate = RNA_decay_rate(gene, genes_position_vector, genes_position_vector[R], mRNA_decay_dict, gene_key)
 
@@ -179,7 +186,7 @@ def get_betas_for_timepoint(prev_protein_amnts, genes_position_vector, genes_vel
         P_rnap_basal = N_rnap / (genome_len * (N_rnap + Kd_rnap))
 
         beta_all = R_transcription / (P_rnap_basal * max_txn_rate)
-        beta_all_matrix.append(np.log10(beta_all) - sum(coefficient_arr)) # ~multiplicative method
+        beta_all_matrix.append(np.log(beta_all)) # ~multiplicative method: np.log10(beta_all) - sum(coefficient_arr)
 
         # get protein rates
         if k != []:
@@ -192,7 +199,7 @@ def get_betas_for_timepoint(prev_protein_amnts, genes_position_vector, genes_vel
 
         protein_amnts.append(protein_amnt)
 
-        coefficient_matrix.append([ 1 for i in range(len(tf_key))])
+        coefficient_matrix.append(coefficient_arr) # mult: [ 1 for i in range(len(tf_key))]
 
     # format matrices
     coefficient_matrix = np.array(coefficient_matrix)
@@ -202,13 +209,30 @@ def get_betas_for_timepoint(prev_protein_amnts, genes_position_vector, genes_vel
 
     # least squares fitting
     print('\t...solving least squares problem')
-    X = cvxpy.Variable((coefficient_matrix.shape[1],1))
-    constraints = [X >= 0]
+    # X = cvxpy.Variable((coefficient_matrix.shape[1],1))
+    # constraints = [X >= 0]
 
-    product = coefficient_matrix @ X
-    cost = cvxpy.sum(product, axis=1, keepdims=True) - beta_all_matrix
-    problem = cvxpy.Problem(cvxpy.Minimize(cvxpy.norm(cost)), constraints)
-    problem.solve(verbose=True)
+    # cost = cvxpy.log(product) - beta_all_matrix
+    # problem = cvxpy.Problem(cvxpy.Minimize(cvxpy.norm(cost, p=2)), constraints)
+    # problem.solve(verbose=True)
+    # Define variables
+    coefficient_matrix = np.random.rand(100, 10)
+    beta_all_matrix = np.random.rand(100, 1)
+
+    log_beta = cvxpy.Variable((coefficient_matrix.shape[1], 1))  # log of beta values
+    constraints = []
+
+    # Convert to a linear form: log(P) + log(beta) = log(beta_all)
+    log_product = cvxpy.log(coefficient_matrix) @ log_beta
+    cost = cvxpy.norm(log_product - cvxpy.log(beta_all_matrix), 2) + 1e-6 * cvxpy.norm(log_beta)
+
+    # Formulate the problem
+    problem = cvxpy.Problem(cvxpy.Minimize(cost), constraints)
+    problem.solve( verbose=True)
+
+    # Obtain original beta values
+    beta_values = np.exp(log_beta.value)
+    print(beta_values)
 
     # beta_vector = solve_ls(coefficient_matrix, beta_all_matrix, lb=lower_bound, solver='osqp', sparse_conversion=True, time_limit=60)
     # print(beta_vector)
@@ -249,7 +273,7 @@ def main(prokode_dir, data_file, genome_loc, annotation_loc, operons_loc, pfm_da
     # get beta vals for each time point
     print('getting beta collection...')
     beta_collection = [] # m time points by n tfs
-    protein_amnts = [0] * len(gene_key)
+    protein_amnts = positions_matrix[:, 0]
     mRNA_decay_dict, protein_decay_dict = get_decay_dicts()
     N_rnap = 10000
     N_ribo = 15000
