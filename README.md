@@ -26,7 +26,7 @@ Inputs:
 Outputs:
 - protein concentrations across time frame (of listed proteins), visualizations and raw data
 
-## Algorithm
+## Algorithm (deprecated)
 
 1st layer = file; 2nd layer = function within file
 
