@@ -74,3 +74,5 @@ https://chem.libretexts.org/Bookshelves/Introductory_Chemistry/Introductory_Chem
 https://chem.libretexts.org/Bookshelves/Biological_Chemistry/Supplemental_Modules_(Biological_Chemistry)/Enzymes/Enzymatic_Kinetics/Michaelis-Menten_Kinetics
 
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6013389/#:~:text=Regulated%20proteolysis%20is%20a%20vital%20process%20that%20affects,specificity%20and%20selectivity%20in%20degrading%20substrates%20is%20key.
+
+update
