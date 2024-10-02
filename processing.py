@@ -18,6 +18,9 @@ Kd_p = 0.1
 Nns = 4600000
 
 def get_data_unit(i):
+
+def fit_function_for_timepoint():
+     
     
     
 # input: pair of time points
