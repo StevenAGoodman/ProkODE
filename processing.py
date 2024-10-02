@@ -7,6 +7,7 @@ import cvxpy
 
 # be sure to run run.py before running this file
 network_loc =
+data_loc =
 
 # global jazz
 num_data = 10
@@ -19,13 +20,20 @@ Nns = 4600000
 
 def get_data_unit(i):
 
-def fit_function_for_timepoint():
+def fit_function_for_timepoint(data_item, gene_key):
+     data_t0 = data_item[:,0]
+     data_t1 = data_item[:,1]
      
+
+     return(beta_arr)
     
     
 # input: pair of time points
 
-for i in range(num_data):
+data_df = pd.read_csv(data_loc)
+gene_key = data_df[0] # may have to subtracted header
+
+for i in range(names(data_df)):
     data_unit = get_data_unit(i)
 
     
