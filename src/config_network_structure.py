@@ -23,7 +23,7 @@ import pandas as pd
 
 #     ],
 #     ...
-# } 
+# }
 
 def create_network_json(prokode_dir, tfbs_loc, annotation_df, operons_df):
     # json start brackets
@@ -48,13 +48,13 @@ def create_network_json(prokode_dir, tfbs_loc, annotation_df, operons_df):
                 arr = {"synonyms":ast.literal_eval(syn),"transcript length":transcript_len,"mRNA length":mRNA_len}
                 reg_arr = {}
                 arr["regulators"] = reg_arr
-                
+
                 output[gene] = arr
                 gene_key.append(gene)
             except:
-                print('failed: ', gene)
+                print('\t\t\tfailed:', gene)
                 None
-    
+
     with open(tfbs_loc, 'r') as tfbs_file:
         for _, line in enumerate(tfbs_file):
             # skip blank lines
@@ -69,7 +69,7 @@ def create_network_json(prokode_dir, tfbs_loc, annotation_df, operons_df):
             tf = line[0]
             kdtf = float(line[2].replace('\n',''))
             # beta = line[3]
-            
+
             try:
                 for tg in operon_genes:
                     output[tg]["regulators"][tf] = {"beta":"NaN","delta G":kdtf}
@@ -77,7 +77,7 @@ def create_network_json(prokode_dir, tfbs_loc, annotation_df, operons_df):
                 continue
 
     # write to network.json
-    print('\t\twriting to network.json')
+    print('\twriting to network.json')
     network_loc = prokode_dir + '/src/network.json'
     with open(network_loc, 'a') as network_file:
         network_file.write('{\n')
@@ -91,9 +91,9 @@ def create_network_json(prokode_dir, tfbs_loc, annotation_df, operons_df):
     return network_loc, gene_key
 
 # def create_network_json(prokode_dir, gene_arr, decay_loc, tfbs_loc, annotation_df):
-#     # read file dependencies: 
+#     # read file dependencies:
 #     decay_df = pd.read_csv(decay_loc) # names=['gene', 'decay_rate']
-    
+
 #     # read tfbs.csv and append to network.json
 #     print('\t\twriting to network.json')
 #     network_loc = prokode_dir + '/src/network.json'
@@ -118,9 +118,9 @@ def create_network_json(prokode_dir, tfbs_loc, annotation_df, operons_df):
 #                     kdtf = tf_row['Kd']
 #                     reg_arr[tf_row['tf']] = {"beta":"nan","kd_tf":kdtf}
 #                 arr["regulators"] = reg_arr
-                
+
 #                 network_file.write(f'{json.loads(arr)},\n')
-            
+
 #             # json end brackets
 #             network_file.write('}')
 
