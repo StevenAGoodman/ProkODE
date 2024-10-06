@@ -1,0 +1,73 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE39439 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE39439/GSE39439.soft.gz 
+Reading file....
+Parsing....
+Found 31 entities...
+GPL14768 (1 of 32 entities)
+GSM968735 (2 of 32 entities)
+GSM968736 (3 of 32 entities)
+GSM968737 (4 of 32 entities)
+GSM968738 (5 of 32 entities)
+GSM968739 (6 of 32 entities)
+GSM968740 (7 of 32 entities)
+GSM968741 (8 of 32 entities)
+GSM968742 (9 of 32 entities)
+GSM968743 (10 of 32 entities)
+GSM968744 (11 of 32 entities)
+GSM968745 (12 of 32 entities)
+GSM968746 (13 of 32 entities)
+GSM968747 (14 of 32 entities)
+GSM968748 (15 of 32 entities)
+GSM968749 (16 of 32 entities)
+GSM968750 (17 of 32 entities)
+GSM968751 (18 of 32 entities)
+GSM968752 (19 of 32 entities)
+GSM968753 (20 of 32 entities)
+GSM968754 (21 of 32 entities)
+GSM968755 (22 of 32 entities)
+GSM968756 (23 of 32 entities)
+GSM968757 (24 of 32 entities)
+GSM968758 (25 of 32 entities)
+GSM968759 (26 of 32 entities)
+GSM968760 (27 of 32 entities)
+GSM968761 (28 of 32 entities)
+GSM968762 (29 of 32 entities)
+GSM968763 (30 of 32 entities)
+GSM968764 (31 of 32 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+Error: invalid sample names; likely not time series
+Execution halted

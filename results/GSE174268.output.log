@@ -1,0 +1,351 @@
+[1] NA
+[1] "Starvation mRNA_Rep1"
+[1] NA
+[1] "Starvation mRNA_Rep2"
+[1] NA
+[1] "Early mRNA_Rep1"
+[1] NA
+[1] "Early mRNA_Rep2"
+[1] NA
+[1] "MeiosisI mRNA_Rep1"
+[1] NA
+[1] "MeiosisI mRNA_Rep2"
+[1] NA
+[1] "MeiosisII mRNA_Rep1"
+[1] NA
+[1] "MeiosisII mRNA_Rep2"
+[1] NA
+[1] "Late mRNA_Rep1"
+[1] NA
+[1] "Late mRNA_Rep2"
+[1] NA
+[1] "Starvation Entry_Vector"
+[1] NA
+[1] "Early Entry_Vector"
+[1] NA
+[1] "MeiosisI Entry_Vector"
+[1] NA
+[1] "MeiosisII Entry_Vector"
+[1] NA
+[1] "Late Entry_Vector"
+[1] NA
+[1] "Starvation Destination_Vector"
+[1] NA
+[1] "Early Destination_Vector"
+[1] NA
+[1] "MeiosisI Destination_Vector"
+[1] NA
+[1] "MeiosisII Destination_Vector"
+[1] NA
+[1] "Late Destination_Vector"
+[1] NA
+[1] "Starvation Yeast"
+[1] NA
+[1] "Early Yeast"
+[1] NA
+[1] "MeiosisI Yeast"
+[1] NA
+[1] "MeiosisII Yeast"
+[1] NA
+[1] "Late Yeast"
+[1] NA
+[1] "Starvation Comp_Screen_YPGR_Day1_Rep1"
+[1] NA
+[1] "Starvation Comp_Screen_YPGR_Day2_Rep1"
+[1] NA
+[1] "Starvation Comp_Screen_YPGR_Day3_Rep1"
+[1] NA
+[1] "Starvation Comp_Screen_YPGR_Day4_Rep1"
+[1] NA
+[1] "Starvation Comp_Screen_YPGR_Day5_Rep1"
+[1] NA
+[1] "Starvation Comp_Screen_YPD_Day1_Rep1"
+[1] NA
+[1] "Starvation Comp_Screen_YPD_Day2_Rep1"
+[1] NA
+[1] "Starvation Comp_Screen_YPD_Day3_Rep1"
+[1] NA
+[1] "Starvation Comp_Screen_YPD_Day4_Rep1"
+[1] NA
+[1] "Starvation Comp_Screen_YPD_Day5_Rep1"
+[1] NA
+[1] "Starvation Comp_Screen_YPGR_Day1_Rep2"
+[1] NA
+[1] "Starvation Comp_Screen_YPGR_Day2_Rep2"
+[1] NA
+[1] "Starvation Comp_Screen_YPGR_Day3_Rep2"
+[1] NA
+[1] "Starvation Comp_Screen_YPGR_Day4_Rep2"
+[1] NA
+[1] "Starvation Comp_Screen_YPGR_Day5_Rep2"
+[1] NA
+[1] "Starvation Comp_Screen_YPD_Day1_Rep2"
+[1] NA
+[1] "Starvation Comp_Screen_YPD_Day2_Rep2"
+[1] NA
+[1] "Starvation Comp_Screen_YPD_Day3_Rep2"
+[1] NA
+[1] "Starvation Comp_Screen_YPD_Day4_Rep2"
+[1] NA
+[1] "Starvation Comp_Screen_YPD_Day5_Rep2"
+[1] NA
+[1] "Starvation Comp_Screen_YPGR_Day1_Rep3"
+[1] NA
+[1] "Starvation Comp_Screen_YPGR_Day2_Rep3"
+[1] NA
+[1] "Starvation Comp_Screen_YPGR_Day3_Rep3"
+[1] NA
+[1] "Starvation Comp_Screen_YPGR_Day4_Rep3"
+[1] NA
+[1] "Starvation Comp_Screen_YPGR_Day5_Rep3"
+[1] NA
+[1] "Starvation Comp_Screen_YPD_Day1_Rep3"
+[1] NA
+[1] "Starvation Comp_Screen_YPD_Day2_Rep3"
+[1] NA
+[1] "Starvation Comp_Screen_YPD_Day3_Rep3"
+[1] NA
+[1] "Starvation Comp_Screen_YPD_Day4_Rep3"
+[1] NA
+[1] "Starvation Comp_Screen_YPD_Day5_Rep3"
+[1] NA
+[1] "Early Comp_Screen_YPGR_Day1_Rep1"
+[1] NA
+[1] "Early Comp_Screen_YPGR_Day_Rep1"
+[1] NA
+[1] "Early Comp_Screen_YPGR_Day3_Rep1"
+[1] NA
+[1] "Early Comp_Screen_YPGR_Day4_Rep1"
+[1] NA
+[1] "Early Comp_Screen_YPGR_Day5_Rep1"
+[1] NA
+[1] "Early Comp_Screen_YPD_Day1_Rep1"
+[1] NA
+[1] "Early Comp_Screen_YPD_Day2_Rep1"
+[1] NA
+[1] "Early Comp_Screen_YPD_Day3_Rep1"
+[1] NA
+[1] "Early Comp_Screen_YPD_Day4_Rep1"
+[1] NA
+[1] "Early Comp_Screen_YPD_Day5_Rep1"
+[1] NA
+[1] "Early Comp_Screen_YPGR_Day1_Rep2"
+[1] NA
+[1] "Early Comp_Screen_YPGR_Day2_Rep2"
+[1] NA
+[1] "Early Comp_Screen_YPGR_Day3_Rep2"
+[1] NA
+[1] "Early Comp_Screen_YPGR_Day4_Rep2"
+[1] NA
+[1] "Early Comp_Screen_YPGR_Day5_Rep2"
+[1] NA
+[1] "Early Comp_Screen_YPD_Day1_Rep2"
+[1] NA
+[1] "Early Comp_Screen_YPD_Day2_Rep2"
+[1] NA
+[1] "Early Comp_Screen_YPD_Day3_Rep2"
+[1] NA
+[1] "Early Comp_Screen_YPD_Day4_Rep2"
+[1] NA
+[1] "Early Comp_Screen_YPD_Day5_Rep2"
+[1] NA
+[1] "Early Comp_Screen_YPGR_Day1_Rep3"
+[1] NA
+[1] "Early Comp_Screen_YPGR_Day2_Rep3"
+[1] NA
+[1] "Early Comp_Screen_YPGR_Day3_Rep3"
+[1] NA
+[1] "Early Comp_Screen_YPGR_Day4_Rep3"
+[1] NA
+[1] "Early Comp_Screen_YPGR_Day5_Rep3"
+[1] NA
+[1] "Early Comp_Screen_YPD_Day1_Rep3"
+[1] NA
+[1] "Early Comp_Screen_YPD_Day2_Rep3"
+[1] NA
+[1] "Early Comp_Screen_YPD_Day3_Rep3"
+[1] NA
+[1] "Early Comp_Screen_YPD_Day4_Rep3"
+[1] NA
+[1] "Early Comp_Screen_YPD_Day5_Rep3"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPGR_Day1_Rep1"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPGR_Day2_Rep1"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPGR_Day3_Rep1"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPGR_Day4_Rep1"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPGR_Day5_Rep1"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPD_Day1_Rep1"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPD_Day2_Rep1"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPD_Day3_Rep1"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPD_Day4_Rep1"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPD_Day5_Rep1"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPGR_Day1_Rep2"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPGR_Day2_Rep2"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPGR_Day3_Rep2"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPGR_Day4_Rep2"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPGR_Day5_Rep2"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPD_Day1_Rep2"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPD_Day2_Rep2"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPD_Day3_Rep2"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPD_Day4_Rep2"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPD_Day5_Rep2"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPGR_Day1_Rep3"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPGR_Day2_Rep3"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPGR_Day3_Rep3"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPGR_Day4_Rep3"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPGR_Day5_Rep3"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPD_Day1_Rep3"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPD_Day2_Rep3"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPD_Day3_Rep3"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPD_Day4_Rep3"
+[1] NA
+[1] "MeiosisI Comp_Screen_YPD_Day5_Rep3"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPGR_Day1_Rep1"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPGR_Day2_Rep1"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPGR_Day3_Rep1"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPGR_Day4_Rep1"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPGR_Day5_Rep1"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPD_Day1_Rep1"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPD_Day2_Rep1"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPD_Day3_Rep1"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPD_Day4_Rep1"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPD_Day5_Rep1"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPGR_Day1_Rep2"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPGR_Day2_Rep2"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPGR_Day3_Rep2"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPGR_Day4_Rep2"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPGR_Day5_Rep2"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPD_Day1_Rep2"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPD_Day2_Rep2"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPD_Day3_Rep2"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPD_Day4_Rep2"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPD_Day5_Rep2"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPGR_Day1_Rep3"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPGR_Day2_Rep3"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPGR_Day3_Rep3"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPGR_Day4_Rep3"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPGR_Day5_Rep3"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPD_Day1_Rep3"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPD_Day2_Rep3"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPD_Day3_Rep3"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPD_Day4_Rep3"
+[1] NA
+[1] "MeiosisII Comp_Screen_YPD_Day5_Rep3"
+[1] NA
+[1] "Late Comp_Screen_YPGR_Day1_Rep1"
+[1] NA
+[1] "Late Comp_Screen_YPGR_Day2_Rep1"
+[1] NA
+[1] "Late Comp_Screen_YPGR_Day3_Rep1"
+[1] NA
+[1] "Late Comp_Screen_YPGR_Day4_Rep1"
+[1] NA
+[1] "Late Comp_Screen_YPGR_Day5_Rep1"
+[1] NA
+[1] "Late Comp_Screen_YPD_Day1_Rep1"
+[1] NA
+[1] "Late Comp_Screen_YPD_Day2_Rep1"
+[1] NA
+[1] "Late Comp_Screen_YPD_Day3_Rep1"
+[1] NA
+[1] "Late Comp_Screen_YPD_Day4_Rep1"
+[1] NA
+[1] "Late Comp_Screen_YPD_Day5_Rep1"
+[1] NA
+[1] "Late Comp_Screen_YPGR_Day1_Rep2"
+[1] NA
+[1] "Late Comp_Screen_YPGR_Day2_Rep2"
+[1] NA
+[1] "Late Comp_Screen_YPGR_Day3_Rep2"
+[1] NA
+[1] "Late Comp_Screen_YPGR_Day4_Rep2"
+[1] NA
+[1] "Late Comp_Screen_YPGR_Day5_Rep2"
+[1] NA
+[1] "Late Comp_Screen_YPD_Day1_Rep2"
+[1] NA
+[1] "Late Comp_Screen_YPD_Day2_Rep2"
+[1] NA
+[1] "Late Comp_Screen_YPD_Day3_Rep2"
+[1] NA
+[1] "Late Comp_Screen_YPD_Day4_Rep2"
+[1] NA
+[1] "Late Comp_Screen_YPD_Day5_Rep2"
+[1] NA
+[1] "Late Comp_Screen_YPGR_Day1_Rep3"
+[1] NA
+[1] "Late Comp_Screen_YPGR_Day2_Rep3"
+[1] NA
+[1] "Late Comp_Screen_YPGR_Day3_Rep3"
+[1] NA
+[1] "Late Comp_Screen_YPGR_Day4_Rep3"
+[1] NA
+[1] "Late Comp_Screen_YPGR_Day5_Rep3"
+[1] NA
+[1] "Late Comp_Screen_YPD_Day1_Rep3"
+[1] NA
+[1] "Late Comp_Screen_YPD_Day2_Rep3"
+[1] NA
+[1] "Late Comp_Screen_YPD_Day3_Rep3"
+[1] NA
+[1] "Late Comp_Screen_YPD_Day4_Rep3"
+[1] NA
+[1] "Late Comp_Screen_YPD_Day5_Rep3"
+[1] NA

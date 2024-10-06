@@ -1,0 +1,80 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE7559 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE7559/GSE7559.soft.gz 
+Reading file....
+Parsing....
+Found 37 entities...
+GPL3739 (1 of 38 entities)
+GSM183356 (2 of 38 entities)
+GSM183357 (3 of 38 entities)
+GSM183358 (4 of 38 entities)
+GSM183359 (5 of 38 entities)
+GSM183360 (6 of 38 entities)
+GSM183361 (7 of 38 entities)
+GSM183362 (8 of 38 entities)
+GSM183363 (9 of 38 entities)
+GSM183364 (10 of 38 entities)
+GSM183365 (11 of 38 entities)
+GSM183366 (12 of 38 entities)
+GSM183367 (13 of 38 entities)
+GSM183368 (14 of 38 entities)
+GSM183369 (15 of 38 entities)
+GSM183370 (16 of 38 entities)
+GSM183371 (17 of 38 entities)
+GSM183372 (18 of 38 entities)
+GSM183373 (19 of 38 entities)
+GSM183374 (20 of 38 entities)
+GSM183375 (21 of 38 entities)
+GSM183376 (22 of 38 entities)
+GSM183377 (23 of 38 entities)
+GSM183378 (24 of 38 entities)
+GSM183379 (25 of 38 entities)
+GSM183380 (26 of 38 entities)
+GSM183381 (27 of 38 entities)
+GSM183382 (28 of 38 entities)
+GSM183383 (29 of 38 entities)
+GSM183384 (30 of 38 entities)
+GSM183385 (31 of 38 entities)
+GSM183386 (32 of 38 entities)
+GSM183387 (33 of 38 entities)
+GSM183388 (34 of 38 entities)
+GSM183389 (35 of 38 entities)
+GSM183390 (36 of 38 entities)
+GSM183391 (37 of 38 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+There were 16 warnings (use warnings() to see them)
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

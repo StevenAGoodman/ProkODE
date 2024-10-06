@@ -1,0 +1,74 @@
+[1] "normalized log2 test/reference"
+[1] "input DNA"
+[1] NA
+[1] "input DNA"
+[1] NA
+[1] "SeqA ChIP DNA"
+[1] NA
+[1] "SeqA ChIP DNA"
+[1] NA
+[1] "SeqA ChIP DNA"
+[1] NA
+[1] "SeqA ChIP DNA"
+[1] NA
+[1] "SeqA ChIP DNA"
+[1] NA
+[1] "SeqA ChIP DNA"
+[1] NA
+[1] "SeqA ChIP DNA"
+[1] NA
+[1] "SeqA ChIP DNA"
+[1] NA
+[1] "input DNA"
+[1] NA
+[1] "input DNA"
+[1] NA
+[1] "input DNA"
+[1] NA
+[1] "input DNA"
+[1] NA
+[1] "input DNA"
+[1] NA
+[1] "SeqA ChIP DNA"
+[1] NA
+[1] "SeqA ChIP DNA"
+[1] NA
+[1] "SeqA ChIP DNA"
+[1] NA
+[1] "SeqA ChIP DNA"
+[1] NA
+[1] "SeqA ChIP DNA"
+[1] NA
+[1] "SeqA ChIP DNA"
+[1] NA
+[1] "input DNA"
+[1] NA
+[1] "SeqA ChIP DNA"
+[1] NA
+[1] "input DNA"
+[1] NA
+[1] "SeqA ChIP DNA"
+[1] NA
+[1] "SeqA ChIP DNA"
+[1] NA
+[1] "SeqA ChIP DNA"
+[1] NA
+[1] "SeqA ChIP DNA"
+[1] NA
+[1] "Methylation in 15 min dnaC2 rep1"
+[1] "15"
+[1] "54000"
+[1] "Methylation in 0 min dnaC2 rep1"
+[1] "0"
+[1] "0"
+[1] "Methylation in 15 min dnaC2 rep2"
+[1] "15"
+[1] "54000"
+[1] "Methylation in 0 min dnaC2 rep2"
+[1] "0"
+[1] "0"
+[1] "54000" "0"     "54000" "0"    
+[1] "ID"         "GENOME_ACC" "region"     "SEQUENCE"   "strand"    
+[6] "length"     "GATC"      
+[1] "gene symbol column not found. searching for ORF column..."
+[1] "orf column not found: checking for '//' exeption..."

@@ -1,0 +1,135 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE67947 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE67947/GSE67947.soft.gz 
+Reading file....
+Parsing....
+Found 95 entities...
+GPL20050 (1 of 96 entities)
+GPL20051 (2 of 96 entities)
+GPL20062 (3 of 96 entities)
+GPL20063 (4 of 96 entities)
+GPL20064 (5 of 96 entities)
+GPL20065 (6 of 96 entities)
+GSM1967249 (7 of 96 entities)
+GSM1967250 (8 of 96 entities)
+GSM1967251 (9 of 96 entities)
+GSM1967252 (10 of 96 entities)
+GSM1967253 (11 of 96 entities)
+GSM1967254 (12 of 96 entities)
+GSM1967255 (13 of 96 entities)
+GSM1967256 (14 of 96 entities)
+GSM1967257 (15 of 96 entities)
+GSM1967258 (16 of 96 entities)
+GSM1967259 (17 of 96 entities)
+GSM1967260 (18 of 96 entities)
+GSM1967261 (19 of 96 entities)
+GSM1967262 (20 of 96 entities)
+GSM1967263 (21 of 96 entities)
+GSM1967264 (22 of 96 entities)
+GSM1967265 (23 of 96 entities)
+GSM1967266 (24 of 96 entities)
+GSM1967267 (25 of 96 entities)
+GSM1967268 (26 of 96 entities)
+GSM1967269 (27 of 96 entities)
+GSM1967270 (28 of 96 entities)
+GSM1967271 (29 of 96 entities)
+GSM1967272 (30 of 96 entities)
+GSM1967273 (31 of 96 entities)
+GSM1967274 (32 of 96 entities)
+GSM1967275 (33 of 96 entities)
+GSM1967276 (34 of 96 entities)
+GSM1967277 (35 of 96 entities)
+GSM1967278 (36 of 96 entities)
+GSM1967279 (37 of 96 entities)
+GSM1967280 (38 of 96 entities)
+GSM1967281 (39 of 96 entities)
+GSM1967282 (40 of 96 entities)
+GSM1967283 (41 of 96 entities)
+GSM1967284 (42 of 96 entities)
+GSM1967285 (43 of 96 entities)
+GSM1967286 (44 of 96 entities)
+GSM1967287 (45 of 96 entities)
+GSM1967288 (46 of 96 entities)
+GSM1967289 (47 of 96 entities)
+GSM1967290 (48 of 96 entities)
+GSM1967291 (49 of 96 entities)
+GSM1967292 (50 of 96 entities)
+GSM1967293 (51 of 96 entities)
+GSM1967294 (52 of 96 entities)
+GSM1967295 (53 of 96 entities)
+GSM1967296 (54 of 96 entities)
+GSM1967297 (55 of 96 entities)
+GSM1967298 (56 of 96 entities)
+GSM1967299 (57 of 96 entities)
+GSM1967300 (58 of 96 entities)
+GSM1967301 (59 of 96 entities)
+GSM1967302 (60 of 96 entities)
+GSM1967303 (61 of 96 entities)
+GSM1967304 (62 of 96 entities)
+GSM1967305 (63 of 96 entities)
+GSM1967306 (64 of 96 entities)
+GSM1967307 (65 of 96 entities)
+GSM1967308 (66 of 96 entities)
+GSM1967309 (67 of 96 entities)
+GSM1967310 (68 of 96 entities)
+GSM1967311 (69 of 96 entities)
+GSM1967312 (70 of 96 entities)
+GSM1967313 (71 of 96 entities)
+GSM1967314 (72 of 96 entities)
+GSM1967315 (73 of 96 entities)
+GSM1967316 (74 of 96 entities)
+GSM1967317 (75 of 96 entities)
+GSM1967318 (76 of 96 entities)
+GSM1967319 (77 of 96 entities)
+GSM1967320 (78 of 96 entities)
+GSM1967321 (79 of 96 entities)
+GSM1967322 (80 of 96 entities)
+GSM1967323 (81 of 96 entities)
+GSM1967324 (82 of 96 entities)
+GSM1967325 (83 of 96 entities)
+GSM1967326 (84 of 96 entities)
+GSM1967327 (85 of 96 entities)
+GSM1967328 (86 of 96 entities)
+GSM1967329 (87 of 96 entities)
+GSM1967330 (88 of 96 entities)
+GSM1967331 (89 of 96 entities)
+GSM1967332 (90 of 96 entities)
+GSM1967333 (91 of 96 entities)
+GSM1967334 (92 of 96 entities)
+GSM1967335 (93 of 96 entities)
+GSM1967336 (94 of 96 entities)
+GSM1967337 (95 of 96 entities)
+Error: invalid sample names; likely not time series
+Execution halted

@@ -1,0 +1,62 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE175812 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE175812/GSE175812.soft.gz 
+Reading file....
+Parsing....
+Found 22 entities...
+GPL26169 (1 of 23 entities)
+GSM5348323 (2 of 23 entities)
+GSM5348324 (3 of 23 entities)
+GSM5348325 (4 of 23 entities)
+GSM5348326 (5 of 23 entities)
+GSM5348327 (6 of 23 entities)
+GSM5348328 (7 of 23 entities)
+GSM5348329 (8 of 23 entities)
+GSM5348330 (9 of 23 entities)
+GSM5348331 (10 of 23 entities)
+GSM5348332 (11 of 23 entities)
+GSM5348333 (12 of 23 entities)
+GSM5348334 (13 of 23 entities)
+GSM5348335 (14 of 23 entities)
+GSM5348336 (15 of 23 entities)
+GSM5348337 (16 of 23 entities)
+GSM5348338 (17 of 23 entities)
+GSM5348339 (18 of 23 entities)
+GSM5348340 (19 of 23 entities)
+GSM5348341 (20 of 23 entities)
+GSM5348342 (21 of 23 entities)
+GSM5348343 (22 of 23 entities)
+Error: invalid sample names; likely not time series
+Execution halted

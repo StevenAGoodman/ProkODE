@@ -1,0 +1,101 @@
+[1] "Log10 of the expression ratio for each feature, where the ratio is equal to the normalized signal intensity in channel 2 divided by the normalized signal intensity in channel 1. Note that this calculation is made using error weighting."
+[1] "H37Rv early log phase #1.1"
+[1] NA
+[1] "H37Rv early log phase #1.2"
+[1] NA
+[1] "H37Rv early log phase #1.3"
+[1] NA
+[1] "H37Ra early log phase #1.4"
+[1] NA
+[1] "H37Ra early log phase #1.5"
+[1] NA
+[1] "H37Ra early log phase #1.6"
+[1] NA
+[1] "H37Rv early log phase #2.1"
+[1] NA
+[1] "H37Rv early log phase #2.2"
+[1] NA
+[1] "H37Rv early log phase #2.3"
+[1] NA
+[1] "H37Ra early log phase #2.4"
+[1] NA
+[1] "H37Ra early log phase #2.5"
+[1] NA
+[1] "H37Ra early log phase #2.6"
+[1] NA
+[1] "H37Rv log phase #1.1"
+[1] NA
+[1] "H37Rv log phase #1.2"
+[1] NA
+[1] "H37Rv log phase #1.3"
+[1] NA
+[1] "H37Ra log phase #1.4"
+[1] NA
+[1] "H37Ra log phase #1.5"
+[1] NA
+[1] "H37Ra log phase #1.6"
+[1] NA
+[1] "H37Rv log phase #2.1"
+[1] NA
+[1] "H37Rv log phase #2.2"
+[1] NA
+[1] "H37Rv log phase #2.3"
+[1] NA
+[1] "H37Ra log phase #2.4"
+[1] NA
+[1] "H37Ra log phase #2.5"
+[1] NA
+[1] "H37Ra log phase #2.6"
+[1] NA
+[1] "H37Rv stationay pahse #1.1"
+[1] NA
+[1] "H37Rv stationay pahse #1.2"
+[1] NA
+[1] "H37Rv stationay pahse #1.3"
+[1] NA
+[1] "H37Ra stationay pahse #1.4"
+[1] NA
+[1] "H37Ra stationay pahse #1.5"
+[1] NA
+[1] "H37Ra stationay pahse #1.6"
+[1] NA
+[1] "H37Rv stationay pahse #2.1"
+[1] NA
+[1] "H37Rv stationay pahse #2.2"
+[1] NA
+[1] "H37Rv stationay pahse #2.3"
+[1] NA
+[1] "H37Ra stationay pahse #2.4"
+[1] NA
+[1] "H37Ra stationay pahse #2.5"
+[1] NA
+[1] "H37Ra stationay pahse #2.6"
+[1] NA
+[1] "H37Rv 1year #1.1"
+[1] NA
+[1] "H37Rv 1year #1.2"
+[1] NA
+[1] "H37Rv 1year #1.3"
+[1] NA
+[1] "H37Rv 1year #1.3.2"
+[1] NA
+[1] "H37Ra 1year #1.4"
+[1] NA
+[1] "H37Ra 1year #1.5"
+[1] NA
+[1] "H37Ra 1year #1.6"
+[1] NA
+[1] "H37Ra 1year #1.6.2"
+[1] NA
+[1] "H37Rv 1year #2.1"
+[1] NA
+[1] "H37Rv 1year #2.2"
+[1] NA
+[1] "H37Rv 1year #2.3"
+[1] NA
+[1] "H37Ra 1year #2.4"
+[1] NA
+[1] "H37Ra 1year #2.5"
+[1] NA
+[1] "H37Ra 1year #2.6"
+[1] NA

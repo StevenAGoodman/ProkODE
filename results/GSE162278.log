@@ -1,0 +1,336 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE162278 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE162278/GSE162278.soft.gz 
+Reading file....
+Parsing....
+Found 26 entities...
+GPL29451 (1 of 27 entities)
+GPL29452 (2 of 27 entities)
+GSM4948299 (3 of 27 entities)
+GSM4948300 (4 of 27 entities)
+GSM4948301 (5 of 27 entities)
+GSM4948302 (6 of 27 entities)
+GSM4948303 (7 of 27 entities)
+GSM4948304 (8 of 27 entities)
+GSM4948305 (9 of 27 entities)
+GSM4948306 (10 of 27 entities)
+GSM4948307 (11 of 27 entities)
+GSM4948308 (12 of 27 entities)
+GSM4948309 (13 of 27 entities)
+GSM4948310 (14 of 27 entities)
+GSM4948311 (15 of 27 entities)
+GSM4948312 (16 of 27 entities)
+GSM4948313 (17 of 27 entities)
+GSM4948314 (18 of 27 entities)
+GSM4948315 (19 of 27 entities)
+GSM4948316 (20 of 27 entities)
+GSM4948317 (21 of 27 entities)
+GSM4948318 (22 of 27 entities)
+GSM4948319 (23 of 27 entities)
+GSM4948320 (24 of 27 entities)
+GSM4948321 (25 of 27 entities)
+GSM4948322 (26 of 27 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_media_0m.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 553409 bytes (540 KB)
+==================================================
+downloaded 540 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_timepoints.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 5918419 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_RPKMs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 596144 bytes (582 KB)
+==================================================
+downloaded 582 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_media_0m.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 553409 bytes (540 KB)
+==================================================
+downloaded 540 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_timepoints.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 5918419 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_RPKMs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 596144 bytes (582 KB)
+==================================================
+downloaded 582 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_media_0m.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 553409 bytes (540 KB)
+==================================================
+downloaded 540 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_timepoints.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 5918419 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_RPKMs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 596144 bytes (582 KB)
+==================================================
+downloaded 582 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_media_0m.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 553409 bytes (540 KB)
+==================================================
+downloaded 540 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_timepoints.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 5918419 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_RPKMs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 596144 bytes (582 KB)
+==================================================
+downloaded 582 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_media_0m.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 553409 bytes (540 KB)
+==================================================
+downloaded 540 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_timepoints.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 5918419 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_RPKMs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 596144 bytes (582 KB)
+==================================================
+downloaded 582 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_media_0m.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 553409 bytes (540 KB)
+==================================================
+downloaded 540 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_timepoints.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 5918419 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_RPKMs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 596144 bytes (582 KB)
+==================================================
+downloaded 582 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_media_0m.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 553409 bytes (540 KB)
+==================================================
+downloaded 540 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_timepoints.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 5918419 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_RPKMs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 596144 bytes (582 KB)
+==================================================
+downloaded 582 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_media_0m.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 553409 bytes (540 KB)
+==================================================
+downloaded 540 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_timepoints.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 5918419 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_RPKMs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 596144 bytes (582 KB)
+==================================================
+downloaded 582 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_media_0m.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 553409 bytes (540 KB)
+==================================================
+downloaded 540 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_timepoints.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 5918419 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_RPKMs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 596144 bytes (582 KB)
+==================================================
+downloaded 582 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_media_0m.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 553409 bytes (540 KB)
+==================================================
+downloaded 540 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_timepoints.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 5918419 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_RPKMs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 596144 bytes (582 KB)
+==================================================
+downloaded 582 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_media_0m.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 553409 bytes (540 KB)
+==================================================
+downloaded 540 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_timepoints.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 5918419 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_RPKMs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 596144 bytes (582 KB)
+==================================================
+downloaded 582 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_media_0m.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 553409 bytes (540 KB)
+==================================================
+downloaded 540 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_timepoints.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 5918419 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_RPKMs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 596144 bytes (582 KB)
+==================================================
+downloaded 582 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_media_0m.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 553409 bytes (540 KB)
+==================================================
+downloaded 540 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_timepoints.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 5918419 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_RPKMs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 596144 bytes (582 KB)
+==================================================
+downloaded 582 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_media_0m.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 553409 bytes (540 KB)
+==================================================
+downloaded 540 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_timepoints.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 5918419 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_RPKMs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 596144 bytes (582 KB)
+==================================================
+downloaded 582 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_media_0m.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 553409 bytes (540 KB)
+==================================================
+downloaded 540 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_timepoints.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 5918419 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_RPKMs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 596144 bytes (582 KB)
+==================================================
+downloaded 582 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_media_0m.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 553409 bytes (540 KB)
+==================================================
+downloaded 540 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_timepoints.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 5918419 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_RPKMs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 596144 bytes (582 KB)
+==================================================
+downloaded 582 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_media_0m.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 553409 bytes (540 KB)
+==================================================
+downloaded 540 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_timepoints.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 5918419 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_RPKMs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 596144 bytes (582 KB)
+==================================================
+downloaded 582 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_media_0m.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 553409 bytes (540 KB)
+==================================================
+downloaded 540 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_DE_between_timepoints.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 5918419 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162278/suppl//GSE162278_RPKMs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 596144 bytes (582 KB)
+==================================================
+downloaded 582 KB
+
+Error: invalid sample names; likely not time series
+Execution halted

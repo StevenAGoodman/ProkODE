@@ -1,0 +1,127 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE141757 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE141757/GSE141757.soft.gz 
+Reading file....
+Parsing....
+Found 27 entities...
+GPL24247 (1 of 28 entities)
+GPL27891 (2 of 28 entities)
+GPL27892 (3 of 28 entities)
+GSM4212791 (4 of 28 entities)
+GSM4212792 (5 of 28 entities)
+GSM4212793 (6 of 28 entities)
+GSM4212794 (7 of 28 entities)
+GSM4212795 (8 of 28 entities)
+GSM4212796 (9 of 28 entities)
+GSM4212797 (10 of 28 entities)
+GSM4212798 (11 of 28 entities)
+GSM4212799 (12 of 28 entities)
+GSM4212800 (13 of 28 entities)
+GSM4212801 (14 of 28 entities)
+GSM4212802 (15 of 28 entities)
+GSM4212803 (16 of 28 entities)
+GSM4212804 (17 of 28 entities)
+GSM4212805 (18 of 28 entities)
+GSM4212806 (19 of 28 entities)
+GSM4212807 (20 of 28 entities)
+GSM4212808 (21 of 28 entities)
+GSM4212809 (22 of 28 entities)
+GSM4212810 (23 of 28 entities)
+GSM4212811 (24 of 28 entities)
+GSM4212812 (25 of 28 entities)
+GSM4212813 (26 of 28 entities)
+GSM4212814 (27 of 28 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE141nnn/GSE141757/suppl//GSE141757_rpg_table_DualSeq_PA14.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 82297 bytes (80 KB)
+==================================================
+downloaded 80 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE141nnn/GSE141757/suppl//GSE141757_rpg_table_DualSeq_mm10.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 430990 bytes (420 KB)
+==================================================
+downloaded 420 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE141nnn/GSE141757/suppl//GSE141757_rpg_table_PA14_planctonic.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 101191 bytes (98 KB)
+==================================================
+downloaded 98 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE141nnn/GSE141757/suppl//GSE141757_rpg_table_mm10_spermidine.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 298632 bytes (291 KB)
+==================================================
+downloaded 291 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE141nnn/GSE141757/suppl//GSE141757_rpg_table_DualSeq_PA14.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 82297 bytes (80 KB)
+==================================================
+downloaded 80 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE141nnn/GSE141757/suppl//GSE141757_rpg_table_DualSeq_mm10.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 430990 bytes (420 KB)
+==================================================
+downloaded 420 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE141nnn/GSE141757/suppl//GSE141757_rpg_table_PA14_planctonic.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 101191 bytes (98 KB)
+==================================================
+downloaded 98 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE141nnn/GSE141757/suppl//GSE141757_rpg_table_mm10_spermidine.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 298632 bytes (291 KB)
+==================================================
+downloaded 291 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE141nnn/GSE141757/suppl//GSE141757_rpg_table_DualSeq_PA14.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 82297 bytes (80 KB)
+==================================================
+downloaded 80 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE141nnn/GSE141757/suppl//GSE141757_rpg_table_DualSeq_mm10.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 430990 bytes (420 KB)
+==================================================
+downloaded 420 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE141nnn/GSE141757/suppl//GSE141757_rpg_table_PA14_planctonic.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 101191 bytes (98 KB)
+==================================================
+downloaded 98 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE141nnn/GSE141757/suppl//GSE141757_rpg_table_mm10_spermidine.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 298632 bytes (291 KB)
+==================================================
+downloaded 291 KB
+
+Error: invalid sample names; likely not time series
+Execution halted

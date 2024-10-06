@@ -1,0 +1,198 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE90030 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE90030/GSE90030.soft.gz 
+Reading file....
+Parsing....
+Found 8 entities...
+GPL18006 (1 of 9 entities)
+GSM2396001 (2 of 9 entities)
+GSM2396002 (3 of 9 entities)
+GSM2396003 (4 of 9 entities)
+GSM2396004 (5 of 9 entities)
+GSM2396005 (6 of 9 entities)
+GSM2396006 (7 of 9 entities)
+GSM2396007 (8 of 9 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample2_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1094922 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample3_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1095167 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample4_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1095536 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample5_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1094152 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample7_vs._Sample6.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1091483 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample2_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1094922 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample3_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1095167 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample4_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1095536 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample5_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1094152 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample7_vs._Sample6.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1091483 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample2_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1094922 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample3_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1095167 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample4_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1095536 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample5_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1094152 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample7_vs._Sample6.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1091483 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample2_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1094922 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample3_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1095167 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample4_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1095536 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample5_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1094152 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample7_vs._Sample6.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1091483 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample2_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1094922 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample3_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1095167 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample4_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1095536 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample5_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1094152 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample7_vs._Sample6.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1091483 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample2_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1094922 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample3_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1095167 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample4_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1095536 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample5_vs._Sample1.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1094152 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE90nnn/GSE90030/suppl//GSE90030_Sample7_vs._Sample6.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1091483 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+Error: invalid sample names; likely not time series
+Execution halted

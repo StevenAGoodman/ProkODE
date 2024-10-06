@@ -1,0 +1,85 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE75334 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE75334/GSE75334.soft.gz 
+Reading file....
+Parsing....
+Found 5 entities...
+GPL21169 (1 of 6 entities)
+GSM1953458 (2 of 6 entities)
+GSM1953459 (3 of 6 entities)
+GSM1953460 (4 of 6 entities)
+GSM1953461 (5 of 6 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE75nnn/GSE75334/suppl//GSE75334_AES-1R_Annotation.gtf.gz?tool=geoquery'
+Content type 'application/x-gzip' length 264387 bytes (258 KB)
+==================================================
+downloaded 258 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE75nnn/GSE75334/suppl//GSE75334_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 122880 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE75nnn/GSE75334/suppl//GSE75334_AES-1R_Annotation.gtf.gz?tool=geoquery'
+Content type 'application/x-gzip' length 264387 bytes (258 KB)
+==================================================
+downloaded 258 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE75nnn/GSE75334/suppl//GSE75334_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 122880 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE75nnn/GSE75334/suppl//GSE75334_AES-1R_Annotation.gtf.gz?tool=geoquery'
+Content type 'application/x-gzip' length 264387 bytes (258 KB)
+==================================================
+downloaded 258 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE75nnn/GSE75334/suppl//GSE75334_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 122880 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE75nnn/GSE75334/suppl//GSE75334_AES-1R_Annotation.gtf.gz?tool=geoquery'
+Content type 'application/x-gzip' length 264387 bytes (258 KB)
+==================================================
+downloaded 258 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE75nnn/GSE75334/suppl//GSE75334_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 122880 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+Error: invalid sample names; likely not time series
+Execution halted

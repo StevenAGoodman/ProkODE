@@ -1,0 +1,77 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE79726 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE79726/GSE79726.soft.gz 
+Reading file....
+Parsing....
+Found 7 entities...
+GPL21672 (1 of 8 entities)
+GSM2101632 (2 of 8 entities)
+GSM2101633 (3 of 8 entities)
+GSM2101634 (4 of 8 entities)
+GSM2101635 (5 of 8 entities)
+GSM2101636 (6 of 8 entities)
+GSM2101637 (7 of 8 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE79nnn/GSE79726/suppl//GSE79726_Se7942-N-starv2016.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 33154 bytes (32 KB)
+==================================================
+downloaded 32 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE79nnn/GSE79726/suppl//GSE79726_Se7942-N-starv2016.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 33154 bytes (32 KB)
+==================================================
+downloaded 32 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE79nnn/GSE79726/suppl//GSE79726_Se7942-N-starv2016.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 33154 bytes (32 KB)
+==================================================
+downloaded 32 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE79nnn/GSE79726/suppl//GSE79726_Se7942-N-starv2016.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 33154 bytes (32 KB)
+==================================================
+downloaded 32 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE79nnn/GSE79726/suppl//GSE79726_Se7942-N-starv2016.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 33154 bytes (32 KB)
+==================================================
+downloaded 32 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE79nnn/GSE79726/suppl//GSE79726_Se7942-N-starv2016.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 33154 bytes (32 KB)
+==================================================
+downloaded 32 KB
+
+Error: invalid sample names; likely not time series
+Execution halted

@@ -1,0 +1,167 @@
+[1] NA
+[1] "methylated RNA1#"
+[1] NA
+[1] "methylated RNA1#_TadA8.20"
+[1] NA
+[1] "methylated RNA2#"
+[1] NA
+[1] "methylated RNA2#_TadA8.20"
+[1] NA
+[1] "methylated E. coli tRNA"
+[1] NA
+[1] "methylated E. coli tRNA_TadA8.20"
+[1] NA
+[1] "methylated E. coli tRNA_WTTadA"
+[1] NA
+[1] "unmethylated RNA1#"
+[1] NA
+[1] "unmethylated RNA1#_TadA8.20"
+[1] NA
+[1] "unmethylated RNA2#"
+[1] NA
+[1] "unmethylated RNA2#_TadA8.20"
+[1] NA
+[1] "unmethylated E. coli tRNA"
+[1] NA
+[1] "unmethylated E. coli tRNA_TadA8.20"
+[1] NA
+[1] "unmethylated E. coli tRNA_WTTadA"
+[1] NA
+[1] "HeLa ACTB_no dilution"
+[1] NA
+[1] "HeLa ACTB_10 fold dilution"
+[1] NA
+[1] "HeLa ACTB_100 fold dilution"
+[1] NA
+[1] "HeLa ACTB_1000 fold dilution"
+[1] NA
+[1] "HeLa EIF2A_no dilution"
+[1] NA
+[1] "HeLa EIF2A_10 fold dilution"
+[1] NA
+[1] "HeLa EIF2A_100 fold dilution"
+[1] NA
+[1] "HeLa EIF2A_1000 fold dilution"
+[1] NA
+[1] "HeLa ACTB_0.25 ng_total RNA"
+[1] NA
+[1] "HeLa ACTB_2.5 ng_total RNA"
+[1] NA
+[1] "HeLa ACTB_25 ng_total RNA"
+[1] NA
+[1] "HeLa EIF2A_0.25 ng_total RNA"
+[1] NA
+[1] "HeLa EIF2A_2.5 ng_total RNA"
+[1] NA
+[1] "HeLa EIF2A_25 ng_total RNA"
+[1] NA
+[1] "HeLa ACTB"
+[1] NA
+[1] "HeLa CAND1"
+[1] NA
+[1] "HeLa CIAO1"
+[1] NA
+[1] "HeLa CLCN3"
+[1] NA
+[1] "HeLa CXCR4"
+[1] NA
+[1] "HeLa EIF2A"
+[1] NA
+[1] "HeLa GRWD1"
+[1] NA
+[1] "HeLa H2AFX"
+[1] NA
+[1] "HeLa HDAC2"
+[1] NA
+[1] "HeLa HOXB7"
+[1] NA
+[1] "HeLa ILF3"
+[1] NA
+[1] "HeLa JUNB"
+[1] NA
+[1] "HeLa MALAT1"
+[1] NA
+[1] "HeLa MYC"
+[1] NA
+[1] "HeLa OGT"
+[1] NA
+[1] "HeLa PPIB"
+[1] NA
+[1] "HeLa SLC7A5"
+[1] NA
+[1] "HeLa TPT1"
+[1] NA
+[1] "HeLa TPX2"
+[1] NA
+[1] "HeLa ZBED5"
+[1] NA
+[1] "IVT ACTB"
+[1] NA
+[1] "IVT CAND1"
+[1] NA
+[1] "IVT CIAO1"
+[1] NA
+[1] "IVT CLCN3"
+[1] NA
+[1] "IVT CXCR4"
+[1] NA
+[1] "IVT EIF2A"
+[1] NA
+[1] "IVT HDAC2"
+[1] NA
+[1] "IVT HOXB7"
+[1] NA
+[1] "IVT ILF3"
+[1] NA
+[1] "IVT MALAT1"
+[1] NA
+[1] "IVT MYC"
+[1] NA
+[1] "IVT OGT"
+[1] NA
+[1] "IVT SLC7A5"
+[1] NA
+[1] "IVT TPT1"
+[1] NA
+[1] "IVT TPX2"
+[1] NA
+[1] "IVT ZBED5"
+[1] NA
+[1] "HeLa polyA_WT_FTO-_rep1"
+[1] NA
+[1] "HeLa polyA_WT_FTO-_rep2"
+[1] NA
+[1] "HeLa polyA_WT_FTO-_rep3"
+[1] NA
+[1] "HeLa polyA_WT_FTO+_rep1"
+[1] NA
+[1] "HeLa polyA_WT_FTO+_rep2"
+[1] NA
+[1] "HeLa polyA_WT_FTO+_rep3"
+[1] NA
+[1] "HeLa polyA_WT_IVT_rep1"
+[1] NA
+[1] "HeLa polyA_WT_IVT_rep2"
+[1] NA
+[1] "HeLa polyA_WT_IVT_rep3"
+[1] NA
+[1] "mESC polyA_WT_FTO-_rep1"
+[1] NA
+[1] "mESC polyA_WT_FTO-_rep2"
+[1] NA
+[1] "mESC polyA_WT_FTO+_rep1"
+[1] NA
+[1] "mESC polyA_WT_FTO+_rep2"
+[1] NA
+[1] "mESC polyA_WT_IVT_rep1"
+[1] NA
+[1] "mESC polyA_WT_IVT_rep2"
+[1] NA
+[1] "mESC polyA_Ctrl_FTO-_rep1"
+[1] NA
+[1] "mESC polyA_Ctrl_FTO+_rep1"
+[1] NA
+[1] "mESC polyA_M3cko_FTO-_rep1"
+[1] NA
+[1] "mESC polyA_M3cko_FTO+_rep1"
+[1] NA

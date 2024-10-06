@@ -1,0 +1,131 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE180739 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE180739/GSE180739.soft.gz 
+Reading file....
+Parsing....
+Found 91 entities...
+GPL30431 (1 of 92 entities)
+GSM5469456 (2 of 92 entities)
+GSM5469457 (3 of 92 entities)
+GSM5469458 (4 of 92 entities)
+GSM5469459 (5 of 92 entities)
+GSM5469460 (6 of 92 entities)
+GSM5469461 (7 of 92 entities)
+GSM5469462 (8 of 92 entities)
+GSM5469463 (9 of 92 entities)
+GSM5469464 (10 of 92 entities)
+GSM5469465 (11 of 92 entities)
+GSM5469466 (12 of 92 entities)
+GSM5469467 (13 of 92 entities)
+GSM5469468 (14 of 92 entities)
+GSM5469469 (15 of 92 entities)
+GSM5469470 (16 of 92 entities)
+GSM5469471 (17 of 92 entities)
+GSM5469472 (18 of 92 entities)
+GSM5469473 (19 of 92 entities)
+GSM5469474 (20 of 92 entities)
+GSM5469475 (21 of 92 entities)
+GSM5469476 (22 of 92 entities)
+GSM5469477 (23 of 92 entities)
+GSM5469478 (24 of 92 entities)
+GSM5469479 (25 of 92 entities)
+GSM5469480 (26 of 92 entities)
+GSM5469481 (27 of 92 entities)
+GSM5469482 (28 of 92 entities)
+GSM5469483 (29 of 92 entities)
+GSM5469484 (30 of 92 entities)
+GSM5469485 (31 of 92 entities)
+GSM5469486 (32 of 92 entities)
+GSM5469487 (33 of 92 entities)
+GSM5469488 (34 of 92 entities)
+GSM5469489 (35 of 92 entities)
+GSM5469490 (36 of 92 entities)
+GSM5469491 (37 of 92 entities)
+GSM5469492 (38 of 92 entities)
+GSM5469493 (39 of 92 entities)
+GSM5469494 (40 of 92 entities)
+GSM5469495 (41 of 92 entities)
+GSM5469496 (42 of 92 entities)
+GSM5469497 (43 of 92 entities)
+GSM5469498 (44 of 92 entities)
+GSM5469499 (45 of 92 entities)
+GSM5469500 (46 of 92 entities)
+GSM5469501 (47 of 92 entities)
+GSM5469502 (48 of 92 entities)
+GSM5469503 (49 of 92 entities)
+GSM5469504 (50 of 92 entities)
+GSM5469505 (51 of 92 entities)
+GSM5469506 (52 of 92 entities)
+GSM5469507 (53 of 92 entities)
+GSM5469508 (54 of 92 entities)
+GSM5469509 (55 of 92 entities)
+GSM5469510 (56 of 92 entities)
+GSM5469511 (57 of 92 entities)
+GSM5469512 (58 of 92 entities)
+GSM5469513 (59 of 92 entities)
+GSM5469514 (60 of 92 entities)
+GSM5469515 (61 of 92 entities)
+GSM5469516 (62 of 92 entities)
+GSM5469517 (63 of 92 entities)
+GSM5469518 (64 of 92 entities)
+GSM5469519 (65 of 92 entities)
+GSM5469520 (66 of 92 entities)
+GSM5469521 (67 of 92 entities)
+GSM5469522 (68 of 92 entities)
+GSM5469523 (69 of 92 entities)
+GSM5469524 (70 of 92 entities)
+GSM5469525 (71 of 92 entities)
+GSM5469526 (72 of 92 entities)
+GSM5469527 (73 of 92 entities)
+GSM5469528 (74 of 92 entities)
+GSM5469529 (75 of 92 entities)
+GSM5469530 (76 of 92 entities)
+GSM5469531 (77 of 92 entities)
+GSM5469532 (78 of 92 entities)
+GSM5469533 (79 of 92 entities)
+GSM5469534 (80 of 92 entities)
+GSM5469535 (81 of 92 entities)
+GSM5469536 (82 of 92 entities)
+GSM5469537 (83 of 92 entities)
+GSM5469538 (84 of 92 entities)
+GSM5469539 (85 of 92 entities)
+GSM5469540 (86 of 92 entities)
+GSM5469541 (87 of 92 entities)
+GSM5469542 (88 of 92 entities)
+GSM5469543 (89 of 92 entities)
+GSM5469544 (90 of 92 entities)
+GSM5469545 (91 of 92 entities)
+Error: invalid sample names; likely not time series
+Execution halted

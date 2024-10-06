@@ -1,0 +1,63 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE146277 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE146277/GSE146277.soft.gz 
+Reading file....
+Parsing....
+Found 23 entities...
+GPL16974 (1 of 24 entities)
+GSM4376606 (2 of 24 entities)
+GSM4376607 (3 of 24 entities)
+GSM4376608 (4 of 24 entities)
+GSM4376609 (5 of 24 entities)
+GSM4376610 (6 of 24 entities)
+GSM4376611 (7 of 24 entities)
+GSM4376612 (8 of 24 entities)
+GSM4376613 (9 of 24 entities)
+GSM4376614 (10 of 24 entities)
+GSM4376615 (11 of 24 entities)
+GSM4376616 (12 of 24 entities)
+GSM4376617 (13 of 24 entities)
+GSM4376618 (14 of 24 entities)
+GSM4376619 (15 of 24 entities)
+GSM4376620 (16 of 24 entities)
+GSM4376621 (17 of 24 entities)
+GSM4376622 (18 of 24 entities)
+GSM4376623 (19 of 24 entities)
+GSM4376624 (20 of 24 entities)
+GSM4376625 (21 of 24 entities)
+GSM4376626 (22 of 24 entities)
+GSM4376627 (23 of 24 entities)
+Error: invalid sample names; likely not time series
+Execution halted

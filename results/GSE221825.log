@@ -1,0 +1,125 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE221825 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE221825/GSE221825.soft.gz 
+Reading file....
+Parsing....
+Found 25 entities...
+GPL21222 (1 of 26 entities)
+GSM6900245 (2 of 26 entities)
+GSM6900246 (3 of 26 entities)
+GSM6900247 (4 of 26 entities)
+GSM6900248 (5 of 26 entities)
+GSM6900249 (6 of 26 entities)
+GSM6900250 (7 of 26 entities)
+GSM6900251 (8 of 26 entities)
+GSM6900252 (9 of 26 entities)
+GSM6900253 (10 of 26 entities)
+GSM6900254 (11 of 26 entities)
+GSM6900255 (12 of 26 entities)
+GSM6900256 (13 of 26 entities)
+GSM6900257 (14 of 26 entities)
+GSM6900258 (15 of 26 entities)
+GSM6900259 (16 of 26 entities)
+GSM6900260 (17 of 26 entities)
+GSM6900261 (18 of 26 entities)
+GSM6900262 (19 of 26 entities)
+GSM6900263 (20 of 26 entities)
+GSM6900264 (21 of 26 entities)
+GSM6900265 (22 of 26 entities)
+GSM6900266 (23 of 26 entities)
+GSM6900267 (24 of 26 entities)
+GSM6900268 (25 of 26 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE221nnn/GSE221825/suppl//GSE221825_counts.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 231714 bytes (226 KB)
+==================================================
+downloaded 226 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE221nnn/GSE221825/suppl//GSE221825_counts.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 231714 bytes (226 KB)
+==================================================
+downloaded 226 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE221nnn/GSE221825/suppl//GSE221825_counts.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 231714 bytes (226 KB)
+==================================================
+downloaded 226 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE221nnn/GSE221825/suppl//GSE221825_counts.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 231714 bytes (226 KB)
+==================================================
+downloaded 226 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE221nnn/GSE221825/suppl//GSE221825_counts.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 231714 bytes (226 KB)
+==================================================
+downloaded 226 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE221nnn/GSE221825/suppl//GSE221825_counts.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 231714 bytes (226 KB)
+==================================================
+downloaded 226 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE221nnn/GSE221825/suppl//GSE221825_counts.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 231714 bytes (226 KB)
+==================================================
+downloaded 226 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE221nnn/GSE221825/suppl//GSE221825_counts.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 231714 bytes (226 KB)
+==================================================
+downloaded 226 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE221nnn/GSE221825/suppl//GSE221825_counts.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 231714 bytes (226 KB)
+==================================================
+downloaded 226 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE221nnn/GSE221825/suppl//GSE221825_counts.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 231714 bytes (226 KB)
+==================================================
+downloaded 226 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE221nnn/GSE221825/suppl//GSE221825_counts.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 231714 bytes (226 KB)
+==================================================
+downloaded 226 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE221nnn/GSE221825/suppl//GSE221825_counts.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 231714 bytes (226 KB)
+==================================================
+downloaded 226 KB
+
+Error: invalid sample names; likely not time series
+Execution halted

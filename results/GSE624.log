@@ -1,0 +1,101 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE624 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE624/GSE624.soft.gz 
+Reading file....
+Parsing....
+Found 41 entities...
+GPL224 (1 of 42 entities)
+GPL331 (2 of 42 entities)
+GSM9502 (3 of 42 entities)
+GSM9503 (4 of 42 entities)
+GSM9504 (5 of 42 entities)
+GSM9505 (6 of 42 entities)
+GSM9506 (7 of 42 entities)
+GSM9507 (8 of 42 entities)
+GSM9508 (9 of 42 entities)
+GSM9509 (10 of 42 entities)
+GSM9510 (11 of 42 entities)
+GSM9511 (12 of 42 entities)
+GSM9512 (13 of 42 entities)
+GSM9513 (14 of 42 entities)
+GSM9531 (15 of 42 entities)
+GSM9533 (16 of 42 entities)
+GSM9535 (17 of 42 entities)
+GSM9538 (18 of 42 entities)
+GSM9540 (19 of 42 entities)
+GSM9541 (20 of 42 entities)
+GSM11700 (21 of 42 entities)
+GSM11701 (22 of 42 entities)
+GSM11702 (23 of 42 entities)
+GSM11907 (24 of 42 entities)
+GSM11908 (25 of 42 entities)
+GSM11909 (26 of 42 entities)
+GSM12396 (27 of 42 entities)
+GSM12397 (28 of 42 entities)
+GSM12398 (29 of 42 entities)
+GSM12400 (30 of 42 entities)
+GSM12401 (31 of 42 entities)
+GSM12402 (32 of 42 entities)
+GSM12403 (33 of 42 entities)
+GSM12404 (34 of 42 entities)
+GSM12405 (35 of 42 entities)
+GSM12406 (36 of 42 entities)
+GSM12407 (37 of 42 entities)
+GSM12408 (38 of 42 entities)
+GSM12452 (39 of 42 entities)
+GSM12453 (40 of 42 entities)
+GSM12454 (41 of 42 entities)
+There were 29 warnings (use warnings() to see them)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+There were 33 warnings (use warnings() to see them)
+Warning messages:
+1: In grep(" ", column) :
+  unable to translate 'STY4124; STY4658; HCM1.05c; HCM1.136; HCM1.138; HCM1.205c; HCM1.239c<85>' to a wide string
+2: In grep(" ", column) : input string 408 is invalid
+3: In grep(" ", column) :
+  unable to translate 'STY0256; STY0437; STY1580; STY1895; STY3154<85>' to a wide string
+4: In grep(" ", column) : input string 2054 is invalid
+5: In grep(" ", column) :
+  unable to translate 'STY0657, STY1108, STY1280, aSTY0256, <85>' to a wide string
+6: In grep(" ", column) : input string 3550 is invalid
+7: In grep(" ", column) :
+  unable to translate 'STY1108, STY1114, STY1379, aSTY0256, aSTY1844, <85>' to a wide string
+8: In grep(" ", column) : input string 4516 is invalid
+9: In grep(" ", column) :
+  unable to translate 'STY4125; STY4657; HCM1.04c; HCM1.136a; HCM1.204c; HCM1.238c<85>' to a wide string
+10: In grep(" ", column) : input string 4632 is invalid
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

@@ -1,0 +1,19 @@
+[1] "We apply a background correction, i.e. we subtract the local background for the local foreground intensities. We compute the base 2 log-ratio (ratio of Cy5/Cy3) for each probe and average the log-ratios over the 4 replicates on the array."
+[1] "D12WW02T01at027h/1"
+[1] NA
+[1] "D12WW02T01at051h/2"
+[1] NA
+[1] "D12WW02T01at075h/1"
+[1] NA
+[1] "D12WW02T01at099h/1"
+[1] NA
+[1] "D12WW02T01at123h/2"
+[1] NA
+[1] "D12WW02T01at147h/1"
+[1] NA
+[1] "D12WW02T01at171h/1"
+[1] NA
+[1] "D12WW02T01at195h/1"
+[1] NA
+[1] "D12WW02T01at219h/2"
+[1] NA

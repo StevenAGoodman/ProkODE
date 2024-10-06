@@ -1,0 +1,45 @@
+[1] "same as UNF VALUE but with flagged values removed"
+[1] "10min UV treated cells, 25 ug total RNA"
+[1] "10"
+[1] "600"
+[1] "20min untreatedcells, 25 ug total RNA"
+[1] "20"
+[1] "1200"
+[1] "20min UV treated cells, 25 ug total RNA"
+[1] "20"
+[1] "1200"
+[1] "40min untreatedcells, 25 ug total RNA"
+[1] "40"
+[1] "2400"
+[1] "5min untreatedcells, 25 ug total RNA"
+[1] "5"
+[1] "300"
+[1] "60min untreatedcells, 25 ug total RNA"
+[1] "60"
+[1] "3600"
+[1] "60min UV treated cells, 25 ug total RNA"
+[1] "60"
+[1] "3600"
+[1] "0', before UV treatment, 25 ug total RNA, 2 ug pdN6"
+[1] NA
+[1] "0', before UV treatment, 25 ug total RNA, 2 ug pdN6"
+[1] NA
+[1] "0', before UV treatment, 25 ug total RNA, 2 ug pdN6"
+[1] NA
+[1] "0', before UV treatment, 25 ug total RNA, 2 ug pdN6"
+[1] NA
+[1] "0', before UV treatment, 25 ug total RNA, 2 ug pdN6"
+[1] NA
+[1] "0', before UV treatment, 25 ug total RNA, 2 ug pdN6"
+[1] NA
+[1] "0', before UV treatment, 25 ug total RNA, 2 ug pdN6"
+[1] NA
+[1] "0' wt, before UV treatment, 25 ug total RNA, 2 ug pdN6"
+[1] NA
+[1] "300"  "900"  "900"  "2100" "0"    "3300" "3300"
+ [1] "ID"              "ORF"             "SPOT_ID"         "GENE_SYMBOL"    
+ [5] "GENE_DESC"       "SECTOR"          "SECTORROW"       "SECTORCOL"      
+ [9] "PLATE"           "PROW"            "PCOL"            "FAILED"         
+[13] "IS_CONTAMINATED"
+[1] "PROW"
+[1] "IS_CONTAMINATED"

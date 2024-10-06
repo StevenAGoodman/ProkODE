@@ -1,0 +1,79 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE15394 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE15394/GSE15394.soft.gz 
+Reading file....
+Parsing....
+Found 38 entities...
+GPL1339 (1 of 39 entities)
+GSM386347 (2 of 39 entities)
+GSM386348 (3 of 39 entities)
+GSM386349 (4 of 39 entities)
+GSM386350 (5 of 39 entities)
+GSM386351 (6 of 39 entities)
+GSM386352 (7 of 39 entities)
+GSM386353 (8 of 39 entities)
+GSM386354 (9 of 39 entities)
+GSM386355 (10 of 39 entities)
+GSM386356 (11 of 39 entities)
+GSM386357 (12 of 39 entities)
+GSM386358 (13 of 39 entities)
+GSM386359 (14 of 39 entities)
+GSM386360 (15 of 39 entities)
+GSM386361 (16 of 39 entities)
+GSM386362 (17 of 39 entities)
+GSM386363 (18 of 39 entities)
+GSM386364 (19 of 39 entities)
+GSM386365 (20 of 39 entities)
+GSM386366 (21 of 39 entities)
+GSM386367 (22 of 39 entities)
+GSM386368 (23 of 39 entities)
+GSM386369 (24 of 39 entities)
+GSM386370 (25 of 39 entities)
+GSM386371 (26 of 39 entities)
+GSM386372 (27 of 39 entities)
+GSM386373 (28 of 39 entities)
+GSM386374 (29 of 39 entities)
+GSM386375 (30 of 39 entities)
+GSM386376 (31 of 39 entities)
+GSM386377 (32 of 39 entities)
+GSM386378 (33 of 39 entities)
+GSM386379 (34 of 39 entities)
+GSM386380 (35 of 39 entities)
+GSM386381 (36 of 39 entities)
+GSM386382 (37 of 39 entities)
+GSM386383 (38 of 39 entities)
+There were 19 warnings (use warnings() to see them)
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

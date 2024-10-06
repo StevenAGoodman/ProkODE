@@ -1,0 +1,80 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE61738 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE61738/GSE61738.soft.gz 
+Reading file....
+Parsing....
+Found 40 entities...
+GPL19219 (1 of 41 entities)
+GPL19222 (2 of 41 entities)
+GSM1511987 (3 of 41 entities)
+GSM1511988 (4 of 41 entities)
+GSM1511989 (5 of 41 entities)
+GSM1511990 (6 of 41 entities)
+GSM1511991 (7 of 41 entities)
+GSM1511992 (8 of 41 entities)
+GSM1511993 (9 of 41 entities)
+GSM1511994 (10 of 41 entities)
+GSM1511995 (11 of 41 entities)
+GSM1511996 (12 of 41 entities)
+GSM1511997 (13 of 41 entities)
+GSM1511998 (14 of 41 entities)
+GSM1511999 (15 of 41 entities)
+GSM1512000 (16 of 41 entities)
+GSM1512001 (17 of 41 entities)
+GSM1512002 (18 of 41 entities)
+GSM1512003 (19 of 41 entities)
+GSM1512004 (20 of 41 entities)
+GSM1512005 (21 of 41 entities)
+GSM1512006 (22 of 41 entities)
+GSM1512007 (23 of 41 entities)
+GSM1512008 (24 of 41 entities)
+GSM1512009 (25 of 41 entities)
+GSM1512010 (26 of 41 entities)
+GSM1512011 (27 of 41 entities)
+GSM1512012 (28 of 41 entities)
+GSM1512013 (29 of 41 entities)
+GSM1512014 (30 of 41 entities)
+GSM1512015 (31 of 41 entities)
+GSM1512016 (32 of 41 entities)
+GSM1512017 (33 of 41 entities)
+GSM1512018 (34 of 41 entities)
+GSM1512019 (35 of 41 entities)
+GSM1512020 (36 of 41 entities)
+GSM1512021 (37 of 41 entities)
+GSM1512022 (38 of 41 entities)
+GSM1512023 (39 of 41 entities)
+GSM1512024 (40 of 41 entities)
+Error: invalid sample names; likely not time series
+Execution halted

@@ -1,0 +1,67 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE14836 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE14836/GSE14836.soft.gz 
+Reading file....
+Parsing....
+Found 24 entities...
+GPL3739 (1 of 25 entities)
+GSM370522 (2 of 25 entities)
+GSM370523 (3 of 25 entities)
+GSM370524 (4 of 25 entities)
+GSM370525 (5 of 25 entities)
+GSM370526 (6 of 25 entities)
+GSM370527 (7 of 25 entities)
+GSM370528 (8 of 25 entities)
+GSM370529 (9 of 25 entities)
+GSM370530 (10 of 25 entities)
+GSM370531 (11 of 25 entities)
+GSM370532 (12 of 25 entities)
+GSM370533 (13 of 25 entities)
+GSM370534 (14 of 25 entities)
+GSM370535 (15 of 25 entities)
+GSM370536 (16 of 25 entities)
+GSM370537 (17 of 25 entities)
+GSM370538 (18 of 25 entities)
+GSM370539 (19 of 25 entities)
+GSM370540 (20 of 25 entities)
+GSM370541 (21 of 25 entities)
+GSM370542 (22 of 25 entities)
+GSM370543 (23 of 25 entities)
+GSM370544 (24 of 25 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+There were 16 warnings (use warnings() to see them)
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

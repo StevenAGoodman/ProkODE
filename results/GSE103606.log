@@ -1,0 +1,147 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE103606 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE103606/GSE103606.soft.gz 
+Reading file....
+Parsing....
+Found 107 entities...
+GPL16957 (1 of 108 entities)
+GSM2771773 (2 of 108 entities)
+GSM2771774 (3 of 108 entities)
+GSM2771775 (4 of 108 entities)
+GSM2771776 (5 of 108 entities)
+GSM2771777 (6 of 108 entities)
+GSM2771778 (7 of 108 entities)
+GSM2771779 (8 of 108 entities)
+GSM2771780 (9 of 108 entities)
+GSM2771781 (10 of 108 entities)
+GSM2771782 (11 of 108 entities)
+GSM2771783 (12 of 108 entities)
+GSM2771784 (13 of 108 entities)
+GSM2771785 (14 of 108 entities)
+GSM2771786 (15 of 108 entities)
+GSM2771787 (16 of 108 entities)
+GSM2771788 (17 of 108 entities)
+GSM2777217 (18 of 108 entities)
+GSM2777218 (19 of 108 entities)
+GSM2777219 (20 of 108 entities)
+GSM2777220 (21 of 108 entities)
+GSM2777221 (22 of 108 entities)
+GSM2777222 (23 of 108 entities)
+GSM2779437 (24 of 108 entities)
+GSM2779438 (25 of 108 entities)
+GSM2779439 (26 of 108 entities)
+GSM2779440 (27 of 108 entities)
+GSM2779441 (28 of 108 entities)
+GSM2779442 (29 of 108 entities)
+GSM2779443 (30 of 108 entities)
+GSM2779444 (31 of 108 entities)
+GSM2779445 (32 of 108 entities)
+GSM2779446 (33 of 108 entities)
+GSM2779447 (34 of 108 entities)
+GSM2779448 (35 of 108 entities)
+GSM2779449 (36 of 108 entities)
+GSM2779450 (37 of 108 entities)
+GSM2779451 (38 of 108 entities)
+GSM2779452 (39 of 108 entities)
+GSM2779453 (40 of 108 entities)
+GSM2779454 (41 of 108 entities)
+GSM2779455 (42 of 108 entities)
+GSM2779456 (43 of 108 entities)
+GSM2779457 (44 of 108 entities)
+GSM2779458 (45 of 108 entities)
+GSM2779459 (46 of 108 entities)
+GSM2779460 (47 of 108 entities)
+GSM2779461 (48 of 108 entities)
+GSM2779462 (49 of 108 entities)
+GSM2779463 (50 of 108 entities)
+GSM2779464 (51 of 108 entities)
+GSM2779465 (52 of 108 entities)
+GSM2779466 (53 of 108 entities)
+GSM2779467 (54 of 108 entities)
+GSM2779468 (55 of 108 entities)
+GSM2779469 (56 of 108 entities)
+GSM2779470 (57 of 108 entities)
+GSM2779471 (58 of 108 entities)
+GSM2779472 (59 of 108 entities)
+GSM2827746 (60 of 108 entities)
+GSM2827747 (61 of 108 entities)
+GSM2827748 (62 of 108 entities)
+GSM2827749 (63 of 108 entities)
+GSM2827750 (64 of 108 entities)
+GSM2827751 (65 of 108 entities)
+GSM2827752 (66 of 108 entities)
+GSM2827753 (67 of 108 entities)
+GSM2827754 (68 of 108 entities)
+GSM2827755 (69 of 108 entities)
+GSM2827756 (70 of 108 entities)
+GSM2827757 (71 of 108 entities)
+GSM2827758 (72 of 108 entities)
+GSM2827759 (73 of 108 entities)
+GSM2827760 (74 of 108 entities)
+GSM2827761 (75 of 108 entities)
+GSM2827762 (76 of 108 entities)
+GSM2827763 (77 of 108 entities)
+GSM2827764 (78 of 108 entities)
+GSM2827765 (79 of 108 entities)
+GSM2827766 (80 of 108 entities)
+GSM2827767 (81 of 108 entities)
+GSM2827768 (82 of 108 entities)
+GSM2827769 (83 of 108 entities)
+GSM2827770 (84 of 108 entities)
+GSM2827771 (85 of 108 entities)
+GSM2827772 (86 of 108 entities)
+GSM2827773 (87 of 108 entities)
+GSM2827774 (88 of 108 entities)
+GSM2827775 (89 of 108 entities)
+GSM2827776 (90 of 108 entities)
+GSM2827777 (91 of 108 entities)
+GSM2827778 (92 of 108 entities)
+GSM2827779 (93 of 108 entities)
+GSM2827780 (94 of 108 entities)
+GSM2827781 (95 of 108 entities)
+GSM2854964 (96 of 108 entities)
+GSM2854965 (97 of 108 entities)
+GSM2854966 (98 of 108 entities)
+GSM2854967 (99 of 108 entities)
+GSM2854968 (100 of 108 entities)
+GSM2854969 (101 of 108 entities)
+GSM2854970 (102 of 108 entities)
+GSM2854971 (103 of 108 entities)
+GSM2854972 (104 of 108 entities)
+GSM2854973 (105 of 108 entities)
+GSM2854974 (106 of 108 entities)
+GSM2854975 (107 of 108 entities)
+Error: invalid sample names; likely not time series
+Execution halted

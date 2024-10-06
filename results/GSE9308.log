@@ -1,0 +1,65 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE9308 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE9308/GSE9308.soft.gz 
+Reading file....
+Parsing....
+Found 25 entities...
+GPL1339 (1 of 26 entities)
+GSM237113 (2 of 26 entities)
+GSM237114 (3 of 26 entities)
+GSM237115 (4 of 26 entities)
+GSM237116 (5 of 26 entities)
+GSM237117 (6 of 26 entities)
+GSM237118 (7 of 26 entities)
+GSM237119 (8 of 26 entities)
+GSM237120 (9 of 26 entities)
+GSM237121 (10 of 26 entities)
+GSM237122 (11 of 26 entities)
+GSM237123 (12 of 26 entities)
+GSM237124 (13 of 26 entities)
+GSM237125 (14 of 26 entities)
+GSM237126 (15 of 26 entities)
+GSM237127 (16 of 26 entities)
+GSM237128 (17 of 26 entities)
+GSM237129 (18 of 26 entities)
+GSM237130 (19 of 26 entities)
+GSM237131 (20 of 26 entities)
+GSM237132 (21 of 26 entities)
+GSM237133 (22 of 26 entities)
+GSM237134 (23 of 26 entities)
+GSM237135 (24 of 26 entities)
+GSM237136 (25 of 26 entities)
+Error: invalid sample names; likely not time series
+Execution halted

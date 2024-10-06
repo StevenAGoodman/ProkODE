@@ -1,0 +1,65 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE166112 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE166112/GSE166112.soft.gz 
+Reading file....
+Parsing....
+Found 25 entities...
+GPL20056 (1 of 26 entities)
+GSM5061902 (2 of 26 entities)
+GSM5061903 (3 of 26 entities)
+GSM5061904 (4 of 26 entities)
+GSM5061905 (5 of 26 entities)
+GSM5061906 (6 of 26 entities)
+GSM5061907 (7 of 26 entities)
+GSM5061908 (8 of 26 entities)
+GSM5061909 (9 of 26 entities)
+GSM5061910 (10 of 26 entities)
+GSM5061911 (11 of 26 entities)
+GSM5061912 (12 of 26 entities)
+GSM5061913 (13 of 26 entities)
+GSM5061914 (14 of 26 entities)
+GSM5061915 (15 of 26 entities)
+GSM5061916 (16 of 26 entities)
+GSM5061917 (17 of 26 entities)
+GSM5061918 (18 of 26 entities)
+GSM5061919 (19 of 26 entities)
+GSM5061920 (20 of 26 entities)
+GSM5061921 (21 of 26 entities)
+GSM5061922 (22 of 26 entities)
+GSM5061923 (23 of 26 entities)
+GSM5061924 (24 of 26 entities)
+GSM5061925 (25 of 26 entities)
+Error: invalid sample names; likely not time series
+Execution halted

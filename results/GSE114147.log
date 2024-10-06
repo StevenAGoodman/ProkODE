@@ -1,0 +1,251 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE114147 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE114147/GSE114147.soft.gz 
+Reading file....
+Parsing....
+Found 31 entities...
+GPL19006 (1 of 32 entities)
+GSM3135586 (2 of 32 entities)
+GSM3135587 (3 of 32 entities)
+GSM3135588 (4 of 32 entities)
+GSM3135589 (5 of 32 entities)
+GSM3135590 (6 of 32 entities)
+GSM3135591 (7 of 32 entities)
+GSM3135592 (8 of 32 entities)
+GSM3135593 (9 of 32 entities)
+GSM3135594 (10 of 32 entities)
+GSM3135595 (11 of 32 entities)
+GSM3135596 (12 of 32 entities)
+GSM3135597 (13 of 32 entities)
+GSM3135598 (14 of 32 entities)
+GSM3135599 (15 of 32 entities)
+GSM3135600 (16 of 32 entities)
+GSM3135601 (17 of 32 entities)
+GSM3135602 (18 of 32 entities)
+GSM3135603 (19 of 32 entities)
+GSM3135604 (20 of 32 entities)
+GSM3135605 (21 of 32 entities)
+GSM3135606 (22 of 32 entities)
+GSM3135607 (23 of 32 entities)
+GSM3135608 (24 of 32 entities)
+GSM3135609 (25 of 32 entities)
+GSM3135610 (26 of 32 entities)
+GSM3135611 (27 of 32 entities)
+GSM3135612 (28 of 32 entities)
+GSM3135613 (29 of 32 entities)
+GSM3135614 (30 of 32 entities)
+GSM3135615 (31 of 32 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.count_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 223678 bytes (218 KB)
+==================================================
+downloaded 218 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.fpkm_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 524975 bytes (512 KB)
+==================================================
+downloaded 512 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.count_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 223678 bytes (218 KB)
+==================================================
+downloaded 218 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.fpkm_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 524975 bytes (512 KB)
+==================================================
+downloaded 512 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.count_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 223678 bytes (218 KB)
+==================================================
+downloaded 218 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.fpkm_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 524975 bytes (512 KB)
+==================================================
+downloaded 512 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.count_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 223678 bytes (218 KB)
+==================================================
+downloaded 218 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.fpkm_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 524975 bytes (512 KB)
+==================================================
+downloaded 512 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.count_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 223678 bytes (218 KB)
+==================================================
+downloaded 218 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.fpkm_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 524975 bytes (512 KB)
+==================================================
+downloaded 512 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.count_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 223678 bytes (218 KB)
+==================================================
+downloaded 218 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.fpkm_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 524975 bytes (512 KB)
+==================================================
+downloaded 512 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.count_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 223678 bytes (218 KB)
+==================================================
+downloaded 218 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.fpkm_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 524975 bytes (512 KB)
+==================================================
+downloaded 512 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.count_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 223678 bytes (218 KB)
+==================================================
+downloaded 218 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.fpkm_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 524975 bytes (512 KB)
+==================================================
+downloaded 512 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.count_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 223678 bytes (218 KB)
+==================================================
+downloaded 218 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.fpkm_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 524975 bytes (512 KB)
+==================================================
+downloaded 512 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.count_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 223678 bytes (218 KB)
+==================================================
+downloaded 218 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.fpkm_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 524975 bytes (512 KB)
+==================================================
+downloaded 512 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.count_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 223678 bytes (218 KB)
+==================================================
+downloaded 218 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.fpkm_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 524975 bytes (512 KB)
+==================================================
+downloaded 512 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.count_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 223678 bytes (218 KB)
+==================================================
+downloaded 218 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.fpkm_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 524975 bytes (512 KB)
+==================================================
+downloaded 512 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.count_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 223678 bytes (218 KB)
+==================================================
+downloaded 218 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.fpkm_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 524975 bytes (512 KB)
+==================================================
+downloaded 512 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.count_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 223678 bytes (218 KB)
+==================================================
+downloaded 218 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.fpkm_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 524975 bytes (512 KB)
+==================================================
+downloaded 512 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.count_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 223678 bytes (218 KB)
+==================================================
+downloaded 218 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.fpkm_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 524975 bytes (512 KB)
+==================================================
+downloaded 512 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.count_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 223678 bytes (218 KB)
+==================================================
+downloaded 218 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.fpkm_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 524975 bytes (512 KB)
+==================================================
+downloaded 512 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.count_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 223678 bytes (218 KB)
+==================================================
+downloaded 218 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.fpkm_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 524975 bytes (512 KB)
+==================================================
+downloaded 512 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.count_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 223678 bytes (218 KB)
+==================================================
+downloaded 218 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114147/suppl//GSE114147_Lacey_GEO_040718_frm_genes.fpkm_tracking.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 524975 bytes (512 KB)
+==================================================
+downloaded 512 KB
+
+Error: invalid sample names; likely not time series
+Execution halted

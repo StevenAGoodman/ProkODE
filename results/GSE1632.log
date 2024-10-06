@@ -1,0 +1,168 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE1632 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE1632/GSE1632.soft.gz 
+Reading file....
+Parsing....
+Found 110 entities...
+GPL224 (1 of 111 entities)
+GPL548 (2 of 111 entities)
+GSM23105 (3 of 111 entities)
+GSM23106 (4 of 111 entities)
+GSM23107 (5 of 111 entities)
+GSM23108 (6 of 111 entities)
+GSM23109 (7 of 111 entities)
+GSM23110 (8 of 111 entities)
+GSM23126 (9 of 111 entities)
+GSM23127 (10 of 111 entities)
+GSM23128 (11 of 111 entities)
+GSM23150 (12 of 111 entities)
+GSM23151 (13 of 111 entities)
+GSM23152 (14 of 111 entities)
+GSM23333 (15 of 111 entities)
+GSM23334 (16 of 111 entities)
+GSM23335 (17 of 111 entities)
+GSM23876 (18 of 111 entities)
+GSM23877 (19 of 111 entities)
+GSM23878 (20 of 111 entities)
+GSM23879 (21 of 111 entities)
+GSM23880 (22 of 111 entities)
+GSM23881 (23 of 111 entities)
+GSM23883 (24 of 111 entities)
+GSM23884 (25 of 111 entities)
+GSM23885 (26 of 111 entities)
+GSM23889 (27 of 111 entities)
+GSM23890 (28 of 111 entities)
+GSM23891 (29 of 111 entities)
+GSM23896 (30 of 111 entities)
+GSM23897 (31 of 111 entities)
+GSM23898 (32 of 111 entities)
+GSM23900 (33 of 111 entities)
+GSM23901 (34 of 111 entities)
+GSM23902 (35 of 111 entities)
+GSM23905 (36 of 111 entities)
+GSM23906 (37 of 111 entities)
+GSM23907 (38 of 111 entities)
+GSM23909 (39 of 111 entities)
+GSM23910 (40 of 111 entities)
+GSM23911 (41 of 111 entities)
+GSM23913 (42 of 111 entities)
+GSM23914 (43 of 111 entities)
+GSM23915 (44 of 111 entities)
+GSM23917 (45 of 111 entities)
+GSM23918 (46 of 111 entities)
+GSM23920 (47 of 111 entities)
+GSM23973 (48 of 111 entities)
+GSM23974 (49 of 111 entities)
+GSM23975 (50 of 111 entities)
+GSM23976 (51 of 111 entities)
+GSM23977 (52 of 111 entities)
+GSM23978 (53 of 111 entities)
+GSM23981 (54 of 111 entities)
+GSM23982 (55 of 111 entities)
+GSM23983 (56 of 111 entities)
+GSM23986 (57 of 111 entities)
+GSM23987 (58 of 111 entities)
+GSM23988 (59 of 111 entities)
+GSM23992 (60 of 111 entities)
+GSM23993 (61 of 111 entities)
+GSM23994 (62 of 111 entities)
+GSM24267 (63 of 111 entities)
+GSM24268 (64 of 111 entities)
+GSM24269 (65 of 111 entities)
+GSM24270 (66 of 111 entities)
+GSM24271 (67 of 111 entities)
+GSM24272 (68 of 111 entities)
+GSM24273 (69 of 111 entities)
+GSM24274 (70 of 111 entities)
+GSM24275 (71 of 111 entities)
+GSM24276 (72 of 111 entities)
+GSM24277 (73 of 111 entities)
+GSM24278 (74 of 111 entities)
+GSM24279 (75 of 111 entities)
+GSM24280 (76 of 111 entities)
+GSM24281 (77 of 111 entities)
+GSM24282 (78 of 111 entities)
+GSM24283 (79 of 111 entities)
+GSM24284 (80 of 111 entities)
+GSM24395 (81 of 111 entities)
+GSM24396 (82 of 111 entities)
+GSM24397 (83 of 111 entities)
+GSM24398 (84 of 111 entities)
+GSM24399 (85 of 111 entities)
+GSM24400 (86 of 111 entities)
+GSM24401 (87 of 111 entities)
+GSM24402 (88 of 111 entities)
+GSM24403 (89 of 111 entities)
+GSM24404 (90 of 111 entities)
+GSM24405 (91 of 111 entities)
+GSM24406 (92 of 111 entities)
+GSM24407 (93 of 111 entities)
+GSM24408 (94 of 111 entities)
+GSM24409 (95 of 111 entities)
+GSM24410 (96 of 111 entities)
+GSM24411 (97 of 111 entities)
+GSM24412 (98 of 111 entities)
+GSM24413 (99 of 111 entities)
+GSM24414 (100 of 111 entities)
+GSM24415 (101 of 111 entities)
+GSM24416 (102 of 111 entities)
+GSM24417 (103 of 111 entities)
+GSM24418 (104 of 111 entities)
+GSM24419 (105 of 111 entities)
+GSM24420 (106 of 111 entities)
+GSM24421 (107 of 111 entities)
+GSM24422 (108 of 111 entities)
+GSM24423 (109 of 111 entities)
+GSM24424 (110 of 111 entities)
+There were 29 warnings (use warnings() to see them)
+There were 33 warnings (use warnings() to see them)
+Warning messages:
+1: In grep(" ", column) :
+  unable to translate 'STY4124; STY4658; HCM1.05c; HCM1.136; HCM1.138; HCM1.205c; HCM1.239c<85>' to a wide string
+2: In grep(" ", column) : input string 445 is invalid
+3: In grep(" ", column) :
+  unable to translate 'STY0256; STY0437; STY1580; STY1895; STY3154<85>' to a wide string
+4: In grep(" ", column) : input string 2276 is invalid
+5: In grep(" ", column) :
+  unable to translate 'STY0657, STY1108, STY1280, aSTY0256, <85>' to a wide string
+6: In grep(" ", column) : input string 3920 is invalid
+7: In grep(" ", column) :
+  unable to translate 'STY1108, STY1114, STY1379, aSTY0256, aSTY1844, <85>' to a wide string
+8: In grep(" ", column) : input string 4997 is invalid
+9: In grep(" ", column) :
+  unable to translate 'STY4125; STY4657; HCM1.04c; HCM1.136a; HCM1.204c; HCM1.238c<85>' to a wide string
+10: In grep(" ", column) : input string 5150 is invalid
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

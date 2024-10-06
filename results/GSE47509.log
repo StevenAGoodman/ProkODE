@@ -1,0 +1,161 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE47509 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE47509/GSE47509.soft.gz 
+Reading file....
+Parsing....
+Found 21 entities...
+GPL15010 (1 of 22 entities)
+GSM1151289 (2 of 22 entities)
+GSM1151290 (3 of 22 entities)
+GSM1151291 (4 of 22 entities)
+GSM1151292 (5 of 22 entities)
+GSM1151293 (6 of 22 entities)
+GSM1151294 (7 of 22 entities)
+GSM1151295 (8 of 22 entities)
+GSM1151296 (9 of 22 entities)
+GSM1151297 (10 of 22 entities)
+GSM1151298 (11 of 22 entities)
+GSM1151299 (12 of 22 entities)
+GSM1151300 (13 of 22 entities)
+GSM1151301 (14 of 22 entities)
+GSM1151302 (15 of 22 entities)
+GSM1151303 (16 of 22 entities)
+GSM1151304 (17 of 22 entities)
+GSM1151305 (18 of 22 entities)
+GSM1151306 (19 of 22 entities)
+GSM1151307 (20 of 22 entities)
+GSM1151308 (21 of 22 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE47nnn/GSE47509/suppl//GSE47509_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1822720 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+Error: invalid sample names; likely not time series
+Execution halted

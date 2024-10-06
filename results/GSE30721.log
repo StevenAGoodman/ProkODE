@@ -1,0 +1,197 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE30721 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE30721/GSE30721.soft.gz 
+Reading file....
+Parsing....
+Found 157 entities...
+GPL9790 (1 of 158 entities)
+GSM762112 (2 of 158 entities)
+GSM762113 (3 of 158 entities)
+GSM762114 (4 of 158 entities)
+GSM762115 (5 of 158 entities)
+GSM762116 (6 of 158 entities)
+GSM762117 (7 of 158 entities)
+GSM762118 (8 of 158 entities)
+GSM762119 (9 of 158 entities)
+GSM762120 (10 of 158 entities)
+GSM762121 (11 of 158 entities)
+GSM762122 (12 of 158 entities)
+GSM762123 (13 of 158 entities)
+GSM762124 (14 of 158 entities)
+GSM762125 (15 of 158 entities)
+GSM762126 (16 of 158 entities)
+GSM762127 (17 of 158 entities)
+GSM762128 (18 of 158 entities)
+GSM762129 (19 of 158 entities)
+GSM762130 (20 of 158 entities)
+GSM762131 (21 of 158 entities)
+GSM762132 (22 of 158 entities)
+GSM762133 (23 of 158 entities)
+GSM762134 (24 of 158 entities)
+GSM762135 (25 of 158 entities)
+GSM762136 (26 of 158 entities)
+GSM762137 (27 of 158 entities)
+GSM762138 (28 of 158 entities)
+GSM762139 (29 of 158 entities)
+GSM762140 (30 of 158 entities)
+GSM762141 (31 of 158 entities)
+GSM762142 (32 of 158 entities)
+GSM762143 (33 of 158 entities)
+GSM762144 (34 of 158 entities)
+GSM762145 (35 of 158 entities)
+GSM762146 (36 of 158 entities)
+GSM762147 (37 of 158 entities)
+GSM762148 (38 of 158 entities)
+GSM762149 (39 of 158 entities)
+GSM762150 (40 of 158 entities)
+GSM762151 (41 of 158 entities)
+GSM762152 (42 of 158 entities)
+GSM762153 (43 of 158 entities)
+GSM762154 (44 of 158 entities)
+GSM762155 (45 of 158 entities)
+GSM762156 (46 of 158 entities)
+GSM762157 (47 of 158 entities)
+GSM762158 (48 of 158 entities)
+GSM762159 (49 of 158 entities)
+GSM762160 (50 of 158 entities)
+GSM762161 (51 of 158 entities)
+GSM762162 (52 of 158 entities)
+GSM762163 (53 of 158 entities)
+GSM762164 (54 of 158 entities)
+GSM762165 (55 of 158 entities)
+GSM762166 (56 of 158 entities)
+GSM762167 (57 of 158 entities)
+GSM762168 (58 of 158 entities)
+GSM762169 (59 of 158 entities)
+GSM762170 (60 of 158 entities)
+GSM762171 (61 of 158 entities)
+GSM762172 (62 of 158 entities)
+GSM762173 (63 of 158 entities)
+GSM762174 (64 of 158 entities)
+GSM762175 (65 of 158 entities)
+GSM762176 (66 of 158 entities)
+GSM762177 (67 of 158 entities)
+GSM762178 (68 of 158 entities)
+GSM762179 (69 of 158 entities)
+GSM762180 (70 of 158 entities)
+GSM762181 (71 of 158 entities)
+GSM762182 (72 of 158 entities)
+GSM762183 (73 of 158 entities)
+GSM762184 (74 of 158 entities)
+GSM762185 (75 of 158 entities)
+GSM762186 (76 of 158 entities)
+GSM762187 (77 of 158 entities)
+GSM762188 (78 of 158 entities)
+GSM762189 (79 of 158 entities)
+GSM762190 (80 of 158 entities)
+GSM762191 (81 of 158 entities)
+GSM762192 (82 of 158 entities)
+GSM762193 (83 of 158 entities)
+GSM762194 (84 of 158 entities)
+GSM762195 (85 of 158 entities)
+GSM762196 (86 of 158 entities)
+GSM762197 (87 of 158 entities)
+GSM762198 (88 of 158 entities)
+GSM762199 (89 of 158 entities)
+GSM762200 (90 of 158 entities)
+GSM762201 (91 of 158 entities)
+GSM762202 (92 of 158 entities)
+GSM762203 (93 of 158 entities)
+GSM762204 (94 of 158 entities)
+GSM762205 (95 of 158 entities)
+GSM762206 (96 of 158 entities)
+GSM762207 (97 of 158 entities)
+GSM762208 (98 of 158 entities)
+GSM762209 (99 of 158 entities)
+GSM762210 (100 of 158 entities)
+GSM762211 (101 of 158 entities)
+GSM762212 (102 of 158 entities)
+GSM762213 (103 of 158 entities)
+GSM762214 (104 of 158 entities)
+GSM762215 (105 of 158 entities)
+GSM762216 (106 of 158 entities)
+GSM762217 (107 of 158 entities)
+GSM762218 (108 of 158 entities)
+GSM762219 (109 of 158 entities)
+GSM762220 (110 of 158 entities)
+GSM762221 (111 of 158 entities)
+GSM762222 (112 of 158 entities)
+GSM762223 (113 of 158 entities)
+GSM762224 (114 of 158 entities)
+GSM762225 (115 of 158 entities)
+GSM762226 (116 of 158 entities)
+GSM762227 (117 of 158 entities)
+GSM762228 (118 of 158 entities)
+GSM762229 (119 of 158 entities)
+GSM762230 (120 of 158 entities)
+GSM762231 (121 of 158 entities)
+GSM762232 (122 of 158 entities)
+GSM762233 (123 of 158 entities)
+GSM762234 (124 of 158 entities)
+GSM762235 (125 of 158 entities)
+GSM762236 (126 of 158 entities)
+GSM762237 (127 of 158 entities)
+GSM762238 (128 of 158 entities)
+GSM762239 (129 of 158 entities)
+GSM762240 (130 of 158 entities)
+GSM762241 (131 of 158 entities)
+GSM762242 (132 of 158 entities)
+GSM762243 (133 of 158 entities)
+GSM762244 (134 of 158 entities)
+GSM762245 (135 of 158 entities)
+GSM762246 (136 of 158 entities)
+GSM762247 (137 of 158 entities)
+GSM762248 (138 of 158 entities)
+GSM762249 (139 of 158 entities)
+GSM762250 (140 of 158 entities)
+GSM762251 (141 of 158 entities)
+GSM762252 (142 of 158 entities)
+GSM762253 (143 of 158 entities)
+GSM762254 (144 of 158 entities)
+GSM762255 (145 of 158 entities)
+GSM762256 (146 of 158 entities)
+GSM762257 (147 of 158 entities)
+GSM762258 (148 of 158 entities)
+GSM762259 (149 of 158 entities)
+GSM762260 (150 of 158 entities)
+GSM762261 (151 of 158 entities)
+GSM762262 (152 of 158 entities)
+GSM762263 (153 of 158 entities)
+GSM762264 (154 of 158 entities)
+GSM762265 (155 of 158 entities)
+GSM762266 (156 of 158 entities)
+GSM762267 (157 of 158 entities)
+Error: invalid sample names; likely not time series
+Execution halted

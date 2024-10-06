@@ -1,0 +1,150 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE181680 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE181680/GSE181680.soft.gz 
+Reading file....
+Parsing....
+Found 20 entities...
+GPL21103 (1 of 21 entities)
+GPL24209 (2 of 21 entities)
+GPL24247 (3 of 21 entities)
+GSM5509193 (4 of 21 entities)
+GSM5509194 (5 of 21 entities)
+GSM5509195 (6 of 21 entities)
+GSM5509196 (7 of 21 entities)
+GSM5509197 (8 of 21 entities)
+GSM5509198 (9 of 21 entities)
+GSM5509199 (10 of 21 entities)
+GSM5509200 (11 of 21 entities)
+GSM5509201 (12 of 21 entities)
+GSM5509202 (13 of 21 entities)
+GSM5509203 (14 of 21 entities)
+GSM5509204 (15 of 21 entities)
+GSM5509205 (16 of 21 entities)
+GSM5509206 (17 of 21 entities)
+GSM5509207 (18 of 21 entities)
+GSM5509208 (19 of 21 entities)
+GSM5509209 (20 of 21 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE181nnn/GSE181680/suppl//GSE181680_Mouse_countsTable.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1969963 bytes (1.9 MB)
+==================================================
+downloaded 1.9 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE181nnn/GSE181680/suppl//GSE181680_Ypestis_countsTable.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 343039 bytes (334 KB)
+==================================================
+downloaded 334 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE181nnn/GSE181680/suppl//GSE181680_Mouse_countsTable.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1969963 bytes (1.9 MB)
+==================================================
+downloaded 1.9 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE181nnn/GSE181680/suppl//GSE181680_Ypestis_countsTable.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 343039 bytes (334 KB)
+==================================================
+downloaded 334 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE181nnn/GSE181680/suppl//GSE181680_Mouse_countsTable.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1969963 bytes (1.9 MB)
+==================================================
+downloaded 1.9 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE181nnn/GSE181680/suppl//GSE181680_Ypestis_countsTable.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 343039 bytes (334 KB)
+==================================================
+downloaded 334 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE181nnn/GSE181680/suppl//GSE181680_Mouse_countsTable.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1969963 bytes (1.9 MB)
+==================================================
+downloaded 1.9 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE181nnn/GSE181680/suppl//GSE181680_Ypestis_countsTable.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 343039 bytes (334 KB)
+==================================================
+downloaded 334 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE181nnn/GSE181680/suppl//GSE181680_Mouse_countsTable.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1969963 bytes (1.9 MB)
+==================================================
+downloaded 1.9 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE181nnn/GSE181680/suppl//GSE181680_Ypestis_countsTable.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 343039 bytes (334 KB)
+==================================================
+downloaded 334 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE181nnn/GSE181680/suppl//GSE181680_Mouse_countsTable.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1969963 bytes (1.9 MB)
+==================================================
+downloaded 1.9 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE181nnn/GSE181680/suppl//GSE181680_Ypestis_countsTable.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 343039 bytes (334 KB)
+==================================================
+downloaded 334 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE181nnn/GSE181680/suppl//GSE181680_Mouse_countsTable.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1969963 bytes (1.9 MB)
+==================================================
+downloaded 1.9 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE181nnn/GSE181680/suppl//GSE181680_Ypestis_countsTable.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 343039 bytes (334 KB)
+==================================================
+downloaded 334 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE181nnn/GSE181680/suppl//GSE181680_Mouse_countsTable.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1969963 bytes (1.9 MB)
+==================================================
+downloaded 1.9 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE181nnn/GSE181680/suppl//GSE181680_Ypestis_countsTable.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 343039 bytes (334 KB)
+==================================================
+downloaded 334 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE181nnn/GSE181680/suppl//GSE181680_Mouse_countsTable.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1969963 bytes (1.9 MB)
+==================================================
+downloaded 1.9 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE181nnn/GSE181680/suppl//GSE181680_Ypestis_countsTable.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 343039 bytes (334 KB)
+==================================================
+downloaded 334 KB
+
+Error: invalid sample names; likely not time series
+Execution halted

@@ -1,0 +1,89 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE24478 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE24478/GSE24478.soft.gz 
+Reading file....
+Parsing....
+Found 49 entities...
+GPL11006 (1 of 50 entities)
+GSM602859 (2 of 50 entities)
+GSM602860 (3 of 50 entities)
+GSM602861 (4 of 50 entities)
+GSM602862 (5 of 50 entities)
+GSM602863 (6 of 50 entities)
+GSM602864 (7 of 50 entities)
+GSM602865 (8 of 50 entities)
+GSM602866 (9 of 50 entities)
+GSM602867 (10 of 50 entities)
+GSM602868 (11 of 50 entities)
+GSM602869 (12 of 50 entities)
+GSM602870 (13 of 50 entities)
+GSM602871 (14 of 50 entities)
+GSM602872 (15 of 50 entities)
+GSM602873 (16 of 50 entities)
+GSM602874 (17 of 50 entities)
+GSM602875 (18 of 50 entities)
+GSM602876 (19 of 50 entities)
+GSM602877 (20 of 50 entities)
+GSM602878 (21 of 50 entities)
+GSM602879 (22 of 50 entities)
+GSM602880 (23 of 50 entities)
+GSM602881 (24 of 50 entities)
+GSM602882 (25 of 50 entities)
+GSM602883 (26 of 50 entities)
+GSM602884 (27 of 50 entities)
+GSM602885 (28 of 50 entities)
+GSM602886 (29 of 50 entities)
+GSM602887 (30 of 50 entities)
+GSM602888 (31 of 50 entities)
+GSM602889 (32 of 50 entities)
+GSM602890 (33 of 50 entities)
+GSM602891 (34 of 50 entities)
+GSM602892 (35 of 50 entities)
+GSM602893 (36 of 50 entities)
+GSM602894 (37 of 50 entities)
+GSM602895 (38 of 50 entities)
+GSM602896 (39 of 50 entities)
+GSM602897 (40 of 50 entities)
+GSM602898 (41 of 50 entities)
+GSM602899 (42 of 50 entities)
+GSM602900 (43 of 50 entities)
+GSM602901 (44 of 50 entities)
+GSM602902 (45 of 50 entities)
+GSM602903 (46 of 50 entities)
+GSM602904 (47 of 50 entities)
+GSM602905 (48 of 50 entities)
+GSM602906 (49 of 50 entities)
+Error: invalid sample names; likely not time series
+Execution halted

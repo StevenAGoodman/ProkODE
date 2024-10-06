@@ -1,0 +1,129 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE36345 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE36345/GSE36345.soft.gz 
+Reading file....
+Parsing....
+Found 89 entities...
+GPL14824 (1 of 90 entities)
+GPL15323 (2 of 90 entities)
+GSM889308 (3 of 90 entities)
+GSM889309 (4 of 90 entities)
+GSM889310 (5 of 90 entities)
+GSM889311 (6 of 90 entities)
+GSM889312 (7 of 90 entities)
+GSM889313 (8 of 90 entities)
+GSM889314 (9 of 90 entities)
+GSM889315 (10 of 90 entities)
+GSM889316 (11 of 90 entities)
+GSM889317 (12 of 90 entities)
+GSM889318 (13 of 90 entities)
+GSM889319 (14 of 90 entities)
+GSM889320 (15 of 90 entities)
+GSM889321 (16 of 90 entities)
+GSM889322 (17 of 90 entities)
+GSM889323 (18 of 90 entities)
+GSM889324 (19 of 90 entities)
+GSM889325 (20 of 90 entities)
+GSM889326 (21 of 90 entities)
+GSM889327 (22 of 90 entities)
+GSM889328 (23 of 90 entities)
+GSM889329 (24 of 90 entities)
+GSM889330 (25 of 90 entities)
+GSM889331 (26 of 90 entities)
+GSM889332 (27 of 90 entities)
+GSM889333 (28 of 90 entities)
+GSM889334 (29 of 90 entities)
+GSM889335 (30 of 90 entities)
+GSM889336 (31 of 90 entities)
+GSM889337 (32 of 90 entities)
+GSM889338 (33 of 90 entities)
+GSM889339 (34 of 90 entities)
+GSM889340 (35 of 90 entities)
+GSM889341 (36 of 90 entities)
+GSM889342 (37 of 90 entities)
+GSM889343 (38 of 90 entities)
+GSM889344 (39 of 90 entities)
+GSM889345 (40 of 90 entities)
+GSM889346 (41 of 90 entities)
+GSM889347 (42 of 90 entities)
+GSM889348 (43 of 90 entities)
+GSM889349 (44 of 90 entities)
+GSM889350 (45 of 90 entities)
+GSM889351 (46 of 90 entities)
+GSM889352 (47 of 90 entities)
+GSM889353 (48 of 90 entities)
+GSM889354 (49 of 90 entities)
+GSM889355 (50 of 90 entities)
+GSM889356 (51 of 90 entities)
+GSM889357 (52 of 90 entities)
+GSM889358 (53 of 90 entities)
+GSM889359 (54 of 90 entities)
+GSM889360 (55 of 90 entities)
+GSM889361 (56 of 90 entities)
+GSM889362 (57 of 90 entities)
+GSM889363 (58 of 90 entities)
+GSM889364 (59 of 90 entities)
+GSM889365 (60 of 90 entities)
+GSM889366 (61 of 90 entities)
+GSM889367 (62 of 90 entities)
+GSM889368 (63 of 90 entities)
+GSM889369 (64 of 90 entities)
+GSM889370 (65 of 90 entities)
+GSM889371 (66 of 90 entities)
+GSM889372 (67 of 90 entities)
+GSM889373 (68 of 90 entities)
+GSM889374 (69 of 90 entities)
+GSM889375 (70 of 90 entities)
+GSM889376 (71 of 90 entities)
+GSM889377 (72 of 90 entities)
+GSM889378 (73 of 90 entities)
+GSM889379 (74 of 90 entities)
+GSM889380 (75 of 90 entities)
+GSM889381 (76 of 90 entities)
+GSM889382 (77 of 90 entities)
+GSM889383 (78 of 90 entities)
+GSM889384 (79 of 90 entities)
+GSM889385 (80 of 90 entities)
+GSM889386 (81 of 90 entities)
+GSM889387 (82 of 90 entities)
+GSM889388 (83 of 90 entities)
+GSM889389 (84 of 90 entities)
+GSM889390 (85 of 90 entities)
+GSM889391 (86 of 90 entities)
+GSM889392 (87 of 90 entities)
+GSM889393 (88 of 90 entities)
+GSM889394 (89 of 90 entities)
+Error: invalid sample names; likely not time series
+Execution halted

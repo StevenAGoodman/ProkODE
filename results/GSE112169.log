@@ -1,0 +1,149 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE112169 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE112169/GSE112169.soft.gz 
+Reading file....
+Parsing....
+Found 19 entities...
+GPL24758 (1 of 20 entities)
+GSM4018788 (2 of 20 entities)
+GSM4018789 (3 of 20 entities)
+GSM4018790 (4 of 20 entities)
+GSM4018791 (5 of 20 entities)
+GSM4018792 (6 of 20 entities)
+GSM4018793 (7 of 20 entities)
+GSM4018794 (8 of 20 entities)
+GSM4018795 (9 of 20 entities)
+GSM4018796 (10 of 20 entities)
+GSM4018797 (11 of 20 entities)
+GSM4018798 (12 of 20 entities)
+GSM4018799 (13 of 20 entities)
+GSM4018800 (14 of 20 entities)
+GSM4018801 (15 of 20 entities)
+GSM4018802 (16 of 20 entities)
+GSM4018803 (17 of 20 entities)
+GSM4018804 (18 of 20 entities)
+GSM4018805 (19 of 20 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112169/suppl//GSE112169_Overall_mRNA_dynamics_during_competence_development_in_Streptococcus_pneumoniae_Rx1_strain.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1068333 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112169/suppl//GSE112169_Overall_mRNA_dynamics_during_competence_development_in_Streptococcus_pneumoniae_Rx1_strain.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1068333 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112169/suppl//GSE112169_Overall_mRNA_dynamics_during_competence_development_in_Streptococcus_pneumoniae_Rx1_strain.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1068333 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112169/suppl//GSE112169_Overall_mRNA_dynamics_during_competence_development_in_Streptococcus_pneumoniae_Rx1_strain.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1068333 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112169/suppl//GSE112169_Overall_mRNA_dynamics_during_competence_development_in_Streptococcus_pneumoniae_Rx1_strain.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1068333 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112169/suppl//GSE112169_Overall_mRNA_dynamics_during_competence_development_in_Streptococcus_pneumoniae_Rx1_strain.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1068333 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112169/suppl//GSE112169_Overall_mRNA_dynamics_during_competence_development_in_Streptococcus_pneumoniae_Rx1_strain.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1068333 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112169/suppl//GSE112169_Overall_mRNA_dynamics_during_competence_development_in_Streptococcus_pneumoniae_Rx1_strain.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1068333 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112169/suppl//GSE112169_Overall_mRNA_dynamics_during_competence_development_in_Streptococcus_pneumoniae_Rx1_strain.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1068333 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112169/suppl//GSE112169_Overall_mRNA_dynamics_during_competence_development_in_Streptococcus_pneumoniae_Rx1_strain.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1068333 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112169/suppl//GSE112169_Overall_mRNA_dynamics_during_competence_development_in_Streptococcus_pneumoniae_Rx1_strain.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1068333 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112169/suppl//GSE112169_Overall_mRNA_dynamics_during_competence_development_in_Streptococcus_pneumoniae_Rx1_strain.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1068333 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112169/suppl//GSE112169_Overall_mRNA_dynamics_during_competence_development_in_Streptococcus_pneumoniae_Rx1_strain.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1068333 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112169/suppl//GSE112169_Overall_mRNA_dynamics_during_competence_development_in_Streptococcus_pneumoniae_Rx1_strain.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1068333 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112169/suppl//GSE112169_Overall_mRNA_dynamics_during_competence_development_in_Streptococcus_pneumoniae_Rx1_strain.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1068333 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112169/suppl//GSE112169_Overall_mRNA_dynamics_during_competence_development_in_Streptococcus_pneumoniae_Rx1_strain.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1068333 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112169/suppl//GSE112169_Overall_mRNA_dynamics_during_competence_development_in_Streptococcus_pneumoniae_Rx1_strain.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1068333 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112169/suppl//GSE112169_Overall_mRNA_dynamics_during_competence_development_in_Streptococcus_pneumoniae_Rx1_strain.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 1068333 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+Error: invalid sample names; likely not time series
+Execution halted

@@ -1,0 +1,57 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE87118 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE87118/GSE87118.soft.gz 
+Reading file....
+Parsing....
+Found 11 entities...
+GPL14548 (1 of 12 entities)
+GSM2321583 (2 of 12 entities)
+GSM2321584 (3 of 12 entities)
+GSM2321585 (4 of 12 entities)
+GSM2321586 (5 of 12 entities)
+GSM2322588 (6 of 12 entities)
+GSM2322589 (7 of 12 entities)
+GSM2322590 (8 of 12 entities)
+GSM2322591 (9 of 12 entities)
+GSM2322592 (10 of 12 entities)
+GSM2322593 (11 of 12 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE87nnn/GSE87118/suppl//GSE87118_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 2289397760 bytes (2183.3 MB)
+==========
+downloaded 454.2 MB
+
+Error in getGEOSuppFiles(gse_id, makeDirectory = T, baseDir = gse_results_dir) : 
+  Failed to download ./results/GSE87118/GSE87118/GSE87118_RAW.tar!
+Execution halted

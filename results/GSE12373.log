@@ -1,0 +1,467 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE12373 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE12373/GSE12373.soft.gz 
+Reading file....
+Parsing....
+Found 9 entities...
+GPL6540 (1 of 10 entities)
+GSM310447 (2 of 10 entities)
+GSM310606 (3 of 10 entities)
+GSM310609 (4 of 10 entities)
+GSM310610 (5 of 10 entities)
+GSM310631 (6 of 10 entities)
+GSM310632 (7 of 10 entities)
+GSM310634 (8 of 10 entities)
+GSM310635 (9 of 10 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+Warning messages:
+1: In as.numeric(column) : NAs introduced by coercion
+2: In as.numeric(column) : NAs introduced by coercion
+3: In as.numeric(column) : NAs introduced by coercion
+4: In as.numeric(column) : NAs introduced by coercion
+5: In as.numeric(column) : NAs introduced by coercion
+6: In as.numeric(column) : NAs introduced by coercion
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowedcyuA
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedsmf
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedyjiV
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedygcU
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedtdcG
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedyghJ
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedgntU
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedinfA
+duplicate 'row.names' are not allowedygiQ
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedparC
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedrpoE
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not alloweddgoR
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedytfR
+duplicate 'row.names' are not allowedprfB
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowednusB
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedrpsB
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedftsL
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedexoD
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedexoD
+duplicate 'row.names' are not allowedypeC
+duplicate 'row.names' are not allowedwecF
+duplicate 'row.names' are not allowedmurI
+duplicate 'row.names' are not allowedghxQ
+duplicate 'row.names' are not allowedfliO
+duplicate 'row.names' are not allowedyhdP
+duplicate 'row.names' are not alloweddnaK
+duplicate 'row.names' are not allowedcpxP
+duplicate 'row.names' are not allowedygaQ
+duplicate 'row.names' are not allowedaccD
+duplicate 'row.names' are not allowedtatD
+duplicate 'row.names' are not allowedyraK
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedyfjD
+duplicate 'row.names' are not allowedaraH
+duplicate 'row.names' are not allowedyigE
+duplicate 'row.names' are not allowedgroL
+duplicate 'row.names' are not allowedrtcA
+duplicate 'row.names' are not allowedhdfR
+There were 50 or more warnings (use warnings() to see the first 50)

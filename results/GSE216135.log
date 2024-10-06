@@ -1,0 +1,75 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE216135 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE216135/GSE216135.soft.gz 
+Reading file....
+Parsing....
+Found 35 entities...
+GPL23999 (1 of 36 entities)
+GPL33271 (2 of 36 entities)
+GSM6659105 (3 of 36 entities)
+GSM6659106 (4 of 36 entities)
+GSM6659107 (5 of 36 entities)
+GSM6659108 (6 of 36 entities)
+GSM6659109 (7 of 36 entities)
+GSM6659110 (8 of 36 entities)
+GSM6659111 (9 of 36 entities)
+GSM6659112 (10 of 36 entities)
+GSM6659113 (11 of 36 entities)
+GSM6659114 (12 of 36 entities)
+GSM6659115 (13 of 36 entities)
+GSM6659116 (14 of 36 entities)
+GSM6659117 (15 of 36 entities)
+GSM6659118 (16 of 36 entities)
+GSM6659119 (17 of 36 entities)
+GSM6659120 (18 of 36 entities)
+GSM6659121 (19 of 36 entities)
+GSM6659122 (20 of 36 entities)
+GSM6659123 (21 of 36 entities)
+GSM6659124 (22 of 36 entities)
+GSM6659125 (23 of 36 entities)
+GSM6659126 (24 of 36 entities)
+GSM6659127 (25 of 36 entities)
+GSM6659128 (26 of 36 entities)
+GSM7107977 (27 of 36 entities)
+GSM7107978 (28 of 36 entities)
+GSM7107979 (29 of 36 entities)
+GSM7107980 (30 of 36 entities)
+GSM7107981 (31 of 36 entities)
+GSM7107982 (32 of 36 entities)
+GSM7107983 (33 of 36 entities)
+GSM7107984 (34 of 36 entities)
+GSM7107985 (35 of 36 entities)
+Error: invalid sample names; likely not time series
+Execution halted

@@ -1,0 +1,56 @@
+[1] "RMA values"
+[1] "Sa t30"
+[1] NA
+[1] "Sa t180"
+[1] NA
+[1] "Sa t60"
+[1] NA
+[1] "Sa t180"
+[1] NA
+[1] "Sa t90"
+[1] NA
+[1] "Sa t0"
+[1] NA
+[1] "Sa 3h neg"
+[1] "3"
+[1] "10800"
+[1] "Sa t60"
+[1] NA
+[1] "Sa t0"
+[1] NA
+[1] "Sa 0h neg"
+[1] "0"
+[1] "0"
+[1] "Sa t90"
+[1] NA
+[1] "Sa t30"
+[1] NA
+[1] "Sa t180"
+[1] NA
+[1] "Sa 3h neg"
+[1] "3"
+[1] "10800"
+[1] "Sa t0"
+[1] NA
+[1] "Sa od"
+[1] NA
+[1] "Sa t0"
+[1] NA
+[1] "Sa t30"
+[1] NA
+[1] "Sa t60"
+[1] NA
+[1] "Sa t90"
+[1] NA
+[1] "Sa t30"
+[1] NA
+[1] "Sa t60"
+[1] NA
+[1] "Sa t90"
+[1] NA
+[1] "Sa t180"
+[1] NA
+[1] "10800" "0"     "10800"
+[1] "ID"        "ORF"       "Position"  "Direction"
+[1] "gene symbol column not found. searching for ORF column..."
+[1] "orf column not found: checking for '//' exeption..."

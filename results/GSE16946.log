@@ -1,0 +1,106 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE16946 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE16946/GSE16946.soft.gz 
+Reading file....
+Parsing....
+Found 10 entities...
+GPL534 (1 of 11 entities)
+GSM422819 (2 of 11 entities)
+GSM422820 (3 of 11 entities)
+GSM422821 (4 of 11 entities)
+GSM422822 (5 of 11 entities)
+GSM422823 (6 of 11 entities)
+GSM422824 (7 of 11 entities)
+GSM422825 (8 of 11 entities)
+GSM422826 (9 of 11 entities)
+GSM422827 (10 of 11 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+Warning messages:
+1: In as.numeric(column) : NAs introduced by coercion
+2: In as.numeric(column) : NAs introduced by coercion
+3: In as.numeric(column) : NAs introduced by coercion
+4: In as.numeric(column) : NAs introduced by coercion
+5: In as.numeric(column) : NAs introduced by coercion
+duplicate 'row.names' are not allowedhns
+duplicate 'row.names' are not allowedhycH
+duplicate 'row.names' are not allowedrusA
+duplicate 'row.names' are not allowedtgt
+duplicate 'row.names' are not allowedchaA
+duplicate 'row.names' are not allowedccmF
+duplicate 'row.names' are not allowedrmf
+duplicate 'row.names' are not allowedentA
+duplicate 'row.names' are not allowedrhsE
+duplicate 'row.names' are not allowedypjA
+duplicate 'row.names' are not allowedflgN
+duplicate 'row.names' are not allowedtdh
+duplicate 'row.names' are not allowedrpoB
+duplicate 'row.names' are not allowedmfd
+duplicate 'row.names' are not allowedrplN
+duplicate 'row.names' are not allowedfhuB
+duplicate 'row.names' are not allowedarcB
+duplicate 'row.names' are not allowedrbsD
+duplicate 'row.names' are not alloweddeaD
+duplicate 'row.names' are not allowedhupA
+duplicate 'row.names' are not allowedmhpD
+duplicate 'row.names' are not allowedhupB
+duplicate 'row.names' are not allowedhcaR
+duplicate 'row.names' are not allowedglgS
+duplicate 'row.names' are not allowedmdh
+duplicate 'row.names' are not allowedsfmF
+duplicate 'row.names' are not allowedfdnI
+duplicate 'row.names' are not allowedphnK
+duplicate 'row.names' are not allowednadR
+duplicate 'row.names' are not allowedmoeB
+duplicate 'row.names' are not allowedgatY
+duplicate 'row.names' are not allowedrplX
+duplicate 'row.names' are not allowedagaS
+duplicate 'row.names' are not allowedglpA
+duplicate 'row.names' are not allowedptsP
+duplicate 'row.names' are not allowedchpB
+duplicate 'row.names' are not allowedhsdM
+duplicate 'row.names' are not allowedrplS
+duplicate 'row.names' are not allowedgpmA
+duplicate 'row.names' are not allowedtrpC
+duplicate 'row.names' are not allowedfimD
+duplicate 'row.names' are not allowedinaA
+duplicate 'row.names' are not allowedsdhA
+duplicate 'row.names' are not allowedglnS
+duplicate 'row.names' are not allowedgapA
+duplicate 'row.names' are not allowedfrwB
+duplicate 'row.names' are not allowedftsX
+duplicate 'row.names' are not allowedmhpF
+duplicate 'row.names' are not allowedtrmD
+There were 49 warnings (use warnings() to see them)

@@ -1,0 +1,137 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE55719 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE55719/GSE55719.soft.gz 
+Reading file....
+Parsing....
+Found 91 entities...
+GPL13336 (1 of 92 entities)
+GSM1342336 (2 of 92 entities)
+GSM1342337 (3 of 92 entities)
+GSM1342338 (4 of 92 entities)
+GSM1342339 (5 of 92 entities)
+GSM1342340 (6 of 92 entities)
+GSM1342341 (7 of 92 entities)
+GSM1342342 (8 of 92 entities)
+GSM1342343 (9 of 92 entities)
+GSM1342344 (10 of 92 entities)
+GSM1342345 (11 of 92 entities)
+GSM1342346 (12 of 92 entities)
+GSM1342347 (13 of 92 entities)
+GSM1342348 (14 of 92 entities)
+GSM1342349 (15 of 92 entities)
+GSM1342350 (16 of 92 entities)
+GSM1342351 (17 of 92 entities)
+GSM1342352 (18 of 92 entities)
+GSM1342353 (19 of 92 entities)
+GSM1342354 (20 of 92 entities)
+GSM1342355 (21 of 92 entities)
+GSM1342356 (22 of 92 entities)
+GSM1342357 (23 of 92 entities)
+GSM1342358 (24 of 92 entities)
+GSM1342359 (25 of 92 entities)
+GSM1342360 (26 of 92 entities)
+GSM1342361 (27 of 92 entities)
+GSM1342362 (28 of 92 entities)
+GSM1342363 (29 of 92 entities)
+GSM1342364 (30 of 92 entities)
+GSM1342365 (31 of 92 entities)
+GSM1342366 (32 of 92 entities)
+GSM1342367 (33 of 92 entities)
+GSM1342368 (34 of 92 entities)
+GSM1342369 (35 of 92 entities)
+GSM1342370 (36 of 92 entities)
+GSM1342371 (37 of 92 entities)
+GSM1342372 (38 of 92 entities)
+GSM1342373 (39 of 92 entities)
+GSM1342374 (40 of 92 entities)
+GSM1342375 (41 of 92 entities)
+GSM1342376 (42 of 92 entities)
+GSM1342377 (43 of 92 entities)
+GSM1342378 (44 of 92 entities)
+GSM1342379 (45 of 92 entities)
+GSM1342380 (46 of 92 entities)
+GSM1342381 (47 of 92 entities)
+GSM1342382 (48 of 92 entities)
+GSM1342383 (49 of 92 entities)
+GSM1342384 (50 of 92 entities)
+GSM1342385 (51 of 92 entities)
+GSM1342386 (52 of 92 entities)
+GSM1342387 (53 of 92 entities)
+GSM1342388 (54 of 92 entities)
+GSM1342389 (55 of 92 entities)
+GSM1342390 (56 of 92 entities)
+GSM1342391 (57 of 92 entities)
+GSM1342392 (58 of 92 entities)
+GSM1342393 (59 of 92 entities)
+GSM1342394 (60 of 92 entities)
+GSM1342395 (61 of 92 entities)
+GSM1342396 (62 of 92 entities)
+GSM1342397 (63 of 92 entities)
+GSM1342398 (64 of 92 entities)
+GSM1342399 (65 of 92 entities)
+GSM1342400 (66 of 92 entities)
+GSM1342401 (67 of 92 entities)
+GSM1342402 (68 of 92 entities)
+GSM1342403 (69 of 92 entities)
+GSM1342404 (70 of 92 entities)
+GSM1342405 (71 of 92 entities)
+GSM1342406 (72 of 92 entities)
+GSM1342407 (73 of 92 entities)
+GSM1342408 (74 of 92 entities)
+GSM1342409 (75 of 92 entities)
+GSM1342410 (76 of 92 entities)
+GSM1342411 (77 of 92 entities)
+GSM1342412 (78 of 92 entities)
+GSM1342413 (79 of 92 entities)
+GSM1342414 (80 of 92 entities)
+GSM1342415 (81 of 92 entities)
+GSM1342416 (82 of 92 entities)
+GSM1342417 (83 of 92 entities)
+GSM1342418 (84 of 92 entities)
+GSM1342419 (85 of 92 entities)
+GSM1342420 (86 of 92 entities)
+GSM1342421 (87 of 92 entities)
+GSM1342422 (88 of 92 entities)
+GSM1342423 (89 of 92 entities)
+GSM1342424 (90 of 92 entities)
+GSM1342425 (91 of 92 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE55nnn/GSE55719/suppl//GSE55719_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 3980165120 bytes (3795.8 MB)
+========
+downloaded 609.0 MB
+
+Error in getGEOSuppFiles(gse_id, makeDirectory = T, baseDir = gse_results_dir) : 
+  Failed to download ./results/GSE55719/GSE55719/GSE55719_RAW.tar!
+Execution halted

@@ -1,0 +1,150 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE162169 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE162169/GSE162169.soft.gz 
+Reading file....
+Parsing....
+Found 110 entities...
+GPL18561 (1 of 111 entities)
+GPL21373 (2 of 111 entities)
+GPL24109 (3 of 111 entities)
+GSM4944036 (4 of 111 entities)
+GSM4944037 (5 of 111 entities)
+GSM4944038 (6 of 111 entities)
+GSM4944039 (7 of 111 entities)
+GSM4944040 (8 of 111 entities)
+GSM4944041 (9 of 111 entities)
+GSM4944042 (10 of 111 entities)
+GSM4944043 (11 of 111 entities)
+GSM4944044 (12 of 111 entities)
+GSM4944045 (13 of 111 entities)
+GSM4944046 (14 of 111 entities)
+GSM4944047 (15 of 111 entities)
+GSM4944048 (16 of 111 entities)
+GSM4944049 (17 of 111 entities)
+GSM4944050 (18 of 111 entities)
+GSM4944051 (19 of 111 entities)
+GSM4944052 (20 of 111 entities)
+GSM4944053 (21 of 111 entities)
+GSM4944054 (22 of 111 entities)
+GSM4944055 (23 of 111 entities)
+GSM4944056 (24 of 111 entities)
+GSM4944057 (25 of 111 entities)
+GSM4944058 (26 of 111 entities)
+GSM4944059 (27 of 111 entities)
+GSM4944060 (28 of 111 entities)
+GSM4944061 (29 of 111 entities)
+GSM4944062 (30 of 111 entities)
+GSM4944063 (31 of 111 entities)
+GSM4944064 (32 of 111 entities)
+GSM4944065 (33 of 111 entities)
+GSM4944066 (34 of 111 entities)
+GSM4944067 (35 of 111 entities)
+GSM4944068 (36 of 111 entities)
+GSM4944069 (37 of 111 entities)
+GSM4944070 (38 of 111 entities)
+GSM4944071 (39 of 111 entities)
+GSM4944072 (40 of 111 entities)
+GSM4944073 (41 of 111 entities)
+GSM4944074 (42 of 111 entities)
+GSM4944075 (43 of 111 entities)
+GSM4944076 (44 of 111 entities)
+GSM4944077 (45 of 111 entities)
+GSM4944078 (46 of 111 entities)
+GSM4944079 (47 of 111 entities)
+GSM4944080 (48 of 111 entities)
+GSM4944081 (49 of 111 entities)
+GSM4944082 (50 of 111 entities)
+GSM4944083 (51 of 111 entities)
+GSM4944084 (52 of 111 entities)
+GSM4944085 (53 of 111 entities)
+GSM4944086 (54 of 111 entities)
+GSM4944087 (55 of 111 entities)
+GSM4944088 (56 of 111 entities)
+GSM4944089 (57 of 111 entities)
+GSM4944090 (58 of 111 entities)
+GSM4944091 (59 of 111 entities)
+GSM4944092 (60 of 111 entities)
+GSM4944093 (61 of 111 entities)
+GSM4944094 (62 of 111 entities)
+GSM4944095 (63 of 111 entities)
+GSM4944096 (64 of 111 entities)
+GSM4944097 (65 of 111 entities)
+GSM4944098 (66 of 111 entities)
+GSM4944099 (67 of 111 entities)
+GSM4944100 (68 of 111 entities)
+GSM4944101 (69 of 111 entities)
+GSM4944102 (70 of 111 entities)
+GSM4944103 (71 of 111 entities)
+GSM4944104 (72 of 111 entities)
+GSM4944105 (73 of 111 entities)
+GSM4944106 (74 of 111 entities)
+GSM4944107 (75 of 111 entities)
+GSM4944108 (76 of 111 entities)
+GSM4944109 (77 of 111 entities)
+GSM4944110 (78 of 111 entities)
+GSM4944111 (79 of 111 entities)
+GSM4944112 (80 of 111 entities)
+GSM4944113 (81 of 111 entities)
+GSM4944114 (82 of 111 entities)
+GSM4944115 (83 of 111 entities)
+GSM4944116 (84 of 111 entities)
+GSM4944117 (85 of 111 entities)
+GSM4944118 (86 of 111 entities)
+GSM4944119 (87 of 111 entities)
+GSM4944120 (88 of 111 entities)
+GSM4944121 (89 of 111 entities)
+GSM4944122 (90 of 111 entities)
+GSM4944123 (91 of 111 entities)
+GSM4944124 (92 of 111 entities)
+GSM4944125 (93 of 111 entities)
+GSM4944126 (94 of 111 entities)
+GSM4944127 (95 of 111 entities)
+GSM4944128 (96 of 111 entities)
+GSM4944129 (97 of 111 entities)
+GSM4944130 (98 of 111 entities)
+GSM4944131 (99 of 111 entities)
+GSM4944132 (100 of 111 entities)
+GSM4944133 (101 of 111 entities)
+GSM4944134 (102 of 111 entities)
+GSM4944135 (103 of 111 entities)
+GSM4944136 (104 of 111 entities)
+GSM4944137 (105 of 111 entities)
+GSM4944138 (106 of 111 entities)
+GSM4944139 (107 of 111 entities)
+GSM4944140 (108 of 111 entities)
+GSM4944141 (109 of 111 entities)
+GSM4944142 (110 of 111 entities)
+Error: invalid sample names; likely not time series
+Execution halted

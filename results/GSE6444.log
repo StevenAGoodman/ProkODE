@@ -1,0 +1,75 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE6444 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE6444/GSE6444.soft.gz 
+Reading file....
+Parsing....
+Found 24 entities...
+GPL2928 (1 of 25 entities)
+GPL3500 (2 of 25 entities)
+GPL4620 (3 of 25 entities)
+GSM147976 (4 of 25 entities)
+GSM147981 (5 of 25 entities)
+GSM147983 (6 of 25 entities)
+GSM147985 (7 of 25 entities)
+GSM147986 (8 of 25 entities)
+GSM147988 (9 of 25 entities)
+GSM147989 (10 of 25 entities)
+GSM147990 (11 of 25 entities)
+GSM147991 (12 of 25 entities)
+GSM147992 (13 of 25 entities)
+GSM147993 (14 of 25 entities)
+GSM147994 (15 of 25 entities)
+GSM147995 (16 of 25 entities)
+GSM147996 (17 of 25 entities)
+GSM147997 (18 of 25 entities)
+GSM147998 (19 of 25 entities)
+GSM147999 (20 of 25 entities)
+GSM148000 (21 of 25 entities)
+GSM148001 (22 of 25 entities)
+GSM148002 (23 of 25 entities)
+GSM148003 (24 of 25 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+Warning messages:
+1: In as.numeric(column) : NAs introduced by coercion
+2: In as.numeric(column) : NAs introduced by coercion
+3: In as.numeric(column) : NAs introduced by coercion
+4: In as.numeric(column) : NAs introduced by coercion
+5: In as.numeric(column) : NAs introduced by coercion
+6: In as.numeric(column) : NAs introduced by coercion
+7: In as.numeric(column) : NAs introduced by coercion
+8: In as.numeric(column) : NAs introduced by coercion
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

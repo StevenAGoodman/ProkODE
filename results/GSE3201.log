@@ -1,0 +1,91 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE3201 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE3201/GSE3201.soft.gz 
+Reading file....
+Parsing....
+Found 49 entities...
+GPL2787 (1 of 50 entities)
+GSM71943 (2 of 50 entities)
+GSM71944 (3 of 50 entities)
+GSM71945 (4 of 50 entities)
+GSM71946 (5 of 50 entities)
+GSM71947 (6 of 50 entities)
+GSM71948 (7 of 50 entities)
+GSM71949 (8 of 50 entities)
+GSM71950 (9 of 50 entities)
+GSM71951 (10 of 50 entities)
+GSM71952 (11 of 50 entities)
+GSM71953 (12 of 50 entities)
+GSM71954 (13 of 50 entities)
+GSM71955 (14 of 50 entities)
+GSM71956 (15 of 50 entities)
+GSM71957 (16 of 50 entities)
+GSM71958 (17 of 50 entities)
+GSM71959 (18 of 50 entities)
+GSM71960 (19 of 50 entities)
+GSM71961 (20 of 50 entities)
+GSM71962 (21 of 50 entities)
+GSM71963 (22 of 50 entities)
+GSM71964 (23 of 50 entities)
+GSM71965 (24 of 50 entities)
+GSM71966 (25 of 50 entities)
+GSM71967 (26 of 50 entities)
+GSM71968 (27 of 50 entities)
+GSM71969 (28 of 50 entities)
+GSM71970 (29 of 50 entities)
+GSM71971 (30 of 50 entities)
+GSM71972 (31 of 50 entities)
+GSM71973 (32 of 50 entities)
+GSM71974 (33 of 50 entities)
+GSM71975 (34 of 50 entities)
+GSM71976 (35 of 50 entities)
+GSM71977 (36 of 50 entities)
+GSM71978 (37 of 50 entities)
+GSM71979 (38 of 50 entities)
+GSM71980 (39 of 50 entities)
+GSM71981 (40 of 50 entities)
+GSM71982 (41 of 50 entities)
+GSM71983 (42 of 50 entities)
+GSM71984 (43 of 50 entities)
+GSM71985 (44 of 50 entities)
+GSM71986 (45 of 50 entities)
+GSM71987 (46 of 50 entities)
+GSM71988 (47 of 50 entities)
+GSM71989 (48 of 50 entities)
+GSM71990 (49 of 50 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+Error: invalid sample names; likely not time series
+Execution halted

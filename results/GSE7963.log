@@ -1,0 +1,81 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE7963 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE7963/GSE7963.soft.gz 
+Reading file....
+Parsing....
+Found 34 entities...
+GPL4057 (1 of 35 entities)
+GSM143399 (2 of 35 entities)
+GSM143400 (3 of 35 entities)
+GSM143401 (4 of 35 entities)
+GSM143402 (5 of 35 entities)
+GSM143403 (6 of 35 entities)
+GSM143404 (7 of 35 entities)
+GSM143405 (8 of 35 entities)
+GSM143406 (9 of 35 entities)
+GSM143407 (10 of 35 entities)
+GSM143408 (11 of 35 entities)
+GSM197147 (12 of 35 entities)
+GSM197148 (13 of 35 entities)
+GSM197149 (14 of 35 entities)
+GSM197150 (15 of 35 entities)
+GSM197151 (16 of 35 entities)
+GSM197152 (17 of 35 entities)
+GSM197153 (18 of 35 entities)
+GSM197154 (19 of 35 entities)
+GSM197155 (20 of 35 entities)
+GSM197156 (21 of 35 entities)
+GSM197157 (22 of 35 entities)
+GSM197158 (23 of 35 entities)
+GSM197159 (24 of 35 entities)
+GSM197160 (25 of 35 entities)
+GSM197161 (26 of 35 entities)
+GSM197162 (27 of 35 entities)
+GSM197163 (28 of 35 entities)
+GSM197164 (29 of 35 entities)
+GSM197165 (30 of 35 entities)
+GSM197166 (31 of 35 entities)
+GSM197167 (32 of 35 entities)
+GSM197168 (33 of 35 entities)
+GSM197169 (34 of 35 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+Warning messages:
+1: In as.numeric(column) : NAs introduced by coercion
+2: In as.numeric(column) : NAs introduced by coercion
+3: In as.numeric(column) : NAs introduced by coercion
+4: In as.numeric(column) : NAs introduced by coercion
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

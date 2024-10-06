@@ -1,0 +1,591 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE130799 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE130799/GSE130799.soft.gz 
+Reading file....
+Parsing....
+Found 51 entities...
+GPL18133 (1 of 52 entities)
+GSM3754043 (2 of 52 entities)
+GSM3754044 (3 of 52 entities)
+GSM3754045 (4 of 52 entities)
+GSM3754046 (5 of 52 entities)
+GSM3754047 (6 of 52 entities)
+GSM3754048 (7 of 52 entities)
+GSM3754049 (8 of 52 entities)
+GSM3754050 (9 of 52 entities)
+GSM3754051 (10 of 52 entities)
+GSM3754052 (11 of 52 entities)
+GSM3754053 (12 of 52 entities)
+GSM3754054 (13 of 52 entities)
+GSM3754055 (14 of 52 entities)
+GSM3754056 (15 of 52 entities)
+GSM3754057 (16 of 52 entities)
+GSM3754058 (17 of 52 entities)
+GSM3754059 (18 of 52 entities)
+GSM3754060 (19 of 52 entities)
+GSM3754061 (20 of 52 entities)
+GSM3754062 (21 of 52 entities)
+GSM3754063 (22 of 52 entities)
+GSM3754064 (23 of 52 entities)
+GSM3754065 (24 of 52 entities)
+GSM3754066 (25 of 52 entities)
+GSM3754067 (26 of 52 entities)
+GSM3754068 (27 of 52 entities)
+GSM3754069 (28 of 52 entities)
+GSM3754070 (29 of 52 entities)
+GSM3754071 (30 of 52 entities)
+GSM3754072 (31 of 52 entities)
+GSM3754073 (32 of 52 entities)
+GSM3754074 (33 of 52 entities)
+GSM3754075 (34 of 52 entities)
+GSM3754076 (35 of 52 entities)
+GSM3754077 (36 of 52 entities)
+GSM3754078 (37 of 52 entities)
+GSM3754079 (38 of 52 entities)
+GSM3754080 (39 of 52 entities)
+GSM3754081 (40 of 52 entities)
+GSM3754082 (41 of 52 entities)
+GSM3754083 (42 of 52 entities)
+GSM3754084 (43 of 52 entities)
+GSM3754085 (44 of 52 entities)
+GSM3754086 (45 of 52 entities)
+GSM3754087 (46 of 52 entities)
+GSM3754088 (47 of 52 entities)
+GSM3754089 (48 of 52 entities)
+GSM3754090 (49 of 52 entities)
+GSM3754091 (50 of 52 entities)
+GSM3754092 (51 of 52 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_log2FC_padj.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 728793 bytes (711 KB)
+==================================================
+downloaded 711 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130799/suppl//GSE130799_RNAseq_all_rawCounts.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 357548 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+Error: invalid sample names; likely not time series
+Execution halted

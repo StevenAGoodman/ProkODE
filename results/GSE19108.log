@@ -1,0 +1,159 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE19108 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE19108/GSE19108.soft.gz 
+Reading file....
+Parsing....
+Found 117 entities...
+GPL9105 (1 of 118 entities)
+GSM472517 (2 of 118 entities)
+GSM472518 (3 of 118 entities)
+GSM472520 (4 of 118 entities)
+GSM472521 (5 of 118 entities)
+GSM472522 (6 of 118 entities)
+GSM472523 (7 of 118 entities)
+GSM472524 (8 of 118 entities)
+GSM472525 (9 of 118 entities)
+GSM472526 (10 of 118 entities)
+GSM472527 (11 of 118 entities)
+GSM472528 (12 of 118 entities)
+GSM472529 (13 of 118 entities)
+GSM472530 (14 of 118 entities)
+GSM472531 (15 of 118 entities)
+GSM472532 (16 of 118 entities)
+GSM472533 (17 of 118 entities)
+GSM472534 (18 of 118 entities)
+GSM472535 (19 of 118 entities)
+GSM472536 (20 of 118 entities)
+GSM472543 (21 of 118 entities)
+GSM472544 (22 of 118 entities)
+GSM472545 (23 of 118 entities)
+GSM472546 (24 of 118 entities)
+GSM472547 (25 of 118 entities)
+GSM472548 (26 of 118 entities)
+GSM472549 (27 of 118 entities)
+GSM472550 (28 of 118 entities)
+GSM472551 (29 of 118 entities)
+GSM472552 (30 of 118 entities)
+GSM472553 (31 of 118 entities)
+GSM472554 (32 of 118 entities)
+GSM472555 (33 of 118 entities)
+GSM472556 (34 of 118 entities)
+GSM472557 (35 of 118 entities)
+GSM472558 (36 of 118 entities)
+GSM472559 (37 of 118 entities)
+GSM472560 (38 of 118 entities)
+GSM472561 (39 of 118 entities)
+GSM472562 (40 of 118 entities)
+GSM472563 (41 of 118 entities)
+GSM472564 (42 of 118 entities)
+GSM472565 (43 of 118 entities)
+GSM472566 (44 of 118 entities)
+GSM472568 (45 of 118 entities)
+GSM472569 (46 of 118 entities)
+GSM472570 (47 of 118 entities)
+GSM472571 (48 of 118 entities)
+GSM472572 (49 of 118 entities)
+GSM472573 (50 of 118 entities)
+GSM472574 (51 of 118 entities)
+GSM472575 (52 of 118 entities)
+GSM472576 (53 of 118 entities)
+GSM472577 (54 of 118 entities)
+GSM472578 (55 of 118 entities)
+GSM472579 (56 of 118 entities)
+GSM472580 (57 of 118 entities)
+GSM472581 (58 of 118 entities)
+GSM472582 (59 of 118 entities)
+GSM472583 (60 of 118 entities)
+GSM472584 (61 of 118 entities)
+GSM472585 (62 of 118 entities)
+GSM472586 (63 of 118 entities)
+GSM472587 (64 of 118 entities)
+GSM472589 (65 of 118 entities)
+GSM472604 (66 of 118 entities)
+GSM472612 (67 of 118 entities)
+GSM472627 (68 of 118 entities)
+GSM472646 (69 of 118 entities)
+GSM472682 (70 of 118 entities)
+GSM472686 (71 of 118 entities)
+GSM472692 (72 of 118 entities)
+GSM472712 (73 of 118 entities)
+GSM472716 (74 of 118 entities)
+GSM472728 (75 of 118 entities)
+GSM472739 (76 of 118 entities)
+GSM472749 (77 of 118 entities)
+GSM472772 (78 of 118 entities)
+GSM472776 (79 of 118 entities)
+GSM472787 (80 of 118 entities)
+GSM472800 (81 of 118 entities)
+GSM472810 (82 of 118 entities)
+GSM472814 (83 of 118 entities)
+GSM472839 (84 of 118 entities)
+GSM472855 (85 of 118 entities)
+GSM472867 (86 of 118 entities)
+GSM472876 (87 of 118 entities)
+GSM472877 (88 of 118 entities)
+GSM472878 (89 of 118 entities)
+GSM472879 (90 of 118 entities)
+GSM472880 (91 of 118 entities)
+GSM472881 (92 of 118 entities)
+GSM472882 (93 of 118 entities)
+GSM472883 (94 of 118 entities)
+GSM472884 (95 of 118 entities)
+GSM472885 (96 of 118 entities)
+GSM472886 (97 of 118 entities)
+GSM472887 (98 of 118 entities)
+GSM472888 (99 of 118 entities)
+GSM472889 (100 of 118 entities)
+GSM472890 (101 of 118 entities)
+GSM472891 (102 of 118 entities)
+GSM472892 (103 of 118 entities)
+GSM472893 (104 of 118 entities)
+GSM472894 (105 of 118 entities)
+GSM472895 (106 of 118 entities)
+GSM472896 (107 of 118 entities)
+GSM472897 (108 of 118 entities)
+GSM472899 (109 of 118 entities)
+GSM472930 (110 of 118 entities)
+GSM472946 (111 of 118 entities)
+GSM472947 (112 of 118 entities)
+GSM472948 (113 of 118 entities)
+GSM472949 (114 of 118 entities)
+GSM472950 (115 of 118 entities)
+GSM473495 (116 of 118 entities)
+GSM473501 (117 of 118 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+Error: invalid sample names; likely not time series
+Execution halted

@@ -1,0 +1,70 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE152882 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE152882/GSE152882.soft.gz 
+Reading file....
+Parsing....
+Found 30 entities...
+GPL19756 (1 of 31 entities)
+GPL21117 (2 of 31 entities)
+GSM4628309 (3 of 31 entities)
+GSM4628310 (4 of 31 entities)
+GSM4628311 (5 of 31 entities)
+GSM4628312 (6 of 31 entities)
+GSM4628313 (7 of 31 entities)
+GSM4628314 (8 of 31 entities)
+GSM4628315 (9 of 31 entities)
+GSM4628316 (10 of 31 entities)
+GSM4628317 (11 of 31 entities)
+GSM4628318 (12 of 31 entities)
+GSM4628319 (13 of 31 entities)
+GSM4989042 (14 of 31 entities)
+GSM4989043 (15 of 31 entities)
+GSM5001899 (16 of 31 entities)
+GSM5001900 (17 of 31 entities)
+GSM5001901 (18 of 31 entities)
+GSM5001902 (19 of 31 entities)
+GSM5001903 (20 of 31 entities)
+GSM5001904 (21 of 31 entities)
+GSM5001905 (22 of 31 entities)
+GSM5001906 (23 of 31 entities)
+GSM5001907 (24 of 31 entities)
+GSM5001908 (25 of 31 entities)
+GSM5001909 (26 of 31 entities)
+GSM5001910 (27 of 31 entities)
+GSM5001911 (28 of 31 entities)
+GSM5001912 (29 of 31 entities)
+GSM5001913 (30 of 31 entities)
+Error: invalid sample names; likely not time series
+Execution halted

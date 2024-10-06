@@ -1,0 +1,60 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE16973 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE16973/GSE16973.soft.gz 
+Reading file....
+Parsing....
+Found 13 entities...
+GPL8811 (1 of 14 entities)
+GSM424867 (2 of 14 entities)
+GSM424868 (3 of 14 entities)
+GSM424869 (4 of 14 entities)
+GSM424870 (5 of 14 entities)
+GSM424871 (6 of 14 entities)
+GSM424872 (7 of 14 entities)
+GSM424873 (8 of 14 entities)
+GSM424874 (9 of 14 entities)
+GSM424875 (10 of 14 entities)
+GSM424876 (11 of 14 entities)
+GSM424877 (12 of 14 entities)
+GSM424878 (13 of 14 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+Warning messages:
+1: In as.numeric(column) : NAs introduced by coercion
+2: In as.numeric(column) : NAs introduced by coercion
+3: In as.numeric(column) : NAs introduced by coercion
+4: In as.numeric(column) : NAs introduced by coercion
+5: In as.numeric(column) : NAs introduced by coercion
+6: In as.numeric(column) : NAs introduced by coercion

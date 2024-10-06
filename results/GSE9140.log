@@ -1,0 +1,63 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE9140 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE9140/GSE9140.soft.gz 
+Reading file....
+Parsing....
+Found 21 entities...
+GPL5459 (1 of 22 entities)
+GSM231112 (2 of 22 entities)
+GSM231113 (3 of 22 entities)
+GSM231114 (4 of 22 entities)
+GSM231115 (5 of 22 entities)
+GSM231116 (6 of 22 entities)
+GSM231117 (7 of 22 entities)
+GSM231118 (8 of 22 entities)
+GSM231119 (9 of 22 entities)
+GSM231120 (10 of 22 entities)
+GSM231121 (11 of 22 entities)
+GSM231122 (12 of 22 entities)
+GSM231123 (13 of 22 entities)
+GSM231124 (14 of 22 entities)
+GSM231125 (15 of 22 entities)
+GSM231126 (16 of 22 entities)
+GSM231127 (17 of 22 entities)
+GSM231128 (18 of 22 entities)
+GSM231129 (19 of 22 entities)
+GSM231130 (20 of 22 entities)
+GSM231131 (21 of 22 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+Error: invalid sample names; likely not time series
+Execution halted
