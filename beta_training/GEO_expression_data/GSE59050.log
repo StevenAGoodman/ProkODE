@@ -1,0 +1,83 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE59050 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE59050/GSE59050.soft.gz 
+Reading file....
+Parsing....
+Found 32 entities...
+GPL13336 (1 of 33 entities)
+GSM1424998 (2 of 33 entities)
+GSM1424999 (3 of 33 entities)
+GSM1425000 (4 of 33 entities)
+GSM1425001 (5 of 33 entities)
+GSM1425002 (6 of 33 entities)
+GSM1425003 (7 of 33 entities)
+GSM1425004 (8 of 33 entities)
+GSM1425005 (9 of 33 entities)
+GSM1425006 (10 of 33 entities)
+GSM1425007 (11 of 33 entities)
+GSM1425008 (12 of 33 entities)
+GSM1425009 (13 of 33 entities)
+GSM1425010 (14 of 33 entities)
+GSM1425011 (15 of 33 entities)
+GSM1425012 (16 of 33 entities)
+GSM1425013 (17 of 33 entities)
+GSM1425014 (18 of 33 entities)
+GSM1425015 (19 of 33 entities)
+GSM1425016 (20 of 33 entities)
+GSM1425017 (21 of 33 entities)
+GSM1425018 (22 of 33 entities)
+GSM1425019 (23 of 33 entities)
+GSM1425020 (24 of 33 entities)
+GSM1425021 (25 of 33 entities)
+GSM1425022 (26 of 33 entities)
+GSM1425023 (27 of 33 entities)
+GSM1425024 (28 of 33 entities)
+GSM1425025 (29 of 33 entities)
+GSM1425026 (30 of 33 entities)
+GSM1425027 (31 of 33 entities)
+GSM1425028 (32 of 33 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE59nnn/GSE59050/suppl//GSE59050.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 149457 bytes (145 KB)
+==================================================
+downloaded 145 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE59nnn/GSE59050/suppl//GSE59050_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 1498910720 bytes (1429.5 MB)
+======================
+downloaded 629.8 MB
+
+Error in getGEOSuppFiles(gse_id, makeDirectory = T, baseDir = gse_results_dir) : 
+  Failed to download ./results/GSE59050/GSE59050/GSE59050_RAW.tar!
+Execution halted

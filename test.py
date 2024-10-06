@@ -6,35 +6,32 @@ import matplotlib.pyplot as plt
 
 # Define the model function
 def model_func(x, *params):
-    return params[0] * x[0] + params[1] * x[1]
+    x = np.array(x).T
+    params = np.array(params).T
+    return x @ params
 
 # Generate sample data
 np.random.seed(0)  # For reproducibility
-n_samples = 100
-n_features = 2
+n_samples = 100000
+n_features = 3
 
 # Random independent variables
-X = np.random.rand(n_samples, n_features) * 10
+X = np.random.rand(n_samples, n_features) 
 
 # True parameters
-true_params = np.array([])
+true_params = [2.,3.,4.]
 
 # Generate dependent variable with some noise
-y = model_func(X, 1.5, -2.0) + np.random.normal(0, .01, n_samples)
+y = []
+for x in X:
+    x = [float(n) for n in x] 
+    y.append(model_func(x, 2.,3., 4.) + np.random.normal(0, 10))
 
 p = [1] * n_features
 
 # Fit the model
-popt, pcov = sp.optimize.curve_fit(model_func, X, y, p0 = p)
+popt, pcov = sp.optimize.curve_fit(model_func, X.T, y, p0 = p)
 
 # Display the results
-print("Fitted parameters:", popt)
+print("Fitted parameters:", popt, "\ncov:", pcov)
 
-# Optional: Plotting the results (only for 2D visualization if you choose 2 features)
-if n_features == 2:
-    plt.scatter(X[:, 1], y, label='Data')
-    plt.plot(X[:, 1], model_func(X, *popt), color='red', label='Fitted Model')
-    plt.xlabel('X1')
-    plt.ylabel('y')
-    plt.legend()
-    plt.show()

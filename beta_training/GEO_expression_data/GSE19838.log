@@ -1,0 +1,64 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE19838 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE19838/GSE19838.soft.gz 
+Reading file....
+Parsing....
+Found 22 entities...
+GPL9900 (1 of 23 entities)
+GPL9901 (2 of 23 entities)
+GSM495672 (3 of 23 entities)
+GSM495673 (4 of 23 entities)
+GSM495674 (5 of 23 entities)
+GSM495675 (6 of 23 entities)
+GSM495676 (7 of 23 entities)
+GSM495677 (8 of 23 entities)
+GSM495678 (9 of 23 entities)
+GSM495679 (10 of 23 entities)
+GSM495680 (11 of 23 entities)
+GSM495681 (12 of 23 entities)
+GSM495682 (13 of 23 entities)
+GSM495683 (14 of 23 entities)
+GSM495684 (15 of 23 entities)
+GSM495685 (16 of 23 entities)
+GSM495686 (17 of 23 entities)
+GSM495687 (18 of 23 entities)
+GSM495688 (19 of 23 entities)
+GSM495689 (20 of 23 entities)
+GSM495690 (21 of 23 entities)
+GSM495691 (22 of 23 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+Error: invalid sample names; likely not time series
+Execution halted

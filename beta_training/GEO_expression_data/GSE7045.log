@@ -1,0 +1,124 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE7045 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE7045/GSE7045.soft.gz 
+Reading file....
+Parsing....
+Found 82 entities...
+GPL4661 (1 of 83 entities)
+GPL4662 (2 of 83 entities)
+GPL4663 (3 of 83 entities)
+GPL4664 (4 of 83 entities)
+GSM156606 (5 of 83 entities)
+GSM156607 (6 of 83 entities)
+GSM156608 (7 of 83 entities)
+GSM156609 (8 of 83 entities)
+GSM156610 (9 of 83 entities)
+GSM156611 (10 of 83 entities)
+GSM156612 (11 of 83 entities)
+GSM156613 (12 of 83 entities)
+GSM156614 (13 of 83 entities)
+GSM156616 (14 of 83 entities)
+GSM156617 (15 of 83 entities)
+GSM156618 (16 of 83 entities)
+GSM156619 (17 of 83 entities)
+GSM156620 (18 of 83 entities)
+GSM156621 (19 of 83 entities)
+GSM156622 (20 of 83 entities)
+GSM156623 (21 of 83 entities)
+GSM156624 (22 of 83 entities)
+GSM156625 (23 of 83 entities)
+GSM156626 (24 of 83 entities)
+GSM156627 (25 of 83 entities)
+GSM156628 (26 of 83 entities)
+GSM156629 (27 of 83 entities)
+GSM156630 (28 of 83 entities)
+GSM156631 (29 of 83 entities)
+GSM156632 (30 of 83 entities)
+GSM156633 (31 of 83 entities)
+GSM156634 (32 of 83 entities)
+GSM156635 (33 of 83 entities)
+GSM156636 (34 of 83 entities)
+GSM156637 (35 of 83 entities)
+GSM156638 (36 of 83 entities)
+GSM156639 (37 of 83 entities)
+GSM156640 (38 of 83 entities)
+GSM156641 (39 of 83 entities)
+GSM156642 (40 of 83 entities)
+GSM156643 (41 of 83 entities)
+GSM156644 (42 of 83 entities)
+GSM156645 (43 of 83 entities)
+GSM156646 (44 of 83 entities)
+GSM156647 (45 of 83 entities)
+GSM156648 (46 of 83 entities)
+GSM156649 (47 of 83 entities)
+GSM156650 (48 of 83 entities)
+GSM156651 (49 of 83 entities)
+GSM156652 (50 of 83 entities)
+GSM156653 (51 of 83 entities)
+GSM156654 (52 of 83 entities)
+GSM156655 (53 of 83 entities)
+GSM156656 (54 of 83 entities)
+GSM156657 (55 of 83 entities)
+GSM156658 (56 of 83 entities)
+GSM156659 (57 of 83 entities)
+GSM156660 (58 of 83 entities)
+GSM156661 (59 of 83 entities)
+GSM156662 (60 of 83 entities)
+GSM156663 (61 of 83 entities)
+GSM156664 (62 of 83 entities)
+GSM156665 (63 of 83 entities)
+GSM156666 (64 of 83 entities)
+GSM156667 (65 of 83 entities)
+GSM156668 (66 of 83 entities)
+GSM156669 (67 of 83 entities)
+GSM156670 (68 of 83 entities)
+GSM156671 (69 of 83 entities)
+GSM156672 (70 of 83 entities)
+GSM156673 (71 of 83 entities)
+GSM156674 (72 of 83 entities)
+GSM156675 (73 of 83 entities)
+GSM156676 (74 of 83 entities)
+GSM156677 (75 of 83 entities)
+GSM156678 (76 of 83 entities)
+GSM156679 (77 of 83 entities)
+GSM156680 (78 of 83 entities)
+GSM156681 (79 of 83 entities)
+GSM156682 (80 of 83 entities)
+GSM156683 (81 of 83 entities)
+GSM156684 (82 of 83 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+Error: invalid sample names; likely not time series
+Execution halted

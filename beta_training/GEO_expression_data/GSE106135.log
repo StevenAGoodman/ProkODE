@@ -1,0 +1,71 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE106135 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE106135/GSE106135.soft.gz 
+Reading file....
+Parsing....
+Found 11 entities...
+GPL24180 (1 of 12 entities)
+GSM2830260 (2 of 12 entities)
+GSM2830261 (3 of 12 entities)
+GSM2830262 (4 of 12 entities)
+GSM2830263 (5 of 12 entities)
+GSM2830264 (6 of 12 entities)
+GSM2830265 (7 of 12 entities)
+GSM2830266 (8 of 12 entities)
+GSM2830267 (9 of 12 entities)
+GSM2830268 (10 of 12 entities)
+GSM2830269 (11 of 12 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE106nnn/GSE106135/suppl//GSE106135_CRP_Binding_Sites_GEO_Sub.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 29885 bytes (29 KB)
+==================================================
+downloaded 29 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE106nnn/GSE106135/suppl//GSE106135_Cmr_Binding_sites_GEO_Sub_b.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 4318 bytes
+==================================================
+downloaded 4318 bytes
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE106nnn/GSE106135/suppl//GSE106135_CRP_Binding_Sites_GEO_Sub.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 29885 bytes (29 KB)
+==================================================
+downloaded 29 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE106nnn/GSE106135/suppl//GSE106135_Cmr_Binding_sites_GEO_Sub_b.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 4318 bytes
+==================================================
+downloaded 4318 bytes
+
+Error: invalid sample names; likely not time series
+Execution halted

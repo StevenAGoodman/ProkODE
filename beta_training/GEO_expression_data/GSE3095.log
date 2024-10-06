@@ -1,0 +1,66 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE3095 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE3095/GSE3095.soft.gz 
+Reading file....
+Parsing....
+Found 25 entities...
+GPL548 (1 of 26 entities)
+GSM68748 (2 of 26 entities)
+GSM68749 (3 of 26 entities)
+GSM68750 (4 of 26 entities)
+GSM68751 (5 of 26 entities)
+GSM68752 (6 of 26 entities)
+GSM68753 (7 of 26 entities)
+GSM68754 (8 of 26 entities)
+GSM68755 (9 of 26 entities)
+GSM68756 (10 of 26 entities)
+GSM68757 (11 of 26 entities)
+GSM68758 (12 of 26 entities)
+GSM68759 (13 of 26 entities)
+GSM68760 (14 of 26 entities)
+GSM68761 (15 of 26 entities)
+GSM68762 (16 of 26 entities)
+GSM68763 (17 of 26 entities)
+GSM68764 (18 of 26 entities)
+GSM68765 (19 of 26 entities)
+GSM68766 (20 of 26 entities)
+GSM68767 (21 of 26 entities)
+GSM68768 (22 of 26 entities)
+GSM68769 (23 of 26 entities)
+GSM68770 (24 of 26 entities)
+GSM68771 (25 of 26 entities)
+There were 20 warnings (use warnings() to see them)
+Error: all time values are the same
+Execution halted

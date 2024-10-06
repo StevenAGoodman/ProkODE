@@ -1,0 +1,91 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE21111 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE21111/GSE21111.soft.gz 
+Reading file....
+Parsing....
+Found 49 entities...
+GPL10265 (1 of 50 entities)
+GSM528052 (2 of 50 entities)
+GSM528053 (3 of 50 entities)
+GSM528054 (4 of 50 entities)
+GSM528055 (5 of 50 entities)
+GSM528056 (6 of 50 entities)
+GSM528057 (7 of 50 entities)
+GSM528058 (8 of 50 entities)
+GSM528059 (9 of 50 entities)
+GSM528060 (10 of 50 entities)
+GSM528061 (11 of 50 entities)
+GSM528062 (12 of 50 entities)
+GSM528063 (13 of 50 entities)
+GSM528064 (14 of 50 entities)
+GSM528065 (15 of 50 entities)
+GSM528066 (16 of 50 entities)
+GSM528067 (17 of 50 entities)
+GSM528068 (18 of 50 entities)
+GSM528069 (19 of 50 entities)
+GSM528070 (20 of 50 entities)
+GSM528071 (21 of 50 entities)
+GSM528072 (22 of 50 entities)
+GSM528073 (23 of 50 entities)
+GSM528074 (24 of 50 entities)
+GSM528075 (25 of 50 entities)
+GSM528076 (26 of 50 entities)
+GSM528077 (27 of 50 entities)
+GSM528078 (28 of 50 entities)
+GSM528079 (29 of 50 entities)
+GSM528080 (30 of 50 entities)
+GSM528081 (31 of 50 entities)
+GSM528082 (32 of 50 entities)
+GSM528083 (33 of 50 entities)
+GSM528084 (34 of 50 entities)
+GSM528085 (35 of 50 entities)
+GSM528086 (36 of 50 entities)
+GSM528087 (37 of 50 entities)
+GSM528088 (38 of 50 entities)
+GSM528089 (39 of 50 entities)
+GSM528090 (40 of 50 entities)
+GSM528091 (41 of 50 entities)
+GSM528092 (42 of 50 entities)
+GSM528093 (43 of 50 entities)
+GSM528094 (44 of 50 entities)
+GSM528095 (45 of 50 entities)
+GSM528096 (46 of 50 entities)
+GSM528097 (47 of 50 entities)
+GSM528098 (48 of 50 entities)
+GSM528099 (49 of 50 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+Error: invalid sample names; likely not time series
+Execution halted

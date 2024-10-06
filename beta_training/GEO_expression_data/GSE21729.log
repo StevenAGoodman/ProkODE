@@ -1,0 +1,95 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE21729 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE21729/GSE21729.soft.gz 
+Reading file....
+Parsing....
+Found 46 entities...
+GPL6268 (1 of 47 entities)
+GSM537208 (2 of 47 entities)
+GSM537209 (3 of 47 entities)
+GSM537210 (4 of 47 entities)
+GSM537211 (5 of 47 entities)
+GSM537212 (6 of 47 entities)
+GSM537213 (7 of 47 entities)
+GSM537214 (8 of 47 entities)
+GSM537215 (9 of 47 entities)
+GSM537216 (10 of 47 entities)
+GSM537217 (11 of 47 entities)
+GSM537218 (12 of 47 entities)
+GSM537219 (13 of 47 entities)
+GSM537220 (14 of 47 entities)
+GSM537221 (15 of 47 entities)
+GSM537222 (16 of 47 entities)
+GSM537223 (17 of 47 entities)
+GSM537224 (18 of 47 entities)
+GSM537225 (19 of 47 entities)
+GSM537226 (20 of 47 entities)
+GSM537227 (21 of 47 entities)
+GSM537228 (22 of 47 entities)
+GSM537229 (23 of 47 entities)
+GSM537230 (24 of 47 entities)
+GSM537231 (25 of 47 entities)
+GSM537232 (26 of 47 entities)
+GSM537233 (27 of 47 entities)
+GSM537234 (28 of 47 entities)
+GSM537235 (29 of 47 entities)
+GSM537236 (30 of 47 entities)
+GSM537237 (31 of 47 entities)
+GSM537238 (32 of 47 entities)
+GSM537239 (33 of 47 entities)
+GSM537240 (34 of 47 entities)
+GSM537241 (35 of 47 entities)
+GSM537242 (36 of 47 entities)
+GSM537243 (37 of 47 entities)
+GSM537244 (38 of 47 entities)
+GSM537245 (39 of 47 entities)
+GSM537246 (40 of 47 entities)
+GSM537247 (41 of 47 entities)
+GSM537248 (42 of 47 entities)
+GSM537249 (43 of 47 entities)
+GSM537250 (44 of 47 entities)
+GSM537251 (45 of 47 entities)
+GSM537252 (46 of 47 entities)
+Warning messages:
+1: In as.numeric(column) : NAs introduced by coercion
+2: In as.numeric(column) : NAs introduced by coercion
+3: In as.numeric(column) : NAs introduced by coercion
+4: In as.numeric(column) : NAs introduced by coercion
+5: In as.numeric(column) : NAs introduced by coercion
+6: In as.numeric(column) : NAs introduced by coercion
+7: In as.numeric(column) : NAs introduced by coercion
+8: In as.numeric(column) : NAs introduced by coercion
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

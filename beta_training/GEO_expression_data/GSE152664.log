@@ -1,0 +1,59 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE152664 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE152664/GSE152664.soft.gz 
+Reading file....
+Parsing....
+Found 19 entities...
+GPL14548 (1 of 20 entities)
+GSM4745062 (2 of 20 entities)
+GSM4745063 (3 of 20 entities)
+GSM4745064 (4 of 20 entities)
+GSM4745065 (5 of 20 entities)
+GSM4745066 (6 of 20 entities)
+GSM4745067 (7 of 20 entities)
+GSM4745068 (8 of 20 entities)
+GSM4745069 (9 of 20 entities)
+GSM4745070 (10 of 20 entities)
+GSM4745071 (11 of 20 entities)
+GSM4745072 (12 of 20 entities)
+GSM4745073 (13 of 20 entities)
+GSM4745074 (14 of 20 entities)
+GSM4745075 (15 of 20 entities)
+GSM4745076 (16 of 20 entities)
+GSM4745077 (17 of 20 entities)
+GSM4745078 (18 of 20 entities)
+GSM4745079 (19 of 20 entities)
+Error: invalid sample names; likely not time series
+Execution halted

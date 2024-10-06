@@ -1,0 +1,64 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE149236 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE149236/GSE149236.soft.gz 
+Reading file....
+Parsing....
+Found 24 entities...
+GPL13336 (1 of 25 entities)
+GSM4494733 (2 of 25 entities)
+GSM4494734 (3 of 25 entities)
+GSM4494735 (4 of 25 entities)
+GSM4494736 (5 of 25 entities)
+GSM4494737 (6 of 25 entities)
+GSM4494738 (7 of 25 entities)
+GSM4494739 (8 of 25 entities)
+GSM4494740 (9 of 25 entities)
+GSM4494741 (10 of 25 entities)
+GSM4494742 (11 of 25 entities)
+GSM4494743 (12 of 25 entities)
+GSM4494744 (13 of 25 entities)
+GSM4494745 (14 of 25 entities)
+GSM4494746 (15 of 25 entities)
+GSM4494747 (16 of 25 entities)
+GSM4494748 (17 of 25 entities)
+GSM4494749 (18 of 25 entities)
+GSM4494750 (19 of 25 entities)
+GSM4494751 (20 of 25 entities)
+GSM4494752 (21 of 25 entities)
+GSM4494753 (22 of 25 entities)
+GSM4494754 (23 of 25 entities)
+GSM4494755 (24 of 25 entities)
+Error: invalid sample names; likely not time series
+Execution halted

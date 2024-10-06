@@ -1,0 +1,156 @@
+[1] "normalized Cy5/Cy3 ratio in log space (no background subtracted)"
+[1] "wt total RNA 60min untreated"
+[1] "60"
+[1] "3600"
+[1] "Unterated growing cells"
+[1] NA
+[1] "WT untreated"
+[1] NA
+[1] "growing cells MMC replicate 1"
+[1] NA
+[1] "WT MMC rep2"
+[1] NA
+[1] "WT with MMC rep3"
+[1] NA
+[1] "recA untreated"
+[1] NA
+[1] "RNA from recA untreated"
+[1] NA
+[1] "recA untreated rep3"
+[1] NA
+[1] "recA cells MMC treated"
+[1] NA
+[1] "recA mmc treated"
+[1] NA
+[1] "recA treated with MMC"
+[1] NA
+[1] "phage- untreated RNA"
+[1] NA
+[1] "phage-  untr repl2"
+[1] NA
+[1] "phage- untreated RNA"
+[1] NA
+[1] "phage- MMC 60min"
+[1] "60"
+[1] "216000"
+[1] "phage- MMC for 60min repl2"
+[1] "60"
+[1] "216000"
+[1] "phage- MMC for 60min"
+[1] "60"
+[1] "216000"
+[1] "phage- recA untreated"
+[1] NA
+[1] "phage- recA untreated"
+[1] NA
+[1] "phage- recA untreated"
+[1] NA
+[1] "phage- recA MMC fro 60min"
+[1] "60"
+[1] "216000"
+[1] "phage- recA MMC treated for 60min"
+[1] "60"
+[1] "216000"
+[1] "phage- recA MMC treated for 60min"
+[1] "60"
+[1] "216000"
+[1] "growing cultures"
+[1] NA
+[1] "growing untreated cells"
+[1] NA
+[1] "growing cells untreated"
+[1] NA
+[1] "HPUra treated cells"
+[1] NA
+[1] "HPUra treated cells"
+[1] NA
+[1] "HPUra treated cells"
+[1] NA
+[1] "growing cells"
+[1] NA
+[1] "growing untreated cells"
+[1] NA
+[1] "growing untreated cells"
+[1] NA
+[1] "HPUra treated cells"
+[1] NA
+[1] "HPUra treated cells"
+[1] NA
+[1] "HPUra treated cells"
+[1] NA
+[1] "yneA growing untreated cells"
+[1] NA
+[1] "growing untreated cells"
+[1] NA
+[1] "untreated growing cells"
+[1] NA
+[1] "HPUra treated cells"
+[1] NA
+[1] "HPUra treated cells"
+[1] NA
+[1] "HPUra treated cells"
+[1] NA
+[1] "growing untreated cells"
+[1] NA
+[1] "growing untreated cells"
+[1] NA
+[1] "growing untreated cells"
+[1] NA
+[1] "HPUra treated growing cells"
+[1] NA
+[1] "growing cells treated with HPUra"
+[1] NA
+[1] "growing cells treated with HPUra"
+[1] NA
+[1] "untreated growing cells"
+[1] NA
+[1] "growing untreated cultures"
+[1] NA
+[1] "untreated cells"
+[1] NA
+[1] "UV treated cells"
+[1] NA
+[1] "UV treated cells"
+[1] NA
+[1] "UV treated cells"
+[1] NA
+[1] "untreated cells"
+[1] NA
+[1] "untreated cells"
+[1] NA
+[1] "untreated cells"
+[1] NA
+[1] "UV treated cells"
+[1] NA
+[1] "UV treated cells"
+[1] NA
+[1] "UV treated cells"
+[1] NA
+[1] "HPUra treated wt cells"
+[1] NA
+[1] "HPUra treated sample 3"
+[1] NA
+[1] "cell treated with HPUra"
+[1] NA
+[1] "untreated cells"
+[1] NA
+[1] "untreated cells"
+[1] NA
+[1] "untreated cells"
+[1] NA
+[1] "HPUra treated cells"
+[1] NA
+[1] "HPUra treated cells"
+[1] NA
+[1] "HPUra treated cells"
+[1] NA
+[1] "untreated cells"
+[1] NA
+[1] "untreated cells"
+[1] NA
+[1] "untreated cells"
+[1] NA
+[1] "0"      "212400" "212400" "212400" "212400" "212400" "212400"
+[1] "ID"    "ORF"   "BS_ID"
+[1] "gene symbol column not found. searching for ORF column..."
+[1] "orf column not found: checking for '//' exeption..."

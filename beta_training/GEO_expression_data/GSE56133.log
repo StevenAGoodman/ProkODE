@@ -1,0 +1,68 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE56133 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE56133/GSE56133.soft.gz 
+Reading file....
+Parsing....
+Found 28 entities...
+GPL3154 (1 of 29 entities)
+GSM1356325 (2 of 29 entities)
+GSM1356326 (3 of 29 entities)
+GSM1356327 (4 of 29 entities)
+GSM1356328 (5 of 29 entities)
+GSM1356329 (6 of 29 entities)
+GSM1356330 (7 of 29 entities)
+GSM1356331 (8 of 29 entities)
+GSM1356332 (9 of 29 entities)
+GSM1356333 (10 of 29 entities)
+GSM1356334 (11 of 29 entities)
+GSM1356335 (12 of 29 entities)
+GSM1356336 (13 of 29 entities)
+GSM1356337 (14 of 29 entities)
+GSM1356338 (15 of 29 entities)
+GSM1356339 (16 of 29 entities)
+GSM1356340 (17 of 29 entities)
+GSM1356341 (18 of 29 entities)
+GSM1356342 (19 of 29 entities)
+GSM1356343 (20 of 29 entities)
+GSM1356344 (21 of 29 entities)
+GSM1356345 (22 of 29 entities)
+GSM1356346 (23 of 29 entities)
+GSM1356347 (24 of 29 entities)
+GSM1356348 (25 of 29 entities)
+GSM1356349 (26 of 29 entities)
+GSM1356350 (27 of 29 entities)
+GSM1356351 (28 of 29 entities)
+Error: all time values are the same
+Execution halted

@@ -1,0 +1,109 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE46740 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE46740/GSE46740.soft.gz 
+Reading file....
+Parsing....
+Found 57 entities...
+GPL8387 (1 of 58 entities)
+GPL17102 (2 of 58 entities)
+GPL17137 (3 of 58 entities)
+GSM1132022 (4 of 58 entities)
+GSM1132023 (5 of 58 entities)
+GSM1132024 (6 of 58 entities)
+GSM1132025 (7 of 58 entities)
+GSM1132026 (8 of 58 entities)
+GSM1132027 (9 of 58 entities)
+GSM1132028 (10 of 58 entities)
+GSM1132029 (11 of 58 entities)
+GSM1132030 (12 of 58 entities)
+GSM1132031 (13 of 58 entities)
+GSM1132032 (14 of 58 entities)
+GSM1132033 (15 of 58 entities)
+GSM1132034 (16 of 58 entities)
+GSM1132035 (17 of 58 entities)
+GSM1132036 (18 of 58 entities)
+GSM1132037 (19 of 58 entities)
+GSM1132038 (20 of 58 entities)
+GSM1132039 (21 of 58 entities)
+GSM1132040 (22 of 58 entities)
+GSM1132041 (23 of 58 entities)
+GSM1132042 (24 of 58 entities)
+GSM1132043 (25 of 58 entities)
+GSM1132044 (26 of 58 entities)
+GSM1132045 (27 of 58 entities)
+GSM1132046 (28 of 58 entities)
+GSM1132047 (29 of 58 entities)
+GSM1132048 (30 of 58 entities)
+GSM1132049 (31 of 58 entities)
+GSM1132050 (32 of 58 entities)
+GSM1132051 (33 of 58 entities)
+GSM1132052 (34 of 58 entities)
+GSM1132053 (35 of 58 entities)
+GSM1132054 (36 of 58 entities)
+GSM1132055 (37 of 58 entities)
+GSM1132056 (38 of 58 entities)
+GSM1132057 (39 of 58 entities)
+GSM1132058 (40 of 58 entities)
+GSM1132059 (41 of 58 entities)
+GSM1132060 (42 of 58 entities)
+GSM1132061 (43 of 58 entities)
+GSM1132062 (44 of 58 entities)
+GSM1132063 (45 of 58 entities)
+GSM1132064 (46 of 58 entities)
+GSM1132065 (47 of 58 entities)
+GSM1132066 (48 of 58 entities)
+GSM1132081 (49 of 58 entities)
+GSM1132082 (50 of 58 entities)
+GSM1132083 (51 of 58 entities)
+GSM1137316 (52 of 58 entities)
+GSM1137317 (53 of 58 entities)
+GSM1137318 (54 of 58 entities)
+GSM1137319 (55 of 58 entities)
+GSM1137320 (56 of 58 entities)
+GSM1137321 (57 of 58 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE46nnn/GSE46740/suppl//GSE46740_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 648212480 bytes (618.2 MB)
+==================================================
+downloaded 618.2 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE46nnn/GSE46740/suppl//GSE46740_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 648212480 bytes (618.2 MB)
+==================================================
+downloaded 618.2 MB
+
+Error: invalid sample names; likely not time series
+Execution halted

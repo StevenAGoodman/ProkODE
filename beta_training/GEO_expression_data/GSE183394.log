@@ -1,0 +1,362 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE183394 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE183394/GSE183394.soft.gz 
+Reading file....
+Parsing....
+Found 22 entities...
+GPL18782 (1 of 23 entities)
+GPL28916 (2 of 23 entities)
+GSM5556736 (3 of 23 entities)
+GSM5556737 (4 of 23 entities)
+GSM5556738 (5 of 23 entities)
+GSM5556739 (6 of 23 entities)
+GSM5556740 (7 of 23 entities)
+GSM5556741 (8 of 23 entities)
+GSM5556742 (9 of 23 entities)
+GSM5556743 (10 of 23 entities)
+GSM5556744 (11 of 23 entities)
+GSM5556745 (12 of 23 entities)
+GSM5556746 (13 of 23 entities)
+GSM5556747 (14 of 23 entities)
+GSM5556748 (15 of 23 entities)
+GSM5556749 (16 of 23 entities)
+GSM5556750 (17 of 23 entities)
+GSM5556751 (18 of 23 entities)
+GSM5857042 (19 of 23 entities)
+GSM5857043 (20 of 23 entities)
+GSM5857044 (21 of 23 entities)
+GSM5857045 (22 of 23 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 97887 bytes (95 KB)
+==================================================
+downloaded 95 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table2.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 58090 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183394/suppl//GSE183394_rpg_table_RNASeq_repetition.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 90570 bytes (88 KB)
+==================================================
+downloaded 88 KB
+
+Error: invalid sample names; likely not time series
+Execution halted

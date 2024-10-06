@@ -1,0 +1,167 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE58927 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE58927/GSE58927.soft.gz 
+Reading file....
+Parsing....
+Found 127 entities...
+GPL13634 (1 of 128 entities)
+GPL14548 (2 of 128 entities)
+GPL14649 (3 of 128 entities)
+GPL18945 (4 of 128 entities)
+GSM1419875 (5 of 128 entities)
+GSM1419876 (6 of 128 entities)
+GSM1419877 (7 of 128 entities)
+GSM1419878 (8 of 128 entities)
+GSM1419879 (9 of 128 entities)
+GSM1419880 (10 of 128 entities)
+GSM1419881 (11 of 128 entities)
+GSM1419882 (12 of 128 entities)
+GSM1419883 (13 of 128 entities)
+GSM1419884 (14 of 128 entities)
+GSM1419885 (15 of 128 entities)
+GSM1419886 (16 of 128 entities)
+GSM1419887 (17 of 128 entities)
+GSM1419888 (18 of 128 entities)
+GSM1419889 (19 of 128 entities)
+GSM1419890 (20 of 128 entities)
+GSM1419891 (21 of 128 entities)
+GSM1419892 (22 of 128 entities)
+GSM1419893 (23 of 128 entities)
+GSM1419894 (24 of 128 entities)
+GSM1419895 (25 of 128 entities)
+GSM1419896 (26 of 128 entities)
+GSM1419897 (27 of 128 entities)
+GSM1419898 (28 of 128 entities)
+GSM1419899 (29 of 128 entities)
+GSM1419900 (30 of 128 entities)
+GSM1419901 (31 of 128 entities)
+GSM1419902 (32 of 128 entities)
+GSM1419903 (33 of 128 entities)
+GSM1419904 (34 of 128 entities)
+GSM1419905 (35 of 128 entities)
+GSM1419906 (36 of 128 entities)
+GSM1419907 (37 of 128 entities)
+GSM1419908 (38 of 128 entities)
+GSM1419909 (39 of 128 entities)
+GSM1419910 (40 of 128 entities)
+GSM1422112 (41 of 128 entities)
+GSM1422113 (42 of 128 entities)
+GSM1422114 (43 of 128 entities)
+GSM1422115 (44 of 128 entities)
+GSM1422116 (45 of 128 entities)
+GSM1422117 (46 of 128 entities)
+GSM1423198 (47 of 128 entities)
+GSM1423199 (48 of 128 entities)
+GSM1423200 (49 of 128 entities)
+GSM1423201 (50 of 128 entities)
+GSM1423202 (51 of 128 entities)
+GSM1423203 (52 of 128 entities)
+GSM1423204 (53 of 128 entities)
+GSM1423205 (54 of 128 entities)
+GSM1423206 (55 of 128 entities)
+GSM1423207 (56 of 128 entities)
+GSM1423208 (57 of 128 entities)
+GSM1423209 (58 of 128 entities)
+GSM1423210 (59 of 128 entities)
+GSM1423211 (60 of 128 entities)
+GSM1423212 (61 of 128 entities)
+GSM1423213 (62 of 128 entities)
+GSM1423214 (63 of 128 entities)
+GSM1423215 (64 of 128 entities)
+GSM1423216 (65 of 128 entities)
+GSM1423217 (66 of 128 entities)
+GSM1423218 (67 of 128 entities)
+GSM1423219 (68 of 128 entities)
+GSM1423220 (69 of 128 entities)
+GSM1423221 (70 of 128 entities)
+GSM1423222 (71 of 128 entities)
+GSM1423223 (72 of 128 entities)
+GSM1423224 (73 of 128 entities)
+GSM1423225 (74 of 128 entities)
+GSM1423226 (75 of 128 entities)
+GSM1423227 (76 of 128 entities)
+GSM1423228 (77 of 128 entities)
+GSM1423229 (78 of 128 entities)
+GSM1423230 (79 of 128 entities)
+GSM1423231 (80 of 128 entities)
+GSM1423232 (81 of 128 entities)
+GSM1423233 (82 of 128 entities)
+GSM1423234 (83 of 128 entities)
+GSM1423235 (84 of 128 entities)
+GSM1423236 (85 of 128 entities)
+GSM1423237 (86 of 128 entities)
+GSM1423238 (87 of 128 entities)
+GSM1423239 (88 of 128 entities)
+GSM1423240 (89 of 128 entities)
+GSM1423241 (90 of 128 entities)
+GSM1423242 (91 of 128 entities)
+GSM1423243 (92 of 128 entities)
+GSM1423244 (93 of 128 entities)
+GSM1423245 (94 of 128 entities)
+GSM1423246 (95 of 128 entities)
+GSM1423247 (96 of 128 entities)
+GSM1423248 (97 of 128 entities)
+GSM1423249 (98 of 128 entities)
+GSM1423250 (99 of 128 entities)
+GSM1423251 (100 of 128 entities)
+GSM1423252 (101 of 128 entities)
+GSM1423253 (102 of 128 entities)
+GSM1423254 (103 of 128 entities)
+GSM1423255 (104 of 128 entities)
+GSM1423256 (105 of 128 entities)
+GSM1423257 (106 of 128 entities)
+GSM1436266 (107 of 128 entities)
+GSM1436267 (108 of 128 entities)
+GSM1436268 (109 of 128 entities)
+GSM1436269 (110 of 128 entities)
+GSM1436270 (111 of 128 entities)
+GSM1436271 (112 of 128 entities)
+GSM1436272 (113 of 128 entities)
+GSM1436273 (114 of 128 entities)
+GSM1436274 (115 of 128 entities)
+GSM1436275 (116 of 128 entities)
+GSM1436276 (117 of 128 entities)
+GSM1436277 (118 of 128 entities)
+GSM1436278 (119 of 128 entities)
+GSM1436279 (120 of 128 entities)
+GSM1436280 (121 of 128 entities)
+GSM1436281 (122 of 128 entities)
+GSM1436282 (123 of 128 entities)
+GSM1436283 (124 of 128 entities)
+GSM1436284 (125 of 128 entities)
+GSM1436285 (126 of 128 entities)
+GSM1436286 (127 of 128 entities)
+Error: invalid sample names; likely not time series
+Execution halted

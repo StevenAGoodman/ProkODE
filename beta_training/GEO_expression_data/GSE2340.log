@@ -1,0 +1,84 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE2340 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE2340/GSE2340.soft.gz 
+Reading file....
+Parsing....
+Found 26 entities...
+GPL224 (1 of 27 entities)
+GPL548 (2 of 27 entities)
+GSM23150 (3 of 27 entities)
+GSM23151 (4 of 27 entities)
+GSM23152 (5 of 27 entities)
+GSM23876 (6 of 27 entities)
+GSM23877 (7 of 27 entities)
+GSM23878 (8 of 27 entities)
+GSM23879 (9 of 27 entities)
+GSM23880 (10 of 27 entities)
+GSM23881 (11 of 27 entities)
+GSM23883 (12 of 27 entities)
+GSM23884 (13 of 27 entities)
+GSM23885 (14 of 27 entities)
+GSM23889 (15 of 27 entities)
+GSM23890 (16 of 27 entities)
+GSM23891 (17 of 27 entities)
+GSM23896 (18 of 27 entities)
+GSM23897 (19 of 27 entities)
+GSM23898 (20 of 27 entities)
+GSM23900 (21 of 27 entities)
+GSM23901 (22 of 27 entities)
+GSM23902 (23 of 27 entities)
+GSM43870 (24 of 27 entities)
+GSM43871 (25 of 27 entities)
+GSM43872 (26 of 27 entities)
+There were 32 warnings (use warnings() to see them)
+There were 33 warnings (use warnings() to see them)
+Warning messages:
+1: In grep(" ", column) :
+  unable to translate 'STY4124; STY4658; HCM1.05c; HCM1.136; HCM1.138; HCM1.205c; HCM1.239c<85>' to a wide string
+2: In grep(" ", column) : input string 445 is invalid
+3: In grep(" ", column) :
+  unable to translate 'STY0256; STY0437; STY1580; STY1895; STY3154<85>' to a wide string
+4: In grep(" ", column) : input string 2276 is invalid
+5: In grep(" ", column) :
+  unable to translate 'STY0657, STY1108, STY1280, aSTY0256, <85>' to a wide string
+6: In grep(" ", column) : input string 3920 is invalid
+7: In grep(" ", column) :
+  unable to translate 'STY1108, STY1114, STY1379, aSTY0256, aSTY1844, <85>' to a wide string
+8: In grep(" ", column) : input string 4997 is invalid
+9: In grep(" ", column) :
+  unable to translate 'STY4125; STY4657; HCM1.04c; HCM1.136a; HCM1.204c; HCM1.238c<85>' to a wide string
+10: In grep(" ", column) : input string 5150 is invalid
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

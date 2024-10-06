@@ -1,0 +1,161 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE19831 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE19831/GSE19831.soft.gz 
+Reading file....
+Parsing....
+Found 119 entities...
+GPL6031 (1 of 120 entities)
+GSM495251 (2 of 120 entities)
+GSM495252 (3 of 120 entities)
+GSM495253 (4 of 120 entities)
+GSM495254 (5 of 120 entities)
+GSM495255 (6 of 120 entities)
+GSM495256 (7 of 120 entities)
+GSM495257 (8 of 120 entities)
+GSM495258 (9 of 120 entities)
+GSM495259 (10 of 120 entities)
+GSM495260 (11 of 120 entities)
+GSM495261 (12 of 120 entities)
+GSM495262 (13 of 120 entities)
+GSM495263 (14 of 120 entities)
+GSM495264 (15 of 120 entities)
+GSM495265 (16 of 120 entities)
+GSM495266 (17 of 120 entities)
+GSM495267 (18 of 120 entities)
+GSM495268 (19 of 120 entities)
+GSM495269 (20 of 120 entities)
+GSM495270 (21 of 120 entities)
+GSM495271 (22 of 120 entities)
+GSM495272 (23 of 120 entities)
+GSM495273 (24 of 120 entities)
+GSM495274 (25 of 120 entities)
+GSM495275 (26 of 120 entities)
+GSM495276 (27 of 120 entities)
+GSM495277 (28 of 120 entities)
+GSM495278 (29 of 120 entities)
+GSM495279 (30 of 120 entities)
+GSM495280 (31 of 120 entities)
+GSM495281 (32 of 120 entities)
+GSM495282 (33 of 120 entities)
+GSM495283 (34 of 120 entities)
+GSM495284 (35 of 120 entities)
+GSM495285 (36 of 120 entities)
+GSM495286 (37 of 120 entities)
+GSM495287 (38 of 120 entities)
+GSM495288 (39 of 120 entities)
+GSM495289 (40 of 120 entities)
+GSM495290 (41 of 120 entities)
+GSM495291 (42 of 120 entities)
+GSM495292 (43 of 120 entities)
+GSM495293 (44 of 120 entities)
+GSM495294 (45 of 120 entities)
+GSM495295 (46 of 120 entities)
+GSM495296 (47 of 120 entities)
+GSM495297 (48 of 120 entities)
+GSM495298 (49 of 120 entities)
+GSM495299 (50 of 120 entities)
+GSM495300 (51 of 120 entities)
+GSM495301 (52 of 120 entities)
+GSM495302 (53 of 120 entities)
+GSM495303 (54 of 120 entities)
+GSM495304 (55 of 120 entities)
+GSM495305 (56 of 120 entities)
+GSM495306 (57 of 120 entities)
+GSM495307 (58 of 120 entities)
+GSM495308 (59 of 120 entities)
+GSM495309 (60 of 120 entities)
+GSM495310 (61 of 120 entities)
+GSM495311 (62 of 120 entities)
+GSM495312 (63 of 120 entities)
+GSM495313 (64 of 120 entities)
+GSM495314 (65 of 120 entities)
+GSM495315 (66 of 120 entities)
+GSM495316 (67 of 120 entities)
+GSM495317 (68 of 120 entities)
+GSM495318 (69 of 120 entities)
+GSM495319 (70 of 120 entities)
+GSM495320 (71 of 120 entities)
+GSM495321 (72 of 120 entities)
+GSM495322 (73 of 120 entities)
+GSM495323 (74 of 120 entities)
+GSM495324 (75 of 120 entities)
+GSM495325 (76 of 120 entities)
+GSM495326 (77 of 120 entities)
+GSM495327 (78 of 120 entities)
+GSM495328 (79 of 120 entities)
+GSM495329 (80 of 120 entities)
+GSM495330 (81 of 120 entities)
+GSM495331 (82 of 120 entities)
+GSM495332 (83 of 120 entities)
+GSM495333 (84 of 120 entities)
+GSM495334 (85 of 120 entities)
+GSM495335 (86 of 120 entities)
+GSM495336 (87 of 120 entities)
+GSM495337 (88 of 120 entities)
+GSM495338 (89 of 120 entities)
+GSM495339 (90 of 120 entities)
+GSM495340 (91 of 120 entities)
+GSM495341 (92 of 120 entities)
+GSM495342 (93 of 120 entities)
+GSM495343 (94 of 120 entities)
+GSM495344 (95 of 120 entities)
+GSM495345 (96 of 120 entities)
+GSM495346 (97 of 120 entities)
+GSM495347 (98 of 120 entities)
+GSM495348 (99 of 120 entities)
+GSM495349 (100 of 120 entities)
+GSM495350 (101 of 120 entities)
+GSM495351 (102 of 120 entities)
+GSM495352 (103 of 120 entities)
+GSM495353 (104 of 120 entities)
+GSM495354 (105 of 120 entities)
+GSM495355 (106 of 120 entities)
+GSM495356 (107 of 120 entities)
+GSM495357 (108 of 120 entities)
+GSM495358 (109 of 120 entities)
+GSM495359 (110 of 120 entities)
+GSM495360 (111 of 120 entities)
+GSM495361 (112 of 120 entities)
+GSM495362 (113 of 120 entities)
+GSM495363 (114 of 120 entities)
+GSM495364 (115 of 120 entities)
+GSM495365 (116 of 120 entities)
+GSM495366 (117 of 120 entities)
+GSM495367 (118 of 120 entities)
+GSM495368 (119 of 120 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+Error: invalid sample names; likely not time series
+Execution halted

@@ -3,6 +3,7 @@ import ast
 import re
 import numpy as np
 import pandas as pd
+from maths import *
 
 # network.json formatting:
 # {
@@ -43,16 +44,20 @@ def create_network_json(prokode_dir, tfbs_loc, annotation_df, operons_df):
                 # length of individual gene mrna
                 mRNA_len = int(annotation_df.loc[annotation_df['geneid']==gene, 'end'].tolist()[0]) - int(annotation_df.loc[annotation_df['geneid']==gene, 'start'].tolist()[0])
 
+                # gene decays
+                mRNA_decay_arr = 
+                protein_decay_arr = 
+
                 # within each gene's brackets:
                 syn = annotation_df.loc[annotation_df['geneid']==gene,'synonyms'].tolist()[0]
-                arr = {"synonyms":ast.literal_eval(syn),"transcript length":transcript_len,"mRNA length":mRNA_len}
+                arr = {"synonyms":ast.literal_eval(syn),"transcript length":transcript_len,"mRNA length":mRNA_len, "mRNA decay": mRNA_decay_arr, "protein decay": protein_decay_arr}
                 reg_arr = {}
                 arr["regulators"] = reg_arr
 
                 output[gene] = arr
                 gene_key.append(gene)
             except:
-                print('\t\t\tfailed:', gene)
+                print('\t\tfailed:', gene)
                 None
 
     with open(tfbs_loc, 'r') as tfbs_file:

@@ -1,0 +1,145 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE63715 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE63715/GSE63715.soft.gz 
+Reading file....
+Parsing....
+Found 103 entities...
+GPL13609 (1 of 104 entities)
+GPL19472 (2 of 104 entities)
+GSM1556038 (3 of 104 entities)
+GSM1556039 (4 of 104 entities)
+GSM1556040 (5 of 104 entities)
+GSM1556041 (6 of 104 entities)
+GSM1556042 (7 of 104 entities)
+GSM1556043 (8 of 104 entities)
+GSM1556044 (9 of 104 entities)
+GSM1556045 (10 of 104 entities)
+GSM1556046 (11 of 104 entities)
+GSM1556047 (12 of 104 entities)
+GSM1556048 (13 of 104 entities)
+GSM1556049 (14 of 104 entities)
+GSM1556050 (15 of 104 entities)
+GSM1556051 (16 of 104 entities)
+GSM1556052 (17 of 104 entities)
+GSM1556053 (18 of 104 entities)
+GSM1556054 (19 of 104 entities)
+GSM1556055 (20 of 104 entities)
+GSM1556056 (21 of 104 entities)
+GSM1556057 (22 of 104 entities)
+GSM1556058 (23 of 104 entities)
+GSM1556059 (24 of 104 entities)
+GSM1556060 (25 of 104 entities)
+GSM1556061 (26 of 104 entities)
+GSM1556062 (27 of 104 entities)
+GSM1556063 (28 of 104 entities)
+GSM1556064 (29 of 104 entities)
+GSM1556065 (30 of 104 entities)
+GSM1556066 (31 of 104 entities)
+GSM1556067 (32 of 104 entities)
+GSM1556068 (33 of 104 entities)
+GSM1556069 (34 of 104 entities)
+GSM1556070 (35 of 104 entities)
+GSM1556073 (36 of 104 entities)
+GSM1556074 (37 of 104 entities)
+GSM1556075 (38 of 104 entities)
+GSM1556081 (39 of 104 entities)
+GSM1556082 (40 of 104 entities)
+GSM1556083 (41 of 104 entities)
+GSM1556084 (42 of 104 entities)
+GSM1556085 (43 of 104 entities)
+GSM1556086 (44 of 104 entities)
+GSM1556087 (45 of 104 entities)
+GSM1556088 (46 of 104 entities)
+GSM1556089 (47 of 104 entities)
+GSM1556090 (48 of 104 entities)
+GSM1556091 (49 of 104 entities)
+GSM1556092 (50 of 104 entities)
+GSM1556093 (51 of 104 entities)
+GSM1556094 (52 of 104 entities)
+GSM1556095 (53 of 104 entities)
+GSM1556096 (54 of 104 entities)
+GSM1556097 (55 of 104 entities)
+GSM1556098 (56 of 104 entities)
+GSM1556099 (57 of 104 entities)
+GSM1556100 (58 of 104 entities)
+GSM1556101 (59 of 104 entities)
+GSM1556102 (60 of 104 entities)
+GSM1556103 (61 of 104 entities)
+GSM1556104 (62 of 104 entities)
+GSM1556105 (63 of 104 entities)
+GSM1556106 (64 of 104 entities)
+GSM1556107 (65 of 104 entities)
+GSM1556108 (66 of 104 entities)
+GSM1556109 (67 of 104 entities)
+GSM1556110 (68 of 104 entities)
+GSM1556111 (69 of 104 entities)
+GSM1556112 (70 of 104 entities)
+GSM1556113 (71 of 104 entities)
+GSM1556114 (72 of 104 entities)
+GSM1556115 (73 of 104 entities)
+GSM1556116 (74 of 104 entities)
+GSM1556117 (75 of 104 entities)
+GSM1556118 (76 of 104 entities)
+GSM1556119 (77 of 104 entities)
+GSM1556120 (78 of 104 entities)
+GSM1556121 (79 of 104 entities)
+GSM1556122 (80 of 104 entities)
+GSM1556123 (81 of 104 entities)
+GSM1556124 (82 of 104 entities)
+GSM1556125 (83 of 104 entities)
+GSM1556126 (84 of 104 entities)
+GSM1556127 (85 of 104 entities)
+GSM1556128 (86 of 104 entities)
+GSM1556129 (87 of 104 entities)
+GSM1556130 (88 of 104 entities)
+GSM1556131 (89 of 104 entities)
+GSM1556132 (90 of 104 entities)
+GSM1556133 (91 of 104 entities)
+GSM1556134 (92 of 104 entities)
+GSM1556135 (93 of 104 entities)
+GSM1556136 (94 of 104 entities)
+GSM1556137 (95 of 104 entities)
+GSM1556138 (96 of 104 entities)
+GSM1556139 (97 of 104 entities)
+GSM1556140 (98 of 104 entities)
+GSM1556141 (99 of 104 entities)
+GSM1556142 (100 of 104 entities)
+GSM1556143 (101 of 104 entities)
+GSM1556144 (102 of 104 entities)
+GSM1556145 (103 of 104 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+Error: invalid sample names; likely not time series
+Execution halted

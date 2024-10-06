@@ -1,0 +1,233 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE123982 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE123982/GSE123982.soft.gz 
+Reading file....
+Parsing....
+Found 13 entities...
+GPL25945 (1 of 14 entities)
+GSM3518187 (2 of 14 entities)
+GSM3518188 (3 of 14 entities)
+GSM3518189 (4 of 14 entities)
+GSM3518190 (5 of 14 entities)
+GSM3518191 (6 of 14 entities)
+GSM3518192 (7 of 14 entities)
+GSM3518193 (8 of 14 entities)
+GSM3518194 (9 of 14 entities)
+GSM3518195 (10 of 14 entities)
+GSM3518196 (11 of 14 entities)
+GSM3518197 (12 of 14 entities)
+GSM3518198 (13 of 14 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_4559.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 47889 bytes (46 KB)
+==================================================
+downloaded 46 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_9-47.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 46252 bytes (45 KB)
+==================================================
+downloaded 45 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_mouse.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 1935142 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_4559.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 47889 bytes (46 KB)
+==================================================
+downloaded 46 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_9-47.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 46252 bytes (45 KB)
+==================================================
+downloaded 45 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_mouse.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 1935142 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_4559.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 47889 bytes (46 KB)
+==================================================
+downloaded 46 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_9-47.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 46252 bytes (45 KB)
+==================================================
+downloaded 45 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_mouse.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 1935142 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_4559.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 47889 bytes (46 KB)
+==================================================
+downloaded 46 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_9-47.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 46252 bytes (45 KB)
+==================================================
+downloaded 45 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_mouse.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 1935142 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_4559.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 47889 bytes (46 KB)
+==================================================
+downloaded 46 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_9-47.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 46252 bytes (45 KB)
+==================================================
+downloaded 45 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_mouse.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 1935142 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_4559.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 47889 bytes (46 KB)
+==================================================
+downloaded 46 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_9-47.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 46252 bytes (45 KB)
+==================================================
+downloaded 45 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_mouse.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 1935142 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_4559.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 47889 bytes (46 KB)
+==================================================
+downloaded 46 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_9-47.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 46252 bytes (45 KB)
+==================================================
+downloaded 45 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_mouse.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 1935142 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_4559.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 47889 bytes (46 KB)
+==================================================
+downloaded 46 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_9-47.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 46252 bytes (45 KB)
+==================================================
+downloaded 45 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_mouse.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 1935142 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_4559.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 47889 bytes (46 KB)
+==================================================
+downloaded 46 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_9-47.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 46252 bytes (45 KB)
+==================================================
+downloaded 45 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_mouse.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 1935142 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_4559.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 47889 bytes (46 KB)
+==================================================
+downloaded 46 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_9-47.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 46252 bytes (45 KB)
+==================================================
+downloaded 45 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_mouse.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 1935142 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_4559.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 47889 bytes (46 KB)
+==================================================
+downloaded 46 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_9-47.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 46252 bytes (45 KB)
+==================================================
+downloaded 45 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_mouse.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 1935142 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_4559.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 47889 bytes (46 KB)
+==================================================
+downloaded 46 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_9-47.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 46252 bytes (45 KB)
+==================================================
+downloaded 45 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE123nnn/GSE123982/suppl//GSE123982_mouse.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 1935142 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+Error: invalid sample names; likely not time series
+Execution halted

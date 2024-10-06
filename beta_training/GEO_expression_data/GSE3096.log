@@ -1,0 +1,83 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE3096 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE3096/GSE3096.soft.gz 
+Reading file....
+Parsing....
+Found 32 entities...
+GPL548 (1 of 33 entities)
+GPL1835 (2 of 33 entities)
+GSM68766 (3 of 33 entities)
+GSM68767 (4 of 33 entities)
+GSM68768 (5 of 33 entities)
+GSM68769 (6 of 33 entities)
+GSM68770 (7 of 33 entities)
+GSM68771 (8 of 33 entities)
+GSM68772 (9 of 33 entities)
+GSM68773 (10 of 33 entities)
+GSM68774 (11 of 33 entities)
+GSM68775 (12 of 33 entities)
+GSM68776 (13 of 33 entities)
+GSM68777 (14 of 33 entities)
+GSM68778 (15 of 33 entities)
+GSM68779 (16 of 33 entities)
+GSM68780 (17 of 33 entities)
+GSM68781 (18 of 33 entities)
+GSM68782 (19 of 33 entities)
+GSM68783 (20 of 33 entities)
+GSM68784 (21 of 33 entities)
+GSM68785 (22 of 33 entities)
+GSM68786 (23 of 33 entities)
+GSM68787 (24 of 33 entities)
+GSM68788 (25 of 33 entities)
+GSM68789 (26 of 33 entities)
+GSM68790 (27 of 33 entities)
+GSM68791 (28 of 33 entities)
+GSM68792 (29 of 33 entities)
+GSM68793 (30 of 33 entities)
+GSM68794 (31 of 33 entities)
+GSM68795 (32 of 33 entities)
+There were 20 warnings (use warnings() to see them)
+Warning messages:
+1: In as.numeric(column) : NAs introduced by coercion
+2: In as.numeric(column) : NAs introduced by coercion
+3: In as.numeric(column) : NAs introduced by coercion
+4: In as.numeric(column) : NAs introduced by coercion
+5: In as.numeric(column) : NAs introduced by coercion
+6: In as.numeric(column) : NAs introduced by coercion
+7: In as.numeric(column) : NAs introduced by coercion
+8: In as.numeric(column) : NAs introduced by coercion
+9: In as.numeric(column) : NAs introduced by coercion
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

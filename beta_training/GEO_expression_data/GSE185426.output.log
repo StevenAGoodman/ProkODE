@@ -1,0 +1,17 @@
+[1] NA
+[1] "Glucose to acetate growth transition, pre-shift"
+[1] NA
+[1] "Glucose to acetate growth transition, 5 minutes"
+[1] "5"
+[1] "valid gsm... but no data in gsm data table! getting supplementary file (which may or may not contain the data) and writing to subfolder"
+[1] "Glucose to acetate growth transition, 15 minutes"
+[1] "15"
+[1] "valid gsm... but no data in gsm data table! getting supplementary file (which may or may not contain the data) and writing to subfolder"
+[1] "Glucose to acetate growth transition, 60 minutes"
+[1] "60"
+[1] "valid gsm... but no data in gsm data table! getting supplementary file (which may or may not contain the data) and writing to subfolder"
+[1] "Glucose to acetate growth transition, 120 minutes"
+[1] "120"
+[1] "valid gsm... but no data in gsm data table! getting supplementary file (which may or may not contain the data) and writing to subfolder"
+[1] "Glucose to acetate growth transition, post-shift"
+[1] NA

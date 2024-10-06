@@ -1,0 +1,228 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE152384 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE152384/GSE152384.soft.gz 
+Reading file....
+Parsing....
+Found 28 entities...
+GPL17739 (1 of 29 entities)
+GPL27892 (2 of 29 entities)
+GSM4614109 (3 of 29 entities)
+GSM4614110 (4 of 29 entities)
+GSM4614111 (5 of 29 entities)
+GSM4614112 (6 of 29 entities)
+GSM4614113 (7 of 29 entities)
+GSM4614114 (8 of 29 entities)
+GSM4614115 (9 of 29 entities)
+GSM4614116 (10 of 29 entities)
+GSM4614117 (11 of 29 entities)
+GSM4614118 (12 of 29 entities)
+GSM4614119 (13 of 29 entities)
+GSM4614120 (14 of 29 entities)
+GSM4614121 (15 of 29 entities)
+GSM4614122 (16 of 29 entities)
+GSM4614123 (17 of 29 entities)
+GSM4614124 (18 of 29 entities)
+GSM4614125 (19 of 29 entities)
+GSM4614126 (20 of 29 entities)
+GSM4614127 (21 of 29 entities)
+GSM4614128 (22 of 29 entities)
+GSM4614129 (23 of 29 entities)
+GSM4614130 (24 of 29 entities)
+GSM4614131 (25 of 29 entities)
+GSM4614132 (26 of 29 entities)
+GSM4614133 (27 of 29 entities)
+GSM4614134 (28 of 29 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_pSEVA_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 205443 bytes (200 KB)
+==================================================
+downloaded 200 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_terminator_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 123283 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_pSEVA_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 205443 bytes (200 KB)
+==================================================
+downloaded 200 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_terminator_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 123283 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_pSEVA_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 205443 bytes (200 KB)
+==================================================
+downloaded 200 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_terminator_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 123283 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_pSEVA_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 205443 bytes (200 KB)
+==================================================
+downloaded 200 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_terminator_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 123283 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_pSEVA_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 205443 bytes (200 KB)
+==================================================
+downloaded 200 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_terminator_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 123283 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_pSEVA_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 205443 bytes (200 KB)
+==================================================
+downloaded 200 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_terminator_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 123283 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_pSEVA_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 205443 bytes (200 KB)
+==================================================
+downloaded 200 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_terminator_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 123283 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_pSEVA_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 205443 bytes (200 KB)
+==================================================
+downloaded 200 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_terminator_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 123283 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_pSEVA_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 205443 bytes (200 KB)
+==================================================
+downloaded 200 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_terminator_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 123283 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_pSEVA_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 205443 bytes (200 KB)
+==================================================
+downloaded 200 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_terminator_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 123283 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_pSEVA_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 205443 bytes (200 KB)
+==================================================
+downloaded 200 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_terminator_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 123283 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_pSEVA_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 205443 bytes (200 KB)
+==================================================
+downloaded 200 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_terminator_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 123283 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_pSEVA_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 205443 bytes (200 KB)
+==================================================
+downloaded 200 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_terminator_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 123283 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_pSEVA_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 205443 bytes (200 KB)
+==================================================
+downloaded 200 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_terminator_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 123283 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_pSEVA_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 205443 bytes (200 KB)
+==================================================
+downloaded 200 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_terminator_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 123283 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_pSEVA_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 205443 bytes (200 KB)
+==================================================
+downloaded 200 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152384/suppl//GSE152384_rpg_table_PA14_terminator_constructs.csv.gz?tool=geoquery'
+Content type 'application/x-gzip' length 123283 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+Error: invalid sample names; likely not time series
+Execution halted

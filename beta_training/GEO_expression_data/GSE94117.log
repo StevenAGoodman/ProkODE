@@ -1,0 +1,193 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE94117 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE94117/GSE94117.soft.gz 
+Reading file....
+Parsing....
+Found 153 entities...
+GPL22993 (1 of 154 entities)
+GSM2469588 (2 of 154 entities)
+GSM2469589 (3 of 154 entities)
+GSM2469590 (4 of 154 entities)
+GSM2469591 (5 of 154 entities)
+GSM2469592 (6 of 154 entities)
+GSM2469593 (7 of 154 entities)
+GSM2469594 (8 of 154 entities)
+GSM2469595 (9 of 154 entities)
+GSM2469596 (10 of 154 entities)
+GSM2469597 (11 of 154 entities)
+GSM2469598 (12 of 154 entities)
+GSM2469599 (13 of 154 entities)
+GSM2469600 (14 of 154 entities)
+GSM2469601 (15 of 154 entities)
+GSM2469602 (16 of 154 entities)
+GSM2469603 (17 of 154 entities)
+GSM2469604 (18 of 154 entities)
+GSM2469605 (19 of 154 entities)
+GSM2469606 (20 of 154 entities)
+GSM2469607 (21 of 154 entities)
+GSM2469608 (22 of 154 entities)
+GSM2469609 (23 of 154 entities)
+GSM2469610 (24 of 154 entities)
+GSM2469611 (25 of 154 entities)
+GSM2469612 (26 of 154 entities)
+GSM2469613 (27 of 154 entities)
+GSM2469614 (28 of 154 entities)
+GSM2469615 (29 of 154 entities)
+GSM2469616 (30 of 154 entities)
+GSM2469617 (31 of 154 entities)
+GSM2469618 (32 of 154 entities)
+GSM2469619 (33 of 154 entities)
+GSM2469620 (34 of 154 entities)
+GSM2469621 (35 of 154 entities)
+GSM2469622 (36 of 154 entities)
+GSM2469623 (37 of 154 entities)
+GSM2469624 (38 of 154 entities)
+GSM2469625 (39 of 154 entities)
+GSM2469626 (40 of 154 entities)
+GSM2469627 (41 of 154 entities)
+GSM2469628 (42 of 154 entities)
+GSM2469629 (43 of 154 entities)
+GSM2469630 (44 of 154 entities)
+GSM2469631 (45 of 154 entities)
+GSM2469632 (46 of 154 entities)
+GSM2469633 (47 of 154 entities)
+GSM2469634 (48 of 154 entities)
+GSM2469635 (49 of 154 entities)
+GSM2469636 (50 of 154 entities)
+GSM2469637 (51 of 154 entities)
+GSM2469638 (52 of 154 entities)
+GSM2469639 (53 of 154 entities)
+GSM2469640 (54 of 154 entities)
+GSM2469641 (55 of 154 entities)
+GSM2469642 (56 of 154 entities)
+GSM2469643 (57 of 154 entities)
+GSM2469644 (58 of 154 entities)
+GSM2469645 (59 of 154 entities)
+GSM2469646 (60 of 154 entities)
+GSM2469647 (61 of 154 entities)
+GSM2469648 (62 of 154 entities)
+GSM2469649 (63 of 154 entities)
+GSM2469650 (64 of 154 entities)
+GSM2469651 (65 of 154 entities)
+GSM2469652 (66 of 154 entities)
+GSM2469653 (67 of 154 entities)
+GSM2469654 (68 of 154 entities)
+GSM2469655 (69 of 154 entities)
+GSM2469656 (70 of 154 entities)
+GSM2469657 (71 of 154 entities)
+GSM2469658 (72 of 154 entities)
+GSM2469659 (73 of 154 entities)
+GSM2469660 (74 of 154 entities)
+GSM2469661 (75 of 154 entities)
+GSM2469662 (76 of 154 entities)
+GSM2469663 (77 of 154 entities)
+GSM2469664 (78 of 154 entities)
+GSM2469665 (79 of 154 entities)
+GSM2469666 (80 of 154 entities)
+GSM2469667 (81 of 154 entities)
+GSM2469668 (82 of 154 entities)
+GSM2469669 (83 of 154 entities)
+GSM2469670 (84 of 154 entities)
+GSM2469671 (85 of 154 entities)
+GSM2469672 (86 of 154 entities)
+GSM2469673 (87 of 154 entities)
+GSM2469674 (88 of 154 entities)
+GSM2469675 (89 of 154 entities)
+GSM2469676 (90 of 154 entities)
+GSM2469677 (91 of 154 entities)
+GSM2469678 (92 of 154 entities)
+GSM2469679 (93 of 154 entities)
+GSM2469680 (94 of 154 entities)
+GSM2469681 (95 of 154 entities)
+GSM2469682 (96 of 154 entities)
+GSM2469683 (97 of 154 entities)
+GSM2469684 (98 of 154 entities)
+GSM2469685 (99 of 154 entities)
+GSM2469686 (100 of 154 entities)
+GSM2469687 (101 of 154 entities)
+GSM2469688 (102 of 154 entities)
+GSM2469689 (103 of 154 entities)
+GSM2469690 (104 of 154 entities)
+GSM2469691 (105 of 154 entities)
+GSM2469692 (106 of 154 entities)
+GSM2469693 (107 of 154 entities)
+GSM2469694 (108 of 154 entities)
+GSM2469695 (109 of 154 entities)
+GSM2469696 (110 of 154 entities)
+GSM2469697 (111 of 154 entities)
+GSM2469698 (112 of 154 entities)
+GSM2469699 (113 of 154 entities)
+GSM2469700 (114 of 154 entities)
+GSM2469701 (115 of 154 entities)
+GSM2469702 (116 of 154 entities)
+GSM2469703 (117 of 154 entities)
+GSM2469704 (118 of 154 entities)
+GSM2469705 (119 of 154 entities)
+GSM2469706 (120 of 154 entities)
+GSM2469707 (121 of 154 entities)
+GSM2469708 (122 of 154 entities)
+GSM2469709 (123 of 154 entities)
+GSM2469710 (124 of 154 entities)
+GSM2469711 (125 of 154 entities)
+GSM2469712 (126 of 154 entities)
+GSM2469713 (127 of 154 entities)
+GSM2469714 (128 of 154 entities)
+GSM2469715 (129 of 154 entities)
+GSM2469716 (130 of 154 entities)
+GSM2469717 (131 of 154 entities)
+GSM2469718 (132 of 154 entities)
+GSM2469719 (133 of 154 entities)
+GSM2469720 (134 of 154 entities)
+GSM2469721 (135 of 154 entities)
+GSM2469722 (136 of 154 entities)
+GSM2469723 (137 of 154 entities)
+GSM2469724 (138 of 154 entities)
+GSM2469725 (139 of 154 entities)
+GSM2469726 (140 of 154 entities)
+GSM2469727 (141 of 154 entities)
+GSM2469728 (142 of 154 entities)
+GSM2469729 (143 of 154 entities)
+GSM2469730 (144 of 154 entities)
+GSM2469731 (145 of 154 entities)
+GSM2469732 (146 of 154 entities)
+GSM2469733 (147 of 154 entities)
+GSM2469734 (148 of 154 entities)
+GSM2469735 (149 of 154 entities)
+GSM2469736 (150 of 154 entities)
+GSM2469737 (151 of 154 entities)
+GSM2469738 (152 of 154 entities)
+GSM2469739 (153 of 154 entities)
+Error: invalid sample names; likely not time series
+Execution halted

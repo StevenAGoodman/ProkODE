@@ -1,0 +1,77 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE50675 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE50675/GSE50675.soft.gz 
+Reading file....
+Parsing....
+Found 36 entities...
+GPL1339 (1 of 37 entities)
+GSM1226122 (2 of 37 entities)
+GSM1226123 (3 of 37 entities)
+GSM1226124 (4 of 37 entities)
+GSM1226125 (5 of 37 entities)
+GSM1226126 (6 of 37 entities)
+GSM1226127 (7 of 37 entities)
+GSM1226128 (8 of 37 entities)
+GSM1226129 (9 of 37 entities)
+GSM1226130 (10 of 37 entities)
+GSM1226131 (11 of 37 entities)
+GSM1226132 (12 of 37 entities)
+GSM1226133 (13 of 37 entities)
+GSM1226134 (14 of 37 entities)
+GSM1226135 (15 of 37 entities)
+GSM1226136 (16 of 37 entities)
+GSM1226137 (17 of 37 entities)
+GSM1226138 (18 of 37 entities)
+GSM1226139 (19 of 37 entities)
+GSM1226140 (20 of 37 entities)
+GSM1226141 (21 of 37 entities)
+GSM1226142 (22 of 37 entities)
+GSM1226143 (23 of 37 entities)
+GSM1226144 (24 of 37 entities)
+GSM1226145 (25 of 37 entities)
+GSM1226146 (26 of 37 entities)
+GSM1226147 (27 of 37 entities)
+GSM1226148 (28 of 37 entities)
+GSM1226149 (29 of 37 entities)
+GSM1226150 (30 of 37 entities)
+GSM1226151 (31 of 37 entities)
+GSM1226152 (32 of 37 entities)
+GSM1226153 (33 of 37 entities)
+GSM1226154 (34 of 37 entities)
+GSM1226155 (35 of 37 entities)
+GSM1226156 (36 of 37 entities)
+There were 19 warnings (use warnings() to see them)
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

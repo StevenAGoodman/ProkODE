@@ -1,0 +1,227 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE89507 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE89507/GSE89507.soft.gz 
+Reading file....
+Parsing....
+Found 7 entities...
+GPL22638 (1 of 8 entities)
+GSM2374957 (2 of 8 entities)
+GSM2374958 (3 of 8 entities)
+GSM2374959 (4 of 8 entities)
+GSM2374960 (5 of 8 entities)
+GSM2374961 (6 of 8 entities)
+GSM2374962 (7 of 8 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_0min_NA114.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 248765 bytes (242 KB)
+==================================================
+downloaded 242 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_0min_NA114.xml.gz?tool=geoquery'
+Content type 'application/x-gzip' length 358171 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_30min_NA114.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 250057 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_30min_NA114.xml.gz?tool=geoquery'
+Content type 'application/x-gzip' length 360600 bytes (352 KB)
+==================================================
+downloaded 352 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_90min_NA114.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 249723 bytes (243 KB)
+==================================================
+downloaded 243 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_90min_NA114.xml.gz?tool=geoquery'
+Content type 'application/x-gzip' length 364344 bytes (355 KB)
+==================================================
+downloaded 355 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_0min_NA114.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 248765 bytes (242 KB)
+==================================================
+downloaded 242 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_0min_NA114.xml.gz?tool=geoquery'
+Content type 'application/x-gzip' length 358171 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_30min_NA114.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 250057 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_30min_NA114.xml.gz?tool=geoquery'
+Content type 'application/x-gzip' length 360600 bytes (352 KB)
+==================================================
+downloaded 352 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_90min_NA114.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 249723 bytes (243 KB)
+==================================================
+downloaded 243 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_90min_NA114.xml.gz?tool=geoquery'
+Content type 'application/x-gzip' length 364344 bytes (355 KB)
+==================================================
+downloaded 355 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_0min_NA114.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 248765 bytes (242 KB)
+==================================================
+downloaded 242 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_0min_NA114.xml.gz?tool=geoquery'
+Content type 'application/x-gzip' length 358171 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_30min_NA114.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 250057 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_30min_NA114.xml.gz?tool=geoquery'
+Content type 'application/x-gzip' length 360600 bytes (352 KB)
+==================================================
+downloaded 352 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_90min_NA114.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 249723 bytes (243 KB)
+==================================================
+downloaded 243 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_90min_NA114.xml.gz?tool=geoquery'
+Content type 'application/x-gzip' length 364344 bytes (355 KB)
+==================================================
+downloaded 355 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_0min_NA114.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 248765 bytes (242 KB)
+==================================================
+downloaded 242 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_0min_NA114.xml.gz?tool=geoquery'
+Content type 'application/x-gzip' length 358171 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_30min_NA114.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 250057 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_30min_NA114.xml.gz?tool=geoquery'
+Content type 'application/x-gzip' length 360600 bytes (352 KB)
+==================================================
+downloaded 352 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_90min_NA114.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 249723 bytes (243 KB)
+==================================================
+downloaded 243 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_90min_NA114.xml.gz?tool=geoquery'
+Content type 'application/x-gzip' length 364344 bytes (355 KB)
+==================================================
+downloaded 355 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_0min_NA114.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 248765 bytes (242 KB)
+==================================================
+downloaded 242 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_0min_NA114.xml.gz?tool=geoquery'
+Content type 'application/x-gzip' length 358171 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_30min_NA114.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 250057 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_30min_NA114.xml.gz?tool=geoquery'
+Content type 'application/x-gzip' length 360600 bytes (352 KB)
+==================================================
+downloaded 352 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_90min_NA114.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 249723 bytes (243 KB)
+==================================================
+downloaded 243 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_90min_NA114.xml.gz?tool=geoquery'
+Content type 'application/x-gzip' length 364344 bytes (355 KB)
+==================================================
+downloaded 355 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_0min_NA114.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 248765 bytes (242 KB)
+==================================================
+downloaded 242 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_0min_NA114.xml.gz?tool=geoquery'
+Content type 'application/x-gzip' length 358171 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_30min_NA114.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 250057 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_30min_NA114.xml.gz?tool=geoquery'
+Content type 'application/x-gzip' length 360600 bytes (352 KB)
+==================================================
+downloaded 352 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_90min_NA114.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 249723 bytes (243 KB)
+==================================================
+downloaded 243 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE89nnn/GSE89507/suppl//GSE89507_ST2_90min_NA114.xml.gz?tool=geoquery'
+Content type 'application/x-gzip' length 364344 bytes (355 KB)
+==================================================
+downloaded 355 KB
+
+Error: invalid sample names; likely not time series
+Execution halted

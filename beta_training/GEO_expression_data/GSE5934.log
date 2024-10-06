@@ -1,0 +1,70 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE5934 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE5934/GSE5934.soft.gz 
+Reading file....
+Parsing....
+Found 28 entities...
+GPL3052 (1 of 29 entities)
+GSM138087 (2 of 29 entities)
+GSM138088 (3 of 29 entities)
+GSM138089 (4 of 29 entities)
+GSM138090 (5 of 29 entities)
+GSM138091 (6 of 29 entities)
+GSM138092 (7 of 29 entities)
+GSM138093 (8 of 29 entities)
+GSM138094 (9 of 29 entities)
+GSM138095 (10 of 29 entities)
+GSM138096 (11 of 29 entities)
+GSM138097 (12 of 29 entities)
+GSM138098 (13 of 29 entities)
+GSM138099 (14 of 29 entities)
+GSM138100 (15 of 29 entities)
+GSM138101 (16 of 29 entities)
+GSM138102 (17 of 29 entities)
+GSM138103 (18 of 29 entities)
+GSM138104 (19 of 29 entities)
+GSM138105 (20 of 29 entities)
+GSM138106 (21 of 29 entities)
+GSM138107 (22 of 29 entities)
+GSM138109 (23 of 29 entities)
+GSM138111 (24 of 29 entities)
+GSM138112 (25 of 29 entities)
+GSM138113 (26 of 29 entities)
+GSM138114 (27 of 29 entities)
+GSM138115 (28 of 29 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+Error: invalid sample names; likely not time series
+Execution halted

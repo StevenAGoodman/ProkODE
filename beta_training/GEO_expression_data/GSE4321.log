@@ -1,0 +1,69 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE4321 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE4321/GSE4321.soft.gz 
+Reading file....
+Parsing....
+Found 17 entities...
+GPL3500 (1 of 18 entities)
+GSM98717 (2 of 18 entities)
+GSM98718 (3 of 18 entities)
+GSM98719 (4 of 18 entities)
+GSM98720 (5 of 18 entities)
+GSM98721 (6 of 18 entities)
+GSM98722 (7 of 18 entities)
+GSM98723 (8 of 18 entities)
+GSM98724 (9 of 18 entities)
+GSM98725 (10 of 18 entities)
+GSM98726 (11 of 18 entities)
+GSM98727 (12 of 18 entities)
+GSM98728 (13 of 18 entities)
+GSM98729 (14 of 18 entities)
+GSM98730 (15 of 18 entities)
+GSM98731 (16 of 18 entities)
+GSM98732 (17 of 18 entities)
+There were 50 or more warnings (use warnings() to see the first 50)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+Warning messages:
+1: In as.numeric(column) : NAs introduced by coercion
+2: In as.numeric(column) : NAs introduced by coercion
+3: In as.numeric(column) : NAs introduced by coercion
+4: In as.numeric(column) : NAs introduced by coercion
+5: In as.numeric(column) : NAs introduced by coercion
+6: In as.numeric(column) : NAs introduced by coercion
+7: In as.numeric(column) : NAs introduced by coercion
+8: In as.numeric(column) : NAs introduced by coercion
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

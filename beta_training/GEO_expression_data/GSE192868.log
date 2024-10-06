@@ -1,0 +1,273 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE192868 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE192868/GSE192868.soft.gz 
+Reading file....
+Parsing....
+Found 23 entities...
+GPL19910 (1 of 24 entities)
+GPL29515 (2 of 24 entities)
+GSM5767759 (3 of 24 entities)
+GSM5767760 (4 of 24 entities)
+GSM5767761 (5 of 24 entities)
+GSM5767762 (6 of 24 entities)
+GSM5767763 (7 of 24 entities)
+GSM5767764 (8 of 24 entities)
+GSM5767765 (9 of 24 entities)
+GSM5767766 (10 of 24 entities)
+GSM5767767 (11 of 24 entities)
+GSM5767768 (12 of 24 entities)
+GSM5767769 (13 of 24 entities)
+GSM5767770 (14 of 24 entities)
+GSM5767771 (15 of 24 entities)
+GSM5767772 (16 of 24 entities)
+GSM5767773 (17 of 24 entities)
+GSM5767774 (18 of 24 entities)
+GSM5767775 (19 of 24 entities)
+GSM5767776 (20 of 24 entities)
+GSM5767777 (21 of 24 entities)
+GSM5767778 (22 of 24 entities)
+GSM5767779 (23 of 24 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR178_179_181.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 99978 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE192nnn/GSE192868/suppl//GSE192868_sporulation_1kb_ChIPseq_DMR312_314_363.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 555658 bytes (542 KB)
+==================================================
+downloaded 542 KB
+
+Error: invalid sample names; likely not time series
+Execution halted

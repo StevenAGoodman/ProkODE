@@ -1,0 +1,74 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE5925 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE5925/GSE5925.soft.gz 
+Reading file....
+Parsing....
+Found 31 entities...
+GPL3739 (1 of 32 entities)
+GSM137640 (2 of 32 entities)
+GSM137641 (3 of 32 entities)
+GSM137642 (4 of 32 entities)
+GSM137643 (5 of 32 entities)
+GSM137644 (6 of 32 entities)
+GSM137645 (7 of 32 entities)
+GSM137646 (8 of 32 entities)
+GSM137647 (9 of 32 entities)
+GSM137648 (10 of 32 entities)
+GSM137649 (11 of 32 entities)
+GSM137650 (12 of 32 entities)
+GSM137651 (13 of 32 entities)
+GSM137652 (14 of 32 entities)
+GSM137653 (15 of 32 entities)
+GSM137654 (16 of 32 entities)
+GSM137655 (17 of 32 entities)
+GSM137656 (18 of 32 entities)
+GSM137657 (19 of 32 entities)
+GSM137658 (20 of 32 entities)
+GSM137659 (21 of 32 entities)
+GSM137660 (22 of 32 entities)
+GSM137661 (23 of 32 entities)
+GSM137662 (24 of 32 entities)
+GSM137663 (25 of 32 entities)
+GSM137664 (26 of 32 entities)
+GSM137665 (27 of 32 entities)
+GSM137666 (28 of 32 entities)
+GSM137667 (29 of 32 entities)
+GSM137668 (30 of 32 entities)
+GSM137669 (31 of 32 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+There were 16 warnings (use warnings() to see them)
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

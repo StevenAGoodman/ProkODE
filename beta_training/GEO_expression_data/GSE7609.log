@@ -1,0 +1,76 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE7609 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE7609/GSE7609.soft.gz 
+Reading file....
+Parsing....
+Found 33 entities...
+GPL3739 (1 of 34 entities)
+GSM182477 (2 of 34 entities)
+GSM182478 (3 of 34 entities)
+GSM182479 (4 of 34 entities)
+GSM182480 (5 of 34 entities)
+GSM182481 (6 of 34 entities)
+GSM182482 (7 of 34 entities)
+GSM182483 (8 of 34 entities)
+GSM182484 (9 of 34 entities)
+GSM182485 (10 of 34 entities)
+GSM182486 (11 of 34 entities)
+GSM182487 (12 of 34 entities)
+GSM182488 (13 of 34 entities)
+GSM182489 (14 of 34 entities)
+GSM182490 (15 of 34 entities)
+GSM182491 (16 of 34 entities)
+GSM182492 (17 of 34 entities)
+GSM182493 (18 of 34 entities)
+GSM182494 (19 of 34 entities)
+GSM182495 (20 of 34 entities)
+GSM182496 (21 of 34 entities)
+GSM182497 (22 of 34 entities)
+GSM182498 (23 of 34 entities)
+GSM182499 (24 of 34 entities)
+GSM182500 (25 of 34 entities)
+GSM182501 (26 of 34 entities)
+GSM182502 (27 of 34 entities)
+GSM182503 (28 of 34 entities)
+GSM182504 (29 of 34 entities)
+GSM182505 (30 of 34 entities)
+GSM182506 (31 of 34 entities)
+GSM182507 (32 of 34 entities)
+GSM182508 (33 of 34 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+There were 16 warnings (use warnings() to see them)
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

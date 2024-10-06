@@ -1,0 +1,70 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE16352 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE16352/GSE16352.soft.gz 
+Reading file....
+Parsing....
+Found 25 entities...
+GPL7320 (1 of 26 entities)
+GSM410631 (2 of 26 entities)
+GSM410632 (3 of 26 entities)
+GSM410633 (4 of 26 entities)
+GSM410634 (5 of 26 entities)
+GSM410635 (6 of 26 entities)
+GSM410636 (7 of 26 entities)
+GSM410637 (8 of 26 entities)
+GSM410638 (9 of 26 entities)
+GSM410639 (10 of 26 entities)
+GSM410640 (11 of 26 entities)
+GSM410641 (12 of 26 entities)
+GSM410642 (13 of 26 entities)
+GSM410643 (14 of 26 entities)
+GSM410644 (15 of 26 entities)
+GSM410645 (16 of 26 entities)
+GSM410646 (17 of 26 entities)
+GSM410647 (18 of 26 entities)
+GSM410648 (19 of 26 entities)
+GSM410649 (20 of 26 entities)
+GSM410650 (21 of 26 entities)
+GSM410651 (22 of 26 entities)
+GSM410652 (23 of 26 entities)
+GSM410653 (24 of 26 entities)
+GSM410654 (25 of 26 entities)
+Warning messages:
+1: In as.numeric(column) : NAs introduced by coercion
+2: In as.numeric(column) : NAs introduced by coercion
+3: In as.numeric(column) : NAs introduced by coercion
+4: In as.numeric(column) : NAs introduced by coercion
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

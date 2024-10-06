@@ -1,0 +1,66 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE40427 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE40427/GSE40427.soft.gz 
+Reading file....
+Parsing....
+Found 22 entities...
+GPL13175 (1 of 23 entities)
+GSM993804 (2 of 23 entities)
+GSM993805 (3 of 23 entities)
+GSM993806 (4 of 23 entities)
+GSM993807 (5 of 23 entities)
+GSM993808 (6 of 23 entities)
+GSM993809 (7 of 23 entities)
+GSM993810 (8 of 23 entities)
+GSM993811 (9 of 23 entities)
+GSM993812 (10 of 23 entities)
+GSM993813 (11 of 23 entities)
+GSM993814 (12 of 23 entities)
+GSM993815 (13 of 23 entities)
+GSM993816 (14 of 23 entities)
+GSM993817 (15 of 23 entities)
+GSM993818 (16 of 23 entities)
+GSM993819 (17 of 23 entities)
+GSM993820 (18 of 23 entities)
+GSM993821 (19 of 23 entities)
+GSM993822 (20 of 23 entities)
+GSM993823 (21 of 23 entities)
+GSM993824 (22 of 23 entities)
+Warning messages:
+1: In as.numeric(column) : NAs introduced by coercion
+2: In as.numeric(column) : NAs introduced by coercion
+3: In as.numeric(column) : NAs introduced by coercion
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

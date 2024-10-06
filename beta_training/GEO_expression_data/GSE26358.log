@@ -1,0 +1,107 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE26358 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE26358/GSE26358.soft.gz 
+Reading file....
+Parsing....
+Found 64 entities...
+GPL10597 (1 of 65 entities)
+GSM646716 (2 of 65 entities)
+GSM646718 (3 of 65 entities)
+GSM646722 (4 of 65 entities)
+GSM646723 (5 of 65 entities)
+GSM646724 (6 of 65 entities)
+GSM646725 (7 of 65 entities)
+GSM646729 (8 of 65 entities)
+GSM646730 (9 of 65 entities)
+GSM646731 (10 of 65 entities)
+GSM646732 (11 of 65 entities)
+GSM646733 (12 of 65 entities)
+GSM646734 (13 of 65 entities)
+GSM646735 (14 of 65 entities)
+GSM646736 (15 of 65 entities)
+GSM646737 (16 of 65 entities)
+GSM646738 (17 of 65 entities)
+GSM646741 (18 of 65 entities)
+GSM646742 (19 of 65 entities)
+GSM646743 (20 of 65 entities)
+GSM646744 (21 of 65 entities)
+GSM646745 (22 of 65 entities)
+GSM646796 (23 of 65 entities)
+GSM646797 (24 of 65 entities)
+GSM646798 (25 of 65 entities)
+GSM646799 (26 of 65 entities)
+GSM646800 (27 of 65 entities)
+GSM646801 (28 of 65 entities)
+GSM646802 (29 of 65 entities)
+GSM646803 (30 of 65 entities)
+GSM646804 (31 of 65 entities)
+GSM646805 (32 of 65 entities)
+GSM646806 (33 of 65 entities)
+GSM646807 (34 of 65 entities)
+GSM646808 (35 of 65 entities)
+GSM646809 (36 of 65 entities)
+GSM646810 (37 of 65 entities)
+GSM646811 (38 of 65 entities)
+GSM646812 (39 of 65 entities)
+GSM646813 (40 of 65 entities)
+GSM646814 (41 of 65 entities)
+GSM646815 (42 of 65 entities)
+GSM646816 (43 of 65 entities)
+GSM646817 (44 of 65 entities)
+GSM646818 (45 of 65 entities)
+GSM646819 (46 of 65 entities)
+GSM646820 (47 of 65 entities)
+GSM646821 (48 of 65 entities)
+GSM646822 (49 of 65 entities)
+GSM647159 (50 of 65 entities)
+GSM647166 (51 of 65 entities)
+GSM647167 (52 of 65 entities)
+GSM647174 (53 of 65 entities)
+GSM647175 (54 of 65 entities)
+GSM647182 (55 of 65 entities)
+GSM647183 (56 of 65 entities)
+GSM647188 (57 of 65 entities)
+GSM647189 (58 of 65 entities)
+GSM647190 (59 of 65 entities)
+GSM647191 (60 of 65 entities)
+GSM647196 (61 of 65 entities)
+GSM647197 (62 of 65 entities)
+GSM647198 (63 of 65 entities)
+GSM647199 (64 of 65 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+There were 16 warnings (use warnings() to see them)
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

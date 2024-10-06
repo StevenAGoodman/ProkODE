@@ -1,0 +1,67 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE30005 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE30005/GSE30005.soft.gz 
+Reading file....
+Parsing....
+Found 25 entities...
+GPL8984 (1 of 26 entities)
+GSM742541 (2 of 26 entities)
+GSM742542 (3 of 26 entities)
+GSM742543 (4 of 26 entities)
+GSM742544 (5 of 26 entities)
+GSM742545 (6 of 26 entities)
+GSM742546 (7 of 26 entities)
+GSM742547 (8 of 26 entities)
+GSM742548 (9 of 26 entities)
+GSM742549 (10 of 26 entities)
+GSM742550 (11 of 26 entities)
+GSM742551 (12 of 26 entities)
+GSM742552 (13 of 26 entities)
+GSM742553 (14 of 26 entities)
+GSM742554 (15 of 26 entities)
+GSM742555 (16 of 26 entities)
+GSM742556 (17 of 26 entities)
+GSM742557 (18 of 26 entities)
+GSM742558 (19 of 26 entities)
+GSM742559 (20 of 26 entities)
+GSM742560 (21 of 26 entities)
+GSM742561 (22 of 26 entities)
+GSM742562 (23 of 26 entities)
+GSM742563 (24 of 26 entities)
+GSM742564 (25 of 26 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+Error: invalid sample names; likely not time series
+Execution halted

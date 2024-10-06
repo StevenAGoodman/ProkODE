@@ -1,0 +1,85 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE7573 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE7573/GSE7573.soft.gz 
+Reading file....
+Parsing....
+Found 45 entities...
+GPL5113 (1 of 46 entities)
+GPL5146 (2 of 46 entities)
+GSM183524 (3 of 46 entities)
+GSM183526 (4 of 46 entities)
+GSM183528 (5 of 46 entities)
+GSM183529 (6 of 46 entities)
+GSM188008 (7 of 46 entities)
+GSM188009 (8 of 46 entities)
+GSM188010 (9 of 46 entities)
+GSM188011 (10 of 46 entities)
+GSM188036 (11 of 46 entities)
+GSM188037 (12 of 46 entities)
+GSM188038 (13 of 46 entities)
+GSM188039 (14 of 46 entities)
+GSM188363 (15 of 46 entities)
+GSM188364 (16 of 46 entities)
+GSM188365 (17 of 46 entities)
+GSM188366 (18 of 46 entities)
+GSM188367 (19 of 46 entities)
+GSM188368 (20 of 46 entities)
+GSM188369 (21 of 46 entities)
+GSM188370 (22 of 46 entities)
+GSM188371 (23 of 46 entities)
+GSM188372 (24 of 46 entities)
+GSM188373 (25 of 46 entities)
+GSM188374 (26 of 46 entities)
+GSM188375 (27 of 46 entities)
+GSM188376 (28 of 46 entities)
+GSM188377 (29 of 46 entities)
+GSM188378 (30 of 46 entities)
+GSM188379 (31 of 46 entities)
+GSM188380 (32 of 46 entities)
+GSM188381 (33 of 46 entities)
+GSM188382 (34 of 46 entities)
+GSM188383 (35 of 46 entities)
+GSM188384 (36 of 46 entities)
+GSM188385 (37 of 46 entities)
+GSM188386 (38 of 46 entities)
+GSM188387 (39 of 46 entities)
+GSM188388 (40 of 46 entities)
+GSM188389 (41 of 46 entities)
+GSM188390 (42 of 46 entities)
+GSM188391 (43 of 46 entities)
+GSM188392 (44 of 46 entities)
+GSM188393 (45 of 46 entities)
+Error: all time values are the same
+Execution halted

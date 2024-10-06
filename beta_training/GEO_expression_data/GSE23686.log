@@ -1,0 +1,67 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE23686 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE23686/GSE23686.soft.gz 
+Reading file....
+Parsing....
+Found 25 entities...
+GPL10707 (1 of 26 entities)
+GSM580926 (2 of 26 entities)
+GSM580927 (3 of 26 entities)
+GSM580928 (4 of 26 entities)
+GSM580929 (5 of 26 entities)
+GSM580930 (6 of 26 entities)
+GSM580931 (7 of 26 entities)
+GSM580932 (8 of 26 entities)
+GSM580933 (9 of 26 entities)
+GSM580934 (10 of 26 entities)
+GSM580935 (11 of 26 entities)
+GSM580936 (12 of 26 entities)
+GSM580937 (13 of 26 entities)
+GSM580938 (14 of 26 entities)
+GSM580939 (15 of 26 entities)
+GSM580940 (16 of 26 entities)
+GSM580941 (17 of 26 entities)
+GSM580942 (18 of 26 entities)
+GSM580943 (19 of 26 entities)
+GSM580944 (20 of 26 entities)
+GSM580945 (21 of 26 entities)
+GSM580946 (22 of 26 entities)
+GSM580947 (23 of 26 entities)
+GSM580948 (24 of 26 entities)
+GSM580949 (25 of 26 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+Error: all time values are the same
+Execution halted

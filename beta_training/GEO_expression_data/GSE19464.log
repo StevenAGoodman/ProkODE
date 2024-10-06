@@ -1,0 +1,67 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE19464 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE19464/GSE19464.soft.gz 
+Reading file....
+Parsing....
+Found 17 entities...
+GPL9817 (1 of 18 entities)
+GSM488049 (2 of 18 entities)
+GSM488050 (3 of 18 entities)
+GSM488051 (4 of 18 entities)
+GSM488052 (5 of 18 entities)
+GSM488053 (6 of 18 entities)
+GSM488054 (7 of 18 entities)
+GSM488055 (8 of 18 entities)
+GSM488056 (9 of 18 entities)
+GSM488057 (10 of 18 entities)
+GSM488058 (11 of 18 entities)
+GSM488059 (12 of 18 entities)
+GSM488060 (13 of 18 entities)
+GSM488061 (14 of 18 entities)
+GSM488062 (15 of 18 entities)
+GSM488063 (16 of 18 entities)
+GSM488064 (17 of 18 entities)
+Warning messages:
+1: In as.numeric(column) : NAs introduced by coercion
+2: In as.numeric(column) : NAs introduced by coercion
+3: In as.numeric(column) : NAs introduced by coercion
+4: In as.numeric(column) : NAs introduced by coercion
+5: In as.numeric(column) : NAs introduced by coercion
+6: In as.numeric(column) : NAs introduced by coercion
+7: In as.numeric(column) : NAs introduced by coercion
+8: In as.numeric(column) : NAs introduced by coercion
+9: In as.numeric(column) : NAs introduced by coercion
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

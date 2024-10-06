@@ -1,0 +1,413 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE140211 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE140211/GSE140211.soft.gz 
+Reading file....
+Parsing....
+Found 13 entities...
+GPL16085 (1 of 14 entities)
+GSM4156709 (2 of 14 entities)
+GSM4156710 (3 of 14 entities)
+GSM4156711 (4 of 14 entities)
+GSM4156712 (5 of 14 entities)
+GSM4156713 (6 of 14 entities)
+GSM4156714 (7 of 14 entities)
+GSM4156715 (8 of 14 entities)
+GSM4156716 (9 of 14 entities)
+GSM4156717 (10 of 14 entities)
+GSM4156718 (11 of 14 entities)
+GSM4156719 (12 of 14 entities)
+GSM4156720 (13 of 14 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_AllTimeDataTogether.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 656764 bytes (641 KB)
+==================================================
+downloaded 641 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_MG1655_raw_read_counts_per_gene_Nate_BL_06022016_31124104.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 303373 bytes (296 KB)
+==================================================
+downloaded 296 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t120.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251088 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t30.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251770 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t60.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 250489 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_readme.txt?tool=geoquery'
+Content type 'text/plain' length 507 bytes
+==================================================
+downloaded 507 bytes
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_AllTimeDataTogether.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 656764 bytes (641 KB)
+==================================================
+downloaded 641 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_MG1655_raw_read_counts_per_gene_Nate_BL_06022016_31124104.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 303373 bytes (296 KB)
+==================================================
+downloaded 296 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t120.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251088 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t30.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251770 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t60.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 250489 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_readme.txt?tool=geoquery'
+Content type 'text/plain' length 507 bytes
+==================================================
+downloaded 507 bytes
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_AllTimeDataTogether.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 656764 bytes (641 KB)
+==================================================
+downloaded 641 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_MG1655_raw_read_counts_per_gene_Nate_BL_06022016_31124104.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 303373 bytes (296 KB)
+==================================================
+downloaded 296 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t120.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251088 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t30.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251770 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t60.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 250489 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_readme.txt?tool=geoquery'
+Content type 'text/plain' length 507 bytes
+==================================================
+downloaded 507 bytes
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_AllTimeDataTogether.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 656764 bytes (641 KB)
+==================================================
+downloaded 641 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_MG1655_raw_read_counts_per_gene_Nate_BL_06022016_31124104.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 303373 bytes (296 KB)
+==================================================
+downloaded 296 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t120.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251088 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t30.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251770 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t60.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 250489 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_readme.txt?tool=geoquery'
+Content type 'text/plain' length 507 bytes
+==================================================
+downloaded 507 bytes
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_AllTimeDataTogether.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 656764 bytes (641 KB)
+==================================================
+downloaded 641 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_MG1655_raw_read_counts_per_gene_Nate_BL_06022016_31124104.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 303373 bytes (296 KB)
+==================================================
+downloaded 296 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t120.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251088 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t30.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251770 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t60.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 250489 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_readme.txt?tool=geoquery'
+Content type 'text/plain' length 507 bytes
+==================================================
+downloaded 507 bytes
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_AllTimeDataTogether.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 656764 bytes (641 KB)
+==================================================
+downloaded 641 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_MG1655_raw_read_counts_per_gene_Nate_BL_06022016_31124104.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 303373 bytes (296 KB)
+==================================================
+downloaded 296 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t120.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251088 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t30.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251770 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t60.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 250489 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_readme.txt?tool=geoquery'
+Content type 'text/plain' length 507 bytes
+==================================================
+downloaded 507 bytes
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_AllTimeDataTogether.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 656764 bytes (641 KB)
+==================================================
+downloaded 641 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_MG1655_raw_read_counts_per_gene_Nate_BL_06022016_31124104.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 303373 bytes (296 KB)
+==================================================
+downloaded 296 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t120.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251088 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t30.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251770 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t60.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 250489 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_readme.txt?tool=geoquery'
+Content type 'text/plain' length 507 bytes
+==================================================
+downloaded 507 bytes
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_AllTimeDataTogether.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 656764 bytes (641 KB)
+==================================================
+downloaded 641 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_MG1655_raw_read_counts_per_gene_Nate_BL_06022016_31124104.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 303373 bytes (296 KB)
+==================================================
+downloaded 296 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t120.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251088 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t30.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251770 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t60.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 250489 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_readme.txt?tool=geoquery'
+Content type 'text/plain' length 507 bytes
+==================================================
+downloaded 507 bytes
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_AllTimeDataTogether.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 656764 bytes (641 KB)
+==================================================
+downloaded 641 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_MG1655_raw_read_counts_per_gene_Nate_BL_06022016_31124104.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 303373 bytes (296 KB)
+==================================================
+downloaded 296 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t120.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251088 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t30.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251770 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t60.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 250489 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_readme.txt?tool=geoquery'
+Content type 'text/plain' length 507 bytes
+==================================================
+downloaded 507 bytes
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_AllTimeDataTogether.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 656764 bytes (641 KB)
+==================================================
+downloaded 641 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_MG1655_raw_read_counts_per_gene_Nate_BL_06022016_31124104.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 303373 bytes (296 KB)
+==================================================
+downloaded 296 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t120.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251088 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t30.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251770 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t60.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 250489 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_readme.txt?tool=geoquery'
+Content type 'text/plain' length 507 bytes
+==================================================
+downloaded 507 bytes
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_AllTimeDataTogether.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 656764 bytes (641 KB)
+==================================================
+downloaded 641 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_MG1655_raw_read_counts_per_gene_Nate_BL_06022016_31124104.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 303373 bytes (296 KB)
+==================================================
+downloaded 296 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t120.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251088 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t30.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251770 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t60.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 250489 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_readme.txt?tool=geoquery'
+Content type 'text/plain' length 507 bytes
+==================================================
+downloaded 507 bytes
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_AllTimeDataTogether.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 656764 bytes (641 KB)
+==================================================
+downloaded 641 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_MG1655_raw_read_counts_per_gene_Nate_BL_06022016_31124104.xlsx?tool=geoquery'
+Content type 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' length 303373 bytes (296 KB)
+==================================================
+downloaded 296 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t120.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251088 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t30.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 251770 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_ann_t0t60.result.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 250489 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140211/suppl//GSE140211_readme.txt?tool=geoquery'
+Content type 'text/plain' length 507 bytes
+==================================================
+downloaded 507 bytes
+
+Error: invalid sample names; likely not time series
+Execution halted

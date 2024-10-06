@@ -1,18 +1,60 @@
 import numpy as np
 import pandas as pd
+import re
+import json
 
-# constants
+# constants... that may change
 temperature = 298 # kelvin
 elongation_rate = 60 # nt/s
 peptide_rate = 20 # aa/s
-Kd_ribo_mrna = 0.1 # WHAT IS THE BINDING AFFINITY OF RIBO TO DALGARNO SEQ????
+Kd_ribo_mrna = 0.1 # WHAT IS THE BINDING AFFINITY OF RIBO TO DALGARNO SEQ???? maybe use molecular docking
 len_taken_by_rnap = 30 # nt
 len_taken_by_ribo = 30 # aa
 
+
+
+# fundemental functions
 def score_to_K(score):
     delta_G = -1 * score * 1000
     return 1 / np.exp(delta_G / (1.98722 * temperature))
+def search_network_json(network_loc, gene_str:str):
+    gene_str = str.lower(gene_str)
+    with open(network_loc, 'r') as network_file:
+        for _, line in enumerate(network_file):
+            print(line)
+            if len(line) > 3 and re.search(gene_str, str.lower(line[1:line.find('":{')])) != None:
+                gene_info = line[line.find('":{')+2:-2].replace("\n",'')
+                return json.loads(gene_info)
+            elif len(line) > 3 and gene_str in json.loads(re.search('"synonyms": (\[.+\]), ', line).group(1)):
+                return json.loads(line[line.find('":{')+2:-2].replace("\n",''))
+            else:
+                continue
 
+
+
+#########            #########
+### FUNCTIONS FOR TWEAKING ###
+#########            #########
+
+
+
+# max rates
+R_max_txn = len_taken_by_rnap / elongation_rate
+R_max_trans = len_taken_by_ribo / peptide_rate
+
+
+
+# binding probability functions
+def tf_probabiltiy(N_tf, Kd_tf_target, genome_len):
+    return N_tf / (genome_len * (N_tf + Kd_tf_target))
+def rnap_probabiltiy(N_rnap, Kd_rnap_target, genome_len):
+    return N_rnap / (genome_len * (N_rnap + Kd_rnap_target))
+def ribo_probabiltiy(N_ribo, ):
+    return N_ribo / (N_ribo + Kd_ribo_mrna)
+
+
+
+# Transcription rate function
 def transcription_rate(gene, protein_amnts, gene_key, N_rnap, Kd_rnap, gene_info_dict, genome_len):
     genome_len = 4.5e6
 
@@ -33,6 +75,18 @@ def transcription_rate(gene, protein_amnts, gene_key, N_rnap, Kd_rnap, gene_info
 
     return beta_all * P_rnap_basal * max_txn_rate
 
+
+
+# Beta function
+def beta_function(P_arr, *beta_arr):
+    assert len(P_arr) == len(beta_arr)
+    return np.array(P_arr) @ np.log10(np.array(beta_arr)).T
+def beta_from_context(R_txn, P_rnap):
+    return R_txn / (P_rnap * R_max_txn)
+
+
+
+# Translation rate function
 def translation_rate(gene, protein_amnts, N_ribo, gene_info_dict):
     if gene_info_dict == None:
         return 0
@@ -45,6 +99,9 @@ def translation_rate(gene, protein_amnts, N_ribo, gene_info_dict):
 
     return P_ribo_bound * max_translation_rate
 
+
+
+# mRNA decay model
 def RNA_decay_rate(gene, prev_total_mRNA_amnt, protein_amnts, decay_dict, gene_key):
     # calculation of natural decay component
     natural_mRNA_decay_rate = 0
@@ -63,6 +120,9 @@ def RNA_decay_rate(gene, prev_total_mRNA_amnt, protein_amnts, decay_dict, gene_k
 
     return rate_of_mRNA_cleavage + natural_mRNA_decay_rate
 
+
+
+# Protein decay model
 def protein_decay_rate(gene, protein_amnts, decay_dict, gene_key):
     # total_half_life = 0
 
@@ -75,7 +135,29 @@ def protein_decay_rate(gene, protein_amnts, decay_dict, gene_key):
     # return 1 / total_half_life
     return 0
 
-def creation_rate_from_overall_mRNA_stats(overall_mRNA_change_rate, mRNA_amnts, protein_amnts, gene_key):
-    mRNA_decay_rate = RNA_decay_rate(gene, mRNA_amnts, protein_amnts, decay_dict, gene_key)
 
-    return
+
+# RNAP change model
+def RNAP_amount(protein_amnts):
+    return None
+    
+
+
+# Ribosome change model
+def ribo_amount(protein_amnts):
+    return None
+
+
+
+# link to processing.py
+def beta_from_overall_mRNA(gene, gene_mRNA_amnt, overall_mRNA_change_rate, protein_amnts, gene_key, genome_length, Kd_rnap):
+    N_rnap = RNAP_amount(protein_amnts)
+    N_ribo = ribo_amount(protein_amnts)
+
+    mRNA_decay_rate = RNA_decay_rate(gene, gene_mRNA_amnt, protein_amnts, decay_dict, gene_key)
+    mRNA_creation_rate = overall_mRNA_change_rate + mRNA_decay_rate * gene_mRNA_amnt
+
+    P_rnap = rnap_probabiltiy(N_rnap, Kd_rnap, genome_length)
+    beta_all = beta_from_context(mRNA_creation_rate, P_rnap)
+
+    return coefficient_arr, beta_all

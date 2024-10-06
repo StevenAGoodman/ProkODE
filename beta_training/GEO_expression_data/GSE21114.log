@@ -1,0 +1,160 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE21114 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE21114/GSE21114.soft.gz 
+Reading file....
+Parsing....
+Found 118 entities...
+GPL10265 (1 of 119 entities)
+GPL10266 (2 of 119 entities)
+GSM528052 (3 of 119 entities)
+GSM528053 (4 of 119 entities)
+GSM528054 (5 of 119 entities)
+GSM528055 (6 of 119 entities)
+GSM528056 (7 of 119 entities)
+GSM528057 (8 of 119 entities)
+GSM528058 (9 of 119 entities)
+GSM528059 (10 of 119 entities)
+GSM528060 (11 of 119 entities)
+GSM528061 (12 of 119 entities)
+GSM528062 (13 of 119 entities)
+GSM528063 (14 of 119 entities)
+GSM528064 (15 of 119 entities)
+GSM528065 (16 of 119 entities)
+GSM528066 (17 of 119 entities)
+GSM528067 (18 of 119 entities)
+GSM528068 (19 of 119 entities)
+GSM528069 (20 of 119 entities)
+GSM528070 (21 of 119 entities)
+GSM528071 (22 of 119 entities)
+GSM528072 (23 of 119 entities)
+GSM528073 (24 of 119 entities)
+GSM528074 (25 of 119 entities)
+GSM528075 (26 of 119 entities)
+GSM528076 (27 of 119 entities)
+GSM528077 (28 of 119 entities)
+GSM528078 (29 of 119 entities)
+GSM528079 (30 of 119 entities)
+GSM528080 (31 of 119 entities)
+GSM528081 (32 of 119 entities)
+GSM528082 (33 of 119 entities)
+GSM528083 (34 of 119 entities)
+GSM528084 (35 of 119 entities)
+GSM528085 (36 of 119 entities)
+GSM528086 (37 of 119 entities)
+GSM528087 (38 of 119 entities)
+GSM528088 (39 of 119 entities)
+GSM528089 (40 of 119 entities)
+GSM528090 (41 of 119 entities)
+GSM528091 (42 of 119 entities)
+GSM528092 (43 of 119 entities)
+GSM528093 (44 of 119 entities)
+GSM528094 (45 of 119 entities)
+GSM528095 (46 of 119 entities)
+GSM528096 (47 of 119 entities)
+GSM528097 (48 of 119 entities)
+GSM528098 (49 of 119 entities)
+GSM528099 (50 of 119 entities)
+GSM528100 (51 of 119 entities)
+GSM528101 (52 of 119 entities)
+GSM528102 (53 of 119 entities)
+GSM528103 (54 of 119 entities)
+GSM528104 (55 of 119 entities)
+GSM528105 (56 of 119 entities)
+GSM528106 (57 of 119 entities)
+GSM528107 (58 of 119 entities)
+GSM528108 (59 of 119 entities)
+GSM528109 (60 of 119 entities)
+GSM528110 (61 of 119 entities)
+GSM528111 (62 of 119 entities)
+GSM528112 (63 of 119 entities)
+GSM528113 (64 of 119 entities)
+GSM528114 (65 of 119 entities)
+GSM528115 (66 of 119 entities)
+GSM528116 (67 of 119 entities)
+GSM528117 (68 of 119 entities)
+GSM528118 (69 of 119 entities)
+GSM528119 (70 of 119 entities)
+GSM528120 (71 of 119 entities)
+GSM528121 (72 of 119 entities)
+GSM528122 (73 of 119 entities)
+GSM528123 (74 of 119 entities)
+GSM528124 (75 of 119 entities)
+GSM528125 (76 of 119 entities)
+GSM528126 (77 of 119 entities)
+GSM528127 (78 of 119 entities)
+GSM528128 (79 of 119 entities)
+GSM528129 (80 of 119 entities)
+GSM528130 (81 of 119 entities)
+GSM528131 (82 of 119 entities)
+GSM528132 (83 of 119 entities)
+GSM528133 (84 of 119 entities)
+GSM528134 (85 of 119 entities)
+GSM528135 (86 of 119 entities)
+GSM528136 (87 of 119 entities)
+GSM528137 (88 of 119 entities)
+GSM528138 (89 of 119 entities)
+GSM528139 (90 of 119 entities)
+GSM528140 (91 of 119 entities)
+GSM528141 (92 of 119 entities)
+GSM528142 (93 of 119 entities)
+GSM528143 (94 of 119 entities)
+GSM528144 (95 of 119 entities)
+GSM528145 (96 of 119 entities)
+GSM528146 (97 of 119 entities)
+GSM528147 (98 of 119 entities)
+GSM528148 (99 of 119 entities)
+GSM528149 (100 of 119 entities)
+GSM528150 (101 of 119 entities)
+GSM528151 (102 of 119 entities)
+GSM528152 (103 of 119 entities)
+GSM528153 (104 of 119 entities)
+GSM528154 (105 of 119 entities)
+GSM528155 (106 of 119 entities)
+GSM528156 (107 of 119 entities)
+GSM528157 (108 of 119 entities)
+GSM528158 (109 of 119 entities)
+GSM528159 (110 of 119 entities)
+GSM528160 (111 of 119 entities)
+GSM528161 (112 of 119 entities)
+GSM528162 (113 of 119 entities)
+GSM528163 (114 of 119 entities)
+GSM528164 (115 of 119 entities)
+GSM528165 (116 of 119 entities)
+GSM528166 (117 of 119 entities)
+GSM528167 (118 of 119 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+Error: invalid sample names; likely not time series
+Execution halted

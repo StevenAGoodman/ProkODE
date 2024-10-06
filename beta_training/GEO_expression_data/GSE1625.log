@@ -1,0 +1,120 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE1625 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE1625/GSE1625.soft.gz 
+Reading file....
+Parsing....
+Found 62 entities...
+GPL224 (1 of 63 entities)
+GPL548 (2 of 63 entities)
+GSM23123 (3 of 63 entities)
+GSM23124 (4 of 63 entities)
+GSM23125 (5 of 63 entities)
+GSM23132 (6 of 63 entities)
+GSM23133 (7 of 63 entities)
+GSM23134 (8 of 63 entities)
+GSM23135 (9 of 63 entities)
+GSM23136 (10 of 63 entities)
+GSM23137 (11 of 63 entities)
+GSM23138 (12 of 63 entities)
+GSM23139 (13 of 63 entities)
+GSM23140 (14 of 63 entities)
+GSM23141 (15 of 63 entities)
+GSM23142 (16 of 63 entities)
+GSM23143 (17 of 63 entities)
+GSM23144 (18 of 63 entities)
+GSM23145 (19 of 63 entities)
+GSM23146 (20 of 63 entities)
+GSM23147 (21 of 63 entities)
+GSM23148 (22 of 63 entities)
+GSM23149 (23 of 63 entities)
+GSM23153 (24 of 63 entities)
+GSM23154 (25 of 63 entities)
+GSM23155 (26 of 63 entities)
+GSM23156 (27 of 63 entities)
+GSM23157 (28 of 63 entities)
+GSM23158 (29 of 63 entities)
+GSM23336 (30 of 63 entities)
+GSM23337 (31 of 63 entities)
+GSM23338 (32 of 63 entities)
+GSM23345 (33 of 63 entities)
+GSM23346 (34 of 63 entities)
+GSM23347 (35 of 63 entities)
+GSM23348 (36 of 63 entities)
+GSM23349 (37 of 63 entities)
+GSM23350 (38 of 63 entities)
+GSM23351 (39 of 63 entities)
+GSM23352 (40 of 63 entities)
+GSM23353 (41 of 63 entities)
+GSM24028 (42 of 63 entities)
+GSM24029 (43 of 63 entities)
+GSM24031 (44 of 63 entities)
+GSM24032 (45 of 63 entities)
+GSM24033 (46 of 63 entities)
+GSM24034 (47 of 63 entities)
+GSM24035 (48 of 63 entities)
+GSM24036 (49 of 63 entities)
+GSM24037 (50 of 63 entities)
+GSM24252 (51 of 63 entities)
+GSM24253 (52 of 63 entities)
+GSM24254 (53 of 63 entities)
+GSM24258 (54 of 63 entities)
+GSM24259 (55 of 63 entities)
+GSM24260 (56 of 63 entities)
+GSM24261 (57 of 63 entities)
+GSM24262 (58 of 63 entities)
+GSM24263 (59 of 63 entities)
+GSM24264 (60 of 63 entities)
+GSM24265 (61 of 63 entities)
+GSM24266 (62 of 63 entities)
+There were 29 warnings (use warnings() to see them)
+There were 33 warnings (use warnings() to see them)
+Warning messages:
+1: In grep(" ", column) :
+  unable to translate 'STY4124; STY4658; HCM1.05c; HCM1.136; HCM1.138; HCM1.205c; HCM1.239c<85>' to a wide string
+2: In grep(" ", column) : input string 445 is invalid
+3: In grep(" ", column) :
+  unable to translate 'STY0256; STY0437; STY1580; STY1895; STY3154<85>' to a wide string
+4: In grep(" ", column) : input string 2276 is invalid
+5: In grep(" ", column) :
+  unable to translate 'STY0657, STY1108, STY1280, aSTY0256, <85>' to a wide string
+6: In grep(" ", column) : input string 3920 is invalid
+7: In grep(" ", column) :
+  unable to translate 'STY1108, STY1114, STY1379, aSTY0256, aSTY1844, <85>' to a wide string
+8: In grep(" ", column) : input string 4997 is invalid
+9: In grep(" ", column) :
+  unable to translate 'STY4125; STY4657; HCM1.04c; HCM1.136a; HCM1.204c; HCM1.238c<85>' to a wide string
+10: In grep(" ", column) : input string 5150 is invalid
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

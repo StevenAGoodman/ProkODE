@@ -1,0 +1,154 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE260475 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE260475/GSE260475.soft.gz 
+Reading file....
+Parsing....
+Found 114 entities...
+GPL34255 (1 of 115 entities)
+GSM8117872 (2 of 115 entities)
+GSM8117873 (3 of 115 entities)
+GSM8117874 (4 of 115 entities)
+GSM8117875 (5 of 115 entities)
+GSM8117876 (6 of 115 entities)
+GSM8117877 (7 of 115 entities)
+GSM8117878 (8 of 115 entities)
+GSM8117879 (9 of 115 entities)
+GSM8117880 (10 of 115 entities)
+GSM8117881 (11 of 115 entities)
+GSM8117882 (12 of 115 entities)
+GSM8117883 (13 of 115 entities)
+GSM8117884 (14 of 115 entities)
+GSM8117885 (15 of 115 entities)
+GSM8117886 (16 of 115 entities)
+GSM8117887 (17 of 115 entities)
+GSM8117888 (18 of 115 entities)
+GSM8117889 (19 of 115 entities)
+GSM8117890 (20 of 115 entities)
+GSM8117891 (21 of 115 entities)
+GSM8117892 (22 of 115 entities)
+GSM8117893 (23 of 115 entities)
+GSM8117894 (24 of 115 entities)
+GSM8117895 (25 of 115 entities)
+GSM8117896 (26 of 115 entities)
+GSM8117897 (27 of 115 entities)
+GSM8117898 (28 of 115 entities)
+GSM8117899 (29 of 115 entities)
+GSM8117900 (30 of 115 entities)
+GSM8117901 (31 of 115 entities)
+GSM8117902 (32 of 115 entities)
+GSM8117903 (33 of 115 entities)
+GSM8117904 (34 of 115 entities)
+GSM8117905 (35 of 115 entities)
+GSM8117906 (36 of 115 entities)
+GSM8117907 (37 of 115 entities)
+GSM8117908 (38 of 115 entities)
+GSM8117909 (39 of 115 entities)
+GSM8117910 (40 of 115 entities)
+GSM8117911 (41 of 115 entities)
+GSM8117912 (42 of 115 entities)
+GSM8117913 (43 of 115 entities)
+GSM8117914 (44 of 115 entities)
+GSM8117915 (45 of 115 entities)
+GSM8117916 (46 of 115 entities)
+GSM8117917 (47 of 115 entities)
+GSM8117918 (48 of 115 entities)
+GSM8117919 (49 of 115 entities)
+GSM8117920 (50 of 115 entities)
+GSM8117921 (51 of 115 entities)
+GSM8117922 (52 of 115 entities)
+GSM8117923 (53 of 115 entities)
+GSM8117924 (54 of 115 entities)
+GSM8117925 (55 of 115 entities)
+GSM8117926 (56 of 115 entities)
+GSM8117927 (57 of 115 entities)
+GSM8117928 (58 of 115 entities)
+GSM8117929 (59 of 115 entities)
+GSM8117930 (60 of 115 entities)
+GSM8117931 (61 of 115 entities)
+GSM8117932 (62 of 115 entities)
+GSM8117933 (63 of 115 entities)
+GSM8117934 (64 of 115 entities)
+GSM8117935 (65 of 115 entities)
+GSM8117936 (66 of 115 entities)
+GSM8117937 (67 of 115 entities)
+GSM8117938 (68 of 115 entities)
+GSM8117939 (69 of 115 entities)
+GSM8117940 (70 of 115 entities)
+GSM8117941 (71 of 115 entities)
+GSM8117942 (72 of 115 entities)
+GSM8117943 (73 of 115 entities)
+GSM8117944 (74 of 115 entities)
+GSM8117945 (75 of 115 entities)
+GSM8117946 (76 of 115 entities)
+GSM8117947 (77 of 115 entities)
+GSM8117948 (78 of 115 entities)
+GSM8117949 (79 of 115 entities)
+GSM8117950 (80 of 115 entities)
+GSM8117951 (81 of 115 entities)
+GSM8117952 (82 of 115 entities)
+GSM8117953 (83 of 115 entities)
+GSM8117954 (84 of 115 entities)
+GSM8117955 (85 of 115 entities)
+GSM8117956 (86 of 115 entities)
+GSM8117957 (87 of 115 entities)
+GSM8117958 (88 of 115 entities)
+GSM8117959 (89 of 115 entities)
+GSM8117960 (90 of 115 entities)
+GSM8117961 (91 of 115 entities)
+GSM8117962 (92 of 115 entities)
+GSM8117963 (93 of 115 entities)
+GSM8117964 (94 of 115 entities)
+GSM8117965 (95 of 115 entities)
+GSM8117966 (96 of 115 entities)
+GSM8117967 (97 of 115 entities)
+GSM8117968 (98 of 115 entities)
+GSM8117969 (99 of 115 entities)
+GSM8117970 (100 of 115 entities)
+GSM8117971 (101 of 115 entities)
+GSM8117972 (102 of 115 entities)
+GSM8117973 (103 of 115 entities)
+GSM8117974 (104 of 115 entities)
+GSM8117975 (105 of 115 entities)
+GSM8117976 (106 of 115 entities)
+GSM8117977 (107 of 115 entities)
+GSM8117978 (108 of 115 entities)
+GSM8117979 (109 of 115 entities)
+GSM8117980 (110 of 115 entities)
+GSM8117981 (111 of 115 entities)
+GSM8117982 (112 of 115 entities)
+GSM8117983 (113 of 115 entities)
+GSM8117984 (114 of 115 entities)
+Error: invalid sample names; likely not time series
+Execution halted

@@ -1,0 +1,267 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE127680 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE127680/GSE127680.soft.gz 
+Reading file....
+Parsing....
+Found 77 entities...
+GPL16085 (1 of 78 entities)
+GPL18133 (2 of 78 entities)
+GPL26241 (3 of 78 entities)
+GSM3636360 (4 of 78 entities)
+GSM3636361 (5 of 78 entities)
+GSM3636362 (6 of 78 entities)
+GSM3636363 (7 of 78 entities)
+GSM3636364 (8 of 78 entities)
+GSM3636365 (9 of 78 entities)
+GSM3636366 (10 of 78 entities)
+GSM3636367 (11 of 78 entities)
+GSM3636368 (12 of 78 entities)
+GSM3636369 (13 of 78 entities)
+GSM3636370 (14 of 78 entities)
+GSM3636371 (15 of 78 entities)
+GSM3636372 (16 of 78 entities)
+GSM3636373 (17 of 78 entities)
+GSM3636374 (18 of 78 entities)
+GSM3636375 (19 of 78 entities)
+GSM3636376 (20 of 78 entities)
+GSM3636377 (21 of 78 entities)
+GSM3636378 (22 of 78 entities)
+GSM3636379 (23 of 78 entities)
+GSM3636380 (24 of 78 entities)
+GSM3636381 (25 of 78 entities)
+GSM3636382 (26 of 78 entities)
+GSM3636383 (27 of 78 entities)
+GSM3754043 (28 of 78 entities)
+GSM3754044 (29 of 78 entities)
+GSM3754045 (30 of 78 entities)
+GSM3754046 (31 of 78 entities)
+GSM3754047 (32 of 78 entities)
+GSM3754048 (33 of 78 entities)
+GSM3754049 (34 of 78 entities)
+GSM3754050 (35 of 78 entities)
+GSM3754051 (36 of 78 entities)
+GSM3754052 (37 of 78 entities)
+GSM3754053 (38 of 78 entities)
+GSM3754054 (39 of 78 entities)
+GSM3754055 (40 of 78 entities)
+GSM3754056 (41 of 78 entities)
+GSM3754057 (42 of 78 entities)
+GSM3754058 (43 of 78 entities)
+GSM3754059 (44 of 78 entities)
+GSM3754060 (45 of 78 entities)
+GSM3754061 (46 of 78 entities)
+GSM3754062 (47 of 78 entities)
+GSM3754063 (48 of 78 entities)
+GSM3754064 (49 of 78 entities)
+GSM3754065 (50 of 78 entities)
+GSM3754066 (51 of 78 entities)
+GSM3754067 (52 of 78 entities)
+GSM3754068 (53 of 78 entities)
+GSM3754069 (54 of 78 entities)
+GSM3754070 (55 of 78 entities)
+GSM3754071 (56 of 78 entities)
+GSM3754072 (57 of 78 entities)
+GSM3754073 (58 of 78 entities)
+GSM3754074 (59 of 78 entities)
+GSM3754075 (60 of 78 entities)
+GSM3754076 (61 of 78 entities)
+GSM3754077 (62 of 78 entities)
+GSM3754078 (63 of 78 entities)
+GSM3754079 (64 of 78 entities)
+GSM3754080 (65 of 78 entities)
+GSM3754081 (66 of 78 entities)
+GSM3754082 (67 of 78 entities)
+GSM3754083 (68 of 78 entities)
+GSM3754084 (69 of 78 entities)
+GSM3754085 (70 of 78 entities)
+GSM3754086 (71 of 78 entities)
+GSM3754087 (72 of 78 entities)
+GSM3754088 (73 of 78 entities)
+GSM3754089 (74 of 78 entities)
+GSM3754090 (75 of 78 entities)
+GSM3754091 (76 of 78 entities)
+GSM3754092 (77 of 78 entities)
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+No supplemental files found.
+Check URL manually if in doubt
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE127nnn/GSE127680/suppl/
+Error: invalid sample names; likely not time series
+Execution halted

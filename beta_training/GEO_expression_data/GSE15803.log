@@ -1,0 +1,78 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE15803 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE15803/GSE15803.soft.gz 
+Reading file....
+Parsing....
+Found 35 entities...
+GPL5459 (1 of 36 entities)
+GSM392550 (2 of 36 entities)
+GSM392551 (3 of 36 entities)
+GSM392552 (4 of 36 entities)
+GSM392553 (5 of 36 entities)
+GSM392554 (6 of 36 entities)
+GSM392555 (7 of 36 entities)
+GSM392556 (8 of 36 entities)
+GSM392557 (9 of 36 entities)
+GSM392558 (10 of 36 entities)
+GSM392721 (11 of 36 entities)
+GSM392722 (12 of 36 entities)
+GSM392723 (13 of 36 entities)
+GSM392724 (14 of 36 entities)
+GSM392725 (15 of 36 entities)
+GSM392726 (16 of 36 entities)
+GSM392727 (17 of 36 entities)
+GSM392728 (18 of 36 entities)
+GSM392729 (19 of 36 entities)
+GSM392730 (20 of 36 entities)
+GSM392731 (21 of 36 entities)
+GSM392732 (22 of 36 entities)
+GSM392733 (23 of 36 entities)
+GSM392734 (24 of 36 entities)
+GSM392735 (25 of 36 entities)
+GSM392736 (26 of 36 entities)
+GSM392737 (27 of 36 entities)
+GSM392738 (28 of 36 entities)
+GSM392739 (29 of 36 entities)
+GSM392740 (30 of 36 entities)
+GSM392741 (31 of 36 entities)
+GSM392742 (32 of 36 entities)
+GSM392743 (33 of 36 entities)
+GSM392744 (34 of 36 entities)
+GSM392745 (35 of 36 entities)
+Warning message:
+series may be getting RATIOS not actual raw measures 
+There were 11 warnings (use warnings() to see them)
+Error: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Execution halted

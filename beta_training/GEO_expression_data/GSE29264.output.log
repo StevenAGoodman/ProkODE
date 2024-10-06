@@ -1,0 +1,36 @@
+[1] NA
+[1] "AMC 408"
+[1] NA
+[1] "AMC 408"
+[1] NA
+[1] "AMC 408"
+[1] NA
+[1] "AMC 408"
+[1] NA
+[1] "AMC 408"
+[1] NA
+[1] "AMC 408"
+[1] NA
+[1] "AMC 408"
+[1] NA
+[1] "AMC 408"
+[1] NA
+[1] "AMC 408"
+[1] NA
+[1] "continuous light T = 60 hours"
+[1] "60"
+[1] "216000"
+[1] "continuous light T = 68 hours"
+[1] "68"
+[1] "244800"
+[1] "continuous light T = 72 hours"
+[1] "72"
+[1] "259200"
+[1] "continuous light T = 80 hours"
+[1] "80"
+[1] "288000"
+[1] "0"     "28800" "43200" "72000"
+[1] "ID"           "Chromosome"   "RANGE_GB"     "RANGE_STRAND" "RANGE_START" 
+[6] "RANGE_END"   
+[1] "gene symbol column not found. searching for ORF column..."
+[1] "orf column not found: checking for '//' exeption..."

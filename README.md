@@ -71,17 +71,48 @@ Outputs:
 
 ## Testing Log
 
-### Testing model accuracy through how well beta values match
+### Variables & testing notes for each
+1. **binding probability functions**
+   - P_i = N_i / (Nns * (N_i + Kd_i))
+   - P_rnap = N_rnap / (Nns * (N_rnap + Kd_rnap-i)) for RNAP binding, \
+   P_i = N_i / (N_i + Kd_i) for all else
+   - SOME FUNCTION INCLUDING COLLISION PROBABILITY P_rnap = N_rnap / (Nns * (N_rnap + Kd_rnap-i)) for RNAP binding, \
+   P_i = N_i / (N_i + Kd_i) for all else
+2. **transcription function**
+   - R_txn = B_all * P<sub>RNAP-gene-binding</sub> * R<sub>max_txn</sub>\
+   s.t. R<sub>max_txn</sub> {mRNA / sec} = length_of_RNAP {nt} / transcription_rate {nt / sec}
+2. **Beta function**
+   - B_all = sum(P_i * B_i)
+   - B_all = product(P_i * B_i)
+      - if P_i = 0 for any i, it messes up the entire thing
+   - B_all = sum(P_i * log10(B_i))
+3. **translation function**
+   - *Model A*: Translation_rate = P<sub>ribo-gene-binding</sub> * max_rate,\
+   s.t. max_rate {prot / mRNA / sec} = length_of_ribo {aa} / translation_rate {aa / sec}
+   - *Model B*: Translation_rate = P<sub>ribo-gene-binding</sub> * max_rate,\
+   s.t. max_rate {prot / mRNA / sec} = length_of_ribo {aa} / translation_rate {aa / sec}
+2. **mRNA decay model**
+4. **protein decay model**
+5. **RNAP change model**
+6. **Ribosome change model**
 
-1. `1.1`
+### Testing & trial log
 
-   - model used:
-   - tf match threshold:
-   - preprocessing features:
-   - average standard deviation:
+1. `1.1` *Configuration A*
+   - variables:
+      - model used:
+   - trials:
+      - trial 1
+         - accuracy:
+         - 
+   - average accuracy:
 
 2. `1.2`
 
+### Overall validation log
+
+
+## neat articles
 https://iubmb.onlinelibrary.wiley.com/doi/epdf/10.1080/15216540400022441
 https://en.wikipedia.org/wiki/Reaction_progress_kinetic_analysis
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5452729/
@@ -90,5 +121,3 @@ https://chem.libretexts.org/Bookshelves/Introductory_Chemistry/Introductory_Chem
 https://chem.libretexts.org/Bookshelves/Biological_Chemistry/Supplemental_Modules_(Biological_Chemistry)/Enzymes/Enzymatic_Kinetics/Michaelis-Menten_Kinetics
 
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6013389/#:~:text=Regulated%20proteolysis%20is%20a%20vital%20process%20that%20affects,specificity%20and%20selectivity%20in%20degrading%20substrates%20is%20key.
-
-@id:ms-python.python

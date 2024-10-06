@@ -1,0 +1,74 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE128366 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE128366/GSE128366.soft.gz 
+Reading file....
+Parsing....
+Found 19 entities...
+GPL26308 (1 of 20 entities)
+GSM3672535 (2 of 20 entities)
+GSM3672536 (3 of 20 entities)
+GSM3672537 (4 of 20 entities)
+GSM3672538 (5 of 20 entities)
+GSM3672539 (6 of 20 entities)
+GSM3672540 (7 of 20 entities)
+GSM3672541 (8 of 20 entities)
+GSM3672542 (9 of 20 entities)
+GSM3672543 (10 of 20 entities)
+GSM3672544 (11 of 20 entities)
+GSM3672545 (12 of 20 entities)
+GSM3672546 (13 of 20 entities)
+GSM3672547 (14 of 20 entities)
+GSM3672548 (15 of 20 entities)
+GSM3672549 (16 of 20 entities)
+GSM3672550 (17 of 20 entities)
+GSM3672551 (18 of 20 entities)
+GSM3672552 (19 of 20 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE128nnn/GSE128366/suppl//GSE128366_20180725_count_strand_2.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 112310 bytes (109 KB)
+==================================================
+downloaded 109 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE128nnn/GSE128366/suppl//GSE128366_20180725_count_strand_2.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 112310 bytes (109 KB)
+==================================================
+downloaded 109 KB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE128nnn/GSE128366/suppl//GSE128366_20180725_count_strand_2.txt.gz?tool=geoquery'
+Content type 'application/x-gzip' length 112310 bytes (109 KB)
+==================================================
+downloaded 109 KB
+
+Error: invalid sample names; likely not time series
+Execution halted

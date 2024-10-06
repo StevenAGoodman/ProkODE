@@ -1,0 +1,101 @@
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Loading required package: Biobase
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'fs'
+
+The following object is masked from 'package:BiocGenerics':
+
+    path
+
+Using locally cached version of GSE196016 found here:
+C:\Users\Rafael\repos\personal\geo_data_analysis\data/GSE196016/GSE196016.soft.gz 
+Reading file....
+Parsing....
+Found 31 entities...
+GPL21433 (1 of 32 entities)
+GPL24676 (2 of 32 entities)
+GSM5857933 (3 of 32 entities)
+GSM5857934 (4 of 32 entities)
+GSM5857935 (5 of 32 entities)
+GSM5857936 (6 of 32 entities)
+GSM5857937 (7 of 32 entities)
+GSM5857938 (8 of 32 entities)
+GSM5857939 (9 of 32 entities)
+GSM5857940 (10 of 32 entities)
+GSM5857941 (11 of 32 entities)
+GSM5857942 (12 of 32 entities)
+GSM5857943 (13 of 32 entities)
+GSM5857944 (14 of 32 entities)
+GSM5857945 (15 of 32 entities)
+GSM5857946 (16 of 32 entities)
+GSM5857947 (17 of 32 entities)
+GSM5857948 (18 of 32 entities)
+GSM5857949 (19 of 32 entities)
+GSM5857950 (20 of 32 entities)
+GSM5857951 (21 of 32 entities)
+GSM5857952 (22 of 32 entities)
+GSM5857953 (23 of 32 entities)
+GSM5857954 (24 of 32 entities)
+GSM5857955 (25 of 32 entities)
+GSM5857956 (26 of 32 entities)
+GSM5857957 (27 of 32 entities)
+GSM5857958 (28 of 32 entities)
+GSM5857959 (29 of 32 entities)
+GSM5857960 (30 of 32 entities)
+GSM5857961 (31 of 32 entities)
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE196nnn/GSE196016/suppl//GSE196016_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 7690240 bytes (7.3 MB)
+==================================================
+downloaded 7.3 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE196nnn/GSE196016/suppl//GSE196016_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 7690240 bytes (7.3 MB)
+==================================================
+downloaded 7.3 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE196nnn/GSE196016/suppl//GSE196016_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 7690240 bytes (7.3 MB)
+==================================================
+downloaded 7.3 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE196nnn/GSE196016/suppl//GSE196016_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 7690240 bytes (7.3 MB)
+==================================================
+downloaded 7.3 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE196nnn/GSE196016/suppl//GSE196016_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 7690240 bytes (7.3 MB)
+==================================================
+downloaded 7.3 MB
+
+trying URL 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE196nnn/GSE196016/suppl//GSE196016_RAW.tar?tool=geoquery'
+Content type 'application/x-tar' length 7690240 bytes (7.3 MB)
+==================================================
+downloaded 7.3 MB
+
+Error: invalid sample names; likely not time series
+Execution halted
