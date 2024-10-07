@@ -103,6 +103,8 @@ def translation_rate(gene, protein_amnts, N_ribo, gene_info_dict):
 
 # mRNA decay model
 def RNA_decay_rate(gene, prev_total_mRNA_amnt, protein_amnts, decay_dict, gene_key):
+    growth_rate = get_grow_rate(protein_amnts)
+
     half_life = 0
 
     # average half life from bionumbers
@@ -125,12 +127,14 @@ def RNA_decay_rate(gene, prev_total_mRNA_amnt, protein_amnts, decay_dict, gene_k
 
     # half_life += rate_of_mRNA_cleavage + natural_mRNA_half_life
 
-    return np.log(2) / half_life
+    return (np.log(2) / half_life) + growth_rate
 
 
 
 # Protein decay model
 def protein_decay_rate(gene, protein_amnts, decay_dict, gene_key):
+    growth_rate = get_grow_rate(protein_amnts)
+
     half_life = 0 # mins
  
     # average half life from bionumbers
@@ -145,19 +149,19 @@ def protein_decay_rate(gene, protein_amnts, decay_dict, gene_key):
     # total_half_life += 1 / decay_dict["misfold"][gene]()
 
     # return 1 / total_half_life
-    return np.log(2) / half_life
+    return (np.log(2) / half_life) + growth_rate
 
 
 
 # RNAP change model
-def RNAP_amount(protein_amnts, cell_volume):
-    return 2200 * cell_volume # μm^3
+def RNAP_amount(prev_rnap, protein_amnts):
+    return 2200 # μm^3
     
 
 
 # Ribosome change model
-def ribo_amount(protein_amnts):
-    return 15000
+def ribo_amount(prev_ribo, protein_amnts):
+    return 3000 # μm^3
 
 
 
@@ -168,16 +172,16 @@ def sigma_competition():
 
 
 # Cell growth
-def get_cell_volume(prev_cell_volume, dt):
+def get_grow_rate(protein_amnts):
     growth_rate = 0
-    return prev_cell_volume + growth_rate * dt
+    return growth_rate
 
 
 
 # link to processing.py
-def beta_from_overall_mRNA(gene, gene_mRNA_amnt, overall_mRNA_change_rate, protein_amnts, regulators_dict:dict, gene_key, tf_key:list, genome_length, cell_volume, Kd_rnap):
-    N_rnap = RNAP_amount(protein_amnts)
-    N_ribo = ribo_amount(protein_amnts)
+def beta_from_overall_mRNA(gene, gene_mRNA_amnt, overall_mRNA_change_rate, protein_amnts, regulators_dict:dict, gene_key, tf_key:list, genome_length, cell_volume, Kd_rnap, prev_rnap, prev_ribo):
+    N_rnap = RNAP_amount(prev_rnap, protein_amnts)
+    N_ribo = ribo_amount(prev_ribo, protein_amnts)
 
     mRNA_decay_rate = RNA_decay_rate(gene, gene_mRNA_amnt, protein_amnts, decay_dict, gene_key)
     mRNA_creation_rate = overall_mRNA_change_rate + mRNA_decay_rate * gene_mRNA_amnt

@@ -7,9 +7,12 @@ import re
 import sys
 import os
 
-# be sure to run run.py before running this file
+# organism speces
 data_organism = "Escherichia_coli"
 prokode_dir = " C:/Users/cryst/LOFScreening/archive/PROKODE"
+genome_length = 4500000
+
+# be sure to run run.py before running this file
 network_loc = prokode_dir + "/src/network.json"
 data_dir = prokode_dir + "/beta_training/GEO_expression_data/" + data_organism
 
@@ -47,9 +50,9 @@ def protein_amnts_from_mRNA_amnts(mRNA_amnts):
 from scipy.optimize import curve_fit
 from src.maths import *
 
-def function_for_timepoint(data_t0, data_t1, dt, gene_key, tf_key):
+def function_for_timepoint(data_t0, data_t1, protein_data_t0, dt, gene_key, tf_key):
      # MOST CRITICAL PART TO DETERMINE!!!
-     protein_data_t0 = protein_amnts_from_mRNA_amnts(data_t0)
+     protein_data_t1 = []
 
      for i in range(len(gene_key)):
           gene = gene_key[i]
@@ -60,9 +63,13 @@ def function_for_timepoint(data_t0, data_t1, dt, gene_key, tf_key):
           Kd_rnap_gene = regulators_dict["polymerase"]["Kd"]
 
           overall_mRNA_change_rate = (data_t1[i] - data_t0[i]) / dt
-          coefficient_arr, beta_all = beta_from_overall_mRNA(overall_mRNA_change_rate, gene_mRNA_t0, protein_data_t0, gene_key, tf_key)
+          coefficient_arr, beta_all = beta_from_overall_mRNA(gene, gene_mRNA_t0, overall_mRNA_change_rate, protein_data_t0, regulators_dict, gene_key, tf_key, genome_length, Kd_rnap, N_rnap)
 
-     return coefficient_arr, beta_all
+          # update protein amnts
+          overall_protein_change_rate = translation_rate(gene, protein_data_t0, N_ribo, gene_info_dict) - protein_decay_rate(gene, protein_data_t0, gene_info_dict, gene_key) * protein_data_t0[i]
+          protein_data_t1[i] = protein_data_t0[i] + overall_protein_change_rate * dt
+
+     return coefficient_arr, beta_all, protein_data_t1
 
 def fit_function(coefficient_matrix, beta_all_arr):
      # clean matrices
@@ -111,6 +118,8 @@ for data_file in os.listdir(data_dir):
      for i in range(len(groups)):
           group_data_indecies = sorted(groups[i])
 
+          protein_data_matrix = [list(data_df.iloc[:,0])]
+
           col_names = []
 
           for n in group_data_indecies[:-1]:
@@ -119,14 +128,17 @@ for data_file in os.listdir(data_dir):
                data_t1 =  list(data_df.iloc[:,n + 1])
                dt = int(data_df.columns[n + 1]) - int(data_df.columns[i])
 
-               coefficient_arr, beta_all = function_for_timepoint(data_t0, data_t1, dt, gene_key, tf_key)
+               protein_data_t0 = protein_data_matrix[i]
+
+               coefficient_arr, beta_all, protein_data_t1 = function_for_timepoint(data_t0, data_t1, protein_data_t0, dt, gene_key, tf_key)
                coefficient_matrix.append(coefficient_arr)
                beta_all_arr.append(beta_all)
 
                col_names.append(f"{data_df.columns[n]} to {data_df.columns[n + 1]}")
+               protein_data_matrix.append(protein_data_t1)
 
      # overall function fitting for all data points in an organisms
-     beta_arr, covar = fit_function()
+     beta_arr, covar = fit_function(coefficient_matrix, beta)
 
      # export to csv
      results_matrix = np.array(results_matrix)
