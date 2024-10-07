@@ -194,4 +194,4 @@ def beta_from_overall_mRNA(gene, gene_mRNA_amnt, overall_mRNA_change_rate, prote
         P_tf = tf_probabiltiy(protein_amnts[gene_key.index(regulator)], reg_details["Kd"], genome_length)
         coefficient_arr[tf_key.index(regulator)] = P_tf
 
-    return coefficient_arr, beta_all
+    return coefficient_arr, beta_all, N_rnap, N_ribo

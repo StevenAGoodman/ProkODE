@@ -63,7 +63,7 @@ def function_for_timepoint(data_t0, data_t1, protein_data_t0, dt, gene_key, tf_k
           Kd_rnap_gene = regulators_dict["polymerase"]["Kd"]
 
           overall_mRNA_change_rate = (data_t1[i] - data_t0[i]) / dt
-          coefficient_arr, beta_all = beta_from_overall_mRNA(gene, gene_mRNA_t0, overall_mRNA_change_rate, protein_data_t0, regulators_dict, gene_key, tf_key, genome_length, Kd_rnap, N_rnap)
+          coefficient_arr, beta_all, N_rnap, N_ribo = beta_from_overall_mRNA(gene, gene_mRNA_t0, overall_mRNA_change_rate, protein_data_t0, regulators_dict, gene_key, tf_key, genome_length, Kd_rnap, N_rnap)
 
           # update protein amnts
           overall_protein_change_rate = translation_rate(gene, protein_data_t0, N_ribo, gene_info_dict) - protein_decay_rate(gene, protein_data_t0, gene_info_dict, gene_key) * protein_data_t0[i]
@@ -119,6 +119,8 @@ for data_file in os.listdir(data_dir):
           group_data_indecies = sorted(groups[i])
 
           protein_data_matrix = [list(data_df.iloc[:,0])]
+          N_rnap = 2200
+          N_ribo = 3000
 
           col_names = []
 
