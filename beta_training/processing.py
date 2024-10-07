@@ -9,7 +9,7 @@ import os
 
 # be sure to run run.py before running this file
 data_organism = "Escherichia_coli"
-prokode_dir = "C:/Users/cryst/LOFScreening/archive/PROKODE/ProkODE"
+prokode_dir = "C:/KODE/ProkODE"
 network_loc = prokode_dir + "/src/network.json"
 data_dir = prokode_dir + "/beta_training/GEO_expression_data/" + data_organism
 

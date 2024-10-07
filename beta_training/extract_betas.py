@@ -15,7 +15,7 @@ import scipy.optimize as sp
 
 reset = True
 prebuilt = True
-prokode_dir = 'C:/Users/cryst/LOFScreening/archive/PROKODE'
+prokode_dir = 'C:/ing/archive/PROKODE'
 data_file = 'GSE90743_E14R025_raw_counts.txt'
 genome_loc = prokode_dir + '/src/inputs/genome.fasta'
 annotation_loc = prokode_dir + '/src/inputs/annotation.tsv'
