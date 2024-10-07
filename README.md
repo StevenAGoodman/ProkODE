@@ -92,9 +92,18 @@ Outputs:
    - *Model B*: Translation_rate = P<sub>ribo-gene-binding</sub> * max_rate,\
    s.t. max_rate {prot / mRNA / sec} = length_of_ribo {aa} / translation_rate {aa / sec}
 2. **mRNA decay model**
+   - *Control*: mRNA_half_life = average prokaryotic mRNA half life from Bionumbers (https://bionumbers.hms.harvard.edu/search.aspx) found in `/data/mRNA_decay_Bionumbers.csv`
 4. **protein decay model**
+   - *Control*: prot_half_life = average prokaryotic protein half life from Bionumbers (https://bionumbers.hms.harvard.edu/search.aspx) found in `/data/protein_decay_Bionumbers.csv`
 5. **RNAP change model**
+   - *Control*: N_rnap = 2200 rnaps / μm<sup>3</sup>, always proportional to cell size (Bionumbers 108605)
 6. **Ribosome change model**
+   - *Control*: N_ribo = 15000 ribos, always constant (Bionumbers)
+7. **Sigma factor RNAP competition**
+   - *Control*: No sigma factor modeling,  
+8. **Cell growth**
+   - *Control*: growth_rate = 0, no growth
+   - *Model A*: growth_rate = 1/3600, (Bionumbers)
 
 ### Testing & trial log
 

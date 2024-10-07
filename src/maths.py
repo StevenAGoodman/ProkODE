@@ -103,27 +103,39 @@ def translation_rate(gene, protein_amnts, N_ribo, gene_info_dict):
 
 # mRNA decay model
 def RNA_decay_rate(gene, prev_total_mRNA_amnt, protein_amnts, decay_dict, gene_key):
-    # calculation of natural decay component
-    natural_mRNA_decay_rate = 0
+    half_life = 0
 
-    # get degrad_prots of gene
-    decay_info = decay_dict#[gene] # should be a dict of
+    # average half life from bionumbers
+    half_life += (4.5148 + np.random.random()) * 60 # seconds
 
-    rate_of_mRNA_cleavage = 0
-    for degrad_prot, K in decay_info.items():
-        N_dp = protein_amnts[gene_key.index(degrad_prot)]
-        # K_1 is the reaction rate from [Enzyme] + [mRNA] -> [Enzyme-mRNA] (ie, K_1[Enzyme][mRNA] = [Enzyme-mRNA] create / time ) ... k_1 is in 1 / (mols * time)
-        rate_of_mRNA_cleavage += K * prev_total_mRNA_amnt * N_dp / (1 + K * prev_total_mRNA_amnt)
-        # what is the relationship of multiple degrading proteins? it should be additive, right?
-        # how can you identify a protien as degrading?
-        # what is the relationship of degrading prots component and decay (ie half life) component
+    # # calculation of natural decay component
+    # natural_mRNA_half_life = 0
 
-    return rate_of_mRNA_cleavage + natural_mRNA_decay_rate
+    # # get degrad_prots of gene
+    # decay_info = decay_dict#[gene] # should be a dict of
+
+    # rate_of_mRNA_cleavage = 0
+    # for degrad_prot, K in decay_info.items():
+    #     N_dp = protein_amnts[gene_key.index(degrad_prot)]
+    #     # K_1 is the reaction rate from [Enzyme] + [mRNA] -> [Enzyme-mRNA] (ie, K_1[Enzyme][mRNA] = [Enzyme-mRNA] create / time ) ... k_1 is in 1 / (mols * time)
+    #     rate_of_mRNA_cleavage += K * prev_total_mRNA_amnt * N_dp / (1 + K * prev_total_mRNA_amnt)
+    #     # what is the relationship of multiple degrading proteins? it should be additive, right?
+    #     # how can you identify a protien as degrading?
+    # #     # what is the relationship of degrading prots component and decay (ie half life) component
+
+    # half_life += rate_of_mRNA_cleavage + natural_mRNA_half_life
+
+    return np.log(2) / half_life
 
 
 
 # Protein decay model
 def protein_decay_rate(gene, protein_amnts, decay_dict, gene_key):
+    half_life = 0 # mins
+ 
+    # average half life from bionumbers
+    half_life += (664.75 + np.random.random() * 100) * 60 # seconds
+
     # total_half_life = 0
 
     # # N end rule
@@ -133,24 +145,37 @@ def protein_decay_rate(gene, protein_amnts, decay_dict, gene_key):
     # total_half_life += 1 / decay_dict["misfold"][gene]()
 
     # return 1 / total_half_life
-    return 0
+    return np.log(2) / half_life
 
 
 
 # RNAP change model
-def RNAP_amount(protein_amnts):
-    return None
+def RNAP_amount(protein_amnts, cell_volume):
+    return 2200 * cell_volume # μm^3
     
 
 
 # Ribosome change model
 def ribo_amount(protein_amnts):
+    return 15000
+
+
+
+# Sigma factor competition
+def sigma_competition():
     return None
 
 
 
+# Cell growth
+def get_cell_volume(prev_cell_volume, dt):
+    growth_rate = 0
+    return prev_cell_volume + growth_rate * dt
+
+
+
 # link to processing.py
-def beta_from_overall_mRNA(gene, gene_mRNA_amnt, overall_mRNA_change_rate, protein_amnts, gene_key, genome_length, Kd_rnap):
+def beta_from_overall_mRNA(gene, gene_mRNA_amnt, overall_mRNA_change_rate, protein_amnts, regulators_dict:dict, gene_key, tf_key:list, genome_length, cell_volume, Kd_rnap):
     N_rnap = RNAP_amount(protein_amnts)
     N_ribo = ribo_amount(protein_amnts)
 
@@ -159,5 +184,10 @@ def beta_from_overall_mRNA(gene, gene_mRNA_amnt, overall_mRNA_change_rate, prote
 
     P_rnap = rnap_probabiltiy(N_rnap, Kd_rnap, genome_length)
     beta_all = beta_from_context(mRNA_creation_rate, P_rnap)
+
+    coefficient_arr = [0] * len(tf_key)
+    for regulator, reg_details in regulators_dict.items():
+        P_tf = tf_probabiltiy(protein_amnts[gene_key.index(regulator)], reg_details["Kd"], genome_length)
+        coefficient_arr[tf_key.index(regulator)] = P_tf
 
     return coefficient_arr, beta_all

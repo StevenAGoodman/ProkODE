@@ -47,25 +47,32 @@ def protein_amnts_from_mRNA_amnts(mRNA_amnts):
 from scipy.optimize import curve_fit
 from src.maths import *
 
-def fit_function_for_timepoint(data_t0, data_t1, dt, gene_key):
+def function_for_timepoint(data_t0, data_t1, dt, gene_key, tf_key):
      # MOST CRITICAL PART TO DETERMINE!!!
      protein_data_t0 = protein_amnts_from_mRNA_amnts(data_t0)
-
-     # beta_all (1, n_samples) coefficient_matrix (n_samples, n_coefficients)
-     beta_all_arr, coefficient_matrix = ([], [])
 
      for i in range(len(gene_key)):
           gene = gene_key[i]
           gene_mRNA_t0 = data_t0[i]
 
           gene_info_dict = search_network_json(network_loc, gene)
-          Kd_rnap_gene = gene_info_dict["regulators"]["polymerase"]
+          regulators_dict = gene_info_dict["regulators"]
+          Kd_rnap_gene = regulators_dict["polymerase"]["Kd"]
 
           overall_mRNA_change_rate = (data_t1[i] - data_t0[i]) / dt
-          coefficient_arr, beta_all = beta_from_overall_mRNA(overall_mRNA_change_rate, gene_mRNA_t0, protein_data_t0, gene_key)
+          coefficient_arr, beta_all = beta_from_overall_mRNA(overall_mRNA_change_rate, gene_mRNA_t0, protein_data_t0, gene_key, tf_key)
 
-          coefficient_matrix.append(coefficient_arr)
-          beta_all_arr.append(beta_all)
+     return coefficient_arr, beta_all
+
+def fit_function(coefficient_matrix, beta_all_arr):
+     # clean matrices
+     empty_columns = []
+     for i in zip(*coefficient_matrix):
+          column = zip(*coefficient_matrix)[i]
+          if column == [0] * len(coefficient_matrix):
+               empty_columns.append(i)
+          else:
+               continue
 
      # curve fitting parameters
      func_to_fit = beta_function
@@ -73,16 +80,23 @@ def fit_function_for_timepoint(data_t0, data_t1, dt, gene_key):
      p = [1] * n_features
      beta_arr, covar_uncertainty = curve_fit(func_to_fit, coefficient_matrix.T, beta_all_arr, p0 = p)
 
-     return beta_arr, covar_uncertainty, tf_key
+     for index in empty_columns:
+          beta_arr[index] = None
+
+     return beta_arr, covar_uncertainty
 
 
 for data_file in os.listdir(data_dir):
      # get data
      data_df = pd.read_csv(data_file, index_col=0)
      gene_key = list(data_df.index) # may have to subtracted header
+     tf_key = [ tf for val in json.load(open(network_loc, 'r')).values() for tf in val["regulators"].keys() ]
+     tf_key = list(set(tf_key)) # filter repeats
 
-     # prep results
-     results_matrix = np.
+     # prep stuffs
+     # beta_all (1, n_samples) coefficient_matrix (n_samples, n_coefficients)
+     beta_all_arr, coefficient_matrix = ([], [])
+     results_matrix = []
 
      # lil preprocessing
      groups = [ [] for i in range(10) ]
@@ -105,15 +119,20 @@ for data_file in os.listdir(data_dir):
                data_t1 =  list(data_df.iloc[:,n + 1])
                dt = int(data_df.columns[n + 1]) - int(data_df.columns[i])
 
-               beta_arr, covar, tf_key = fit_function_for_timepoint(data_t0, data_t1, dt, gene_key)
+               coefficient_arr, beta_all = function_for_timepoint(data_t0, data_t1, dt, gene_key, tf_key)
+               coefficient_matrix.append(coefficient_arr)
+               beta_all_arr.append(beta_all)
 
                col_names.append(f"{data_df.columns[n]} to {data_df.columns[n + 1]}")
-               np.append(results_matrix, beta_arr)
 
-          # export to csv
-          beta_names = tf_key
-          results_df = pd.DataFrame(results_matrix.T, index = beta_names, columns = col_names)
-          results_df.to_csv(f"{prokode_dir}/beta_training/results/{data_file[data_file.find("beta_training\\")+14:data_file.find(".py")]}_group{i}.csv")
+     # overall function fitting for all data points in an organisms
+     beta_arr, covar = fit_function()
+
+     # export to csv
+     results_matrix = np.array(results_matrix)
+     beta_names = tf_key
+     results_df = pd.DataFrame(results_matrix.T, index = beta_names, columns = col_names)
+     results_df.to_csv(f"{prokode_dir}/beta_training/results/{data_file[data_file.find("beta_training\\")+14:data_file.find(".py")]}_group{i}.csv")
 
 
 
