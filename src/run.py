@@ -30,7 +30,7 @@ annotation_loc = prokode_dir + '/src/inputs/annotation.tsv'
 operons_loc = prokode_dir + '/src/inputs/operons.tsv'
 pfm_database_loc = prokode_dir + '/src/preprocessing/pfmdb.txt'
 # CiiiDER_jar_loc = './CiiiDER_TFMs/CiiiDER.jar'
-CiiiDER_thresh = 0.6
+CiiiDER_thresh = 0
 
 
 def create_network_json_main(prokode_dir, genome_loc, annotation_loc, operons_loc, pfm_database_loc, CiiiDER_thresh, add_betas = False, reset=True):

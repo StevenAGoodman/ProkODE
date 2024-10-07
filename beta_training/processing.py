@@ -147,6 +147,3 @@ for data_file in os.listdir(data_dir):
      beta_names = tf_key
      results_df = pd.DataFrame(results_matrix.T, index = beta_names, columns = col_names)
      results_df.to_csv(f"{prokode_dir}/beta_training/results/{data_file[data_file.find("beta_training\\")+14:data_file.find(".py")]}_group{i}.csv")
-
-
-

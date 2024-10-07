@@ -1,0 +1,31 @@
+# filter empty stuff
+# done in powershell
+library(GEOquery)
+library(stringr)
+library(fixr)
+library(TAF)
+
+rmdir("C:/Users/cryst/LOFScreening/archive/PROKODE/ProkODE/beta_training/GEO_expression_Data", recursive = T)
+
+# check each for negative numbers or wierd number ranges
+file_names <- list.files(path = "C:/Users/cryst/LOFScreening/archive/PROKODE/ProkODE/beta_training/GEO_expression_Data", pattern = "*.csv", full.names = TRUE, recursive = T)
+
+# Loop through each file
+for (file in file_names) {
+    data_df = read.csv(file, header = T)
+    data_df = data_df[2:length(data_df)]
+    val_range = range(data_df, na.rm = T)
+    print(val_range)
+    if (length(check_for_negative_values(data_df)) != 0){
+        file.rename(from = file, to = paste0(substr(file, 1, 85), "/stubborn", substr(file,86,nchar(file))))
+    }
+    if (val_range[2] < 25){
+        file.rename(from = file, to = paste0(substr(file, 1, 85), "/stubborn", substr(file,86,nchar(file))))     
+    }
+}
+
+    # if there are, verify that its a ration theyre measuring and attempt to find raw intensities
+
+# organize columns into groups of same experimental condition
+    # rename ones without "| n" to have "| 0"
+# organize into organism 

@@ -45,13 +45,13 @@ def create_network_json(prokode_dir, tfbs_loc, annotation_df, operons_df):
                 mRNA_len = int(annotation_df.loc[annotation_df['geneid']==gene, 'end'].tolist()[0]) - int(annotation_df.loc[annotation_df['geneid']==gene, 'start'].tolist()[0])
 
                 # gene decays
-                mRNA_decay_arr = 
-                protein_decay_arr = 
+                mRNA_decay_arr = None
+                protein_decay_arr = None
 
                 # within each gene's brackets:
                 syn = annotation_df.loc[annotation_df['geneid']==gene,'synonyms'].tolist()[0]
                 arr = {"synonyms":ast.literal_eval(syn),"transcript length":transcript_len,"mRNA length":mRNA_len, "mRNA decay": mRNA_decay_arr, "protein decay": protein_decay_arr}
-                reg_arr = {}
+                reg_arr = {"polymerase":8.1}
                 arr["regulators"] = reg_arr
 
                 output[gene] = arr
