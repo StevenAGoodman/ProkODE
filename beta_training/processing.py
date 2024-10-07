@@ -9,12 +9,15 @@ import os
 
 # be sure to run run.py before running this file
 data_organism = "Escherichia_coli"
-prokode_dir = " C:/Users/cryst/LOFScreening/archive/PROKODE"
+prokode_dir = "C:/Users/cryst/LOFScreening/archive/PROKODE/ProkODE"
 network_loc = prokode_dir + "/src/network.json"
 data_dir = prokode_dir + "/beta_training/GEO_expression_data/" + data_organism
 
-sys.path.append(prokode_dir)
-from src.run import create_network_json_main
+# organism specs
+genome_len = 4500000
+init_cell_volume = 1.8 # μm^3 (Bionumbers)
+
+sys.path.append('..')
 
 # global jazz
 num_data = 10
@@ -60,7 +63,7 @@ def function_for_timepoint(data_t0, data_t1, dt, gene_key, tf_key):
           Kd_rnap_gene = regulators_dict["polymerase"]["Kd"]
 
           overall_mRNA_change_rate = (data_t1[i] - data_t0[i]) / dt
-          coefficient_arr, beta_all = beta_from_overall_mRNA(overall_mRNA_change_rate, gene_mRNA_t0, protein_data_t0, gene_key, tf_key)
+          coefficient_arr, beta_all = beta_from_overall_mRNA(gene, gene_mRNA_t0, overall_mRNA_change_rate, protein_data_t0, regulators_dict, gene_key, tf_key, genome_length, cell_volume, Kd_rnap_gene)
 
      return coefficient_arr, beta_all
 
@@ -86,7 +89,8 @@ def fit_function(coefficient_matrix, beta_all_arr):
      return beta_arr, covar_uncertainty
 
 
-for data_file in os.listdir(data_dir):
+
+for data_file in ["C:/Users/cryst/LOFScreening/archive/PROKODE/ProkODE/beta_training/GSE10159_results.csv"]: # os.listdir(data_dir):
      # get data
      data_df = pd.read_csv(data_file, index_col=0)
      gene_key = list(data_df.index) # may have to subtracted header
@@ -102,8 +106,8 @@ for data_file in os.listdir(data_dir):
      groups = [ [] for i in range(10) ]
      for i in range(len(data_df.axes[1])):
           colname = data_df.columns[i]
-          group_n = re.search("\| (\\d)", colname).group(1)
-          data_df.rename(columns = {colname: colname[:colname.find("|")]})
+          group_n = re.search(" \\| (\\d)", colname).group(1)
+          data_df = data_df.rename(columns = {colname: colname[:colname.find(" |")]})
           groups[int(group_n)].append(i)
      groups = [x for x in groups if x != []]
 
@@ -118,6 +122,8 @@ for data_file in os.listdir(data_dir):
                data_t0 = list(data_df.iloc[:,n])
                data_t1 =  list(data_df.iloc[:,n + 1])
                dt = int(data_df.columns[n + 1]) - int(data_df.columns[i])
+
+               cell_volume = get_cell_volume(init_cell_volume, int(data_df.columns[i]))
 
                coefficient_arr, beta_all = function_for_timepoint(data_t0, data_t1, dt, gene_key, tf_key)
                coefficient_matrix.append(coefficient_arr)

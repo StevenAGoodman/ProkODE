@@ -16,16 +16,15 @@ len_taken_by_ribo = 30 # aa
 # fundemental functions
 def score_to_K(score):
     delta_G = -1 * score * 1000
-    return 1 / np.exp(delta_G / (1.98722 * temperature))
+    return 1 / np.exp(-delta_G / (1.98722 * temperature))
 def search_network_json(network_loc, gene_str:str):
     gene_str = str.lower(gene_str)
     with open(network_loc, 'r') as network_file:
         for _, line in enumerate(network_file):
-            print(line)
             if len(line) > 3 and re.search(gene_str, str.lower(line[1:line.find('":{')])) != None:
                 gene_info = line[line.find('":{')+2:-2].replace("\n",'')
                 return json.loads(gene_info)
-            elif len(line) > 3 and gene_str in json.loads(re.search('"synonyms": (\[.+\]), ', line).group(1)):
+            elif len(line) > 3 and gene_str in json.loads(re.search('"synonyms": (\\[.+\\]), ', line).group(1)):
                 return json.loads(line[line.find('":{')+2:-2].replace("\n",''))
             else:
                 continue
