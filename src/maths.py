@@ -101,28 +101,32 @@ def translation_rate(gene, protein_amnts, N_ribo, gene_info_dict):
 
 
 # mRNA decay model
-def RNA_decay_rate(gene, prev_total_mRNA_amnt, protein_amnts, decay_dict, gene_key):
-    growth_rate = get_grow_rate(protein_amnts)
-
+def RNA_decay_rate(gene, prev_total_mRNA_amnt, protein_amnts, gene_info_dict, gene_key, model_configuration):
     half_life = 0
 
-    # average half life from bionumbers
-    half_life += (4.5148 + np.random.random()) * 60 # seconds
+    if model_configuration[0] == 1:
+        # average half life from bionumbers
+        half_life += (4.5148 + np.random.random()) * 60 # seconds
 
-    # # calculation of natural decay component
-    # natural_mRNA_half_life = 0
+    if model_configuration[1] == 1:
+        # natural mrna decay
+        natural_mRNA_half_life = 0
 
-    # # get degrad_prots of gene
-    # decay_info = decay_dict#[gene] # should be a dict of
+    if model_configuration[2] == 1:
+        # cell expansion; concentration decreases
+        growth_rate = get_grow_rate(protein_amnts)
+        half_life += growth_rate
 
-    # rate_of_mRNA_cleavage = 0
-    # for degrad_prot, K in decay_info.items():
-    #     N_dp = protein_amnts[gene_key.index(degrad_prot)]
-    #     # K_1 is the reaction rate from [Enzyme] + [mRNA] -> [Enzyme-mRNA] (ie, K_1[Enzyme][mRNA] = [Enzyme-mRNA] create / time ) ... k_1 is in 1 / (mols * time)
-    #     rate_of_mRNA_cleavage += K * prev_total_mRNA_amnt * N_dp / (1 + K * prev_total_mRNA_amnt)
-    #     # what is the relationship of multiple degrading proteins? it should be additive, right?
-    #     # how can you identify a protien as degrading?
-    # #     # what is the relationship of degrading prots component and decay (ie half life) component
+    if model_configuration[3] == 1:
+        decay_dict = gene_info_dict["mRNA decay"]
+        rate_of_mRNA_cleavage = 0
+        for degrad_prot, K in decay_info.items():
+            N_dp = protein_amnts[gene_key.index(degrad_prot)]
+            # K_1 is the reaction rate from [Enzyme] + [mRNA] -> [Enzyme-mRNA] (ie, K_1[Enzyme][mRNA] = [Enzyme-mRNA] create / time ) ... k_1 is in 1 / (mols * time)
+            rate_of_mRNA_cleavage += K * prev_total_mRNA_amnt * N_dp / (1 + K * prev_total_mRNA_amnt)
+            # what is the relationship of multiple degrading proteins? it should be additive, right?
+            # how can you identify a protien as degrading?
+        #     # what is the relationship of degrading prots component and decay (ie half life) component
 
     # half_life += rate_of_mRNA_cleavage + natural_mRNA_half_life
 
@@ -135,7 +139,7 @@ def protein_decay_rate(gene, protein_amnts, decay_dict, gene_key):
     growth_rate = get_grow_rate(protein_amnts)
 
     half_life = 0 # mins
- 
+
     # average half life from bionumbers
     half_life += (664.75 + np.random.random() * 100) * 60 # seconds
 
@@ -155,7 +159,7 @@ def protein_decay_rate(gene, protein_amnts, decay_dict, gene_key):
 # RNAP change model
 def RNAP_amount(prev_rnap, protein_amnts):
     return 2200 # μm^3
-    
+
 
 
 # Ribosome change model
