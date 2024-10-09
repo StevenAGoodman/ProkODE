@@ -3,6 +3,7 @@ import pandas as pd
 from Bio import motifs
 import subprocess
 import csv
+import json
 import math
 
 temperature = 298 # kelvin
@@ -135,11 +136,20 @@ def create_tfbs_through_CiiiDER(prokode_dir, promoters_loc, promoters_len, matri
 
         return tfbs_loc
 
-def create_promoterf(prokode_dir, genome_loc, operon_loc):
+def create_promoterf(prokode_dir, genome_loc, operon_loc, annotation_loc):
     # config files
     genome = open(genome_loc, 'r').read()
     genome = genome[genome.find('\n'):].replace('\n','')
     operons_df = pd.read_csv(operon_loc, sep='\t')
+    annotation_df = pd.read_csv(annotation_loc, sep='\t')
+
+    # check for mismatches between annotation and operons
+    annotation_genes = list(annotation_df["geneid"])
+    operons_genes = [ ele for arr in list(operons_df["geneids"]) for ele in json.loads(arr) ]
+    floating_genes = [ ele for ele in annotation_genes ]
+    for a in operons_genes:
+        if a in annotation_genes:
+            floating_genes.remove(a)
 
     # write promoter region surrounding each gene's start loc to promoters.fa
     promoters_loc = prokode_dir + '/src/preprocessing/promoters.fa'
@@ -150,12 +160,18 @@ def create_promoterf(prokode_dir, genome_loc, operon_loc):
             promo_seq = genome[start-150:start+50]
             promoters_file.write(f'>{operon}\n{promo_seq}\n')
 
-    return promoters_loc, 200
+        for i in range(len(floating_genes)):
+            gene = floating_genes[i]
+            start = int(annotation_df.loc[i, 'start'])
+            promo_seq = genome[start-150:start+50]
+            promoters_file.write(f'>{gene}\n{promo_seq}\n')
+
+    return promoters_loc, 200, floating_genes
 
 def preprocessing_main(prokode_dir, genome_loc, annotation_loc, operons_loc, pfm_database_loc, CiiiDER_thresh, add_betas=False):
     # create promoters.fa
     print('\t\t...creating promoter file')
-    promoters_loc, promoters_len = create_promoterf(prokode_dir, genome_loc, operons_loc)
+    promoters_loc, promoters_len, floating_genes = create_promoterf(prokode_dir, genome_loc, operons_loc, annotation_loc)
 
     # config motif matrix file for only tfs within genome
     print('\t\t...config tf motif file')
@@ -164,4 +180,4 @@ def preprocessing_main(prokode_dir, genome_loc, annotation_loc, operons_loc, pfm
     # configer into tf binding site csv
     tfbs_loc = create_tfbs_through_CiiiDER(prokode_dir, promoters_loc, promoters_len, motif_matrix_loc, CiiiDER_thresh, add_betas)
 
-    return tfbs_loc
+    return tfbs_loc, floating_genes

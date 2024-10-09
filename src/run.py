@@ -47,11 +47,11 @@ def create_network_json_main(prokode_dir, genome_loc, annotation_loc, operons_lo
 
     # create tfbs.csv
     print('\n\tpreprocessing inputs...')
-    tfbs_loc =  preprocessing_main(prokode_dir, genome_loc, annotation_loc, operons_loc, pfm_database_loc, CiiiDER_thresh, add_betas) # '/workspaces/PROKODE-DOCKER/src/tfbs.csv', '/workspaces/PROKODE-DOCKER/src/decay_rates.csv'
+    tfbs_loc, floating_genes =  preprocessing_main(prokode_dir, genome_loc, annotation_loc, operons_loc, pfm_database_loc, CiiiDER_thresh, add_betas) # '/workspaces/PROKODE-DOCKER/src/tfbs.csv', '/workspaces/PROKODE-DOCKER/src/decay_rates.csv'
     # tfbs_loc = 'C:/Users/cryst/LOFScreening/archive/PROKODE/src/tfbs.csv'
     # create network.json
     print('\tconfiguring network structure file...')
-    network_loc = network_main(prokode_dir, annotation_loc, operons_loc, tfbs_loc)
+    network_loc = network_main(prokode_dir, annotation_loc, operons_loc, tfbs_loc, floating_genes)
 
     # plot_system(prokode_dir, prokode_dir + '/src/network.json', 1, 1, 0.1,100)
 

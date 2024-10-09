@@ -1,0 +1,58 @@
+{
+    "R_max_txn":{
+        "a":"lambda len_taken_by_ribo, elongation_rate:"
+    },
+    "tf_probability": {
+        "a": "def tf_probability N_tf, Kd_tf_target, genome_len: N_tf / (genome_len * (N_tf + Kd_tf_target))"
+    },
+    "rnap_probability":{
+        "a": "lambda N_rnap, Kd_rnap_target, genome_len: N_rnap / (genome_len * (N_rnap + Kd_rnap_target))"
+    },
+    "ribo_probability":{
+        "a": "lambda N_ribo, Kd_rnap_target, cell volume: "
+    },
+    "transcription_rate":{
+        "a": "lambda : ",
+        "b":
+    },
+    "beta_function":{
+        "a": "lambda : ",
+        "b":
+    },
+    "beta_from_context":{
+        "a": "lambda : ",
+        "b":
+    },
+    "translation_rate":{
+        "a": "lambda : ",
+        "b":
+    },
+    "RNA_decay_rate":{
+        "a": "lambda : ",
+        "b":
+    },
+    "protein_decay_rate":{
+        "a": "lambda : ",
+        "b":
+    },
+    "RNAP_amount":{
+        "a": "lambda : ",
+        "b":
+    },
+    "ribo_amount":{
+        "a": "lambda : ",
+        "b":
+    },
+    "sigma_competition":{
+        "a": "lambda : ",
+        "b":
+    },
+    "get_grow_rate":{
+        "a": "lambda : ",
+        "b":
+    },
+    "beta_from_overall_mRNA":{
+        "a": "lambda : ",
+        "b":
+    },
+}

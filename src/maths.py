@@ -21,11 +21,10 @@ def search_network_json(network_loc, gene_str:str):
     gene_str = str.lower(gene_str)
     with open(network_loc, 'r') as network_file:
         for _, line in enumerate(network_file):
-            print(line)
             if len(line) > 3 and re.search(gene_str, str.lower(line[1:line.find('":{')])) != None:
                 gene_info = line[line.find('":{')+2:-2].replace("\n",'')
                 return json.loads(gene_info)
-            elif len(line) > 3 and gene_str in json.loads(re.search('"synonyms": (\[.+\]), ', line).group(1)):
+            elif len(line) > 3 and gene_str in json.loads(re.search('"synonyms": (\\[.+\\]), ', line).group(1)):
                 return json.loads(line[line.find('":{')+2:-2].replace("\n",''))
             else:
                 continue
@@ -179,11 +178,11 @@ def get_grow_rate(protein_amnts):
 
 
 # link to processing.py
-def beta_from_overall_mRNA(gene, gene_mRNA_amnt, overall_mRNA_change_rate, protein_amnts, regulators_dict:dict, gene_key, tf_key:list, genome_length, cell_volume, Kd_rnap, prev_rnap, prev_ribo):
+def beta_from_overall_mRNA(gene, gene_mRNA_amnt, overall_mRNA_change_rate, protein_amnts, gene_info_dict, regulators_dict:dict, gene_key, tf_key:list, genome_length, Kd_rnap, prev_rnap, prev_ribo):
     N_rnap = RNAP_amount(prev_rnap, protein_amnts)
     N_ribo = ribo_amount(prev_ribo, protein_amnts)
 
-    mRNA_decay_rate = RNA_decay_rate(gene, gene_mRNA_amnt, protein_amnts, decay_dict, gene_key)
+    mRNA_decay_rate = RNA_decay_rate(gene, gene_mRNA_amnt, protein_amnts, gene_info_dict, gene_key)
     mRNA_creation_rate = overall_mRNA_change_rate + mRNA_decay_rate * gene_mRNA_amnt
 
     P_rnap = rnap_probabiltiy(N_rnap, Kd_rnap, genome_length)
@@ -191,7 +190,12 @@ def beta_from_overall_mRNA(gene, gene_mRNA_amnt, overall_mRNA_change_rate, prote
 
     coefficient_arr = [0] * len(tf_key)
     for regulator, reg_details in regulators_dict.items():
-        P_tf = tf_probabiltiy(protein_amnts[gene_key.index(regulator)], reg_details["Kd"], genome_length)
+        if regulator == "polymerase":
+            continue
+        try:
+            P_tf = tf_probabiltiy(protein_amnts[gene_key.index(regulator)], score_to_K(reg_details["delta G"]), genome_length)
+        except:
+            print(f"\t\t\tFailed: {regulator}\tgenome tf is not found in data's genes")
         coefficient_arr[tf_key.index(regulator)] = P_tf
 
     return coefficient_arr, beta_all, N_rnap, N_ribo

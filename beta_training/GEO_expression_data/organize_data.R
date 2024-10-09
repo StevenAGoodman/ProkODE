@@ -5,12 +5,29 @@ library(stringr)
 library(fixr)
 library(TAF)
 
-rmdir("C:/Users/cryst/LOFScreening/archive/PROKODE/ProkODE/beta_training/GEO_expression_Data", recursive = T)
+rmdir("C:/Users/steve/PROKODE-DOCKER/prokode/beta_training/GEO_expression_data", recursive = T)
 
 # check each for negative numbers or wierd number ranges
-file_names <- list.files(path = "C:/Users/cryst/LOFScreening/archive/PROKODE/ProkODE/beta_training/GEO_expression_Data", pattern = "*.csv", full.names = TRUE, recursive = T)
+file_names <- list.files(path = "C:/Users/steve/PROKODE-DOCKER/prokode/beta_training/GEO_expression_data", pattern = "*.csv", full.names = TRUE, recursive = T)
 
-# Loop through each file
+for (file in file_names){
+    gse_id = str_extract(file, "(GSE\\d+)", group = 1)
+    print(gse_id)
+    gse = getGEO(gse_id, GSEMatrix =F)
+    gsm = GSMList(gse)[[1]]
+    organism = Meta(gsm)$organism_ch1
+    organism = word(organism, 1,2, sep=" ")
+    print(organism)
+
+    dir.create(file.path(substr(file, 1, 71), organism))
+
+    outp = paste0(substr(file, 1, 72), organism, '/', gse_id, ".csv")
+    print(outp)
+    file.rename(from = file, to = outp) 
+}
+
+
+#Loop through each file
 for (file in file_names) {
     data_df = read.csv(file, header = T)
     data_df = data_df[2:length(data_df)]
