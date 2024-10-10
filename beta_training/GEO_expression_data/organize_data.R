@@ -34,13 +34,18 @@ for (file in file_names) {
     val_range = range(data_df, na.rm = T)
     print(val_range)
     if (length(check_for_negative_values(data_df)) != 0){
-        file.rename(from = file, to = paste0(substr(file, 1, 85), "/stubborn", substr(file,86,nchar(file))))
+        file.rename(from = file, to = paste0(substr(file, 1, 85), "/bad", substr(file,86,nchar(file))))
     }
     if (val_range[2] < 25){
-        file.rename(from = file, to = paste0(substr(file, 1, 85), "/stubborn", substr(file,86,nchar(file))))     
+        file.rename(from = file, to = paste0(substr(file, 1, 85), "/bad", substr(file,86,nchar(file))))     
     }
 }
 
+file_names =list.files(path = "C:/Users/steve/PROKODE-DOCKER/prokode/beta_training/GEO_expression_data", pattern = "*.log", full.names = TRUE, recursive = T)
+
+for (file in file_names){
+    file.rename(from = file, to = paste0(substr(file, 1, 72), "/logs", substr(file,72,nchar(file))))     
+}
     # if there are, verify that its a ration theyre measuring and attempt to find raw intensities
 
 # organize columns into groups of same experimental condition

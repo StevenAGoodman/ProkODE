@@ -52,35 +52,22 @@ n_end_rule = {
     "M": 10 * 3600    
 }
 
-def get_N_end(gene, annotation_df, genome_loc):
-    end_loc = int(annotation_df.loc[annotation_df['geneid']==gene, "end"])
-    print(end_loc)
+def get_N_end(gene, annotation_df, genome_loc, end_loc=None):
+    if end_loc == None:
+        end_loc = int(list(annotation_df.loc[annotation_df['geneid']==gene, "end"])[0])
+    else:
+        end_loc = end_loc
     line = linecache.getline(genome_loc, 1 + math.floor(end_loc / 81)).replace('\n','')
-    print(line)
     rem = end_loc % 81
-    print(rem)
-    if rem > 3:
+    if rem >= 3:
         n_residue = Seq(line[rem - 3: rem])
-        print(n_residue)
         n_residue = str(n_residue.translate())
     else:
         n_residue = linecache.getline(genome_loc, math.floor(end_loc / 81)).replace('\n','')[-3 + rem:] + line[:rem]
-        print(n_residue)
         n_residue = str(Seq(n_residue).translate())
-    
     if n_residue == "*":
-        end_loc
-        if rem > 3:
-            n_residue = Seq(line[rem - 3: rem])
-            print(n_residue)
-            n_residue = str(n_residue.translate())
-        else:
-            n_residue = linecache.getline(genome_loc, math.floor(end_loc / 81)).replace('\n','')[-3 + rem:] + line[:rem]
-            print(n_residue)
-            n_residue = str(Seq(n_residue).translate())
-
-        
-
+        end_loc = end_loc - 3
+        return get_N_end(None, annotation_df, genome_loc, end_loc)
     return n_end_rule[n_residue]
 
 def create_network_json(prokode_dir, tfbs_loc, annotation_df, operons_df, genome_loc, floating_genes):
@@ -138,19 +125,25 @@ def create_network_json(prokode_dir, tfbs_loc, annotation_df, operons_df, genome
 
             # gene decays
             mRNA_decay_arr = {}
-            for i in len(mrna_decay_prots):
+            for i in range(len(mrna_decay_prots)):
                 pair = list(mrna_decay_prots.items())[i]
                 if pair[0] in list(annotation_df["geneid"]):
                     mRNA_decay_arr[pair[0]] = pair[1]
+
+
             protein_decay_arr = {}
             for i in range(len(prot_decay_prots)):
                 pair = list(prot_decay_prots.items())[i]
                 if pair[0] in list(annotation_df["geneid"]):
                     protein_decay_arr[pair[0]] = pair[1]
 
+
+            n_end_rule = get_N_end(gene, annotation_df, genome_loc)
+
+
             # within each gene's brackets:
             syn = annotation_df.loc[annotation_df['geneid']==gene,'synonyms'].tolist()[0]
-            arr = {"synonyms":ast.literal_eval(syn),"transcript length":transcript_len,"mRNA length":mRNA_len, "mRNA decay": mRNA_decay_arr, "protein decay": protein_decay_arr}
+            arr = {"synonyms":ast.literal_eval(syn),"transcript length":transcript_len,"mRNA length":mRNA_len, "mRNA decay": mRNA_decay_arr, "protein decay": protein_decay_arr, "N end rule": n_end_rule}
             reg_arr = {"polymerase":8.1}
             arr["regulators"] = reg_arr
 

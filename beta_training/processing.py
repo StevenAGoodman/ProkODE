@@ -1,156 +1,176 @@
+import sys
+# inputs
+feature_ids = "@@@@@@@@100001000000" # sys.argv[1] #
+data_organism = "" #  sys.argv[2] # Escherichia coli
+prokode_dir = "C:/Users/cryst/LOFScreening/archive/PROKODE/ProkODE" # sys.argv[3] # 
+
 import pandas as pd
 import numpy as np
 import json
 import statistics
 import cvxpy
 import re
-import sys
 import os
-
-# organism speces
-data_organism = "Escherichia_coli"
-prokode_dir = "/workspaces/prokode"
-genome_length = 4500000
-
-# be sure to run run.py before running this file
-network_loc = prokode_dir + "/src/network.json"
-data_dir = prokode_dir + "/beta_training/GEO_expression_data/" + data_organism
-
+import multiprocessing as mp
+ 
 sys.path.append(prokode_dir)
-
-# global jazz
-num_data = 10
-sensor_normal_dist = 10
-basal_rate = 3
-decay_rate = np.log(2)/300
-Np = 6000
-Kd_p = 0.1
-Nns = 4600000
-
-def function_to_test(data_t0, protein_data_t0, dt):
-     # rate_of_protein_creation = some_function_dependent_on_num_ribo()
-     # overall_protein_half_life = some_constant_func_independent_of_other_stuff()
-
-     # overall_rate_of_protein_change = rate_of_protein_creation * data_t0  - overall_protein_half_life * protein_data_t0
-
-     # rate_of_mRNA_creation =
-     # overall_mRNA_half_life = some_constant_func_independent_of_other_stuff()
-
-     # overall_rate_of_mRNA_change = rate_of_mRNA_creation - overall_mRNA_half_life * data_t0
-
-     # protein_data_t1 = protein_data_t0 + overall_rate_of_protein_change * dt
-     # data_t1 = data_t0 + overall_rate_of_mRNA_change * dt
-     return data_t1
-
-def protein_amnts_from_mRNA_amnts(mRNA_amnts):
-     protein_amnts = mRNA_amnts
-     return protein_amnts
-
 from scipy.optimize import curve_fit
 from src.maths import *
 
-def function_for_timepoint(data_t0, data_t1, protein_data_t0, N_rnap, N_ribo, dt, gene_key, tf_key):
-     # MOST CRITICAL PART TO DETERMINE!!!
+# be sure to run run.py before this file
+network_loc = prokode_dir + "/src/network.json"
+data_dir = prokode_dir + "/beta_training/GEO_expression_data/" + data_organism
+data_file_list = os.listdir(data_dir)
+
+# constants that preferably would be set by the user
+genome_length = 4500000
+cell_volume = 1e-15 # L
+temperature = 298 # kelvin
+elongation_rate = 60 # nt/s
+peptide_rate = 20 # aa/s
+Kd_ribo_mrna = 0.1 # WHAT IS THE BINDING AFFINITY OF RIBO TO DALGARNO SEQ???? maybe use molecular docking
+len_taken_by_rnap = 30 # nt
+len_taken_by_ribo = 30 # aa
+
+# unpack model feature string
+feature_ids = list(feature_ids)
+transcriptionRate_betaFromContext_fid = feature_ids[0]
+translationRate_fid = feature_ids[1]
+tf_probabiltiy_fid = feature_ids[2]
+beta_function_fid = feature_ids[3]
+RNAPAmount_fid = feature_ids[4]
+RiboAmount_fid = feature_ids[5]
+sigma_competition_fid = feature_ids[6]
+growthRate_fid = feature_ids[7]
+mRNA_decay_rate_farr = feature_ids[8:13]
+protein_decay_rate_farr = feature_ids[13:20]
+
+# global definable functions
+network_key = create_network_key(network_loc)
+func_to_fit = beta_curveFit_func(beta_function_fid)
+
+def function_for_timepoint(mRNAs_t0, gene_key):
      protein_data_t1 = [None] * len(gene_key)
+     coefficient_submat = []
+     beta_all_subarr = []
+
+     # with mp.Pool() as pool:
+     #      pool.map(for_each_gene_func, range(len(gene_key)))
 
      for i in range(len(gene_key)):
           gene = gene_key[i]
           gene_mRNA_t0 = data_t0[i]
-
-          gene_info_dict = search_network_json(network_loc, gene)
+          gene_info_dict = search_network_json(network_loc, network_key, gene)
 
           if gene_info_dict == None:
                print(f"\t\t\t\tFailed: {gene}\tgene from data not found in genome")
                continue
           
-          regulators_dict = gene_info_dict["regulators"]
-          Kd_rnap_gene = regulators_dict["polymerase"]
-
+          R_max_txn, R_max_trans = max_rates(len_taken_by_rnap, elongation_rate, len_taken_by_ribo, peptide_rate, gene_info_dict, transcriptionRate_betaFromContext_fid)
+          Kd_rnap_gene = gene_info_dict["regulators"]["polymerase"]
           overall_mRNA_change_rate = (data_t1[i] - data_t0[i]) / dt
-          coefficient_arr, beta_all, N_rnap, N_ribo = beta_from_overall_mRNA(gene, gene_mRNA_t0, overall_mRNA_change_rate, protein_data_t0, gene_info_dict, regulators_dict, gene_key, tf_key, genome_length, Kd_rnap_gene, N_rnap, N_ribo)
+
+          coefficient_arr, beta_all = beta_from_overall_mRNA(
+
+          )
+
+          coefficient_submat.append(coefficient_arr)
+          beta_all_subarr.append(beta_all)
 
           # update protein amnts
-          overall_protein_change_rate = translation_rate(gene, protein_data_t0, N_ribo, gene_info_dict) - protein_decay_rate(gene, protein_data_t0, gene_info_dict, gene_key) * protein_data_t0[i]
+          overall_protein_change_rate = translation_rate() - protein_decay_rate() * protein_data_t0[i]
           protein_data_t1[i] = protein_data_t0[i] + overall_protein_change_rate * dt
 
-     return coefficient_arr, beta_all, protein_data_t1, N_rnap, N_ribo
+     # update protein amounts, RNAP, ribo, and cell vol
+     N_rnap = RNAP_amount()
+     N_ribo = ribo_amount()
+     cell_volume = cell_volume + get_grow_rate() * dt
+     protein_data_t0 = protein_data_t1
 
-def fit_function(coefficient_matrix, beta_all_arr):
+     return coefficient_submat, beta_all_subarr, protein_data_t1
+
+def fit_function(coefficient_matrix, beta_all_arr, feature_id):
      # clean matrices
      empty_columns = []
-     for i in zip(*coefficient_matrix):
-          column = zip(*coefficient_matrix)[i]
+     for i in range(len(list(zip(*coefficient_matrix)))):
+          column = list(zip(*coefficient_matrix))[i]
           if column == [0] * len(coefficient_matrix):
                empty_columns.append(i)
           else:
                continue
 
-     # curve fitting parameters
-     func_to_fit = beta_function
      n_features = len(coefficient_matrix[0])
      p = [1] * n_features
-     beta_arr, covar_uncertainty = curve_fit(func_to_fit, coefficient_matrix.T, beta_all_arr, p0 = p)
+     beta_arr, covar_uncertainty = curve_fit(func_to_fit, coefficient_matrix, beta_all_arr, p0 = p)
 
      for index in empty_columns:
           beta_arr[index] = None
 
      return beta_arr, covar_uncertainty
 
-
-for data_file in ["/workspaces/prokode/beta_training/GSE10159_results.csv"]: # os.listdir(data_dir):
+for data_file in ["data.csv"]:
      # get data
-     data_df = pd.read_csv(data_file, index_col=0)
+     data_df = pd.read_csv(f"{data_dir}/{data_file}", index_col=0)
+     
+     # normalize as concentations
+     data_df = data_df.multiply(1 / 6.02e23)
+
+     # define keys
      gene_key = list(data_df.index) # may have to subtracted header
      tf_key = [ tf for val in json.load(open(network_loc, 'r')).values() for tf in val["regulators"].keys() ]
      tf_key = list(set(tf_key)) # filter repeats
 
-     # prep stuffs
-     # beta_all (1, n_samples) coefficient_matrix (n_samples, n_coefficients)
-     beta_all_arr, coefficient_matrix = ([], [])
-     results_matrix = []
-
-     # lil preprocessing
-     groups = [ [] for i in range(10) ]
+     # filter out groups
+     groups = [ [] for i in range(50) ]
      for i in range(len(data_df.axes[1])):
           colname = data_df.columns[i]
-          group_n = re.search("\\| (\\d)", colname).group(1)
-          data_df = data_df.rename(columns = {colname: colname[:colname.find("|")]})
-          groups[int(group_n)].append(i)
-     groups = [x for x in groups if x != []]
+          group_n = re.search("\\| (\\d+)", colname)
+          if group_n == None:
+               group_n = "0"
+          else:
+               data_df = data_df.rename(columns = {colname: colname[:colname.find(" | ")]})
+               group_n = group_n.group(1)
 
-     # do the stuff
+          groups[int(group_n)].append(i)
+          
+     groups = [x for x in groups if x != []] # filter empties
+
+     beta_all_arr, coefficient_matrix = ([], [])
+
+     # groups are isolated consecutive data
      for i in range(len(groups)):
           print(f"\tgroup {i}")
+
           group_data_indecies = sorted(groups[i])
 
-          protein_data_matrix = [list(data_df.iloc[:,0])]
+          protein_data_t0 = list(data_df.iloc[:,0])
           N_rnap = 2200
           N_ribo = 3000
 
-          col_names = []
+          for l in range(len(group_data_indecies[:-1])):
+               print(f"\t\tdata pair {l}")
 
-          for n in group_data_indecies[:-1]:
-               print(f"\t\tdata pair {n}")
-               # input: pair of time points
-               data_t0 = list(data_df.iloc[:,n])
-               data_t1 =  list(data_df.iloc[:,n + 1])
-               dt = int(data_df.columns[n + 1]) - int(data_df.columns[i])
+               n = group_data_indecies[l].multiply(1 / cell_volume) # data index at t0
+               m = group_data_indecies[l+1] # data index at t1
 
-               protein_data_t0 = protein_data_matrix[i]
+               # pair of time points
+               data_t0 = list(data_df.iloc[:,n]) # data  at t0
+               data_t1 =  list(data_df.iloc[:,m]) # data  at t1
+               dt = float(data_df.columns[m]) - float(data_df.columns[n])
 
-               coefficient_arr, beta_all, protein_data_t1, N_rnap, N_ribo = function_for_timepoint(data_t0, data_t1, protein_data_t0, N_rnap, N_ribo, dt, gene_key, tf_key)
-               coefficient_matrix.append(coefficient_arr)
-               beta_all_arr.append(beta_all)
+               coefficient_submat, beta_all_subarr, protein_data_t1= function_for_timepoint()
+               
+               coefficient_matrix.extend(coefficient_submat)
+               beta_all_arr.extend(beta_all_subarr)
 
-               col_names.append(f"{data_df.columns[n]} to {data_df.columns[n + 1]}")
-               protein_data_matrix.append(protein_data_t1)
-               print(f"\t\t\tbeta all: {beta_all}")
+               print(f"\t\t\tbeta all: {beta_all_subarr}")
 
-     # overall function fitting for all data points in an organisms
-     beta_arr, covar = fit_function(coefficient_matrix, beta_all_arr)
+# overall function fitting for all data points in an organisms
+beta_arr, covar = fit_function(coefficient_matrix, beta_all_arr, beta_function_fid)
 
-     # export to csv
-     results_matrix = np.array(results_matrix)
-     beta_names = tf_key
-     results_df = pd.DataFrame(results_matrix.T, index = beta_names, columns = col_names)
-     results_df.to_csv(f"{prokode_dir}/beta_training/results/{data_file[data_file.find('beta_training')+13:data_file.find('.py')]}_group{i}.csv")
+# export to csv
+results_dict = {
+     "beta values": dict(zip(tf_key, beta_arr)),
+     "covariance": covar
+}
+json.dump(results_dict, "./tf_beta_values.json")

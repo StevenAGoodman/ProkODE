@@ -1,0 +1,13 @@
+- write testing script and split the data
+
+ - find constants:
+	- kd ribo to mrna
+	- len taken by ribo / rnap
+ - find functions:
+	- natural mrna decay (like just how a molecule itself decays)
+	- what proteins are associated with cell growth and by how much
+	- proteins associated with the formation of ribo and rnap
+		- probability of associating
+	- probability of a misfolding occuring
+		- what are the rates associated with removing for misfolded
+		- actually you may just want to say that all misfolds are not valid
