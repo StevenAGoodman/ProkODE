@@ -1,1 +1,9 @@
 .venv/
+src/network.json
+src/preprocessing/tfbs.csv
+src/preprocessing/promoters.fa
+src/preprocessing/motif_matrices.txt
+src/preprocessing/CiiiDER_results.txt
+src/preprocessing/CiiiDER_results.csv
+beta_training/GEO_expression_data/stubborn
+beta_training/GEO_expression_data/data.csv

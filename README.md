@@ -72,38 +72,43 @@ Outputs:
 ## Testing Log
 
 ### Variables & testing notes for each
-1. **binding probability functions**
-   - P_i = N_i / (Nns * (N_i + Kd_i))
-   - P_rnap = N_rnap / (Nns * (N_rnap + Kd_rnap-i)) for RNAP binding, \
-   P_i = N_i / (N_i + Kd_i) for all else
-   - SOME FUNCTION INCLUDING COLLISION PROBABILITY P_rnap = N_rnap / (Nns * (N_rnap + Kd_rnap-i)) for RNAP binding, \
-   P_i = N_i / (N_i + Kd_i) for all else
+1. **max rates**
+   - *Control*: R_max_txn = elongation_rate / transcript_len \
+   R_max_trans = peptide_rate / mRNA_length
+   - *Model A*: R_max_txn = elongation_rate / len_taken_by_rnap
+   R_max_trans = peptide_rate / len_taken_by_ribo
 2. **transcription function**
-   - R_txn = B_all * P<sub>RNAP-gene-binding</sub> * R<sub>max_txn</sub>\
-   s.t. R<sub>max_txn</sub> {mRNA / sec} = length_of_RNAP {nt} / transcription_rate {nt / sec}
-2. **Beta function**
-   - B_all = sum(P_i * B_i)
+   - *Control*: R_txn = B_all * (N_i / (Nns * (N_i + Kd_i))) * R<sub>max_txn</sub>
+   - *A*: R_txn = B_all * (N_i / (N_i + Kd_i)) * R<sub>max_txn</sub>
+   - *B*: R_txn = B_all * (N_rnap * R<sub>max_txn</sub> / (K_d + 1))
+3. **TF DNA binding probability**
+   - *Control*: P_i = N_i / (Nns * (N_i + Kd_i))
+   - *A*: P_i = N_i / (N_i + Kd_i)
+   - *B*: collision theory
+4. **Beta function**
+   - *Control*: B_all = sum(P_i * B_i)
    - B_all = product(P_i * B_i)
       - if P_i = 0 for any i, it messes up the entire thing
    - B_all = sum(P_i * log10(B_i))
-3. **translation function**
-   - *Model A*: Translation_rate = P<sub>ribo-gene-binding</sub> * max_rate,\
-   s.t. max_rate {prot / mRNA / sec} = length_of_ribo {aa} / translation_rate {aa / sec}
-   - *Model B*: Translation_rate = P<sub>ribo-gene-binding</sub> * max_rate,\
-   s.t. max_rate {prot / mRNA / sec} = length_of_ribo {aa} / translation_rate {aa / sec}
-2. **mRNA decay model**
-   - *Control*: mRNA_half_life = average prokaryotic mRNA half life from Bionumbers (https://bionumbers.hms.harvard.edu/search.aspx) found in `/data/mRNA_decay_Bionumbers.csv`
-4. **protein decay model**
-   - *Control*: prot_half_life = average prokaryotic protein half life from Bionumbers (https://bionumbers.hms.harvard.edu/search.aspx) found in `/data/protein_decay_Bionumbers.csv`
-5. **RNAP change model**
-   - *Control*: N_rnap = 2200 rnaps / μm<sup>3</sup>, always proportional to cell size (Bionumbers 108605)
-6. **Ribosome change model**
+5. **translation function**
+   - *Control*: Translation_rate = (N_ribo / (N_ribo + Kd_ribo)) * max_rate,
+   - *Model A*: Translation_rate = (N_ribo / (N_ribo + Kd_ribo)) * N_ribo * max_rate
+   - *Model B*: Translation_rate = (N_ribo * max_rate * N_gene_mrna) / (Kd_ribo + N_gene_mrna)
+   - *Model C*: Collision theory
+8.  **RNAP change model**
+   - *Control*: N_rnap = 5000 rnaps / 1e-15 L, always proportional to cell size (Bionumbers 108605)
+9.  **Ribosome change model**
    - *Control*: N_ribo = 15000 ribos, always constant (Bionumbers)
-7. **Sigma factor RNAP competition**
+10. **Sigma factor RNAP competition**
    - *Control*: No sigma factor modeling,  
-8. **Cell growth**
+11. **Cell growth**
    - *Control*: growth_rate = 0, no growth
    - *Model A*: growth_rate = 1/3600, (Bionumbers)
+12. **mRNA decay model**
+   - *Control*: mRNA_half_life = average prokaryotic mRNA half life from Bionumbers (https://bionumbers.hms.harvard.edu/search.aspx) found in `/data/mRNA_decay_Bionumbers.csv`
+   - *Main*: lambda: if else if else if else for each array of 0 and 1 of possible configs 
+13. **protein decay model**
+   - *Control*: prot_half_life = average prokaryotic protein half life from Bionumbers (https://bionumbers.hms.harvard.edu/search.aspx) found in `/data/protein_decay_Bionumbers.csv`F
 
 ### Testing & trial log
 

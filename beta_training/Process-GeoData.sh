@@ -1,4 +1,4 @@
-CHARS_LIST=("@AB" "@AB" "@ABC" "@AB" "@A" "@A" "@" "@AB" "01" "01" "01" "01" "01" "01" "01" "01" "01" "01" "01" "01")  # Example: 1st index uses 'abc', 2nd uses 'xyz', 3rd uses '123'
+CHARS_LIST=("@AB" "@AB" "@A" "@ABC" "@" "@" "@" "@A" "01" "01" "01" "01" "01" "01" "01" "01")  # Example: 1st index uses 'abc', 2nd uses 'xyz', 3rd uses '123'
 LENGTH=${#CHARS_LIST[@]}       
 PYTHON_SCRIPT="./processing.py"  # Python script to run
 

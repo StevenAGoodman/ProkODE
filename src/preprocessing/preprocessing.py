@@ -60,7 +60,6 @@ def config_tfmotifs(prokode_dir, pfm_database_loc, annotation_loc):
     return out_loc
 
 def get_tfbs_rowarr(line, add_betas):
-    # line headers: ['tg','_','tf','tf_matrixid','start','end','strand','prescore','score','seq']
     tfbs_row = [line[0], line[1]]
     score = float(line[2])
     tfbs_row.append(score)
@@ -120,7 +119,7 @@ def create_tfbs_through_CiiiDER(prokode_dir, promoters_loc, promoters_len, matri
                     else:
                         line = row
 
-                    line_arr = line.split(',')
+                    line_arr = line.replace("\n", '').split(',')
                     a = line_arr[1]
                     b = prev_fullline[1] if type(prev_fullline)==list else ''
 

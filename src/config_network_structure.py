@@ -75,8 +75,7 @@ def create_network_json(prokode_dir, tfbs_loc, annotation_df, operons_df, genome
     output = {}
     gene_key = []
 
-    mrna_decay_prots = {"rne":0, "rnc":0, "rbn":0, "rng":0} # binding afinities to mrna
-    prot_decay_prots = {"clpX":0, "clpP":0, "lon":0} # binding affinities to proteins
+    mrna_decay_prots = {"rne":{"delta G":-10.1, "mass":118197}, "rnc":{"delta G":-10.1,"mass": 25550}, "rbn":{"delta G":-10.1,"mass": 32930}, "rng":{"delta G":-10.1,"mass":55364}} # binding afinities to mrna
     # prot_decay_prots = {"clpX":{"kd":-, "targets":["",""]},}
 
     # loop over every gene
@@ -98,18 +97,13 @@ def create_network_json(prokode_dir, tfbs_loc, annotation_df, operons_df, genome
                     pair = list(mrna_decay_prots.items())[i]
                     if pair[0] in list(annotation_df["geneid"]):
                         mRNA_decay_arr[pair[0]] = pair[1]
-                protein_decay_arr = {}
-                for i in range(len(prot_decay_prots)):
-                    pair = list(prot_decay_prots.items())[i]
-                    if pair[0] in list(annotation_df["geneid"]):
-                        protein_decay_arr[pair[0]] = pair[1]
 
                 n_end_rule = get_N_end(gene, annotation_df, genome_loc)
 
                 # within each gene's brackets:
                 syn = annotation_df.loc[annotation_df['geneid']==gene,'synonyms'].tolist()[0]
-                arr = {"synonyms":ast.literal_eval(syn),"transcript length":transcript_len,"mRNA length":mRNA_len, "mRNA decay": mRNA_decay_arr, "protein decay": protein_decay_arr, "N end rule": n_end_rule}
-                reg_arr = {"polymerase":8.1}
+                arr = {"synonyms":ast.literal_eval(syn),"transcript length":transcript_len,"mRNA length":mRNA_len, "mRNA decay": mRNA_decay_arr, "N end rule": n_end_rule}
+                reg_arr = {"polymerase":10.1}
                 arr["regulators"] = reg_arr
 
                 output[gene] = arr
@@ -131,20 +125,13 @@ def create_network_json(prokode_dir, tfbs_loc, annotation_df, operons_df, genome
                     mRNA_decay_arr[pair[0]] = pair[1]
 
 
-            protein_decay_arr = {}
-            for i in range(len(prot_decay_prots)):
-                pair = list(prot_decay_prots.items())[i]
-                if pair[0] in list(annotation_df["geneid"]):
-                    protein_decay_arr[pair[0]] = pair[1]
-
-
             n_end_rule = get_N_end(gene, annotation_df, genome_loc)
 
 
             # within each gene's brackets:
             syn = annotation_df.loc[annotation_df['geneid']==gene,'synonyms'].tolist()[0]
-            arr = {"synonyms":ast.literal_eval(syn),"transcript length":transcript_len,"mRNA length":mRNA_len, "mRNA decay": mRNA_decay_arr, "protein decay": protein_decay_arr, "N end rule": n_end_rule}
-            reg_arr = {"polymerase":8.1}
+            arr = {"synonyms":ast.literal_eval(syn),"transcript length":transcript_len,"mRNA length":mRNA_len, "mRNA decay": mRNA_decay_arr, "N end rule": n_end_rule}
+            reg_arr = {"polymerase":10.1}
             arr["regulators"] = reg_arr
 
             output[gene] = arr

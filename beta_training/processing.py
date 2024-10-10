@@ -1,8 +1,8 @@
 import sys
 # inputs
-feature_ids = "@@@@@@@@100001000000" # sys.argv[1] #
+feature_ids = "@@@@@@@@10001000" # sys.argv[1] #
 data_organism = "" #  sys.argv[2] # Escherichia coli
-prokode_dir = "C:/Users/cryst/LOFScreening/archive/PROKODE/ProkODE" # sys.argv[3] # 
+prokode_dir = "/workspaces/prokode" # sys.argv[3] # 
 
 import pandas as pd
 import numpy as np
@@ -13,7 +13,7 @@ import re
 import os
 import multiprocessing as mp
  
-sys.path.append(prokode_dir)
+sys.path.append(".")
 from scipy.optimize import curve_fit
 from src.maths import *
 
@@ -42,14 +42,14 @@ RNAPAmount_fid = feature_ids[4]
 RiboAmount_fid = feature_ids[5]
 sigma_competition_fid = feature_ids[6]
 growthRate_fid = feature_ids[7]
-mRNA_decay_rate_farr = feature_ids[8:13]
-protein_decay_rate_farr = feature_ids[13:20]
+mRNA_decay_rate_farr = feature_ids[8:12]
+protein_decay_rate_farr = feature_ids[12:16]
 
 # global definable functions
 network_key = create_network_key(network_loc)
 func_to_fit = beta_curveFit_func(beta_function_fid)
 
-def function_for_timepoint(mRNAs_t0, gene_key):
+def function_for_timepoint(mRNAs_t0, N_rnap, N_ribo, protein_data_t0, cell_volume, gene_key, tf_key):
      protein_data_t1 = [None] * len(gene_key)
      coefficient_submat = []
      beta_all_subarr = []
@@ -67,30 +67,45 @@ def function_for_timepoint(mRNAs_t0, gene_key):
                continue
           
           R_max_txn, R_max_trans = max_rates(len_taken_by_rnap, elongation_rate, len_taken_by_ribo, peptide_rate, gene_info_dict, transcriptionRate_betaFromContext_fid)
-          Kd_rnap_gene = gene_info_dict["regulators"]["polymerase"]
           overall_mRNA_change_rate = (data_t1[i] - data_t0[i]) / dt
 
           coefficient_arr, beta_all = beta_from_overall_mRNA(
-
+               overall_mRNA_change_rate, 
+               gene_mRNA_t0,
+               protein_data_t0,
+               N_rnap, 
+               gene_info_dict,
+               gene_key,
+               tf_key,
+               R_max_txn,
+               temperature, genome_length,
+               growthRate_fid, tf_probabiltiy_fid, sigma_competition_fid, transcriptionRate_betaFromContext_fid, mRNA_decay_rate_farr
           )
 
           coefficient_submat.append(coefficient_arr)
           beta_all_subarr.append(beta_all)
 
           # update protein amnts
-          overall_protein_change_rate = translation_rate() - protein_decay_rate() * protein_data_t0[i]
+          overall_protein_change_rate = translation_rate(
+               gene, gene_mRNA_t0, protein_data_t0, N_ribo, gene_info_dict, R_max_trans, Kd_ribo_mrna, temperature, translationRate_fid
+          ) - protein_decay_rate(
+               gene, protein_data_t0, gene_info_dict, gene_key, temperature, growthRate_fid, protein_decay_rate_farr
+          ) * protein_data_t0[i]
+
           protein_data_t1[i] = protein_data_t0[i] + overall_protein_change_rate * dt
 
      # update protein amounts, RNAP, ribo, and cell vol
-     N_rnap = RNAP_amount()
-     N_ribo = ribo_amount()
-     cell_volume = cell_volume + get_grow_rate() * dt
+     next_N_rnap = RNAP_amount(N_rnap, protein_data_t0, RNAPAmount_fid)
+     next_N_ribo = ribo_amount(N_ribo, protein_data_t0, RiboAmount_fid)
+     cell_volume = cell_volume + get_grow_rate(protein_data_t0, growthRate_fid) * dt
      protein_data_t0 = protein_data_t1
 
-     return coefficient_submat, beta_all_subarr, protein_data_t1
+     return coefficient_submat, beta_all_subarr, N_rnap, N_ribo, protein_data_t1, cell_volume
 
 def fit_function(coefficient_matrix, beta_all_arr, feature_id):
      # clean matrices
+     beta_all_arr = np.nan_to_num(np.array(beta_all_arr)).tolist()
+
      empty_columns = []
      for i in range(len(list(zip(*coefficient_matrix)))):
           column = list(zip(*coefficient_matrix))[i]
@@ -110,10 +125,10 @@ def fit_function(coefficient_matrix, beta_all_arr, feature_id):
 
 for data_file in ["data.csv"]:
      # get data
-     data_df = pd.read_csv(f"{data_dir}/{data_file}", index_col=0)
-     
+     data_df = pd.read_csv(f"{data_dir}/{data_file}", index_col=1)
+     print(data_df)
      # normalize as concentations
-     data_df = data_df.multiply(1 / 6.02e23)
+     # data_df = data_df.multiply(1 / 6.02e23)
 
      # define keys
      gene_key = list(data_df.index) # may have to subtracted header
@@ -121,7 +136,7 @@ for data_file in ["data.csv"]:
      tf_key = list(set(tf_key)) # filter repeats
 
      # filter out groups
-     groups = [ [] for i in range(50) ]
+     groups = [ [] for i in range(1000) ]
      for i in range(len(data_df.axes[1])):
           colname = data_df.columns[i]
           group_n = re.search("\\| (\\d+)", colname)
@@ -144,21 +159,21 @@ for data_file in ["data.csv"]:
           group_data_indecies = sorted(groups[i])
 
           protein_data_t0 = list(data_df.iloc[:,0])
-          N_rnap = 2200
-          N_ribo = 3000
+          N_rnap = 5000
+          N_ribo = 15000
 
           for l in range(len(group_data_indecies[:-1])):
                print(f"\t\tdata pair {l}")
 
-               n = group_data_indecies[l].multiply(1 / cell_volume) # data index at t0
-               m = group_data_indecies[l+1] # data index at t1
+               n = group_data_indecies[l]  # data index at t0
+               m = group_data_indecies[l+1]  # data index at t1
 
                # pair of time points
-               data_t0 = list(data_df.iloc[:,n]) # data  at t0
-               data_t1 =  list(data_df.iloc[:,m]) # data  at t1
+               data_t0 = [ float(i) / cell_volume for i in list(data_df.iloc[:,n]) ]  # data  at t0
+               data_t1 = [ float(i) / cell_volume for i in list(data_df.iloc[:,m]) ]  # data  at t1
                dt = float(data_df.columns[m]) - float(data_df.columns[n])
 
-               coefficient_submat, beta_all_subarr, protein_data_t1= function_for_timepoint()
+               coefficient_submat, beta_all_subarr, N_rnap, N_ribo, protein_data_t0, cell_volume = function_for_timepoint(data_t0, N_rnap, N_ribo, protein_data_t0, cell_volume, gene_key, tf_key)
                
                coefficient_matrix.extend(coefficient_submat)
                beta_all_arr.extend(beta_all_subarr)
@@ -173,4 +188,4 @@ results_dict = {
      "beta values": dict(zip(tf_key, beta_arr)),
      "covariance": covar
 }
-json.dump(results_dict, "./tf_beta_values.json")
+json.dump(results_dict, open("./tf_beta_values.json", 'w'))
