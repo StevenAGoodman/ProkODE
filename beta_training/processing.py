@@ -125,7 +125,7 @@ def fit_function(coefficient_matrix, beta_all_arr, feature_id):
 
 for data_file in [data_file]:
      # get data
-     data_df = pd.read_csv(f"{data_file}", index_col="Unnamed: 0").iloc[:, :3].multiply(1 / 6.02e23)
+     data_df = pd.read_csv(f"{data_file}", index_col="Unnamed: 0").multiply(1 / 6.02e23)
      print(data_df)
      # normalize as concentations
      # data_df = data_df.multiply(1 / 6.02e23)
