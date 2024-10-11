@@ -31,7 +31,7 @@ def search_network_json(network_loc, network_key, gene_str:str):
     except:
         return None
 
-    
+
 
     # with open(network_loc, 'r') as network_file:
     #     for _, line in enumerate(network_file):
@@ -86,7 +86,7 @@ def rnap_probabiltiy(N_rnap, Kd_rnap_target, genome_len, feature_fid):
         return N_rnap / (N_rnap + Kd_rnap_target)
     elif feature_fid == "B":
         return None
-    
+
 
 
 # Transcription rate function
@@ -117,7 +117,7 @@ def transcription_rate(gene, protein_amnts, gene_key, N_rnap, Kd_rnap, gene_info
 def beta_all_from_context(R_txn, N_rnap, Kd_rnap, genome_len, R_max_txn, feature_id):
     if feature_id == "@":
         P_rnap = N_rnap / (genome_len * (N_rnap + Kd_rnap))
-        return R_txn / (P_rnap * R_max_txn) 
+        return R_txn / (P_rnap * R_max_txn)
     elif feature_id == "A":
         P_rnap = N_rnap / (N_rnap + Kd_rnap)
         return R_txn / (P_rnap * R_max_txn)
@@ -133,27 +133,27 @@ def beta_curveFit_func(feature_id):
         def beta_function(P_arr, *beta_arr):
             assert len(P_arr[0]) == len(beta_arr)
             return np.array(P_arr) @ np.array(beta_arr).T
-        
+
     elif feature_id == "A":
         def beta_function(P_arr, *beta_arr):
             assert len(P_arr[0]) == len(beta_arr)
             return np.log10(np.array(P_arr)) @ np.log10(np.array(beta_arr)).T
-        
+
     elif feature_id == "B":
         def beta_function(P_arr, *beta_arr):
             assert len(P_arr[0]) == len(beta_arr)
             return np.array(P_arr) @ np.log10(np.array(beta_arr)).T
-    
+
     return beta_function
 
 
 # Translation rate function
 def translation_rate(gene, gene_mrna_amount, protein_amnts, N_ribo, gene_info_dict, R_max_trans, Kd_ribo_mrna, temperature, feature_id):
-    
+
     if feature_id == "@":
         translation_rate_raw = (N_ribo / (N_ribo + Kd_ribo_mrna)) * R_max_trans
         return translation_rate_raw * gene_mrna_amount
-    
+
     elif feature_id == "A":
         delta_G = gene_info_dict["delta G"]
         m_ribo = (2,500 * 1000000) / 1000 # g / mol -> kg
@@ -166,7 +166,7 @@ def translation_rate(gene, gene_mrna_amount, protein_amnts, N_ribo, gene_info_di
 
     elif feature_id == "B":
         return (N_ribo * R_max_trans * gene_mrna_amount) / (Kd_ribo_mrna + gene_mrna_amount)
-    
+
     else:
         TypeError(f"feature id {feature_id} not found for {translation_rate.__name__}")
 
@@ -195,9 +195,9 @@ def RNA_decay_rate(prev_gene_mRNA, protein_amnts, gene_info_dict, gene_key, temp
             # how can you identify a protien as degrading?
         #     # what is the relationship of degrading prots component and decay (ie half life) component
         half_life += np.log(2) / rate_of_mRNA_cleavage
-    
+
     if binary_feature_arr[3] == 1:
-        # Michaelis–Menten 
+        # Michaelis–Menten
         rate_of_mRNA_cleavage = 0
         for degrad_prot, dp_info in decay_info.items():
             N_dp = protein_amnts[gene_key.index(degrad_prot)]
@@ -250,9 +250,9 @@ def protein_decay_rate(gene, protein_amnts, gene_info_dict, gene_key, temperatur
     #         # how can you identify a protien as degrading?
     #     #     # what is the relationship of degrading prots component and decay (ie half life) component
     #     half_life += np.log(2) / rate_of_mRNA_cleavage
-    
+
     # if binary_feature_arr[4] == 1:
-    #     # Michaelis–Menten 
+    #     # Michaelis–Menten
     #     rate_of_mRNA_cleavage = 0
 
     #     for degrad_prot, dp_info in decay_info.items():
@@ -282,7 +282,7 @@ def protein_decay_rate(gene, protein_amnts, gene_info_dict, gene_key, temperatur
 def RNAP_amount(prev_rnap, protein_amnts, feature_id):
     if feature_id == "@":
         return 2200 # μm^3
-    
+
     # elif feature_id == "A":
     #     # chance of proteins coming together form rnap
     #     return None
@@ -295,7 +295,7 @@ def RNAP_amount(prev_rnap, protein_amnts, feature_id):
 def ribo_amount(prev_ribo, protein_amnts, feature_id):
     if feature_id == "@":
         return 3000 # μm^3
-    
+
     # elif feature_id == "A":
     #     # chance of proteins coming together form ribo
     #     return None
@@ -330,7 +330,7 @@ def get_grow_rate(protein_amnts, feature_id):
 
 # link to processing.py
 def beta_from_overall_mRNA(overall_mRNA_change_rate, gene_mRNA_amnt, protein_amnts, N_rnap, gene_info_dict, gene_key, tf_key, R_max_txn, temperature, genome_length, growthRate_fid, tf_probabiltiy_fid, sigma_competition_fid, transcriptionRate_betaFromContext_fid, mRNADecayRate_fid):
-    
+
     Kd_rnap = score_to_K(gene_info_dict["regulators"]["polymerase"], temperature)
 
     mRNA_decay_rate = RNA_decay_rate(gene_mRNA_amnt, protein_amnts, gene_info_dict, gene_key, temperature, growthRate_fid, mRNADecayRate_fid)
