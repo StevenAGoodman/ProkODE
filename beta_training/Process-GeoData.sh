@@ -9,7 +9,7 @@ perms() {
 
     python_chars_list="["
     for chars in "${chars_list[@]}"; do
-        python_chars_list+="\"$chars\", "  
+        python_chars_list+="\"$chars\", "
     done
 
     python_chars_list="${python_chars_list%, }]"

@@ -15,18 +15,17 @@ def create_network_key(network_loc):
         network_key = []
         for line in netfile:
             if len(line) < 3:
-                continue
+                network_key.append("NaN")
             else:
                 line_keys = [str.lower(line[1:line.find('":{')])]
                 line_keys.extend(json.loads(re.search('"synonyms": (\\[.+\\]), ', line).group(1)))
                 network_key.append(line_keys)
     return network_key
-
 def search_network_json(network_loc, network_key, gene_str:str):
     try:
         gene_str = str.lower(gene_str)
         net_index = [i for i in range(len(network_key)) if gene_str in network_key[i]]
-        line = linecache.getline(network_loc, net_index[0])
+        line = linecache.getline(network_loc, net_index[0] + 2)
         line = line.replace("\n","")[line.find('":{')+2:-1]
         return json.loads(line)
     except:
@@ -144,11 +143,6 @@ def beta_curveFit_func(feature_id):
         def beta_function(P_arr, *beta_arr):
             assert len(P_arr[0]) == len(beta_arr)
             return np.array(P_arr) @ np.log10(np.array(beta_arr)).T
-        
-    elif feature_id == "C":
-        def beta_function(P_arr, *beta_arr):
-            assert len(P_arr) == len(beta_arr)
-            return np.array(P_arr) @ np.log2(np.array(beta_arr)).T
     
     return beta_function
 
@@ -228,7 +222,6 @@ def RNA_decay_rate(prev_gene_mRNA, protein_amnts, gene_info_dict, gene_key, temp
 def protein_decay_rate(gene, protein_amnts, gene_info_dict, gene_key, temperature, growth_fid, binary_feature_arr):
     binary_feature_arr = list(map(int, binary_feature_arr))
     prev_gene_prot = protein_amnts[gene_key.index(gene)]
-    decay_info = gene_info_dict["protein decay"]
 
     half_life = 0 # secs
 
@@ -338,7 +331,7 @@ def get_grow_rate(protein_amnts, feature_id):
 # link to processing.py
 def beta_from_overall_mRNA(overall_mRNA_change_rate, gene_mRNA_amnt, protein_amnts, N_rnap, gene_info_dict, gene_key, tf_key, R_max_txn, temperature, genome_length, growthRate_fid, tf_probabiltiy_fid, sigma_competition_fid, transcriptionRate_betaFromContext_fid, mRNADecayRate_fid):
     
-    Kd_rnap = gene_info_dict["regulators"]["polymerase"]
+    Kd_rnap = score_to_K(gene_info_dict["regulators"]["polymerase"], temperature)
 
     mRNA_decay_rate = RNA_decay_rate(gene_mRNA_amnt, protein_amnts, gene_info_dict, gene_key, temperature, growthRate_fid, mRNADecayRate_fid)
     mRNA_creation_rate = overall_mRNA_change_rate + mRNA_decay_rate * gene_mRNA_amnt

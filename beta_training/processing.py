@@ -1,8 +1,8 @@
 import sys
 # inputs
-feature_ids = "@@@@@@@@10001000" # sys.argv[1] #
-data_organism = "" #  sys.argv[2] # Escherichia coli
-prokode_dir = "/workspaces/prokode" # sys.argv[3] # 
+feature_string = sys.argv[1] # "@@@@@@@@10001000" #
+data_file = sys.argv[2] # 
+prokode_dir = sys.argv[3] # "/workspaces/ProkODE" # 
 
 import pandas as pd
 import numpy as np
@@ -15,12 +15,12 @@ import multiprocessing as mp
  
 sys.path.append(".")
 from scipy.optimize import curve_fit
-from src.maths import *
+from maths import *
 
 # be sure to run run.py before this file
 network_loc = prokode_dir + "/src/network.json"
-data_dir = prokode_dir + "/beta_training/GEO_expression_data/" + data_organism
-data_file_list = os.listdir(data_dir)
+data_dir = prokode_dir + "/beta_training/GEO_expression_data" 
+# data_file_list = os.listdir(data_dir)
 
 # constants that preferably would be set by the user
 genome_length = 4500000
@@ -33,7 +33,7 @@ len_taken_by_rnap = 30 # nt
 len_taken_by_ribo = 30 # aa
 
 # unpack model feature string
-feature_ids = list(feature_ids)
+feature_ids = list(feature_string)
 transcriptionRate_betaFromContext_fid = feature_ids[0]
 translationRate_fid = feature_ids[1]
 tf_probabiltiy_fid = feature_ids[2]
@@ -53,9 +53,6 @@ def function_for_timepoint(mRNAs_t0, N_rnap, N_ribo, protein_data_t0, cell_volum
      protein_data_t1 = [None] * len(gene_key)
      coefficient_submat = []
      beta_all_subarr = []
-
-     # with mp.Pool() as pool:
-     #      pool.map(for_each_gene_func, range(len(gene_key)))
 
      for i in range(len(gene_key)):
           gene = gene_key[i]
@@ -98,7 +95,7 @@ def function_for_timepoint(mRNAs_t0, N_rnap, N_ribo, protein_data_t0, cell_volum
      next_N_rnap = RNAP_amount(N_rnap, protein_data_t0, RNAPAmount_fid)
      next_N_ribo = ribo_amount(N_ribo, protein_data_t0, RiboAmount_fid)
      cell_volume = cell_volume + get_grow_rate(protein_data_t0, growthRate_fid) * dt
-     protein_data_t0 = protein_data_t1
+
 
      return coefficient_submat, beta_all_subarr, N_rnap, N_ribo, protein_data_t1, cell_volume
 
@@ -116,16 +113,19 @@ def fit_function(coefficient_matrix, beta_all_arr, feature_id):
 
      n_features = len(coefficient_matrix[0])
      p = [1] * n_features
-     beta_arr, covar_uncertainty = curve_fit(func_to_fit, coefficient_matrix, beta_all_arr, p0 = p)
+     try:
+          beta_arr, covar_uncertainty = curve_fit(func_to_fit, coefficient_matrix, beta_all_arr, p0 = p)
 
-     for index in empty_columns:
-          beta_arr[index] = None
+          for index in empty_columns:
+               beta_arr[index] = None
 
-     return beta_arr, covar_uncertainty
+          return beta_arr.tolist(), covar_uncertainty.tolist()
+     except:
+          return "ERROR IN FITTING", "NA"
 
-for data_file in ["data.csv"]:
+for data_file in [data_file]:
      # get data
-     data_df = pd.read_csv(f"{data_dir}/{data_file}", index_col=1)
+     data_df = pd.read_csv(f"{data_file}", index_col="Unnamed: 0").iloc[:, :3].multiply(1 / 6.02e23)
      print(data_df)
      # normalize as concentations
      # data_df = data_df.multiply(1 / 6.02e23)
@@ -158,7 +158,7 @@ for data_file in ["data.csv"]:
 
           group_data_indecies = sorted(groups[i])
 
-          protein_data_t0 = list(data_df.iloc[:,0])
+          protein_data_t0 = [ float(i) / cell_volume for i in list(data_df.iloc[:,0]) ]
           N_rnap = 5000
           N_ribo = 15000
 
@@ -178,14 +178,15 @@ for data_file in ["data.csv"]:
                coefficient_matrix.extend(coefficient_submat)
                beta_all_arr.extend(beta_all_subarr)
 
-               print(f"\t\t\tbeta all: {beta_all_subarr}")
+               # print(f"\t\t\tbeta all: {beta_all_subarr}")
 
 # overall function fitting for all data points in an organisms
 beta_arr, covar = fit_function(coefficient_matrix, beta_all_arr, beta_function_fid)
 
 # export to csv
-results_dict = {
+results_dict = {feature_string:{
      "beta values": dict(zip(tf_key, beta_arr)),
-     "covariance": covar
-}
-json.dump(results_dict, open("./tf_beta_values.json", 'w'))
+     "covariance": str(covar)
+}}
+results_dictstr = json.dumps(results_dict)
+open(prokode_dir +"/beta_training/tf_betas.json", 'a').write(results_dictstr + "\n")
