@@ -3,6 +3,7 @@ import ast
 import re
 import math
 import linecache
+import pathlib
 import numpy as np
 import pandas as pd
 from Bio.Seq import Seq
@@ -49,7 +50,7 @@ n_end_rule = {
     "G": 10 * 3600,
     "V": 10 * 3600,
     "P": 10 * 3600,
-    "M": 10 * 3600    
+    "M": 10 * 3600
 }
 
 def get_N_end(gene, annotation_df, genome_loc, end_loc=None):
@@ -175,6 +176,7 @@ def create_network_json(prokode_dir, tfbs_loc, annotation_df, operons_df, genome
     # write to network.json
     print('\twriting to network.json')
     network_loc = prokode_dir + '/src/network.json'
+    pathlib.Path(network_loc).unlink(missing_ok=True)
     with open(network_loc, 'a') as network_file:
         network_file.write('{\n')
         for gene, gene_elmnt in output.items():

@@ -1,5 +1,6 @@
 import os
 import sys
+import glob
 import numpy as np
 import pandas as pd
 
@@ -38,7 +39,9 @@ def create_network_json_main(prokode_dir, genome_loc, annotation_loc, operons_lo
     print("==========================\nProkODE: Inferring Gene Regulatory Network (GRN)\n==========================\n")
     # reset file structure
     if reset:
-        reset_files = ['/results.json','/run.log','/src/tfbs.csv','/src/network.json','/src/__pycache__/config_network_structure.cpython-312.pyc','/src/preprocessing/CiiiDER_results.bsl', '/src/preprocessing/CiiiDER_results.csv','/src/preprocessing/CiiiDER_results.tsv','/src/preprocessing/config.ini','/src/preprocessing/motif_matrices.ml','/src/preprocessing/motif_matrices.txt','/src/preprocessing/promoters.fa','/src/preprocessing/__pycache__/preprocessing.cpython-312.pyc']
+        reset_files = ['/results.json','/run.log','/src/tfbs.csv','/src/preprocessing/CiiiDER_results.bsl', '/src/preprocessing/CiiiDER_results.csv','/src/preprocessing/CiiiDER_results.tsv','/src/preprocessing/config.ini','/src/preprocessing/motif_matrices.ml','/src/preprocessing/motif_matrices.txt','/src/preprocessing/promoters.fa']
+        reset_files.extend([i.replace("\\", "/") for i in glob.glob(prokode_dir + "/**/*.pyc", recursive=True)])
+
         for file in reset_files:
             try:
                 os.remove(f"{prokode_dir}/{file}")
