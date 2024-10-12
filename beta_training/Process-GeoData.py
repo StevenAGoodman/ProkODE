@@ -193,8 +193,6 @@ def main(feature_string, training_df, prokode_dir, network_loc, gene_key, tf_key
 
 network_loc = PROKODE_BASEDIR + "/src/network.json"
 training_df, gene_key, tf_key = init_stuffs(DATA_FILE_PATH, PROKODE_BASEDIR + "/src/network.json")
-## SMALLER TRAINING SET
-training_df = training_df.iloc[:, :10]
 training_df, groups = getGroups(training_df)
 
 
