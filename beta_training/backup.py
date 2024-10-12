@@ -1,10 +1,9 @@
-NUM_CORES = 8
 PYTHON_EXEC_PATH = "python"
 PYSCRIPT_FILE_PATH = "C:/Users/Rafael/repos/personal/geo_analysis/prokode/beta_training/processing.py"
-DATA_FILE_PATH = "C:/Users/Rafael/repos/personal/geo_analysis/prokode/beta_training/GEO_expression_data/combined_gene_expression.csv"
 PROKODE_BASEDIR =  "C:/Users/Rafael/repos/personal/geo_analysis/prokode" # !! NO end '/' !!
+DATA_FILE_PATH = "C:/Users/Rafael/repos/personal/geo_analysis/prokode/beta_training/GEO_expression_data/combined_gene_expression.csv"
 
-# libs
+# necessary libs
 import multiprocessing as mp
 import itertools
 import random
@@ -13,20 +12,10 @@ import numpy as np
 import json
 import re
 import sys
+import os
 sys.path.append(".")
 from scipy.optimize import curve_fit
 from beta_estimation_functions import *
-
-
-chars_list = ["@AB", "@AB", "@A", "@AB", "@", "@", "@", "@A", "01", "01", "01", "01", "01", "01", "01", "01"]
-chars_list = [list(chars) for chars in chars_list]
-perms = []
-for i in itertools.product(*chars_list):
-    perms.append("".join(i))
-random.shuffle(perms)
-
-
-
 
 def init_stuffs(data_file, network_loc):
     print("reading datafile to dataframe")
@@ -57,6 +46,16 @@ def getGroups(data_df):
     return data_df, groups
 
 
+chars_list = ["@AB", "@AB", "@A", "@AB", "@", "@", "@", "@A", "01", "01", "01", "01", "01", "01", "01", "01"]
+
+chars_list = [list(chars) for chars in chars_list]
+
+perms = []
+for i in itertools.product(*chars_list):
+    perms.append("".join(i))
+
+random.shuffle(perms)
+
 def function_for_timepoint(mRNAs_t0, N_rnap, N_ribo, protein_data_t0, cell_volume, gene_key, tf_key, data_t0, network_key, len_taken_by_rnap, elongation_rate, len_taken_by_ribo, peptide_rate, transcriptionRate_betaFromContext_fid, temperature, genome_length, dt, data_t1,growthRate_fid, tf_probabiltiy_fid, sigma_competition_fid, mRNA_decay_rate_farr, Kd_ribo_mrna, protein_decay_rate_farr, translationRate_fid, RNAPAmount_fid, RiboAmount_fid):
     protein_data_t1 = [None] * len(gene_key)
     coefficient_submat = []
@@ -66,7 +65,7 @@ def function_for_timepoint(mRNAs_t0, N_rnap, N_ribo, protein_data_t0, cell_volum
         gene_mRNA_t0 = data_t0[i]
         gene_info_dict = search_network_json(network_loc, network_key, gene)
         if gene_info_dict == None:
-            # print(f"\t\t\t\tFailed: {gene}\tgene from data not found in genome")
+# print((f"\t\t\t\tFailed: {gene}\tgene from data not found in genome")
             continue
 
         R_max_txn, R_max_trans = max_rates(len_taken_by_rnap, elongation_rate, len_taken_by_ribo, peptide_rate, gene_info_dict, transcriptionRate_betaFromContext_fid)
@@ -155,20 +154,20 @@ def main(feature_string, training_df, prokode_dir, network_loc, gene_key, tf_key
     beta_all_arr, coefficient_matrix = ([], [])
     # groups are isolated consecutive data
     for i in range(len(groups)):
-        # print(f"\tgroup {i}")
+# print((f"\tgroup {i}")
         group_data_indecies = sorted(groups[i])
         protein_data_t0 = [ float(i) / cell_volume for i in list(training_df.iloc[:,0]) ]
         N_rnap = 5000
         N_ribo = 15000
         for l in range(len(group_data_indecies[:-1])):
-            # print(f"\t\tdata pair {l}")
+# print((f"\t\tdata pair {l}")
             n = group_data_indecies[l]  # data index at t0
             m = group_data_indecies[l+1]  # data index at t1
             # pair of time points
             data_t0 = [ float(i) / cell_volume for i in list(training_df.iloc[:,n]) ]  # data  at t0
             data_t1 = [ float(i) / cell_volume for i in list(training_df.iloc[:,m]) ]  # data  at t1
             dt = float(training_df.columns[m]) - float(training_df.columns[n])
-            # print("\t\t\testimating equs for each geme")
+# print(("\t\t\testimating equs for each geme")
             coefficient_submat, beta_all_subarr, N_rnap, N_ribo, protein_data_t0, cell_volume = function_for_timepoint(
                 data_t0, N_rnap, N_ribo, protein_data_t0, cell_volume, gene_key, tf_key, data_t0, network_key, len_taken_by_rnap, elongation_rate, len_taken_by_ribo, peptide_rate, transcriptionRate_betaFromContext_fid, temperature, genome_length, dt, data_t1, growthRate_fid, tf_probabiltiy_fid, sigma_competition_fid, mRNA_decay_rate_farr, Kd_ribo_mrna, protein_decay_rate_farr, translationRate_fid, RNAPAmount_fid, RiboAmount_fid
             )
@@ -176,18 +175,18 @@ def main(feature_string, training_df, prokode_dir, network_loc, gene_key, tf_key
             beta_all_arr.extend(beta_all_subarr)
             # print(f"\t\t\tbeta all: {beta_all_subarr}")
 
-    # print("fitting eqs for params")
+# print(("fitting eqs for params")
     # overall function fitting for all data points in an organisms
-    beta_arr, covar = fit_function(coefficient_matrix, beta_all_arr, beta_function_fid)
+    beta_arr, covar = fit_function(coefficient_matrix, beta_all_arr, beta_function_fid, func_to_fit)
     # export to csv
-    print("exporting to csv")
+    # print("exporting to csv")
     results_dict = {feature_string:{
         "beta values": dict(zip(tf_key, beta_arr)),
         "covariance": str(covar)
     }}
     results_dictstr = json.dumps(results_dict)
-    # print("RESULTS!!!!!!!!!!!!!!!!!!!!!!!!!!!:", results_dictstr)
-    open("./tf_beta_values.json", 'a').write(results_dictstr + "\n")
+    print("RESULTS!!!!!!!!!!!!!!!!!!!!!!!!!!!:", results_dictstr)
+    open(prokode_dir +"/beta_training/tf_betas.json", 'a').write(results_dictstr + "\n")
 
 
 
@@ -196,8 +195,6 @@ training_df, gene_key, tf_key = init_stuffs(DATA_FILE_PATH, PROKODE_BASEDIR + "/
 ## SMALLER TRAINING SET
 training_df = training_df.iloc[:, :10]
 training_df, groups = getGroups(training_df)
-
-
 
 def call_py(feature_string):
     print(feature_string)
@@ -208,7 +205,8 @@ def call_py(feature_string):
 
 
 if __name__ == '__main__':
-    pool = mp.Pool(processes=NUM_CORES)
+    pool = mp.Pool(processes=20)
+    print("cpu count:", mp.cpu_count())
     results = pool.map(call_py, perms)
     pool.close()
     pool.join()

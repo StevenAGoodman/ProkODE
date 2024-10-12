@@ -8,3 +8,4 @@ src/preprocessing/CiiiDER_results.csv
 beta_training/GEO_expression_data/stubborn
 beta_training/GEO_expression_data/data.csv
 beta_training/processing.py
+**/__pycache__
