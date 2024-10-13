@@ -1,11 +1,17 @@
-from multiprocessing import Pool
-import linecache
+NUM_CORES = 10
+PYTHON_EXEC_PATH = "python"
+TF_BETA_FILEPATH = "C:/Users/Rafael/repos/personal/geo_analysis/prokode/dev/partially_run_results.json"
+DATA_FILE_PATH = "C:/Users/Rafael/repos/personal/geo_analysis/prokode/dev/beta_training/GEO_expression_data/combined_gene_expression.csv"
+PROKODE_BASEDIR =  "C:/Users/Rafael/repos/personal/geo_analysis/prokode/dev" # !! NO end '/' !!
+
+# libs
+import multiprocessing as mp
 import time
-import json
+import pandas as pd
+import numpy as np
+from beta_estimation_functions import *
 from model_accuracy_functions import *
 
-# inputs
-TF_BETA_FILEPATH = "./tf_betas.json"
 
 latest_line = 1
 
@@ -19,6 +25,9 @@ def init_stuffs(data_file, network_loc):
     gene_key = list(data_df.index) # may have to subtracted header
     tf_key = [ tf for val in json.load(open(network_loc, 'r')).values() for tf in val["regulators"].keys() ]
     tf_key = list(set(tf_key)) # filter repeats
+    return data_df, gene_key, tf_key
+
+def getGroups(data_df):
     # filter out groups
     print("\t\t\t\tfiltering different groups")
     groups = [ [] for i in range(1000) ]
@@ -32,40 +41,45 @@ def init_stuffs(data_file, network_loc):
             group_n = group_n.group(1)
         groups[int(group_n)].append(i)
     groups = [x for x in groups if x != []] # filter empties
-    return data_df, gene_key, tf_key, groups
+    return data_df, groups
 
-def test_config_wBetas():
-    while True:
-      line = linecache.getline(TF_BETA_FILEPATH, latest_line)
-      if line != "":
-        break
-      time.sleep(2)
+
+
+
+network_loc = PROKODE_BASEDIR + "/src/network.json"
+training_df, gene_key, tf_key = init_stuffs(DATA_FILE_PATH, PROKODE_BASEDIR + "/src/network.json")
+training_df = training_df.iloc[:, -20:]
+training_df, groups = getGroups(training_df)
+max_lines = 2594
+network_key = create_network_key(network_loc)
+
+
+latest_line = 1
+
+def main(iter):
+    global latest_line
+    # if iter % 10 == 0:
+    print("line:", iter)
+
+    line = linecache.getline(TF_BETA_FILEPATH, iter)
 
     line = json.loads(line)
-    tf_key =
-    beta_values = list(line["beta values"].values())
+    config_id = [*line.keys()][0]
+    tf_key = list([*line.values()][0]["beta values"].keys())
+    beta_values = list([*line.values()][0]["beta values"].values())
 
-    test_config_accuracy()
+    actual_matrix, predicted_matrix, gene_key, time_points_key = test_config_accuracy(training_df, tf_key, beta_values, network_loc, network_key, config_id)
 
+    # do accuracy measurements
+    general_acc = accuracy_representation(config_id, actual_matrix, predicted_matrix, gene_key, time_points_key, PROKODE_BASEDIR, True)
+    if general_acc == np.float64("nan"):
+        general_acc = str(general_acc) + ": floating point likely to small"
+    open("./beta_training/config_results/overall.csv", 'a').write(f"{config_id},{general_acc}\n")
 
-
-def call_py(feature_string, training_df, gene_key, tf_key,groups, prokode_dir):
-    time.sleep(1)
-    print(feature_string)
-    print(training_df)
-    network_loc = prokode_dir + "/src/network.json"
-    with open(PYSCRIPT_FILE_PATH, 'r') as pyscript:
-        data_file = DATA_FILE_PATH
-        main(feature_string, training_df, prokode_dir, network_loc, gene_key, tf_key, groups, data_file)
 
 if __name__ == '__main__':
-    network_loc = PROKODE_BASEDIR + "/src/network.json"
-    training_df, gene_key, tf_key, groups = init_stuffs(DATA_FILE_PATH, PROKODE_BASEDIR + "/src/network.json")
-    training_df[]
-
-    pool = Pool(processes=15)
-    results = [pool.apply_async(call_py(x,training_df,gene_key, tf_key, groups,PROKODE_BASEDIR), (x,), callback=callback) for x in perms[1:10]]
-
-    for result in results:
-        result.wait()
-
+    pool = mp.Pool(processes=15)
+    print("cpu count:", mp.cpu_count())
+    results = pool.map(main, list(range(1,max_lines)))
+    pool.close()
+    pool.join()
