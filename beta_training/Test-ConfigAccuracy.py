@@ -1,8 +1,8 @@
-NUM_CORES = 10
+NUM_CORES = 6
 PYTHON_EXEC_PATH = "python"
-TF_BETA_FILEPATH = "C:/Users/Rafael/repos/personal/geo_analysis/prokode/dev/partially_run_results.json"
-DATA_FILE_PATH = "C:/Users/Rafael/repos/personal/geo_analysis/prokode/dev/beta_training/GEO_expression_data/combined_gene_expression.csv"
-PROKODE_BASEDIR =  "C:/Users/Rafael/repos/personal/geo_analysis/prokode/dev" # !! NO end '/' !!
+TF_BETA_FILEPATH = "C:/Users/steve/PROKODE-DOCKER/plane/ProkODE/partially_run_results.json"
+DATA_FILE_PATH = "C:/Users/steve/PROKODE-DOCKER/plane/ProkODE/beta_training/GEO_expression_data/combined_gene_expression.csv"
+PROKODE_BASEDIR =  "C:/Users/steve/PROKODE-DOCKER/plane/ProkODE" # !! NO end '/' !!
 
 # libs
 import multiprocessing as mp
@@ -54,7 +54,7 @@ max_lines = 2594
 network_key = create_network_key(network_loc)
 
 
-latest_line = 1
+done = []
 
 def main(iter):
     global latest_line
@@ -76,10 +76,13 @@ def main(iter):
         general_acc = str(general_acc) + ": floating point likely to small"
     open("./beta_training/config_results/overall.csv", 'a').write(f"{config_id},{general_acc}\n")
 
+    open("./test_completed.txt", "a").write(str(iter) + "\n")
 
-if __name__ == '__main__':
-    pool = mp.Pool(processes=15)
-    print("cpu count:", mp.cpu_count())
-    results = pool.map(main, list(range(1,max_lines)))
-    pool.close()
-    pool.join()
+
+main(45)
+# if __name__ == '__main__':
+#     pool = mp.Pool(processes=NUM_CORES)
+#     print("cpu count:", mp.cpu_count())
+#     results = pool.map(main, list(range(1,max_lines)))
+#     pool.close()
+#     pool.join()

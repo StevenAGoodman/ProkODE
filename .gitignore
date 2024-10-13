@@ -9,3 +9,4 @@ beta_training/GEO_expression_data/stubborn
 beta_training/GEO_expression_data/data.csv
 beta_training/processing.py
 **/__pycache__
+partially_run_results.json

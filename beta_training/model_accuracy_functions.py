@@ -54,20 +54,29 @@ def get_beta_all_func():
   if beta_function_fid == "@":
       def beta_function(P_mat, beta_arr):
           assert len(P_mat[0]) == len(beta_arr)
+          P_mat = np.nan_to_num(np.array(P_mat, nan=1e-100))
+          beta_arr = np.nan_to_num(np.array(beta_arr), nan=1e-100)
+          P_mat[P_mat == 0] = 1e-30
+          beta_arr[beta_arr == 0] = 1e-30
           return P_mat @  beta_arr.T
 
   elif beta_function_fid == "A":
       def beta_function(P_mat, beta_arr):
           assert len(P_mat[0]) == len(beta_arr)
-          P_mat = np.nan_to_num(P_mat, nan=1e-100)
-          beta_arr = np.nan_to_num(beta_arr, nan=1e-100)
-          return np.log10(np.where(P_mat == 0, 1e-100, P_mat)) @ np.log10(np.where(beta_arr == 0, 1e-100, beta_arr)).T
+          P_mat = np.nan_to_num(np.array(P_mat), nan=1e-100)
+          beta_arr = np.nan_to_num(np.array(beta_arr), nan=1e-100)
+          P_mat[P_mat == 0] = 1e-30
+          beta_arr[beta_arr == 0] = 1e-30
+          return np.log10(P_mat) @ np.log10(beta_arr).T
 
   elif beta_function_fid == "B":
       def beta_function(P_mat, beta_arr):
           assert len(P_mat[0]) == len(beta_arr)
-          beta_arr = np.nan_to_num(beta_arr, nan=1e-100)
-          return np.nan_to_num(np.array(P_mat)) @ np.log10(np.where(beta_arr == 0, 1e-100, beta_arr)).T
+          P_mat = np.nan_to_num(np.array(P_mat), nan=1e-100)
+          beta_arr = np.nan_to_num(np.array(beta_arr), nan=1e-100)
+          P_mat[P_mat == 0] = 1e-30
+          beta_arr[beta_arr == 0] = 1e-30
+          return np.nan_to_num(P_mat) @ np.log10(beta_arr).T
 
   return beta_function
 
@@ -83,8 +92,11 @@ def get_coefficient_mat(current_protein_amnts, gene_info_dict, gene_key, tf_key)
       if tf ==  "polymerase":
          continue
       Kd_tf_tg = score_to_K(info["delta G"], temperature)
-      N_tf = current_protein_amnts[gene_key.index(tf)]
-      coefficient_mat[0, tf_key.index(tf)] = tf_probability(Kd_tf_tg, N_tf, genome_length)
+      try:
+        N_tf = current_protein_amnts[gene_key.index(tf)]
+        coefficient_mat[0, tf_key.index(tf)] = tf_probability(Kd_tf_tg, N_tf, genome_length)
+      except:
+        continue
   return coefficient_mat
 
 def get_R_mRNA_txn(N_rnap, R_max_txn, protein_amnts, gene_info_dict):
@@ -190,11 +202,11 @@ def accuracy_representation(config_id, data_actual_matrix, data_predicted_matrix
 
     print("dk")
     error_raw = np.nan_to_num(flattened_actual) - np.nan_to_num(flattened_predict)
-    print(numpy.isnan(np.nan_to_num(flattened_actual)).any())
-    print(numpy.isnan(np.nan_to_num(flattened_predict)).any())
+    print('a', np.isnan(np.nan_to_num(flattened_actual)).any())
+    print('b', np.isnan(np.nan_to_num(flattened_predict)).any())
 
     print("raw", error_raw)
-    print(numpy.isnan(error_raw).any())
+    print(np.isnan(error_raw).any())
     mse_error = np.sum(np.nan_to_num(np.square(error_raw))) / len(flattened_actual)
     return mse_error
 
