@@ -1,8 +1,8 @@
 NUM_CORES = 6
 PYTHON_EXEC_PATH = "python"
-TF_BETA_FILEPATH = "C:/Users/steve/PROKODE-DOCKER/plane/ProkODE/partially_run_results.json"
-DATA_FILE_PATH = "C:/Users/steve/PROKODE-DOCKER/plane/ProkODE/beta_training/GEO_expression_data/combined_gene_expression.csv"
-PROKODE_BASEDIR =  "C:/Users/steve/PROKODE-DOCKER/plane/ProkODE" # !! NO end '/' !!
+TF_BETA_FILEPATH = "c:/Users/cryst/LOFScreening/archive/PROKODE/ProkODE/partially_run_results.json"
+DATA_FILE_PATH = "c:/Users/cryst/LOFScreening/archive/PROKODE/ProkODE/beta_training/GEO_expression_data/combined_gene_expression.csv"
+PROKODE_BASEDIR =  "c:/Users/cryst/LOFScreening/archive/PROKODE/ProkODE" # !! NO end '/' !!
 
 # libs
 import multiprocessing as mp
@@ -68,6 +68,10 @@ def main(iter):
     tf_key = list([*line.values()][0]["beta values"].keys())
     beta_values = list([*line.values()][0]["beta values"].values())
 
+    if type(beta_values[0]) == str:
+     open("./test_completed.txt", "a").write(str(iter) + "\n")
+     return "NA"     
+
     actual_matrix, predicted_matrix, gene_key, time_points_key = test_config_accuracy(training_df, tf_key, beta_values, network_loc, network_key, config_id)
 
     # do accuracy measurements
@@ -79,7 +83,7 @@ def main(iter):
     open("./test_completed.txt", "a").write(str(iter) + "\n")
 
 
-main(45)
+main(84)
 # if __name__ == '__main__':
 #     pool = mp.Pool(processes=NUM_CORES)
 #     print("cpu count:", mp.cpu_count())

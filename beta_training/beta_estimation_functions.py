@@ -193,12 +193,14 @@ def RNA_decay_rate(prev_gene_mRNA, protein_amnts, gene_info_dict, gene_key, temp
         for degrad_prot, dp_info in decay_info.items():
             K = score_to_K(dp_info["delta G"], temperature)
             N_dp = protein_amnts[gene_key.index(degrad_prot)]
+            if np.isnan(N_dp):
+                continue
             # K_1 is the reaction rate from [Enzyme] + [mRNA] -> [Enzyme-mRNA] (ie, K_1[Enzyme][mRNA] = [Enzyme-mRNA] create / time ) ... k_1 is in 1 / (mols * time)
             rate_of_mRNA_cleavage += K * prev_gene_mRNA * N_dp / (1 + K * prev_gene_mRNA)
             # how can you identify a protien as degrading?
         #     # what is the relationship of degrading prots component and decay (ie half life) component
         half_life += np.log(2) / rate_of_mRNA_cleavage
-    
+
     if binary_feature_arr[3] == 1:
         # Michaelis–Menten 
         rate_of_mRNA_cleavage = 0
@@ -216,7 +218,7 @@ def RNA_decay_rate(prev_gene_mRNA, protein_amnts, gene_info_dict, gene_key, temp
             # how can you identify a protien as degrading?
         #     # what is the relationship of degrading prots component and decay (ie half life) component
         half_life += np.log(2) / rate_of_mRNA_cleavage
-
+        
     if half_life == 0:
         return 0
     else:

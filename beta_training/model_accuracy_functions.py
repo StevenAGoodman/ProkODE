@@ -3,6 +3,31 @@ import pandas as pd
 from matplotlib import pyplot as plt
 from beta_estimation_functions import *
 
+
+def list_duplicates_of(seq,item):
+    start_at = -1
+    locs = []
+    while True:
+        try:
+            loc = seq.index(item,start_at+1)
+        except ValueError:
+            break
+        else:
+            locs.append(loc)
+            start_at = loc
+    return locs
+
+def count_total_elements(my_list):
+    total_elements = 0
+
+    for item in my_list:
+        if isinstance(item, list):
+            total_elements += count_total_elements(item)
+        else:
+            total_elements += 1
+
+    return total_elements
+
 def define_const_and_fids(feature_string):
   # constants that preferably would be set by the user
   global genome_length
@@ -49,34 +74,35 @@ def define_const_and_fids(feature_string):
   Kd_rnap = 10.1
 
 
-def get_beta_all_func():
+def get_beta_all_func(beta_function_fid):
 
   if beta_function_fid == "@":
       def beta_function(P_mat, beta_arr):
           assert len(P_mat[0]) == len(beta_arr)
-          P_mat = np.nan_to_num(np.array(P_mat, nan=1e-100))
-          beta_arr = np.nan_to_num(np.array(beta_arr), nan=1e-100)
-          P_mat[P_mat == 0] = 1e-30
-          beta_arr[beta_arr == 0] = 1e-30
+          P_mat = np.nan_to_num(np.array(P_mat), nan=1e-30)
+          beta_arr = np.nan_to_num(np.array(beta_arr), nan=1e-30)
+          P_mat[P_mat == 0] = np.float64(1e-30)
+          beta_arr[beta_arr == 0] = np.float64(1e-30)
           return P_mat @  beta_arr.T
 
   elif beta_function_fid == "A":
       def beta_function(P_mat, beta_arr):
           assert len(P_mat[0]) == len(beta_arr)
-          P_mat = np.nan_to_num(np.array(P_mat), nan=1e-100)
-          beta_arr = np.nan_to_num(np.array(beta_arr), nan=1e-100)
-          P_mat[P_mat == 0] = 1e-30
-          beta_arr[beta_arr == 0] = 1e-30
+          P_mat = np.nan_to_num(np.array(P_mat), nan=1e-30)
+          beta_arr = np.nan_to_num(np.array(beta_arr), nan=1e-30)
+          P_mat[P_mat == 0] = np.float64(1e-30)
+          beta_arr[beta_arr == 0] = np.float64(1e-30)
           return np.log10(P_mat) @ np.log10(beta_arr).T
 
   elif beta_function_fid == "B":
-      def beta_function(P_mat, beta_arr):
-          assert len(P_mat[0]) == len(beta_arr)
-          P_mat = np.nan_to_num(np.array(P_mat), nan=1e-100)
-          beta_arr = np.nan_to_num(np.array(beta_arr), nan=1e-100)
-          P_mat[P_mat == 0] = 1e-30
-          beta_arr[beta_arr == 0] = 1e-30
-          return np.nan_to_num(P_mat) @ np.log10(beta_arr).T
+    def beta_function(P_mat, beta_arr):
+        P_mat = np.nan_to_num(np.array(P_mat, dtype=np.float64), nan=1e-30)
+        beta_arr = np.nan_to_num(np.array(beta_arr, dtype=np.float64), nan=1e-30)
+        
+        P_mat[P_mat == 0] = 1e-30
+        beta_arr[beta_arr == 0] = 1e-30
+        
+        return np.nan_to_num(P_mat) @ np.log10(beta_arr).T
 
   return beta_function
 
@@ -99,11 +125,7 @@ def get_coefficient_mat(current_protein_amnts, gene_info_dict, gene_key, tf_key)
         continue
   return coefficient_mat
 
-def get_R_mRNA_txn(N_rnap, R_max_txn, protein_amnts, gene_info_dict):
-  coefficient_arr = get_coefficient_mat(protein_amnts, gene_info_dict, gene_key, ntf_key)
-
-  beta_all = float(beta_func(coefficient_arr, beta_arr)) # 1d arr containing the beta_all values for each gene
-
+def get_R_mRNA_txn(N_rnap, R_max_txn, beta_all, Kd_rnap, genome_length, transcriptionRate_betaFromContext_fid):
   if transcriptionRate_betaFromContext_fid == "@":
       P_rnap = N_rnap / (genome_length * (N_rnap + Kd_rnap))
       return beta_all * (P_rnap * R_max_txn)
@@ -132,6 +154,7 @@ def protein_change(gene, gene_prot_amnt, protein_amnts, gene_info_dict, N_ribo, 
     ) * gene_prot_amnt
 
 def test_config_accuracy(testing_df, tf_key, beta_values, network_loc, network_key, feature_id):
+
   define_const_and_fids(feature_id)
   global ntf_key
   ntf_key = tf_key
@@ -192,10 +215,11 @@ def test_config_accuracy(testing_df, tf_key, beta_values, network_loc, network_k
   return actual_mRNAs_matrix, predicted_mRNAs_matrix, gene_key, time_points_key
 
 # get accuracy: compare predict to actual
-def accuracy_representation(config_id, data_actual_matrix, data_predicted_matrix, gene_key, time_points_key, prokode_dir, just_overall):
+def accuracy_representation(config_id, data_actual_matrix, data_predicted_matrix, gene_key, time_points_key, all_bad_indecies_tup, prokode_dir, just_overall):
   print("AA")
-  flattened_actual = data_actual_matrix.flatten()
-  flattened_predict = data_predicted_matrix.flatten()
+  flattened_all_bad_tup = [x for xs in all_bad_indecies_tup for x in xs]
+  flattened_actual = data_actual_matrix.flatten()[flattened_all_bad_tup]
+  flattened_predict = data_predicted_matrix.flatten()[flattened_all_bad_tup]
   print(flattened_predict)
 
   if just_overall:
